@@ -24,7 +24,13 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-    	return view('users.index');
+        $user = $request->user();
+
+        $nbPayments = Payment::whereHas('order', function ($query) use ($user) {
+            $query->where('user_id', $user->id);
+        })->count();
+
+    	return view('users.index', compact('nbPayments'));
     }
 
     public function show(Request $request, User $user)
