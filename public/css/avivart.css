@@ -1,0 +1,27 @@
+:root {
+	--darken_red_4: #b71c1c;
+	--darken_red_3: #c62828;
+	--darken_red_2: #d32f2f;
+	--darken_red_1: #e53935;
+}
+
+.bg-darken-4 {
+	background-color: var(--darken_red_4);
+}
+
+.bg-darken-4 {
+	background-color: var(--darken_red_3);
+}
+
+.bg-darken-4 {
+	background-color: var(--darken_red_2);
+}
+
+.bg-darken-4 {
+	background-color: var(--darken_red_1);
+}
+
+img.logo {
+	width: 200px;
+	height: 100px;
+}

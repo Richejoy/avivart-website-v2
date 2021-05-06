@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PDF</title>
+</head>
+<body>
+
+	@yield('body')
+
+</body>
+</html>
