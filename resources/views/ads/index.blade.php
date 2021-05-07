@@ -3,7 +3,7 @@
 @section('body')
 
 <section>
-	<h1>annonces</h1>
+    <h1>annonces</h1>
 </section>
 
 @endsection

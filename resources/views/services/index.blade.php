@@ -3,9 +3,9 @@
 @section('content')
 
 <section class="bg-light py-3">
-	<div class="container-fluid">
-		<div class="row">
-			<aside class="col-lg-3">
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-lg-3">
                 <div class="card">
                     <div class="card-header bg-primary text-white">Somaire</div>
                     <div class="card-body">
@@ -19,12 +19,12 @@
                 </div>
             </aside>
 
-			<div class="col-lg-9">
-				
+            <div class="col-lg-9">
 
-			</div>
-		</div>
-	</div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
 @endsection

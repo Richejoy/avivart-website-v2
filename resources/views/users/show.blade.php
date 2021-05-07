@@ -3,9 +3,9 @@
 @section('body')
 
 <div class="row">
-	<div class="col-lg-12">
-		
-		<p class="text-center">
+    <div class="col-lg-12">
+
+        <p class="text-center">
             <img src="{{ Auth::user()->image->link }}" width="150" height="150" alt="Image" class="circle">
         </p>
 
@@ -13,7 +13,9 @@
 
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover mb-0">
-                <caption>{{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-warning']) }}</caption>
+                <caption>
+                    {{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-warning']) }}
+                </caption>
                 <thead class="thead-dark">
                     <tr>
                         <th>Clé</th>
@@ -39,7 +41,8 @@
                     </tr>
                     <tr>
                         <td>Dernière connexion</td>
-                        <td><time class="timeago" datetime="{{ Auth::user()->last_login }}">{{ Auth::user()->last_login }}</time></td>
+                        <td><time class="timeago"
+                                datetime="{{ Auth::user()->last_login }}">{{ Auth::user()->last_login }}</time></td>
                     </tr>
                     <tr>
                         <td>Nombre de connexion</td>
@@ -57,7 +60,7 @@
             </table>
         </div>
 
-	</div>
+    </div>
 </div>
 
 @endsection

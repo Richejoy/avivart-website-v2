@@ -3,97 +3,113 @@
 @section('body')
 
 <section class="bg-light py-3">
-	<div class="container-fluid">
-		<div class="row">
-			<aside class="col-lg-3 pb-3">
-				
-				<div class="accordion" id="accordionExample">
-				  <div class="card">
-				    <div class="card-header bg-white font-weight-bold" id="headingOne">
-				      <h2 class="mb-0">
-				        <button class="btn btn-link btn-block text-left text-decoration-none text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-				          Rayon Aliments Bio
-				        </button>
-				      </h2>
-				    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-lg-3 pb-3">
 
-				    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-				      <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                    type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Rayon Aliments Bio
+                                </button>
+                            </h2>
+                        </div>
 
-				        @if($productCategories->count())
-				        <ul type="circle" class="list-unstyled">
-				        	<li><a class="text-danger" href="{{ route('store.organic_foods') }}">Tout</a></li>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
 
-							@foreach($productCategories as $productCategory)
-				        	<li><a class="{{ $productCategory->getSelected(Request::query('product_category_id')) }}" href="{{ route('store.organic_foods', ['product_category_id' => $productCategory->id]) }}">{{ $productCategory->name }}</a></li>
-				        	@endforeach
-				        </ul>
-				        @else
-				        <p>Aucune catégorie de produits</p>
-						@endif
+                                @if($productCategories->count())
+                                <ul type="circle" class="list-unstyled">
+                                    <li><a class="text-danger" href="{{ route('store.organic_foods') }}">Tout</a></li>
 
-				      </div>
-				    </div>
-				  </div>
-				</div>
+                                    @foreach($productCategories as $productCategory)
+                                    <li><a class="{{ $productCategory->getSelected(Request::query('product_category_id')) }}"
+                                            href="{{ route('store.organic_foods', ['product_category_id' => $productCategory->id]) }}">{{ $productCategory->name }}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                                @else
+                                <p>Aucune catégorie de produits</p>
+                                @endif
 
-			</aside>
-			<div class="col-lg-9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-				@if($products->count())
+            </aside>
+            <div class="col-lg-9">
 
-				<div class="row mb-4">
-					@foreach($products as $product)
-					<article class="col-md-3 mb-3 product-item hvr-float">
-						<div class="text-right">
-							<span class="badge {{ $product->onDiscount() }}">{{ $product->getPercentage() }}%</span>
-						</div>
-						<div class="card h-100">
-						  <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}" src="https://via.placeholder.com/200x150.png?text=Chargement..." class="card-img-top prd-img lazyrate" alt="Image">
-						  <span class="bg-primary text-white text-center">{{ $product->name }}</span>
-						  <div class="card-body p-2 text-center">
-						    <h5 class="card-title m-0">{{ $product->description }}</h5>
+                @if($products->count())
 
-						    <p class="m-0">
-						    	<a href="{{ route('productType.show', ['productType' => $product->productType]) }}">{{ $product->productType->name }}</a>
-						    </p>
+                <div class="row mb-4">
+                    @foreach($products as $product)
+                    <article class="col-md-3 mb-3 product-item hvr-float">
+                        <div class="text-right">
+                            <span class="badge {{ $product->onDiscount() }}">{{ $product->getPercentage() }}%</span>
+                        </div>
+                        <div class="card h-100">
+                            <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
+                                src="https://via.placeholder.com/200x150.png?text=Chargement..."
+                                class="card-img-top prd-img lazyrate" alt="Image">
+                            <span class="bg-primary text-white text-center">{{ $product->name }}</span>
+                            <div class="card-body p-2 text-center">
+                                <h5 class="card-title m-0">{{ $product->description }}</h5>
 
-						    <p class="card-text m-0">
-						    	<a class="text-secondary" href="{{ route('conversion.show', ['conversion' => $product->conversion]) }}">{{ $product->conversion->name }}</a>
-						    </p>
+                                <p class="m-0">
+                                    <a
+                                        href="{{ route('productType.show', ['productType' => $product->productType]) }}">{{ $product->productType->name }}</a>
+                                </p>
 
-						    <h6 class="text-dark m-0">
-						    	<strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
-						    	@if($product->new_price != $product->old_price)
-						    	 / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
-						    	 @endif
-						    </h6>
-						  </div>
-						  <div class="card-footer text-center">
-						    	<a data-toggle="tooltip" title="Ajouter au panier" href="{{ route('cart.add', ['product' => $product]) }}" class="text-primary"><i class="fa fa-shopping-cart"></i></a>
+                                <p class="card-text m-0">
+                                    <a class="text-secondary"
+                                        href="{{ route('conversion.show', ['conversion' => $product->conversion]) }}">{{ $product->conversion->name }}</a>
+                                </p>
 
-						    	<a data-toggle="tooltip" title="Ajouter au favorites" href="{{ route('user.add', ['product' => $product]) }}" class="text-danger px-5"><i class="fa fa-heart"></i></a>
+                                <h6 class="text-dark m-0">
+                                    <strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
+                                    @if($product->new_price != $product->old_price)
+                                    / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
+                                    @endif
+                                </h6>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a data-toggle="tooltip" title="Ajouter au panier"
+                                    href="{{ route('cart.add', ['product' => $product]) }}" class="text-primary"><i
+                                        class="fa fa-shopping-cart"></i></a>
 
-						    	<a data-toggle="tooltip" title="Détails" href="{{ route('store.show', ['product' => $product]) }}" class="text-info"><i class="fa fa-info-circle"></i></a>
-						   </div>
-						</div>
-					</article>
-					@endforeach
-				</div>
+                                <a data-toggle="tooltip" title="Ajouter au favorites"
+                                    href="{{ route('user.add', ['product' => $product]) }}" class="text-danger px-5"><i
+                                        class="fa fa-heart"></i></a>
 
-				<p class="text-right text-muted">
-		            Page {{ $products->currentPage() }} sur {{ $products->lastPage() }}, montrant {{ count($products->items()) }} enregistrement (s) sur {{ $products->total() }} au total
-		        </p>
+                                <a data-toggle="tooltip" title="Détails"
+                                    href="{{ route('store.show', ['product' => $product]) }}" class="text-info"><i
+                                        class="fa fa-info-circle"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    @endforeach
+                </div>
 
-				{{ $products->onEachSide(5)->links() }}
+                <p class="text-right text-muted">
+                    Page {{ $products->currentPage() }} sur {{ $products->lastPage() }}, montrant
+                    {{ count($products->items()) }} enregistrement (s) sur {{ $products->total() }} au total
+                </p>
 
-				@else
-				<p>Aucun produit</p>
-				@endif
+                {{ $products->onEachSide(5)->links() }}
 
-			</div>
-		</div>
-	</div>
+                @else
+                <p>Aucun produit</p>
+                @endif
+
+            </div>
+        </div>
+    </div>
 </section>
 
 @endsection

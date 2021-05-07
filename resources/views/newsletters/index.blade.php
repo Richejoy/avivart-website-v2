@@ -2,12 +2,12 @@
 
 @section('body')
 
-	<section class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				
-			</div>
-		</div>
-	</section>
+<section class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+        </div>
+    </div>
+</section>
 
 @endsection

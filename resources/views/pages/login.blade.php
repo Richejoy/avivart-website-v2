@@ -17,17 +17,21 @@
 
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="pills-email-tab" data-toggle="pill" href="#pills-email" role="tab" aria-controls="pills-email" aria-selected="true">Email</a>
+                        <a class="nav-link active" id="pills-email-tab" data-toggle="pill" href="#pills-email"
+                            role="tab" aria-controls="pills-email" aria-selected="true">Email</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-phone-tab" data-toggle="pill" href="#pills-phone" role="tab" aria-controls="pills-phone" aria-selected="false">Téléphone</a>
+                        <a class="nav-link" id="pills-phone-tab" data-toggle="pill" href="#pills-phone" role="tab"
+                            aria-controls="pills-phone" aria-selected="false">Téléphone</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="pills-username-tab" data-toggle="pill" href="#pills-username" role="tab" aria-controls="pills-username" aria-selected="false">Nom d'utilisateur</a>
+                        <a class="nav-link" id="pills-username-tab" data-toggle="pill" href="#pills-username" role="tab"
+                            aria-controls="pills-username" aria-selected="false">Nom d'utilisateur</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-email" role="tabpanel" aria-labelledby="pills-email-tab">
+                    <div class="tab-pane fade show active" id="pills-email" role="tabpanel"
+                        aria-labelledby="pills-email-tab">
 
                         {!! Form::open() !!}
                         {{ Form::hidden('form', 'email') }}
