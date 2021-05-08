@@ -1,9 +1,7 @@
-@extends('layouts.informatics', ['title' => 'Accueil'])
+@extends('layouts.coming_soon', ['title' => 'Informatique'])
 
 @section('body')
 
-<section>
-	<h1>informatique</h1>
-</section>
+<p>Informatique</p>
 
 @endsection

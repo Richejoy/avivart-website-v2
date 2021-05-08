@@ -200,14 +200,14 @@
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
                             <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
-                            <li><a class="text-secondary" href="{{ route('store.organic_foods') }}">A Aliments Bio</a>
+                            <li><a class="text-secondary" href="{{ route('store.organic_foods') }}">Aliments Bio</a>
                             </li>
-                            <li><a class="text-secondary" href="{{ route('store.manufactured_foods') }}">A Aliments
+                            <li><a class="text-secondary" href="{{ route('store.manufactured_foods') }}">Aliments
                                     Manufacturés</a></li>
                             <li><a class="text-secondary" href="{{ route('store.home_appliance') }}">Electro Ménager</a>
                             </li>
-                            <li><a class="text-secondary" href="{{ route('store.high_tech') }}">A High-Tech</a></li>
-                            <li><a class="text-secondary" href="{{ route('store.other_products') }}">A Autres
+                            <li><a class="text-secondary" href="{{ route('store.high_tech') }}">High-Tech</a></li>
+                            <li><a class="text-secondary" href="{{ route('store.other_products') }}">Autres
                                     Produits</a></li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
@@ -228,15 +228,18 @@
                     </div>
                     <div class="col-lg-4">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-muted">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
                         <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
                             <input type="email" name="email" id="email" class="form-control"
                                 placeholder="Entrez votre email">
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-secondary">Souscrire</button>
+                                <button type="submit" class="btn btn-success">Souscrire</button>
                             </div>
                         </div>
                         {!! Form::close() !!}
@@ -245,23 +248,23 @@
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                                <a target="_blank" href="https://facebook.com" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li class="pl-3 pr-3">
-                                <a href="" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                                <a target="_blank" href="https://twitter.com" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon instagram hvr-pulse"><i
+                                <a target="_blank" href="https://instagram.com" class="text-white text-decoration-none social-icon instagram hvr-pulse"><i
                                         class="fa fa-instagram"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank" href="https://web.whatsapp.com" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                                <a target="_blank" href="https://youtube.com" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -274,18 +277,20 @@
         <section class="copyright">
             <div class="container-fluid py-3">
                 <div class="row">
-                    <div class="col-lg-8 text-muted text-lg-center">
+                    <div class="col-lg-8 text-info text-lg-center">
                         Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
-                        est fait par <a class="text-success" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        <span class="pr-3"><i class="fa fa-credit-card-alt"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-visa"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-mastercard"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-paypal"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-stripe"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-jcb"></i></span>
-                        <span class="pl-3"><i class="fa fa-cc-amex"></i></span>
+                        <img alt="TMONEY" src="{{ asset('public/img/tmoney.png') }}" class="pr-3 img-25x25">
+
+                        <img alt="FLOOZ" src="{{ asset('public/img/flooz.jpeg') }}" class="pl-2 pr-2 img-25x25">
+
+                        <img alt="VISA" src="{{ asset('public/img/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
+
+                        <img alt="MASTERCARD" src="{{ asset('public/img/mastercard.png') }}" class="pl-2 pr-2 img-25x25">
+
+                        <img alt="PAYPAL" src="{{ asset('public/img/paypal.png') }}" class="pl-3 img-25x25">
                     </div>
                 </div>
             </div>
@@ -294,13 +299,13 @@
 
     <!-- Modal -->
     <div class="videoIcon">
-        <video muted autoplay loop>
+        <video muted autoplay loop data-toggle="tooltip" title="Publicités">
             <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
         </video>
     </div>
     <div class="videoPopup">
         <div class="card border-secondary">
-            <div class="card-header bg-secondary text-white">Vidéo d'actualité <span data-toggle="tooltip"
+            <div class="card-header bg-secondary text-white">Publicités<span data-toggle="tooltip"
                     title="Fermer" class="closeVideoPopup pull-right"><i class="fa fa-close"></i></span></div>
             <video controls class="w-100 p-0">
                 <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
@@ -325,6 +330,7 @@
 
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

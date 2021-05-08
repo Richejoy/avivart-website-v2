@@ -85,10 +85,13 @@
                 <form class="my-3" method="get" action="{{ route('cart.add', ['product' => $product]) }}"
                     accept-charset="utf-8" autocomplete="off">
                     <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-shopping-cart"></i></div>
+                        </div>
                         <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantité"
                             value="1" min="1" step="1" required>
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-dark"><i class="fa fa-shopping-cart"></i> Ajouter au
+                            <button type="submit" class="btn btn-dark">Ajouter au
                                 panier</button>
                         </div>
                     </div>

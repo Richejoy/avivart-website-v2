@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col-lg-8">
-                <h2>Mon Panier</h2>
+                <h2 class="my-3">Mon Panier</h2>
 
                 <div class="table-responsive bg-white">
                     <table class="table table-bordered mb-0">
@@ -56,9 +56,9 @@
                 </div>
 
                 <p class="mt-5">
-                    <a href="{{ route('store.index') }}" class="btn btn-primary">Boutique</a>
+                    <a href="{{ route('store.index') }}" class="btn btn-outline-primary">Continuer mes achats</a>
 
-                    <a href="{{ route('cart.truncate') }}" class="btn btn-warning">Vider le panier</a>
+                    <a href="{{ route('cart.truncate') }}" class="btn btn-outline-warning">Vider le panier</a>
                 </p>
 
             </div>

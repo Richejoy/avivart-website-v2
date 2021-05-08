@@ -1,9 +1,7 @@
-@extends('layouts.ad', ['title' => 'Accueil'])
+@extends('layouts.coming_soon', ['title' => 'Annonces'])
 
 @section('body')
 
-<section>
-    <h1>annonces</h1>
-</section>
+<p>Annonces</p>
 
 @endsection

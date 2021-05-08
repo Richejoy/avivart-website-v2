@@ -1,9 +1,7 @@
-@extends('layouts.immovable', ['title' => 'Accueil'])
+@extends('layouts.coming_soon', ['title' => 'Immobilier'])
 
 @section('body')
 
-<section>
-	<h1>immobilier</h1>
-</section>
+<p>Immobilier</p>
 
 @endsection

@@ -15,12 +15,12 @@
                         <ol class="list-unstyled">
                             @foreach($productRays as $productRay)
                             <li><a href="{{ route('productRay.show', ['productRay' => $productRay]) }}">{{ $productRay->name }}
-                                    <i class="fa fa-chevron-down float-right"></i></a></li>
+                                    <i class="fa fa-chevron-right float-right"></i></a></li>
 
                             @if($productRay->productCategories->count())
-                            <ul class="">
+                            <ul class="simple-load-more">
                                 @foreach($productRay->productCategories as $productCategory)
-                                <li><a class="text-muted"
+                                <li class=""><a class="text-muted"
                                         href="{{ route('productCategory.show', ['productCategory' => $productCategory]) }}">{{ $productCategory->name }}</a>
                                 </li>
                                 @endforeach
@@ -82,7 +82,7 @@
                                 class="card-img-top prd-img lazyrate" alt="Image">
                             <span class="bg-primary text-white text-center">{{ $product->name }}</span>
                             <div class="card-body p-2 text-center">
-                                <h5 class="card-title m-0">{{ $product->description }}</h5>
+                                <h6 class="card-title m-0">{{ $product->description }}</h6>
 
                                 <p class="m-0">
                                     <a

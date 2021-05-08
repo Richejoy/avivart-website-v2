@@ -1,9 +1,7 @@
-@extends('layouts.agribusiness', ['title' => 'Accueil'])
+@extends('layouts.coming_soon', ['title' => 'Agrobusiness'])
 
 @section('body')
 
-<section>
-	<h1>agrobusiness</h1>
-</section>
+<p>Agrobusiness</p>
 
 @endsection

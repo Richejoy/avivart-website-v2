@@ -1,9 +1,7 @@
-@extends('layouts.cosmetic', ['title' => 'Accueil'])
+@extends('layouts.coming_soon', ['title' => 'Cosmétique'])
 
 @section('body')
 
-<section>
-	<h1>cosmétique</h1>
-</section>
+<p>Cosmétique</p>
 
 @endsection

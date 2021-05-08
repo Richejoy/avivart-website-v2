@@ -29,4 +29,12 @@ jQuery(document).ready(function ($) {
 		displayedItems: 20,
 		showItems: 4
 	})
+
+    $('ul.simple-load-more').simpleLoadMore({
+      item: 'li',
+      count: 2,
+      itemsToLoad: 2,
+      counterInBtn: true,
+      btnText: 'Afficher Plus {showing}/{total}'
+    })
 })

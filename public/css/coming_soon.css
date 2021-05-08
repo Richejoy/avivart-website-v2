@@ -1,0 +1,65 @@
+ /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img.logo-xs {
+  height: 100px;
+  width: 200px;
+}
+
+.bgimg {
+  /* Background image */
+  background-image: url(https://images.unsplash.com/photo-1549082984-1323b94df9a6?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI4fGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: #ffffff;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #4a148c;
+  padding: 30px;
+}
+
+.middle a {
+  color: #e2e2e2;
+}
+
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
+} 

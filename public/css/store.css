@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-.breadcrumb-item + .breadcrumb-item::before {
-	content: ">";
-}
-
 body {
 	font-family: 'Roboto Slab', serif;
+}
+
+.load-more__btn {
+    color: darkred;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: ">";
 }
 
 .logo-xs {
@@ -93,6 +97,10 @@ footer .social-icon {
 
 .carousel img {
 	height: 500px;
+}
+
+img.img-25x25 {
+	height: 25px;
 }
 
 img.img-50x50 {

@@ -37,7 +37,7 @@
                                 class="card-img-top prd-img lazyrate" alt="Image">
                             <span class="bg-primary text-white text-center">{{ $product->name }}</span>
                             <div class="card-body p-2 text-center">
-                                <h5 class="card-title m-0">{{ $product->description }}</h5>
+                                <h6 class="card-title m-0">{{ $product->description }}</h6>
 
                                 <p class="m-0">
                                     <a
