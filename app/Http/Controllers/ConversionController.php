@@ -21,6 +21,8 @@ class ConversionController extends Controller
 
     public function show(Request $request, Conversion $conversion)
     {
-    	return view('conversions.show', compact('conversion'));
+        $conversions = Conversion::all();
+
+    	return view('conversions.show', compact('conversion', 'conversions'));
     }
 }

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Models\Civility;
-use App\Models\Country;
 use App\Models\Coupon;
 use App\Models\Order;
+use App\Models\PaymentMode;
 use App\Models\ProductOrder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,8 +30,7 @@ class CartController extends Controller
 
     public function checkout(Request $request)
     {
-    	$countries = Country::all()->sortBy('id')->pluck(null, 'id');
-        $civilities = Civility::all()->sortBy('id')->pluck(null, 'id');
+    	$paymentModes = PaymentMode::all()->sortBy('id')->pluck(null, 'id');
 
         $cartContent = Cart::content();
 
@@ -45,6 +43,7 @@ class CartController extends Controller
             $this->validate($request, [
                 'delivery_date' => ['bail', 'required', 'date', 'after_or_equal:today'],
                 'delivery_address' => ['bail', 'required', 'min:3'],
+                'payment_mode_id' => ['bail', 'required'],
             ]);
 
             $user = $request->user();
@@ -106,7 +105,7 @@ class CartController extends Controller
             return back();
         }
 
-        return view('carts.checkout', compact('cartContent', 'countries', 'civilities'));
+        return view('carts.checkout', compact('cartContent', 'paymentModes'));
     }
 
     public function add(Request $request, Product $product)

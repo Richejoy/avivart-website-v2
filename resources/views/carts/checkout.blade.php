@@ -48,14 +48,18 @@
                         {!! Form::open() !!}
 
                         <div class="form-group">
-                            <label for="delivery_address">Adresse de livraison</label>
-                            <input type="text" class="form-control" id="delivery_address" name="delivery_address"
-                                placeholder="Adresse de livraison">
+                            {{ Form::label('delivery_address', 'Adresse de livraison', ['class' => '']) }}
+                            {{ Form::text('delivery_address', null, ['class' => 'form-control', 'placeholder' => 'Adresse de livraison', 'required' => true]) }}
                         </div>
 
                         <div class="form-group">
-                            <label for="delivery_date">Date de livraison</label>
-                            <input type="date" class="form-control" id="delivery_date" name="delivery_date">
+                            {{ Form::label('delivery_date', 'Date de livraison', ['class' => '']) }}
+                            {{ Form::date('delivery_date', now(), ['class' => 'form-control', 'required' => true]) }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ Form::label('payment_mode_id', 'Mode de payement', ['class' => '']) }}
+                            {{ Form::select('payment_mode_id', $paymentModes, null, ['class' => 'form-control', 'placeholder' => 'Mode de payement', 'required' => true]) }}
                         </div>
 
                         <div class="form-group">

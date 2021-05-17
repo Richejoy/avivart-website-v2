@@ -21,6 +21,8 @@ class ProductRayController extends Controller
 
     public function show(Request $request, ProductRay $productRay)
     {
-    	return view('product_rays.show', compact('productRay'));
+        $productRays = ProductRay::all();
+
+    	return view('product_rays.show', compact('productRay', 'productRays'));
     }
 }

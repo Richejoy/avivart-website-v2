@@ -13,7 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\CronsController;
+use App\Http\Controllers\CronController;
 use App\Http\Controllers\ProductRayController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductTypeController;
@@ -157,8 +157,8 @@ Route::prefix('parametres')->name('settings.')->middleware(['auth'])->group(func
 });
 /** */
 
-Route::prefix('/crons')->name('crons.')->group(function () {
-	Route::get('/dbbackup', [CronsController::class, 'dbbackup'])->name('dbbackup');
+Route::prefix('/cron')->name('cron.')->group(function () {
+	Route::get('/dbbackup', [CronController::class, 'dbbackup'])->name('dbbackup');
 });
 
 Route::prefix('/product/ray')->name('productRay.')->group(function() {

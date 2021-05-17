@@ -8,7 +8,7 @@ use Rah\Danpu\Dump as RDump;
 use Rah\Danpu\Export as RExport;
 use Illuminate\Http\Request;
 
-class CronsController extends Controller
+class CronController extends Controller
 {
     public function __construct()
     {

@@ -21,6 +21,8 @@ class ProductTypeController extends Controller
 
     public function show(Request $request, ProductType $productType)
     {
-    	return view('product_types.show', compact('productType'));
+        $productTypes = ProductType::all();
+
+    	return view('product_types.show', compact('productType', 'productTypes'));
     }
 }

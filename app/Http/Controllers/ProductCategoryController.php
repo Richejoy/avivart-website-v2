@@ -25,6 +25,8 @@ class ProductCategoryController extends Controller
 
     public function show(Request $request, ProductCategory $productCategory)
     {
-    	return view('product_categories.show', compact('productCategory'));
+        $productCategories = ProductCategory::all();
+
+    	return view('product_categories.show', compact('productCategory', 'productCategories'));
     }
 }
