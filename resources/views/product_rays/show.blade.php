@@ -24,8 +24,9 @@
                     @foreach($productRay->productCategories as $productCategory)
                     <div class="col-md-3 mb-3 text-center">
                         <p>
-                            <img src="{{ $productCategory->image->link }}" alt="Image"
-                                class="w-100 img-200x200 hvr-push">
+                            <img id="img{{ $productCategory->id }}" data-src="{{ $productCategory->image->link }}"
+                                src="https://via.placeholder.com/200x150.png?text=Chargement..." alt="Image"
+                                class="w-100 img-200x200 hvr-push lazyrate">
                         </p>
                         <h4><a href="{{ route('productCategory.show', ['productCategory' => $productCategory]) }}"
                                 class="text-danger">{{ $productCategory->name }}</a></h4>

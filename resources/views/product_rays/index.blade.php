@@ -13,7 +13,8 @@
                     @foreach($productRays as $productRay)
                     <div class="col-md-3 mb-3 text-center">
                         <p>
-                            <img src="{{ $productRay->image->link }}" alt="Image" class="w-100 img-200x200 hvr-pop">
+                            <img id="img{{ $productRay->id }}" data-src="{{ $productRay->image->link }}"
+                                src="https://via.placeholder.com/200x150.png?text=Chargement..." alt="Image" class="w-100 img-200x200 hvr-pop lazyrate">
                         </p>
                         <h4><a href="{{ route('productRay.show', ['productRay' => $productRay]) }}"
                                 class="text-danger">{{ $productRay->name }}</a></h4>

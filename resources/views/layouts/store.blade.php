@@ -93,10 +93,8 @@
         <section class="container-fluid">
             <div class="row pt-3">
                 <div class="col-lg-3">
-                    <p style="font-size: 12px" class="m-lg-0">Horaires : 7j/7j de 6h30mn à 21h00 Tél : (+228) 92 10 78
-                        78</p>
-                    <p style="font-size: 12px" class="m-lg-0 text-danger">Nous vendons au prix du marché sans
-                        surenchère.</p>
+                    <p class="m-lg-0 fs-12">Horaires : 7j/7j de 6h30mn à 21h00 Tél : (+228) 92 10 78 78</p>
+                    <p class="m-lg-0 fs-12 text-danger">Nous vendons au prix du marché sans surenchère.</p>
                 </div>
                 <div class="col-lg-6">
                     <form class="" method="get" action="{{ route('store.search') }}" accept-charset="utf-8"
@@ -132,13 +130,13 @@
                 </div>
                 <div class="col-lg-3">
                     <div>
-                        <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}"><i
+                        <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}" data-toggle="tooltip" title="Nombre de produits"><i
                                 class="fa fa-shopping-cart"></i> ({{ Cart::content()->count() }})</a>
 
-                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}"><i
+                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}" data-toggle="tooltip" title="Produits favorites"><i
                                 class="fa fa-heart"></i> ({{ session('userFavoriteProducts', 0) }})</a>
 
-                        <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}">
+                        <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}" data-toggle="tooltip" title="Détails commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
                             ({{ Cart::total() - (Cart::subtotal() * session('discountCoupon')->rate) }} FCFA)
@@ -147,7 +145,7 @@
                             @endif
                         </a>
 
-                        <a style="font-size: 12px" class="text-decoration-none"
+                        <a class="text-decoration-none fs-12"
                             href="{{ route('contact.index') }}"><u>Contactez-nous</u></a>
                     </div>
                 </div>
@@ -155,8 +153,7 @@
 
             <div class="row">
                 <div class="col-lg-3">
-                    <p style="font-size: 12px" class="m-lg-0"><a href="{{ route('page.register') }}">Inscrivez-vous.
-                            Livraison gratuite à partir de 100 000FCFA.</a></p>
+                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous. Livraison gratuite à partir de 100 000FCFA.</a></p>
                 </div>
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
@@ -184,16 +181,14 @@
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
                     <div class="col-lg-3">
-                        <h4 class="text-white font-weight-bold text-uppercase">Société</h4>
+                        <p>
+                            <img src="{{ asset('public/img/logo_white.jpeg') }}" alt="{{ config('app.name') }}"
+                                class="logo">
+                        </p>
 
                         <p class="text-light">Adresse : CAP Kégué</p>
                         <p class="text-light">Téléphone : +228 92 10 78 78</p>
                         <p class="text-light">Email : contact@avivart.net</p>
-
-                        <p>
-                            <img src="{{ asset('public/img/logo_grey.png') }}" alt="{{ config('app.name') }}"
-                                class="logo">
-                        </p>
                     </div>
                     <div class="col-lg-3">
                         <h4 class="text-white font-weight-bold text-uppercase">Liens Principaux</h4>
@@ -223,7 +218,7 @@
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
-                            <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généreaux</a></li>
+                            <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4">
@@ -287,8 +282,6 @@
                         <img alt="FLOOZ" src="{{ asset('public/img/flooz.jpeg') }}" class="pl-2 pr-2 img-25x25">
 
                         <img alt="VISA" src="{{ asset('public/img/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
-
-                        <img alt="MASTERCARD" src="{{ asset('public/img/mastercard.png') }}" class="pl-2 pr-2 img-25x25">
 
                         <img alt="PAYPAL" src="{{ asset('public/img/paypal.png') }}" class="pl-3 img-25x25">
                     </div>

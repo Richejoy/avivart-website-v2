@@ -13,7 +13,8 @@
                     @foreach($productTypes as $productType)
                     <div class="col-md-3 mb-3 text-center">
                         <p>
-                            <img src="{{ $productType->image->link }}" alt="Image" class="w-100 img-200x200 hvr-grow">
+                            <img id="img{{ $productType->id }}" data-src="{{ $productType->image->link }}"
+                                src="https://via.placeholder.com/200x150.png?text=Chargement..." alt="Image" class="w-100 img-200x200 hvr-grow lazyrate">
                         </p>
                         <h4><a href="{{ route('productType.show', ['productType' => $productType]) }}"
                                 class="text-danger">{{ $productType->name }}</a></h4>

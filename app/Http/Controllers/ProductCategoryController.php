@@ -16,6 +16,10 @@ class ProductCategoryController extends Controller
     {
     	$productCategories = ProductCategory::paginate(8);
 
+        if ($request->has('product_ray_id')) {
+            $productCategories = ProductCategory::where('product_ray_id', $request->query('product_ray_id'))->paginate(8);
+        }
+
     	return view('product_categories.index', compact('productCategories'));
     }
 

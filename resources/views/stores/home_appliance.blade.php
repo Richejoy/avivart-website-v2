@@ -7,24 +7,24 @@
         <div class="row">
             <aside class="col-lg-3 pb-3">
 
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordion1">
                     <div class="card">
                         <div class="card-header bg-white font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
                                     type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                    Rayon Electro-Ménager
+                                    <i class="fa fa-plus"></i> Electro-Ménager
                                 </button>
                             </h2>
                         </div>
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
+                            data-parent="#accordion1">
                             <div class="card-body">
 
                                 @if($productCategories->count())
-                                <ul type="circle" class="list-unstyled">
+                                <ul type="circle" class="list-unstyled simple-load-more">
                                     <li><a class="text-danger" href="{{ route('store.home_appliance') }}">Tout</a></li>
 
                                     @foreach($productCategories as $productCategory)
@@ -39,6 +39,9 @@
 
                             </div>
                         </div>
+
+                        <div class="card-footer text-right"><a href="{{ route('productCategory.index', ['product_ray_id' => 3]) }}"
+                            class="text-danger">Tout afficher</a></div>
                     </div>
                 </div>
 

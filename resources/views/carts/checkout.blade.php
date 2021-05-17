@@ -34,12 +34,12 @@
 
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 pt-3">
 
                 @if(Auth::check())
 
                 <div class="alert alert-success" role="alert">
-                    Connecter en tant que {{ Auth::user()->username }}
+                    Connecté en tant que {{ Auth::user()->username }}
                 </div>
 
                 <div class="card">

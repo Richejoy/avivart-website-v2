@@ -7,63 +7,93 @@
         <div class="row">
             <aside class="col-lg-3 pb-3">
 
-                <div class="card shadow-sm">
-                    <div class="card-header bg-white text-dark font-weight-bold">Tous nos Rayons</div>
+                <div class="accordion" id="accordion1">
+                    <div class="card">
+                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                    type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    <i class="fa fa-plus"></i> Tous nos Rayons
+                                </button>
+                            </h2>
+                        </div>
 
-                    <div class="card-body">
-                        @if($productRays->count())
-                        <ol class="list-unstyled">
-                            @foreach($productRays as $productRay)
-                            <li><a href="{{ route('productRay.show', ['productRay' => $productRay]) }}">{{ $productRay->name }}
-                                    <i class="fa fa-chevron-right float-right"></i></a></li>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion1">
+                            <div class="card-body">
 
-                            @if($productRay->productCategories->count())
-                            <ul class="simple-load-more">
-                                @foreach($productRay->productCategories as $productCategory)
-                                <li class=""><a class="text-muted"
-                                        href="{{ route('productCategory.show', ['productCategory' => $productCategory]) }}">{{ $productCategory->name }}</a>
-                                </li>
-                                @endforeach
-                            </ul>
-                            @endif
+                                @if($productRays->count())
+                                <ol class="list-unstyled">
+                                    @foreach($productRays as $productRay)
+                                    <li><a href="{{ route('productRay.show', ['productRay' => $productRay]) }}">{{ $productRay->name }}
+                                            <i class="fa fa-chevron-right float-right"></i></a></li>
 
-                            @endforeach
-                        </ol>
-                        @else
-                        <p>Aucun rayon de produits</p>
-                        @endif
-                    </div>
+                                    @if($productRay->productCategories->count())
+                                    <ul class="simple-load-more">
+                                        @foreach($productRay->productCategories as $productCategory)
+                                        <li class=""><a class="text-muted"
+                                                href="{{ route('productCategory.show', ['productCategory' => $productCategory]) }}">{{ $productCategory->name }}</a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
 
-                    <div class="card-footer text-right"><a href="{{ route('productRay.index') }}"
+                                    @endforeach
+                                </ol>
+                                @else
+                                <p>Aucun rayon de produits</p>
+                                @endif
+
+                            </div>
+                        </div>
+
+                        <div class="card-footer text-right"><a href="{{ route('productRay.index') }}"
                             class="text-danger">Tout afficher</a></div>
+                    </div>
                 </div>
 
-                <div class="card mt-3 shadow-sm">
-                    <div class="card-header bg-white text-dark font-weight-bold">Tous nos Types</div>
+                <div class="mt-3 accordion" id="accordion2">
+                    <div class="card">
+                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                    type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                    aria-controls="collapseTwo">
+                                    <i class="fa fa-plus"></i> Tous nos Types
+                                </button>
+                            </h2>
+                        </div>
 
-                    <div class="card-body">
-                        @if($productTypes->count())
-                        <ol class="list-unstyled">
-                            @foreach($productTypes as $productType)
-                            <li><a class="text-muted"
-                                    href="{{ route('productType.show', ['productType' => $productType]) }}">{{ $productType->name }}</a>
-                            </li>
-                            @endforeach
-                        </ol>
-                        @else
-                        <p>Aucun type de produits</p>
-                        @endif
-                    </div>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion2">
+                            <div class="card-body">
 
-                    <div class="card-footer text-right"><a href="{{ route('productType.index') }}"
+                                @if($productTypes->count())
+                                <ol class="list-unstyled simple-load-more">
+                                    @foreach($productTypes as $productType)
+                                    <li><a class="text-muted"
+                                            href="{{ route('productType.show', ['productType' => $productType]) }}">{{ $productType->name }}</a>
+                                    </li>
+                                    @endforeach
+                                </ol>
+                                @else
+                                <p>Aucun type de produits</p>
+                                @endif
+
+                            </div>
+                        </div>
+
+                        <div class="card-footer text-right"><a href="{{ route('productType.index') }}"
                             class="text-danger">Tout afficher</a></div>
+                    </div>
                 </div>
 
             </aside>
 
             <div class="col-lg-9">
-                <div style="padding: 13px"
-                    class="mt-xs-3 mb-3 bg-success text-white font-weight-bold shadow-sm rounded">
+                <div
+                    class="p-20 mt-xs-3 mb-3 bg-success text-white font-weight-bold shadow-sm rounded">
                     <i class="fa fa-bell fa-pulse"></i> Commandez vos aliments en ligne, payez sans frais et faites vous
                     livrer
                 </div>

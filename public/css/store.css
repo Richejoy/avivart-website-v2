@@ -12,6 +12,10 @@ body {
 	content: ">";
 }
 
+.accordion .fa {
+	margin-right: .5rem;
+}
+
 .logo-xs {
 	width: 130px;
 	height: 50px;
@@ -54,7 +58,7 @@ body {
 }
 
 .main-footer {
-	background-color: #263238;
+	background-color: #000000;
 }
 
 .main-footer .copyright {
@@ -135,6 +139,14 @@ img.img-300x300 {
 	display: block;
 }
 
+.fs-12 {
+	font-size: 12px;
+}
+
+.p-20 {
+	padding: 20px;
+}
+
 @media (max-width: 767px)
 {
 	.carousel img {
@@ -171,5 +183,13 @@ img.img-300x300 {
 
 	img.img-300x300 {
 		height: 600px;
+	}
+
+	.fs-12 {
+		font-size: 14px;
+	}
+
+	.p-20 {
+		padding: 15px;
 	}
 }

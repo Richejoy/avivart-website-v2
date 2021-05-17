@@ -22,3 +22,50 @@
 	z-index: 1;
 	margin: 0 auto;
 }
+
+.btn-success {
+
+}
+
+.btn-success:active {
+
+}
+
+.btn-success:hover {
+	background-color: #ffffff;
+	color: #5cb85c;
+}
+
+.btn-primary:hover {
+	background-color: #ffffff;
+	color: #0275d8;
+}
+
+.btn-info:hover {
+	background-color: #ffffff;
+	color: #5bc0de;
+}
+
+.btn-dark:hover {
+	background-color: #ffffff;
+	color: #292b2c;
+}
+
+.btn-danger:hover {
+	background-color: #ffffff;
+	color: #d9534f;
+}
+
+.btn-warning:hover {
+	background-color: #ffffff;
+	color: #f0ad4e;
+}
+
+.btn-secondary:hover {
+	background-color: #ffffff;
+	color: #f7f7f7;
+}
+
+.btn-success:focus {
+
+}

@@ -43,11 +43,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('informatics.index') }}">Informatique</a>
+                        <a class="nav-link" href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('store.index') }}">Boutique</a>
+                        <a class="nav-link" href="{{ route('informatics.index') }}">Informatique</a>
                     </li>
 
                     <li class="nav-item">
@@ -71,7 +71,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="{{ route('page.login') }}">Connexion</a>
+                        <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
                     </li>
 
                 </ul>
@@ -93,11 +93,12 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <p>
-                            <img src="{{ asset('public/img/logo_grey.png') }}" alt="{{ config('app.name') }}"
+                            <img src="{{ asset('public/img/logo_white.jpeg') }}" alt="{{ config('app.name') }}"
                                 class="logo">
                         </p>
-                        <p class="text-light">Adresse : Kégué</p>
-                        <p class="text-light">Téléphone : +228 90 00 00 00</p>
+
+                        <p class="text-light">Adresse : CAP Kégué</p>
+                        <p class="text-light">Téléphone : +228 92 10 78 78</p>
                         <p class="text-light">Email : contact@avivart.net</p>
                     </div>
                     <div class="col-lg-3">
@@ -126,43 +127,47 @@
                     </div>
                     <div class="col-lg-4">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-muted">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
                         <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">@</div>
+                            </div>
                             <input type="email" name="email" id="email" class="form-control"
                                 placeholder="Entrez votre email">
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-secondary">Souscrire</button>
+                                <button type="submit" class="btn btn-success">Souscrire</button>
                             </div>
                         </div>
                         {!! Form::close() !!}
 
-                        <h4 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h4>
+                        <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon facebook"><i
+                                <a target="_blank" href="https://facebook.com" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li class="pl-3 pr-3">
-                                <a href="" class="text-white text-decoration-none social-icon twitter"><i
+                                <a target="_blank" href="https://twitter.com" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon instagram"><i
+                                <a target="_blank" href="https://instagram.com" class="text-white text-decoration-none social-icon instagram hvr-pulse"><i
                                         class="fa fa-instagram"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon whatsapp"><i
+                                <a target="_blank" href="https://web.whatsapp.com" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li class="">
-                                <a href="" class="text-white text-decoration-none social-icon youtube"><i
+                                <a target="_blank" href="https://youtube.com" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -171,19 +176,12 @@
         <section class="copyright">
             <div class="container-fluid py-3">
                 <div class="row">
-                    <div class="col-lg-8 text-muted text-lg-center">
+                    <div class="col-lg-8 text-info text-lg-center">
                         Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
-                        est fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-success" href="#"
-                            target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        <span class="pr-3"><i class="fa fa-credit-card-alt"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-visa"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-mastercard"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-paypal"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-stripe"></i></span>
-                        <span class="pl-2 pr-2"><i class="fa fa-cc-jcb"></i></span>
-                        <span class="pl-3"><i class="fa fa-cc-amex"></i></span>
+                        
                     </div>
                 </div>
             </div>
