@@ -12,10 +12,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    const CALLBACK_URL = '';
-    const RETURN_URL = '';
-    const CANCEL_URL = '';
-    
     const PAYGATE_URL = 'https://paygateglobal.com/v1/page?';
     const PAYGATE_TOKEN = 'd1378627-0ec9-4c72-8c01-3fcaf5275421';
 

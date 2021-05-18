@@ -1,4 +1,4 @@
-@extends('layouts.page', ['title' => 'Accueil'])
+@extends('layouts.page', ['title' => "L'art de mieux vivre"])
 
 @section('body')
 
@@ -111,7 +111,7 @@
 			</div>
 
 			<div class="col-lg-4 h-100">
-				<div class="card">
+				<div class="card mb-sm-3">
 				  <img src="https://images.unsplash.com/photo-1619410766515-6263877c7bfe?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8YWV1NnJMLWo2ZXd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Image">
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold">Agrobusiness</h5>
@@ -122,7 +122,7 @@
 			</div>
 
 			<div class="col-lg-4 h-100">
-				<div class="card">
+				<div class="card mb-sm-3">
 				  <img src="https://images.unsplash.com/photo-1619410766515-6263877c7bfe?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8YWV1NnJMLWo2ZXd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Image">
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold">Immobilier</h5>
@@ -133,7 +133,7 @@
 			</div>
 
 			<div class="col-lg-4 h-100">
-				<div class="card">
+				<div class="card mb-sm-3">
 				  <img src="https://images.unsplash.com/photo-1619410766515-6263877c7bfe?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8YWV1NnJMLWo2ZXd8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Image">
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold">Annonces</h5>
@@ -225,7 +225,7 @@
 		</div>
 
 		<div class="row py-3">
-			<div class="col-lg-4 text-center">
+			<div class="col-lg-4 mb-sm-3 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/man.png" alt="Image">
 				</p>
@@ -240,7 +240,7 @@
 				<h4 class="text-white font-weight-bold">Nom & Prénoms</h4>
 			</div>
 
-			<div class="col-lg-4 text-center">
+			<div class="col-lg-4 mb-sm-3 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/woman.png" alt="Image">
 				</p>
@@ -255,7 +255,7 @@
 				<h4 class="text-white font-weight-bold">Nom & Prénoms</h4>
 			</div>
 
-			<div class="col-lg-4 text-center">
+			<div class="col-lg-4 mb-sm-3 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/lady.png" alt="Image">
 				</p>
@@ -350,25 +350,25 @@
 		</div>
 
 		<div class="row py-3">
-			<div class="col-lg-3 text-center">
+			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/lady.png" alt="Image">
 				</p>
 			</div>
 
-			<div class="col-lg-3 text-center">
+			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/lady.png" alt="Image">
 				</p>
 			</div>
 
-			<div class="col-lg-3 text-center">
+			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/lady.png" alt="Image">
 				</p>
 			</div>
 
-			<div class="col-lg-3 text-center">
+			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
 					<img src="https://avivart.net/images/users/lady.png" alt="Image">
 				</p>

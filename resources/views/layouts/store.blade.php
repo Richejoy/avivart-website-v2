@@ -11,7 +11,7 @@ use App\Helpers\Helper;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="Un site sur mesure" />
+    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
     <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
@@ -195,7 +195,7 @@ use App\Helpers\Helper;
         <section class="content py-lg-4">
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-12">
                         <p>
                             <img src="{{ asset('public/img/logo_white.jpeg') }}" alt="{{ config('app.name') }}"
                                 class="logo">
@@ -205,7 +205,7 @@ use App\Helpers\Helper;
                         <p class="text-light">Téléphone : +228 92 10 78 78</p>
                         <p class="text-light">Email : contact@avivart.net</p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Liens Principaux</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
@@ -223,7 +223,7 @@ use App\Helpers\Helper;
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
@@ -236,7 +236,7 @@ use App\Helpers\Helper;
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
                         <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>

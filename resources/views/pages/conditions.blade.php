@@ -6,12 +6,12 @@
     <div class="container-fluid">
         <div class="row">
             <aside class="col-lg-3">
-                <div class="card">
+                <div class="card sticky-pin">
                     <div class="card-header bg-primary text-white">Somaire</div>
                     <div class="card-body">
                         <ol>
-                            <li><a href="#">Les Conditions d'Utilisation des Données du site (CUD)</a></li>
-                            <li><a href="#">Les Conditions Générales de Vente (CGV)</a></li>
+                            <li><a href="#cud">Les Conditions d'Utilisation des Données du site (CUD)</a></li>
+                            <li><a href="#cgv">Les Conditions Générales de Vente (CGV)</a></li>
                         </ol>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
 
             <div class="col-lg-9">
 
-                <h2 class="font-weight-bold"><u>Les Conditions d'Utilisation des Données du site (CUD)</u></h2>
+                <h2 id="cud" class="font-weight-bold"><u>Les Conditions d'Utilisation des Données du site (CUD)</u></h2>
 
                 <p class="lead">
                     <b>AVIV'ART</b> recueille des informations (login, e-mail) lors de
@@ -42,7 +42,7 @@
                     applicables en rapport avec votre utilisation du site officiel de <b>AVIV'ART</b>.
                 </p>
 
-                <h2 class="font-weight-bold"><u>Les Conditions Générales de Vente (CGV)</u></h2>
+                <h2 id="cgv" class="font-weight-bold"><u>Les Conditions Générales de Vente (CGV)</u></h2>
 
                 <p class="lead">
                     Les conditions générales de vente en ligne sur le site de e-commerce www.avivart.net ou via

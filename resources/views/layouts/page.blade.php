@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="Un site sur mesure" />
+    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
     <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
@@ -17,6 +17,8 @@
     <meta name="google-site-verification" content="ZfxY-rbHjCOQfeNrQTT-4OA03jPPQQAPqz-kqMToyhQ" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
@@ -31,6 +33,10 @@
 
     <title>{{ config('app.name') }} - {{ $title ?? 'Laravel' }}</title>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/cookie-consent-banner-localstroage/css/cookie-banner.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
@@ -39,10 +45,10 @@
 <body>
 
     @if(session()->has('splashscreen'))
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
-                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+                    src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -103,7 +109,7 @@
         <section class="content py-lg-4">
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-12">
                         <p>
                             <img src="{{ asset('public/img/logo_white.jpeg') }}" alt="{{ config('app.name') }}"
                                 class="logo">
@@ -113,19 +119,19 @@
                         <p class="text-light">Téléphone : +228 92 10 78 78</p>
                         <p class="text-light">Email : contact@avivart.net</p>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Société</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
-                            <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
                             <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
+                            <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
@@ -137,7 +143,7 @@
                             <li><a class="text-secondary" href="{{ route('page.donate') }}">Faire un Don</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
                         <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>
@@ -199,17 +205,40 @@
             </div>
         </section>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div class="nk-cookie-banner alert alert-warning text-center mb-0" role="alert">
+      &#x1F36A; This website uses cookies to ensure you get the best experience on our website.
+      <a href="{{ route('page.terms') }}" target="blank">Learn more</a>
+      <button type="button" class="btn btn-primary btn-sm ml-3" onclick="window.nk_hideCookieBanner()">
+        I accept
+      </button>
+    </div>
+    <!-- End of Cookie Banner -->
+
+    <div><button class="material-scrolltop" type="button"></button></div>
+
     @else
     @include('layouts.partials._splashscreen')
     @endif
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
     </script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
+    <script type="text/javascript" src="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/plugins/pin-element-top-sticky/js/jquery.sticky.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/plugins/cookie-consent-banner-localstroage/js/cookie-banner.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/js/page.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

@@ -74,8 +74,8 @@ class CartController extends Controller
 
                 /**/
                 $callbackURL = route('payment.callback_url', ['order_id' => $order->id]);
-                $returnURL = self::RETURN_URL;
-                $cancelURL = self::CANCEL_URL;
+                $returnURL = route('payment.return_url');
+                $cancelURL = route('payment.cancel_url');
 
                 $paygateURL = self::PAYGATE_URL;
                 $token = self::PAYGATE_TOKEN;
