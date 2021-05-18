@@ -13,14 +13,14 @@ jQuery(document).ready(function ($) {
           onScrollEnd: function() {
             console.log('Scrolling End');
           }
-        })
+    })
 
     jQuery('#navbarTop').sticky({
     	outerWidth: true
   	})
 
 	jQuery('.sticky-pin').sticky({
-	    offsetY: 15
+	    offsetY: 90
 	})
 
 })
