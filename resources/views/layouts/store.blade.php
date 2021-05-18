@@ -1,3 +1,7 @@
+@php
+use App\Helpers\Helper;
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -5,6 +9,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta NAME="TITLE" CONTENT="AVIV'ART" />
+    <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
+    <meta NAME="DESCRIPTION" CONTENT="Un site sur mesure" />
+    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="OWNER" CONTENT="VIVA AKUE" />
+    <meta NAME="ROBOTS" CONTENT="index,all">
+    <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
+    <meta NAME="REVISIT-AFTER" CONTENT="15" />
+
+    <meta name="google-site-verification" content="ZfxY-rbHjCOQfeNrQTT-4OA03jPPQQAPqz-kqMToyhQ" />
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
@@ -28,6 +44,8 @@
     <title>{{ config('app.name') }} - Boutique - {{ $title ?? 'Laravel' }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/loadMoreResults/css/loadMoreResults.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/store.css') }}">
@@ -37,7 +55,7 @@
 <body>
 
     @if(session()->has('splashscreen'))
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('page.index') }}"><img
                     src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
@@ -52,36 +70,36 @@
                         <a class="nav-link text-danger font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center active">
-                        <a class="nav-link text-primary font-weight-bold" href="{{ route('store.index') }}">Boutique</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.index') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.index') }}" href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('store.organic_foods') }}">Aliments Bio</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.organic_foods') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.organic_foods') }}" href="{{ route('store.organic_foods') }}">Aliments Bio</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.manufactured_foods') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.manufactured_foods') }}" href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.home_appliance') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.home_appliance') }}" href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('store.high_tech') }}">High-Tech</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.high_tech') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.high_tech') }}" href="{{ route('store.high_tech') }}">High-Tech</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('store.other_products') }}">Autres Produits</a>
-                    </li>
-
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
+                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.other_products') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}" href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center">
                         <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
+                    </li>
+
+                    <li class="nav-item hvr-underline-from-center">
+                        <a class="nav-link" href="{{ route('page.register') }}">Inscription</a>
                     </li>
 
                 </ul>
@@ -144,9 +162,6 @@
                             <i class="fa fa-money"></i> ({{ Cart::subtotal() }} FCFA)
                             @endif
                         </a>
-
-                        <a class="text-decoration-none fs-12"
-                            href="{{ route('contact.index') }}"><u>Contactez-nous</u></a>
                     </div>
                 </div>
             </div>
@@ -158,8 +173,8 @@
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb bg-white m-0 p-0">
-                            <li class="breadcrumb-item"><a href="{{ route('page.index') }}"
-                                    class=" text-danger font-weight-bold">Accueil</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('contact.index') }}"
+                                    class=" text-primary font-weight-bold">Contactez-nous</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('store.index') }}"
                                     class=" text-primary font-weight-bold">Boutique</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('productCategory.index') }}"
@@ -176,7 +191,7 @@
         @yield('body')
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="end">
         <section class="content py-lg-4">
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
@@ -255,7 +270,7 @@
                                         class="fa fa-instagram"></i></a>
                             </li>
                             <li class="">
-                                <a target="_blank" href="https://web.whatsapp.com" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li class="">
@@ -306,6 +321,8 @@
         </div>
     </div>
 
+    <div><a data-toggle="tooltip" title="Haut de page" data-placement="left" href="#" class="bck"></a></div>
+
     @else
     @include('layouts.partials._splashscreen')
     @endif
@@ -324,6 +341,10 @@
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/plugins/fix-element-top-scroll/js/jquery.fixx.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/sticky-cookie-accept-banner/js/cookit.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

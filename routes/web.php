@@ -143,9 +143,9 @@ Route::prefix('/newsletter')->name('newsletter.')->group(function () {
 });
 
 Route::prefix('/payement')->name('payment.')->group(function () {
-	Route::post('/callback_url', [PaymentController::class, 'callbackURL'])->name('callback_url');
-	Route::get('/return_url', [PaymentController::class, 'returnURL'])->name('return_url');
-	Route::get('/cancel_url', [PaymentController::class, 'cancelURL'])->name('cancel_url');
+	Route::post('/callback/url', [PaymentController::class, 'callbackURL'])->name('callback_url');
+	Route::get('/return/url', [PaymentController::class, 'returnURL'])->name('return_url');
+	Route::get('/cancel/url', [PaymentController::class, 'cancelURL'])->name('cancel_url');
 });
 
 

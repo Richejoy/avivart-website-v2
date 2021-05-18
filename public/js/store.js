@@ -1,7 +1,39 @@
 "use strict";
 jQuery(document).ready(function ($) {
 
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+      }
+    })
+
+    //const cookieLinkUrl = "{{ route('page.terms') }}"
+
     $("[data-toggle='tooltip']").tooltip()
+
+    $('#navbarTop').fixx({
+      endElement: 'footer',
+      endAt: 'top'
+    })
+
+    $('.bck').backToTop({
+      iconName : 'fa fa-arrow-up',
+      fxName : 'rightToLeft'  // 'rightToLeft', 'leftToRight', 'bottomToTop', 'topToBottom'
+      //fxTransitionDuration : 300
+      //trigger : 300
+      //scrollDuration : 300
+    })
+
+    $.cookit({
+      messageText: "<b>This site uses cookies. By continuing to browse the site you are agreeing to our use of cookies.</b>",
+      linkText: "Learn more",
+      linkUrl: 'terms',
+      buttonText: "I accept",
+      backgroundColor: '#1c1c1c',
+      messageColor: '#fff',
+      linkColor: '#fad04c',
+      buttonColor: '#fad04c'
+    })
 
     $('.videoIcon').on('click', function(e) {
     	$('.videoPopup').show('slow')

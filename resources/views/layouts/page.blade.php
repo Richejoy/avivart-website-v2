@@ -5,6 +5,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta NAME="TITLE" CONTENT="AVIV'ART" />
+    <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
+    <meta NAME="DESCRIPTION" CONTENT="Un site sur mesure" />
+    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="OWNER" CONTENT="VIVA AKUE" />
+    <meta NAME="ROBOTS" CONTENT="index,all">
+    <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
+    <meta NAME="REVISIT-AFTER" CONTENT="15" />
+
+    <meta name="google-site-verification" content="ZfxY-rbHjCOQfeNrQTT-4OA03jPPQQAPqz-kqMToyhQ" />
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
@@ -27,10 +39,10 @@
 <body>
 
     @if(session()->has('splashscreen'))
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
-                    src="{{ asset('public/img/logo_black.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -159,7 +171,7 @@
                                         class="fa fa-instagram"></i></a>
                             </li>
                             <li class="">
-                                <a target="_blank" href="https://web.whatsapp.com" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li class="">

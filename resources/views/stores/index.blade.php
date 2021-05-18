@@ -9,7 +9,7 @@
 
                 <div class="accordion" id="accordion1">
                     <div class="card">
-                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
                                     type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
@@ -55,7 +55,7 @@
 
                 <div class="mt-3 accordion" id="accordion2">
                     <div class="card">
-                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
                                     type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
@@ -93,7 +93,7 @@
 
             <div class="col-lg-9">
                 <div
-                    class="p-20 mt-xs-3 mb-3 bg-success text-white font-weight-bold shadow-sm rounded">
+                    class="p-2 mt-xs-3 mb-3 bg-success text-white font-weight-bold shadow-sm rounded">
                     <i class="fa fa-bell fa-pulse"></i> Commandez vos aliments en ligne, payez sans frais et faites vous
                     livrer
                 </div>
