@@ -307,7 +307,7 @@ use App\Helpers\Helper;
 
     <!-- Modal -->
     <div class="videoIcon">
-        <video muted autoplay loop data-toggle="tooltip" title="Publicités">
+        <video muted autoplay loop data-toggle="tooltip" title="Publicités" data-placement="right">
             <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
         </video>
     </div>
@@ -326,6 +326,8 @@ use App\Helpers\Helper;
     @else
     @include('layouts.partials._splashscreen')
     @endif
+
+    <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">

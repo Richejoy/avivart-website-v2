@@ -136,9 +136,10 @@
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
-                            <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généreaux</a></li>
+                            <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
+                            <li><a class="text-secondary" href="{{ route('page.faq') }}">FAQ</a></li>
                             <li><a class="text-secondary" href="{{ route('page.sitemap') }}">Plan du Site</a></li>
                             <li><a class="text-secondary" href="{{ route('page.donate') }}">Faire un Don</a></li>
                         </ul>

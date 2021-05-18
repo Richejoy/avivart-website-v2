@@ -1,4 +1,4 @@
-@extends('layouts.contact', ['title' => 'Don'])
+@extends('layouts.contact', ['title' => 'Faire un Don'])
 
 @section('body')
 
@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-lg-6 d-none d-sm-block d-flex align-self-center">
-                <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895__340.png" alt="" class="w-100">
+                <img src="https://cdn.pixabay.com/photo/2020/08/16/03/30/remote-5491798__340.png" alt="" class="w-100">
             </div>
 
             <div class="col-lg-6">

@@ -1,4 +1,4 @@
-@extends('layouts.page', ['title' => 'Accueil'])
+@extends('layouts.page', ['title' => 'Plan du Site'])
 
 @section('body')
 

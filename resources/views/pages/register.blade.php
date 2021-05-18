@@ -1,4 +1,4 @@
-@extends('layouts.auth', ['title' => 'Accueil'])
+@extends('layouts.auth', ['title' => 'Inscription'])
 
 @section('body')
 
@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-md-6 d-none d-sm-block d-flex align-self-center">
-                <img src="https://cdn.pixabay.com/photo/2018/11/29/21/51/social-media-3846597__340.png" alt=""
+                <img src="https://cdn.pixabay.com/photo/2021/05/09/19/21/orchid-6241841__340.png" alt=""
                     class="w-100">
             </div>
 
