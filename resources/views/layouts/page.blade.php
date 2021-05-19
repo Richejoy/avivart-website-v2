@@ -223,6 +223,8 @@
     @include('layouts.partials._splashscreen')
     @endif
 
+    <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">

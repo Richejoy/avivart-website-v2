@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
 
     $('.bck').backToTop({
       iconName : 'fa fa-arrow-up',
-      fxName : 'rightToLeft'  // 'rightToLeft', 'leftToRight', 'bottomToTop', 'topToBottom'
+      fxName : 'bottomToTop'  // 'rightToLeft', 'leftToRight', 'bottomToTop', 'topToBottom'
       //fxTransitionDuration : 300
       //trigger : 300
       //scrollDuration : 300
