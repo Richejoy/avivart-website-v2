@@ -40,6 +40,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+
+    <script data-ad-client="ca-pub-6235533576544520" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
