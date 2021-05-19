@@ -105,7 +105,7 @@ Route::resource('/transaction', TransactionController::class)->middleware(['auth
 
 Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function () {
 	Route::get('/checkout/{order}', [OrderController::class, 'checkout'])->name('checkout');
-	Route::post('/pdf/{order}', [OrderController::class, 'pdf'])->name('pdf');
+	Route::get('/pdf/{order}', [OrderController::class, 'pdf'])->name('pdf');
 });
 
 Route::prefix('/utilisateur')->name('user.')->middleware(['auth'])->group(function() {

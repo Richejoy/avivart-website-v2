@@ -6,11 +6,9 @@
     <div class="col-lg-12">
 
         <p>
-            {{ link_to_route('user.edit', 'Actualiser', ['user' => Auth::user()], ['class' => 'btn btn-warning']) }}
-            {{ link_to_route('user.show', 'Profil', ['user' => Auth::user()], ['class' => 'btn btn-dark']) }}
+            {{ link_to_route('user.edit', 'Actualiser', ['user' => Auth::user()], ['class' => 'btn btn-success']) }}
+            {{ link_to_route('user.show', 'Profil', ['user' => Auth::user()], ['class' => 'btn btn-primary']) }}
         </p>
-
-        <h2 class="lead">Edition de profil</h2>
 
         <div>
             <ul class="nav nav-tabs" role="tablist">
@@ -122,7 +120,7 @@
                         <small class="form-text text-muted">Représente votre nom unique</small>
                     </div>
                     <div class="form-group">
-                        {{ Form::hidden('form', 'pseudo') }}
+                        {{ Form::hidden('form', 'username') }}
                         {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
                     </div>
                     {!! Form::close() !!}
@@ -211,7 +209,7 @@
 
                     {!! Form::open(['files' => true]) !!}
                     <div class="form-group">
-                        {{ Form::label('image', 'Photo ou Image', ['class' => 'btn btn-outline-dark']) }}
+                        {{ Form::label('image', 'Photo ou Image', ['class' => 'btn btn-info']) }}
                         {{ Form::file('image', ['class' => 'form-control-file sr-only', 'data-upload' => true, 'required' => true, 'accept' => 'image/*']) }}
                     </div>
                     <div class="form-group">

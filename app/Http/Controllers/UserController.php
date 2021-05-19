@@ -111,13 +111,11 @@ class UserController extends Controller
                         'image' => 'required|mimes:jpeg,png,jpg,gif|max:10000',
                     ]);
 
-                    
-
                     Flashy::success('Mises à jour éffectuées avec succès');
 
                     break;
-                    
-                default:
+
+                case 'identity':
                     
                     $this->validate($request, [
                         'country_id' => ['required'],
@@ -129,6 +127,10 @@ class UserController extends Controller
                     $user->update($request->all());
 
                     Flashy::success('Mises à jour éffectuées avec succès');
+                    
+                    break;
+                    
+                default:
 
                     break;
             }

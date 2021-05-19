@@ -5,11 +5,9 @@
 <div class="row">
     <div class="col-lg-12">
 
-        <h2 class="lead font-weight-bold"><u>Options de paramétrage</u></h2>
-
         <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
                     <tr>
                         <th>#</th>
                         <th>Opération</th>

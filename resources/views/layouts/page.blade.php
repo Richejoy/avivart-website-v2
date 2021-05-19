@@ -88,9 +88,15 @@
                         <a class="nav-link" href="{{ route('service.index') }}">Services</a>
                     </li>
 
+                    @if(Auth::check())
+                    <li class="nav-item hvr-underline-from-center">
+                        <a class="nav-link" href="{{ route('user.index') }}">Tableau de bord</a>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
                     </li>
+                    @endif
 
                 </ul>
             </div>

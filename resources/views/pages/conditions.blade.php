@@ -7,7 +7,7 @@
         <div class="row">
             <aside class="col-lg-3">
                 <div class="card sticky-pin">
-                    <div class="card-header bg-primary text-white">Somaire</div>
+                    <div class="card-header">Somaire</div>
                     <div class="card-body">
                         <ol>
                             <li><a href="#cud">Les Conditions d'Utilisation des Données du site (CUD)</a></li>

@@ -9,13 +9,12 @@
             <img src="{{ Auth::user()->image->link }}" width="150" height="150" alt="Image" class="circle">
         </p>
 
-        <h2 class="lead text-success font-weight-bold">Profil</h2>
+        <p>
+            {{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-danger']) }}
+        </p>
 
         <div class="table-responsive">
-            <table class="table table-bordered table-striped table-hover mb-0">
-                <caption>
-                    {{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-warning']) }}
-                </caption>
+            <table class="table table-bordered table-striped table-hover">
                 <thead class="thead-dark">
                     <tr>
                         <th>Clé</th>
@@ -55,6 +54,14 @@
                     <tr>
                         <td>Pays de résidence</td>
                         <td>{{ Auth::user()->country }}</td>
+                    </tr>
+                    <tr>
+                        <td>Ville</td>
+                        <td>{{ Auth::user()->city }}</td>
+                    </tr>
+                    <tr>
+                        <td>Adresse</td>
+                        <td>{{ Auth::user()->address }}</td>
                     </tr>
                 </tbody>
             </table>

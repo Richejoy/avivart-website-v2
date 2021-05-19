@@ -94,6 +94,11 @@ use App\Helpers\Helper;
                         <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}" href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
+                    @if(Auth::check())
+                    <li class="nav-item hvr-underline-from-center">
+                        <a class="nav-link" href="{{ route('user.index') }}">Tableau de bord</a>
+                    </li>
+                    @else
                     <li class="nav-item hvr-underline-from-center">
                         <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
                     </li>
@@ -101,6 +106,7 @@ use App\Helpers\Helper;
                     <li class="nav-item hvr-underline-from-center">
                         <a class="nav-link" href="{{ route('page.register') }}">Inscription</a>
                     </li>
+                    @endif
 
                 </ul>
             </div>

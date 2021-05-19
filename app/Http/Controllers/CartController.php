@@ -52,10 +52,22 @@ class CartController extends Controller
 
                 DB::beginTransaction();
 
+                /**/
+                $callbackURL = route('payment.callback_url', ['order_id' => $order->id]);
+                $returnURL = route('payment.return_url');
+                $cancelURL = route('payment.cancel_url');
+
+                $paygateURL = self::PAYGATE_URL;
+                $token = self::PAYGATE_TOKEN;
+                $identifier = mb_substr(uniqid(date('YmdHis') . $user->id ), 0, 25);
+                $amount = session()->has('discountCoupon') ? Cart::subtotal() * session('discountCoupon')->rate : Cart::total();
+                /**/
+
                 $order = Order::create(
                     array_merge(
                         $request->except('_token'),
                         [
+                            'amount' => $amount,
                             'user_id' => $user->id,
                             'coupon_id' => session()->has('discountCoupon') ? session('discountCoupon')->id : null,
                         ]
@@ -72,25 +84,12 @@ class CartController extends Controller
 
                 DB::commit();
 
-                /**/
-                $callbackURL = route('payment.callback_url', ['order_id' => $order->id]);
-                $returnURL = route('payment.return_url');
-                $cancelURL = route('payment.cancel_url');
-
-                $paygateURL = self::PAYGATE_URL;
-                $token = self::PAYGATE_TOKEN;
-                $identifier = mb_substr(uniqid(date('YmdHis') . $user->id . $order->id), 0, 25);
-                $amount = session()->has('discountCoupon') ? Cart::subtotal() * session('discountCoupon')->rate : Cart::total();
-                $description = "Commande de produits";
-                /** */
-
-                //session()->put('pendingOrder', $request->all());
                 session()->put('order_id', $order->id);
 
                 $queryString = [
                     "amount={$amount}",
                     "token={$token}",
-                    "description={$description}",
+                    "description=Commande de produits",
                     "identifier={$identifier}",
                     "url={$returnURL}",
                 ];

@@ -221,7 +221,7 @@
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
-                <b>Version</b> 2.0
+                <a href="{{ route('contact.index') }}" target="_blank">Contactez-nous</a>
             </div>
             <strong>Copyright &copy; {{ date('Y') }} <a href="#">AVIV'ART</a>.</strong> Tous Droits Réservés.
         </footer>

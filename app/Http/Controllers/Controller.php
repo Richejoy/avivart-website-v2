@@ -58,6 +58,19 @@ class Controller extends BaseController
 	{
 		$url = $this->getAppropriateUrl($request);
 
+		if (config('app.env') == 'local') {
+			return "http://localhost/avivart/images/{$folder}/{$url}";
+		}
+
 		return "http://avivart.net/images/{$folder}/{$url}";
+	}
+
+	public function getMonpaysUri()
+	{
+		if (config('app.env') == 'local') {
+			return '';
+		}
+
+		return '';
 	}
 }

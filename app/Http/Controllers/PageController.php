@@ -78,20 +78,18 @@ class PageController extends Controller
                 return back()->withDanger('Désolé, code de vérification incorrecte');
             }
 
-            /*$callbackURL = self::CALLBACK_URL;
-            $returnURL = self::RETURN_URL;
-            $cancelURL = self::CANCEL_URL;
+            /*$callbackURL = route('payment.callback_url', ['order_id' => $order->id]);
+            $returnURL = route('payment.return_url');
+            $cancelURL = route('payment.cancel_url');
 
-            $payhomsURL = self::PAYHOMES_URL;
-            $token = self::PAYHOMES_TOKEN;
+            $paygateURL = self::PAYGATE_URL;
+            $token = self::PAYGATE_TOKEN;
             $identifier = mb_substr(uniqid(date('YmdHis')), 0, 25);
-            $amount = $request->amount;
-            $description = "Don";
 
             $queryString = [
-                "amount={$amount}",
+                "amount={$request->amount}",
                 "token={$token}",
-                "description={$description}",
+                "description=Don",
                 "identifier={$identifier}",
                 "callback_url={$callbackURL}",
                 "return_url={$returnURL}",
@@ -99,6 +97,8 @@ class PageController extends Controller
             ];
 
             return redirect($payhomsURL . implode('&', $queryString));*/
+
+            return back()->withWarning('Désolé, service non prise en compte.');
         }
 
         return view('pages.donate');

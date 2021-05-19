@@ -91,4 +91,14 @@ class Product extends Model implements Buyable
     {
         return ceil(($this->new_price / $this->old_price) * 100) - 100;
     }
+
+    public function getNewPrice()
+    {
+        return $this->new_price . ' ' . $this->currency->name;
+    }
+
+    public function getOldPrice()
+    {
+        return $this->old_price . ' ' . $this->currency->name;
+    }
 }

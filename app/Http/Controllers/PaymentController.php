@@ -26,7 +26,7 @@ class PaymentController extends Controller
 
             file_put_contents(public_path('payments.json'), $data);
 
-            if (session('order_id') || $request->query('order_id')) {
+            if (session()->has('order_id') || $request->has('order_id')) {
 
                 try {
 
