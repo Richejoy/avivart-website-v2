@@ -43,7 +43,7 @@
 				</p>
 			</div>
 			<div class="col-lg-9">
-				<h2 class="font-weight-bold">Mot de la présidente</h2>
+				<h2 class="font-weight-bold">Mot de la Directrice Générale <strong>Viva AKUE-ATSAH</strong></h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
