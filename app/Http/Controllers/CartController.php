@@ -53,7 +53,7 @@ class CartController extends Controller
                 DB::beginTransaction();
 
                 /**/
-                $callbackURL = route('payment.callback_url', ['order_id' => $order->id]);
+                $callbackURL = route('payment.callback_url');
                 $returnURL = route('payment.return_url');
                 $cancelURL = route('payment.cancel_url');
 
@@ -61,6 +61,7 @@ class CartController extends Controller
                 $token = self::PAYGATE_TOKEN;
                 $identifier = mb_substr(uniqid(date('YmdHis') . $user->id ), 0, 25);
                 $amount = session()->has('discountCoupon') ? Cart::subtotal() * session('discountCoupon')->rate : Cart::total();
+                $amount = str_replace(',', '', $amount);    //very important
                 /**/
 
                 $order = Order::create(
