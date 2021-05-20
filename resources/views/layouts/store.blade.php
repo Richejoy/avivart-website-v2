@@ -117,7 +117,7 @@ use App\Helpers\Helper;
         <section class="container-fluid">
             <div class="row pt-3">
                 <div class="col-lg-3">
-                    <p class="m-lg-0 fs-12">Horaires : 7j/7j de 6h30mn à 21h00 Tél : (+228) 92 10 78 78</p>
+                    <p class="m-lg-0 fs-12">Horaires : 7j/7j de 6h30min à 21h00 Tél : (+228) 92 10 78 78</p>
                     <p class="m-lg-0 fs-12 text-danger">Nous vendons au prix du marché sans surenchère.</p>
                 </div>
                 <div class="col-lg-6">
@@ -163,7 +163,7 @@ use App\Helpers\Helper;
                         <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}" data-toggle="tooltip" title="Détails commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
-                            ({{ Cart::total() - (Cart::subtotal() * session('discountCoupon')->rate) }} FCFA)
+                            ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }} FCFA)
                             @else
                             <i class="fa fa-money"></i> ({{ Cart::subtotal() }} FCFA)
                             @endif

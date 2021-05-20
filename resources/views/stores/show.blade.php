@@ -16,24 +16,20 @@
 
                 <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                     <li class="">
-                        <a href="" class="text-white text-decoration-none social-icon facebook hvr-pop"><i
+                        <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u={{ Request::url() }}" class="text-white text-decoration-none social-icon facebook hvr-pop"><i
                                 class="fa fa-facebook"></i></a>
                     </li>
-                    <li class="pl-3 pr-3">
-                        <a href="" class="text-white text-decoration-none social-icon twitter hvr-pulse"><i
+                    <li class="">
+                        <a target="_blank" href="https://twitter.com/intent/tweet?url={{ Request::url() }}" class="text-white text-decoration-none social-icon twitter hvr-pulse"><i
                                 class="fa fa-twitter"></i></a>
                     </li>
                     <li class="">
-                        <a href="" class="text-white text-decoration-none social-icon instagram hvr-push"><i
-                                class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="https://telegram.me/share/url?url={{ Request::url() }}&text=Bonjour" class="text-white text-decoration-none social-icon twitter hvr-pulse"><i
+                                class="fa fa-telegram"></i></a>
                     </li>
                     <li class="">
-                        <a href="" class="text-white text-decoration-none social-icon whatsapp hvr-bob"><i
-                                class="fa fa-whatsapp"></i></a>
-                    </li>
-                    <li class="">
-                        <a href="" class="text-white text-decoration-none social-icon youtube hvr-hang"><i
-                                class="fa fa-youtube"></i></a>
+                        <a target="_blank" href="https://plus.google.com/share?url={{ Request::url() }}" class="text-white text-decoration-none social-icon youtube hvr-hang"><i
+                                class="fa fa-google-plus"></i></a>
                     </li>
                     <li class="">
                         <a data-toggle="tooltip" title="Ajouter au favorite"

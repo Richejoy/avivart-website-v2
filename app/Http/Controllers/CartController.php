@@ -60,7 +60,7 @@ class CartController extends Controller
                 $paygateURL = self::PAYGATE_URL;
                 $token = self::PAYGATE_TOKEN;
                 $identifier = mb_substr(uniqid(date('YmdHis') . $user->id ), 0, 25);
-                $amount = session()->has('discountCoupon') ? Cart::subtotal() * session('discountCoupon')->rate : Cart::total();
+                $amount = session()->has('discountCoupon') ? str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate : Cart::total();
                 $amount = str_replace(',', '', $amount);    //very important
                 /**/
 

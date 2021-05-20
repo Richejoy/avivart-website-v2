@@ -67,11 +67,16 @@
 
                 @if(session()->has('discountCoupon'))
 
-                <h4>Un coupon est en cours...</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <h6>Un coupon de ({{ session('discountCoupon')->rate }}) à été appliqué</h6>
 
-                <p>
-                    <a href="{{ route('cart.destroy_coupon') }}" class="btn btn-warning">Supprimer le coupon</a>
-                </p>
+                        <h5 class="font-weight-bold"><mark>Montant à payé = {{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }} FCFA</mark></h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('cart.remove_coupon') }}" class="">Supprimer le coupon</a>
+                    </div>
+                </div>
 
                 @else
 

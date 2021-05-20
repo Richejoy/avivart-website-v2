@@ -126,7 +126,7 @@ Route::prefix('/panier')->name('cart.')->group(function() {
 	Route::get('/{row}/supprimer', [CartController::class, 'remove'])->name('remove');
 	Route::get('/{row}/modifier', [CartController::class, 'update'])->name('update');
 	Route::get('/vider', [CartController::class, 'truncate'])->name('truncate');
-	Route::get('/appliquer/coupon', [CartController::class, 'applyCoupon'])->name('apply_coupon');
+	Route::post('/appliquer/coupon', [CartController::class, 'applyCoupon'])->name('apply_coupon');
 	Route::get('/supprimer/coupon', [CartController::class, 'removeCoupon'])->name('remove_coupon');
 	Route::match(['GET', 'POST'], '/payement', [CartController::class, 'checkout'])->name('checkout');
 });

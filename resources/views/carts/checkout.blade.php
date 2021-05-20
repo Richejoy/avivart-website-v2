@@ -1,4 +1,4 @@
-@extends('layouts.cart', ['title' => 'Paiement des commandes'])
+@extends('layouts.cart', ['title' => 'Payement des commandes'])
 
 @section('body')
 
@@ -50,16 +50,19 @@
                         <div class="form-group">
                             {{ Form::label('delivery_address', 'Adresse de livraison', ['class' => '']) }}
                             {{ Form::text('delivery_address', null, ['class' => 'form-control', 'placeholder' => 'Adresse de livraison', 'required' => true]) }}
+                            <div class="help-text">Veuillez saisir une adresse valide et complète.</div>
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('delivery_date', 'Date de livraison', ['class' => '']) }}
                             {{ Form::date('delivery_date', now(), ['class' => 'form-control', 'required' => true]) }}
+                            <div class="help-text">Doit être supérieure ou égale à aujourd'hui.</div>
                         </div>
 
                         <div class="form-group">
                             {{ Form::label('payment_mode_id', 'Mode de payement', ['class' => '']) }}
-                            {{ Form::select('payment_mode_id', $paymentModes, null, ['class' => 'form-control', 'placeholder' => 'Mode de payement', 'required' => true]) }}
+                            {{ Form::select('payment_mode_id', $paymentModes, null, ['class' => 'form-control', 'required' => true]) }}
+                            <div class="help-text">Service de payement en ligne utilisant nos réseaux Tmoney et Flooz.</div>
                         </div>
 
                         <div class="form-group">

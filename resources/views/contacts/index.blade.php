@@ -71,6 +71,9 @@
 
             <div class="col-lg-6">
                 <h2 class="font-weight-bold">Nous retrouver</h2>
+                <p>
+                    Adresse du siège AVIV'ART: Lomé, quartier Kégué non loin du Stade de Kégué Sur la rue Atlantique Produce qui longe la station d'essence CAP, prendre quatième ruelle a gauche de la mosquée, ensuite première ruelle a droite. Immeuble a gauche a l'angle.
+                </p>
 
                 <iframe style="width: 100%" height="500" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.458861114333!2d1.2394702143233212!3d6.203039995509483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e2fabd6a12b7%3A0x9e21d7218827f0b0!2zQ0FQIEvDqWd1w6k!5e0!3m2!1sfr!2stg!4v1542822795635" frameborder="0" style="border:0" allowfullscreen></iframe>
 
