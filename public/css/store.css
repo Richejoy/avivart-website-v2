@@ -136,6 +136,10 @@ img.img-300x300 {
 	height: 300px;
 }
 
+.product-item .card-footer i {
+	font-size: 20px;
+}
+
 .product-item .card-footer {
 	display: none;
 }

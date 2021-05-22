@@ -66,9 +66,11 @@
                             <span class="badge {{ $product->onDiscount() }}">{{ $product->getPercentage() }}%</span>
                         </div>
                         <div class="card h-100">
-                            <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
+                            <a href="{{ route('store.show', ['product' => $product]) }}">
+                                <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
                                 src="https://via.placeholder.com/200x150.png?text=Chargement..."
                                 class="card-img-top prd-img lazyrate" alt="Image">
+                            </a>
                             <span class="bg-primary text-white text-center">{{ $product->name }}</span>
                             <div class="card-body p-2 text-center">
                                 <h6 class="card-title m-0">{{ $product->description }}</h6>
@@ -90,7 +92,7 @@
                                     @endif
                                 </h6>
                             </div>
-                            <div class="card-footer text-center">
+                            <div class="card-footer text-center px-0">
                                 <a data-toggle="tooltip" title="Ajouter au panier"
                                     href="{{ route('cart.add', ['product' => $product]) }}" class="text-primary"><i
                                         class="fa fa-shopping-cart"></i></a>

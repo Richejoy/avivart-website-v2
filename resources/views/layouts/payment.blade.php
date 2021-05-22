@@ -16,7 +16,7 @@
 
     <title>{{ config('app.name') }} - Payement - {{ $title ?? 'Laravel' }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/auth.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/payment.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
 
@@ -40,19 +40,9 @@
         </div>
     </nav>
 
-    <header>
-
-    </header>
-
     <main>
         @yield('body')
     </main>
-
-    <footer>
-        <div class="text-center py-3">
-            <a class="mr-2" href="{{ route('page.index') }}">Accueil</a>
-        </div>
-    </footer>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -62,7 +52,7 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 
-    <script type="text/javascript" src="{{ asset('public/js/auth.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/payment.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
 </body>
 

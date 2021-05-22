@@ -177,7 +177,7 @@
                                 <a target="_blank" href="https://facebook.com" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
-                            <li class="pl-3 pr-3">
+                            <li class="">
                                 <a target="_blank" href="https://twitter.com" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
