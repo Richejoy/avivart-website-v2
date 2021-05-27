@@ -66,8 +66,8 @@ use App\Helpers\Helper;
 
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link text-danger font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
+                    <li class="nav-item active hvr-underline-from-center">
+                        <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.index') }}">
@@ -96,7 +96,7 @@ use App\Helpers\Helper;
 
                     @if(Auth::check())
                     <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('user.index') }}">Tableau de bord</a>
+                        <a class="nav-link" href="{{ route('user.index') }}">Espace client</a>
                     </li>
                     @else
                     <li class="nav-item hvr-underline-from-center">
@@ -240,6 +240,9 @@ use App\Helpers\Helper;
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
+                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
+                            </li>
+                            <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-sm-12">
@@ -298,13 +301,13 @@ use App\Helpers\Helper;
                         est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        <img alt="TMONEY" src="{{ asset('public/img/tmoney.png') }}" class="pr-3 img-25x25">
+                        <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="pr-3 img-25x25">
 
-                        <img alt="FLOOZ" src="{{ asset('public/img/flooz.jpeg') }}" class="pl-2 pr-2 img-25x25">
+                        <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}" class="pl-2 pr-2 img-25x25">
 
-                        <img alt="VISA" src="{{ asset('public/img/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
+                        <img alt="VISA" src="{{ asset('public/img/payments/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
 
-                        <img alt="PAYPAL" src="{{ asset('public/img/paypal.png') }}" class="pl-3 img-25x25">
+                        <img alt="PAYPAL" src="{{ asset('public/img/payments/paypal.png') }}" class="pl-3 img-25x25">
                     </div>
                 </div>
             </div>

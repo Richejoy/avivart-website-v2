@@ -74,7 +74,7 @@
                         <h5 class="font-weight-bold"><mark>Montant à payé = {{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }} FCFA</mark></h5>
                     </div>
                     <div class="card-footer">
-                        <a href="{{ route('cart.remove_coupon') }}" class="">Supprimer le coupon</a>
+                        <a href="{{ route('cart.remove_coupon') }}" class="btn btn-warning">Supprimer le coupon</a>
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{ route('cart.checkout') }}">Passer à la caisse</a>
+                        <a href="{{ route('cart.checkout') }}" class="btn btn-success">Payer</a>
                     </div>
                 </div>
             </aside>

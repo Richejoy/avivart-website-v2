@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" />
+
     <title>{{ config('app.name') }} - {{ $title ?? 'Laravel' }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.css') }}">
@@ -40,8 +44,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
-
-    <script data-ad-client="ca-pub-6235533576544520" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -92,7 +94,7 @@
 
                     @if(Auth::check())
                     <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('user.index') }}">Tableau de bord</a>
+                        <a class="nav-link" href="{{ route('user.index') }}">Espace client</a>
                     </li>
                     @else
                     <li class="nav-item">
@@ -142,12 +144,14 @@
                     <div class="col-lg-2 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
+                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
+                            </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
-                            <li><a class="text-secondary" href="{{ route('page.faq') }}">FAQ</a></li>
+                            <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                             <li><a class="text-secondary" href="{{ route('page.sitemap') }}">Plan du Site</a></li>
                             <li><a class="text-secondary" href="{{ route('page.donate') }}">Faire un Don</a></li>
                         </ul>
@@ -234,16 +238,16 @@
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
     </script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.js') }}"></script>
 
@@ -253,6 +257,13 @@
 
     <script type="text/javascript" src="{{ asset('public/js/page.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6235533576544520" data-ad-slot="7920091469" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    
+    <script type="text/javascript">
+        new WOW().init(); (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </body>
 
 </html>

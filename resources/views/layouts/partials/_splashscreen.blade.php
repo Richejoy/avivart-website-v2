@@ -1,6 +1,7 @@
 <div class="splashscreen">
 	<video muted autoplay loop>
-		<source src="{{ asset('public/videos/splashscreen.mp4') }}" type="video/mp4">
+		<source src="{{ asset('public/videos/splashscreen0.webm') }}" type="video/webm">
+		<source src="{{ asset('public/videos/splashscreen0.mp4') }}" type="video/mp4">
 		Votre navigateur n'est pas à jour pour lire la vidéo.
 	</video>
 

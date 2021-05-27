@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
     <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
 	
-	<title>{{ config('app.name') }} - Boutique - {{ $title ?? 'Laravel' }}</title>
+	<title>{{ config('app.name') }} - {{ $title ?? 'Laravel' }}</title>
 
 	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/coming_soon.css') }}">
 </head>

@@ -141,7 +141,7 @@
 
                     <li class="active">
                         <a href="{{ route('user.index') }}">
-                            <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
+                            <i class="fa fa-dashboard"></i> <span>Espace client</span>
                         </a>
                     </li>
 
@@ -199,7 +199,7 @@
                 <h1> {{ $title ?? 'Laravel' }}</h1>
                 <ol class="breadcrumb">
                     <li><a href="{{ route('page.index') }}"><i class="fa fa-home"></i> Accueil</a></li>
-                    <li><a href="{{ route('user.index') }}"><i class="fa fa-dashboard"></i> Tableau de bord</a></li>
+                    <li><a href="{{ route('user.index') }}"><i class="fa fa-dashboard"></i> Espace client</a></li>
                     <li class="active">{{ $title ?? 'Laravel' }}</li>
                 </ol>
             </section>
