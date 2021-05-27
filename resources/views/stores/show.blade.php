@@ -41,12 +41,9 @@
 
             <div class="col-lg-6">
                 <h2 class="font-weight-bold">{{ $product->name }}</h2>
-                <p>Description :</p>
-                <p>
-                    {{ $product->description }}
-                </p>
+                <p>Description : {{ $product->description }}</p>
 
-                <p>Caractéristiques :</p>
+                <h5 class="font-weight-bold">Caractéristiques :</h5>
                 <p class="text-muted">
                     {!! nl2br($product->characteristics) !!}
                 </p>
