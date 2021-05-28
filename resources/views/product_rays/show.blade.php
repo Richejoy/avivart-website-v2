@@ -18,7 +18,7 @@
             <aside class="col-lg-3">
                 <div class="accordion" id="accordion1">
                     <div class="card">
-                        <div class="card-header bg-white font-weight-bold" id="headingOne">
+                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
                                     type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
