@@ -65,11 +65,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('store.index') }}">Boutique</a>
+                        <a class="nav-link" href="{{ route('informatics.index') }}">Informatique</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('informatics.index') }}">Informatique</a>
+                        <a class="nav-link" href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
                     <li class="nav-item">
@@ -133,8 +133,8 @@
                         <h4 class="text-white font-weight-bold text-uppercase">Société</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
-                            <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
                             <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
+                            <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -177,24 +177,24 @@
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
-                            <li class="">
-                                <a target="_blank" href="https://facebook.com" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                            <li>
+                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://twitter.com" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                            <li>
+                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://instagram.com" class="text-white text-decoration-none social-icon instagram hvr-pulse"><i
-                                        class="fa fa-instagram"></i></a>
+                            <li>
+                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                        class="fa fa-telegram"></i></a>
                             </li>
-                            <li class="">
+                            <li>
                                 <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://youtube.com" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                            <li>
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -209,7 +209,7 @@
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
                         Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
-                        est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-success" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
                         

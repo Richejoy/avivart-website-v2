@@ -25,3 +25,145 @@ img.logo {
 	width: 200px;
 	height: 100px;
 }
+
+img.logo-xs {
+	width: 130px;
+	height: 50px;
+}
+
+img.img-25x25 {
+	height: 25px;
+}
+
+img.img-50x50 {
+	height: 50px;
+}
+
+img.img-100x100 {
+	height: 100px;
+}
+
+img.img-150x150 {
+	height: 150px;
+}
+
+img.img-200x200 {
+	height: 200px;
+}
+
+img.img-250x250 {
+	height: 250px;
+}
+
+img.img-300x300 {
+	height: 300px;
+}
+
+.fs-12 {
+	font-size: 12px;
+}
+
+.fs-14 {
+	font-size: 14px;
+}
+
+.fs-16 {
+	font-size: 16px;
+}
+
+.fs-18 {
+	font-size: 18px;
+}
+
+.fs-20 {
+	font-size: 20px;
+}
+
+.fs-22 {
+	font-size: 22px;
+}
+
+.fs-24 {
+	font-size: 24px;
+}
+
+.fs-26 {
+	font-size: 26px;
+}
+
+.fs-28 {
+	font-size: 28px;
+}
+
+.p-20 {
+	padding: 20px;
+}
+
+.social-icon {
+	border-radius: 50%;
+}
+
+.social-icon.facebook {
+	padding: 8px 12px !important;
+	background-color: #0d47a1;
+}
+
+.social-icon.twitter {
+	padding: 8px 10px !important;
+	background-color: #01579b;
+}
+
+.social-icon.instagram {
+	padding: 8px 11px !important;
+	background-color: #880e4f;
+}
+
+.social-icon.telegram {
+	padding: 8px 11px !important;
+	background-color: #159cea;
+}
+
+.social-icon.whatsapp {
+	padding: 8px 10px !important;
+	background-color: #1b5e20;
+}
+
+.social-icon.youtube {
+	padding: 8px 10px !important;
+	background-color: #b71c1c;
+}
+
+@media (max-width: 767px)
+{
+	img.img-50x50 {
+		height: 100px;
+	}
+
+	img.img-100x100 {
+		height: 200px;
+	}
+
+	img.img-150x150 {
+		height: 300px;
+	}
+
+	img.img-200x200 {
+		height: 400px;
+	}
+
+	img.img-250x250 {
+		height: 500px;
+	}
+
+	img.img-300x300 {
+		height: 600px;
+	}
+
+	.fs-12 {
+		font-size: 14px;
+	}
+
+	.p-20 {
+		padding: 15px;
+	}
+}

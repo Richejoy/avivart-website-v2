@@ -104,26 +104,6 @@
 		<div class="row">
 			<div class="col-lg-4 mb-3">
 				<div class="card h-100">
-				  <img src="https://images.unsplash.com/photo-1546213290-e1b492ab3eee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ym91dGlxdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
-				  <div class="card-body">
-				    <h5 class="card-title font-weight-bold text-uppercase">Boutique</h5>
-				    <p class="card-text">
-				    	Nous vendons au prix du marché sans surenchère.
-				    </p>
-				    <ul>
-				    	<li>Aliments Bio</li>
-				    	<li>Aliments manufacturés made in Togo</li>
-				    	<li>Aliments Importés</li>
-				    	<li>Electroménagers</li>
-				    	<li>High Tech</li>
-				    	<li>Divers</li>
-				    </ul>
-				  </div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 mb-3">
-				<div class="card h-100">
 				  <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5mb3JtYXRpb24lMjB0ZWNobm9sb2d5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold text-uppercase">Informatique</h5>
@@ -137,6 +117,26 @@
 				    	<li>Création d’applications web et mobile</li>
 				    	<li>Marketing Digital</li>
 				    	<li>Servies après Ventes</li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-3">
+				<div class="card h-100">
+				  <img src="https://images.unsplash.com/photo-1546213290-e1b492ab3eee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Ym91dGlxdWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
+				  <div class="card-body">
+				    <h5 class="card-title font-weight-bold text-uppercase">Boutique</h5>
+				    <p class="card-text">
+				    	Nous vendons au prix du marché sans surenchère.
+				    </p>
+				    <ul>
+				    	<li>Aliments Bio</li>
+				    	<li>Aliments manufacturés made in Togo</li>
+				    	<li>Aliments Importés</li>
+				    	<li>Electroménagers</li>
+				    	<li>High Tech</li>
+				    	<li>Divers</li>
 				    </ul>
 				  </div>
 				</div>
@@ -403,7 +403,7 @@
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/ozon.jpeg') }}" alt="OZON" class="img-150x150 w-100">
+					<img src="{{ asset('public/img/partners/osons.jpg') }}" alt="OSONS" class="img-150x150 w-100">
 				</p>
 			</div>
 		</div>

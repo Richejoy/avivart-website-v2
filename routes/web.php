@@ -93,6 +93,12 @@ Route::prefix('/agrobusiness')->name('agribusiness.')->group(function() {
 
 Route::prefix('/informatique')->name('informatics.')->group(function() {
 	Route::get('/', [ComputerScienceController::class, 'index'])->name('index');
+	Route::get('/solutions', [ComputerScienceController::class, 'solutions'])->name('solutions');
+	Route::get('/networks', [ComputerScienceController::class, 'networks'])->name('networks');
+	Route::get('/databases', [ComputerScienceController::class, 'databases'])->name('databases');
+	Route::get('/services', [ComputerScienceController::class, 'services'])->name('services');
+	Route::get('/partners', [ComputerScienceController::class, 'partners'])->name('partners');
+	Route::get('/formations', [ComputerScienceController::class, 'formations'])->name('formations');
 });
 
 Route::prefix('/cosmetique')->name('cosmetic.')->group(function() {

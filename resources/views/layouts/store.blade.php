@@ -57,7 +57,7 @@ use App\Helpers\Helper;
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
-            <a class="navbar-brand p-0 hvr-push" href="{{ route('page.index') }}"><img
+            <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
                     src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -247,7 +247,7 @@ use App\Helpers\Helper;
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-warning">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -258,7 +258,7 @@ use App\Helpers\Helper;
                             <input type="email" name="email" id="email" class="form-control"
                                 placeholder="Entrez votre email">
                             <div class="input-group-append">
-                                <button type="submit" class="btn btn-success">Souscrire</button>
+                                <button type="submit" class="btn btn-warning">Souscrire</button>
                             </div>
                         </div>
                         {!! Form::close() !!}
@@ -266,24 +266,24 @@ use App\Helpers\Helper;
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
-                            <li class="">
-                                <a target="_blank" href="https://facebook.com" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                            <li>
+                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://twitter.com" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                            <li>
+                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://instagram.com" class="text-white text-decoration-none social-icon instagram hvr-pulse"><i
-                                        class="fa fa-instagram"></i></a>
+                            <li>
+                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                        class="fa fa-telegram"></i></a>
                             </li>
-                            <li class="">
+                            <li>
                                 <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
-                            <li class="">
-                                <a target="_blank" href="https://youtube.com" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                            <li>
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -298,7 +298,7 @@ use App\Helpers\Helper;
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
                         Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
-                        est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
                         <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="pr-3 img-25x25">
@@ -317,7 +317,7 @@ use App\Helpers\Helper;
     <!-- Modal -->
     <div class="videoIcon">
         <video muted autoplay loop data-toggle="tooltip" title="Publicités" data-placement="right">
-            <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
+            <source src="{{ asset('public/videos/v0.mp4') }}" type="video/mp4">
         </video>
     </div>
     <div class="videoPopup">
@@ -325,7 +325,7 @@ use App\Helpers\Helper;
             <div class="card-header bg-secondary text-white">Publicités<span data-toggle="tooltip"
                     title="Fermer" class="closeVideoPopup pull-right"><i class="fa fa-close"></i></span></div>
             <video controls class="w-100 p-0">
-                <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
+                <source src="{{ asset('public/videos/v0.mp4') }}" type="video/mp4">
             </video>
         </div>
     </div>

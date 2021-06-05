@@ -20,7 +20,7 @@
 	    <p><a href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a></p>
 	  </div>
 	  <div class="middle">
-	    <h1>COMING SOON</h1>
+	    <h1>Nous Arrivons Bientôt</h1>
 	    <hr>
 	    <p id="demo">35 days</p>
 	    <p>
@@ -28,8 +28,6 @@
 	    </p>
 	  </div>
 	  <div class="bottomleft">
-	    
-	    @yield('body')
 
 	  </div>
 	</div>

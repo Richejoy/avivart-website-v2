@@ -1,7 +1,24 @@
+:root {
+	
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
 	font-family: 'Roboto Slab', serif;
+}
+
+.main-footer {
+	background-color: #000000;
+}
+
+.main-footer .copyright {
+}
+
+header .social-icon {
+}
+
+footer .social-icon {
 }
 
 #navbarTop.fixed {
@@ -19,11 +36,6 @@ body {
 
 .accordion .fa {
 	margin-right: .5rem;
-}
-
-.logo-xs {
-	width: 130px;
-	height: 50px;
 }
 
 .videoIcon {
@@ -54,86 +66,12 @@ body {
 }
 
 .videoPopup video {
-	height: 400px;
+	height: 320px;
 	object-fit: fill;
 }
 
 .prd-img {
 	height: 170px;
-}
-
-.main-footer {
-	background-color: #000000;
-}
-
-.main-footer .copyright {
-}
-
-.social-icon {
-	border-radius: 50%;
-}
-
-.social-icon.facebook {
-	padding: 8px 12px !important;
-	background-color: #0d47a1;
-}
-
-.social-icon.twitter {
-	padding: 8px 10px !important;
-	background-color: #01579b;
-}
-
-.social-icon.instagram {
-	padding: 8px 11px !important;
-	background-color: #880e4f;
-}
-
-.social-icon.whatsapp {
-	padding: 8px 10px !important;
-	background-color: #1b5e20;
-}
-
-.social-icon.youtube {
-	padding: 8px 10px !important;
-	background-color: #b71c1c;
-}
-
-header .social-icon {
-}
-
-footer .social-icon {
-}
-
-.carousel img {
-	height: 500px;
-}
-
-img.img-25x25 {
-	height: 25px;
-}
-
-img.img-50x50 {
-	height: 50px;
-}
-
-img.img-100x100 {
-	height: 100px;
-}
-
-img.img-150x150 {
-	height: 150px;
-}
-
-img.img-200x200 {
-	height: 200px;
-}
-
-img.img-250x250 {
-	height: 250px;
-}
-
-img.img-300x300 {
-	height: 300px;
 }
 
 .product-item .card-footer i {
@@ -148,57 +86,13 @@ img.img-300x300 {
 	display: block;
 }
 
-.fs-12 {
-	font-size: 12px;
-}
-
-.p-20 {
-	padding: 20px;
-}
-
 @media (max-width: 767px)
 {
-	.carousel img {
-		height: 250px;
-	}
-
 	.prd-img {
 		height: 300px;
 	}
 
 	.videoPopup video {
 		height: 320px;
-	}
-
-	img.img-50x50 {
-		height: 100px;
-	}
-
-	img.img-100x100 {
-		height: 200px;
-	}
-
-	img.img-150x150 {
-		height: 300px;
-	}
-
-	img.img-200x200 {
-		height: 400px;
-	}
-
-	img.img-250x250 {
-		height: 500px;
-	}
-
-	img.img-300x300 {
-		height: 600px;
-	}
-
-	.fs-12 {
-		font-size: 14px;
-	}
-
-	.p-20 {
-		padding: 15px;
 	}
 }
