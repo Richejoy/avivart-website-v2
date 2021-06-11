@@ -97,7 +97,7 @@
 			<div class="col-lg-12 text-center py-3">
 				<h2 class="text-white font-weight-bold text-uppercase">Domaines d’activité</h2>
 				<p class="text-light">
-					La société exerce aussi dans les domaines suivants en tant qu’intermédiaire : transport et infographie. Nous vous proposons des conseils de placement d’argent vous permettant de faire travailler votre argent à votre place.
+					La société AVIV'ART a de l'expertise dans les domaines suivants. Découvrez ces domaines dans lesquels nous exerçons.
 				</p>
 			</div>
 		</div>
@@ -111,10 +111,10 @@
 				    	Nous offrons des Solutions Informatiques :
 				    </p>
 				    <ul>
-				    	<li>Digitalisation des activités des entreprise</li>
+				    	<li>Digitalisation des activités des entreprises</li>
 				    	<li>Intégration de solutions logiciels</li>
-				    	<li>Développement d’applications métier</li>
-				    	<li>Création d’applications web et mobile</li>
+				    	<li>Développement d’application métier</li>
+				    	<li>Création d’application web et mobile</li>
 				    	<li>Marketing Digital</li>
 				    	<li>Servies après Ventes</li>
 				    </ul>
@@ -176,7 +176,7 @@
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold text-uppercase">Immobiliers</h5>
 				    <p class="card-text">
-				    	Nous mettons en relation des vendeurs, des bailleurs et des chercheurs de locaux...
+				    	Nous louons et vendons les :
 					</p>
 					<ul>
 						<li>Appartements meublés</li>

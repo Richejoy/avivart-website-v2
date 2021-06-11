@@ -52,15 +52,15 @@ jQuery(document).ready(function ($) {
     $('#product-container').loadMoreResults({
 		tag: {
 			name: 'article',
-			'class': 'product-item'
-		},
-		button: {
-			'class': 'btn-load-more',
-			'text': 'Afficher Plus...',
-		},
-		displayedItems: 20,
-		showItems: 4
-	})
+  			'class': 'product-item'
+  		},
+  		button: {
+  			'class': 'btn-load-more',
+  			'text': 'Afficher Plus...',
+  		},
+  		displayedItems: 20,
+  		showItems: 4
+  	})
 
     $('ul.simple-load-more').simpleLoadMore({
       item: 'li',
