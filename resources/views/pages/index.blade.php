@@ -284,9 +284,9 @@
 					<img src="https://avivart.net/images/users/man.png" alt="Image" class="wow flip border rounded-circle p-2">
 				</p>
 				<p class="text-light">
-					La société AVIV'ART a marqué positivement le Top management de notre ociété par la digitalisation des processus opérationnels et fonctionnels. Nos clients ont ésormais accès à nos services en ligne n'impote où n'impote quand. Quel que soit le budget, le model de votre Business (B to B ou B to C). AVIV'ART vous accompagne.
+					La société AVIV'ART a marqué positivement le Top management de notre société par la digitalisation des processus opérationnels et fonctionnels. Nos clients ont désormais accès à nos services en ligne n'importe où n'importe quand. Quel que soit le budget, le model de votre Business (B to B ou B to C). AVIV'ART vous accompagne.
 				</p>
-				<h4 class="text-white font-weight-bold">DSI de la Société MWD (Gérard AKAKPOVI)</h4>
+				<h4 class="text-white font-weight-bold">DSI de la société MWD (Gérard AKAKPOVI)</h4>
 			</div>
 
 			<div class="col-lg-6 text-center">
@@ -294,7 +294,7 @@
 					<img src="https://avivart.net/images/users/woman.png" alt="Image" class="wow snake border rounded-circle p-2">
 				</p>
 				<p class="text-light">
-					En tant que  cadre d'une Banque et manager, je trouve difficlement le temps pour effectuer les courses en vue de bien alimenter ma petite famille. Avec la boutique en ligne de la Société AVIV'ART, j'effecutue les commandes et je me fait livré. L'achat en ligne est sans frais, et les aliments sont au prix du marché. C'est génial.
+					En tant que  cadre d'une banque et manager, je trouve difficilement le temps pour effectuer les courses en vue de bien alimenter ma petite famille. Avec la boutique en ligne de la société AVIV'ART, j'effectue les commandes et je me fait livré. L'achat en ligne est sans frais, et les aliments sont au prix du marché. C'est génial.
 				</p>
 				<h4 class="text-white font-weight-bold">Mme Joséphine DJIDOULA</h4>
 			</div>

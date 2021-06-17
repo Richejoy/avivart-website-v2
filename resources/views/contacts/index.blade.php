@@ -80,7 +80,7 @@
                 <h2 class="font-weight-bold">Nos contacts</h2>
                 <p>Adress : CAP Kégué</p>
                 <p>Téléphone : +228 92 10 78 78</p>
-                <p>Email : <a href="mailto:info@avivart.net">info@avivart.net</a></p>
+                <p>Emails : <a href="mailto:contact@avivart.net">contact@avivart.net</a> & <a href="mailto:info@avivart.net">info@avivart.net</a></p>
             </div>
 
         </div>

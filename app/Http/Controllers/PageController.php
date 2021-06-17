@@ -11,6 +11,7 @@ use App\Models\Civility;
 use App\Models\Image;
 use App\Models\ProductUser;
 use App\Models\User;
+use App\Models\Member;
 use App\Models\Transaction;
 use App\Events\UserEvent;
 
@@ -214,6 +215,10 @@ class PageController extends Controller
                         ]
                     )
                 );
+
+                $member = Member::create([
+                    'user_id' => $user->id,
+                ]);
 
                 DB::commit();
 
