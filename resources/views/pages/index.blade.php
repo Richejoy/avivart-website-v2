@@ -284,7 +284,7 @@
 					<img src="https://avivart.net/images/users/man.png" alt="Image" class="wow flip border rounded-circle p-2">
 				</p>
 				<p class="text-light">
-					La société AVIV'ART a marqué positivement le Top management de notre société par la digitalisation des processus opérationnels et fonctionnels. Nos clients ont désormais accès à nos services en ligne n'importe où n'importe quand. Quel que soit le budget, le model de votre Business (B to B ou B to C). AVIV'ART vous accompagne.
+					La société AVIV'ART a marqué positivement le top management de notre société par la digitalisation des processus opérationnels et fonctionnels. Nos clients ont désormais accès à nos services en ligne n'importe où n'importe quand. Quel que soit le budget, le model de votre Business (B to B ou B to C). AVIV'ART vous accompagne.
 				</p>
 				<h4 class="text-white font-weight-bold">DSI de la société MWD (Gérard AKAKPOVI)</h4>
 			</div>
