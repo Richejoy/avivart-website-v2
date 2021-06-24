@@ -110,8 +110,8 @@ Route::resource('/order', OrderController::class)->middleware(['auth']);
 Route::resource('/transaction', TransactionController::class)->middleware(['auth']);
 
 Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function () {
-	Route::get('/checkout/{order}', [OrderController::class, 'checkout'])->name('checkout');
-	Route::get('/pdf/{order}', [OrderController::class, 'pdf'])->name('pdf');
+	Route::get('/{order}/checkout', [OrderController::class, 'checkout'])->name('checkout');
+	Route::get('/{order}/pdf', [OrderController::class, 'pdf'])->name('pdf');
 });
 
 Route::prefix('/user')->name('user.')->middleware(['auth'])->group(function() {
@@ -169,22 +169,22 @@ Route::prefix('/cron')->name('cron.')->group(function () {
 
 Route::prefix('/product/ray')->name('productRay.')->group(function() {
 	Route::get('/', [ProductRayController::class, 'index'])->name('index');
-	Route::get('/show/{productRay}', [ProductRayController::class, 'show'])->name('show');
+	Route::get('/{productRay}/show', [ProductRayController::class, 'show'])->name('show');
 });
 
 Route::prefix('/product/category')->name('productCategory.')->group(function() {
 	Route::get('/', [ProductCategoryController::class, 'index'])->name('index');
-	Route::get('/show/{productCategory}', [ProductCategoryController::class, 'show'])->name('show');
+	Route::get('/{productCategory}/show', [ProductCategoryController::class, 'show'])->name('show');
 });
 
 Route::prefix('/product/type')->name('productType.')->group(function() {
 	Route::get('/', [ProductTypeController::class, 'index'])->name('index');
-	Route::get('/show/{productType}', [ProductTypeController::class, 'show'])->name('show');
+	Route::get('/{productType}/show', [ProductTypeController::class, 'show'])->name('show');
 });
 
 Route::prefix('/conversion')->name('conversion.')->group(function() {
 	Route::get('/', [ConversionController::class, 'index'])->name('index');
-	Route::get('/show/{conversion}', [ConversionController::class, 'show'])->name('show');
+	Route::get('/{conversion}/show', [ConversionController::class, 'show'])->name('show');
 });
 
 Route::prefix('/service')->name('service.')->group(function() {
