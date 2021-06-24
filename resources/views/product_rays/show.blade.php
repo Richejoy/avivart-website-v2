@@ -47,7 +47,7 @@
                             </div>
                         </div>
 
-                        <div class="card-footer text-right"><a href="{{ route('productRay.index') }}"
+                        <div class="card-footer p-2 text-right"><a href="{{ route('productRay.index') }}"
                             class="text-danger">Tout afficher</a></div>
                     </div>
                 </div>

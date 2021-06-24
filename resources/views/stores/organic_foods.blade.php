@@ -40,7 +40,7 @@
                             </div>
                         </div>
 
-                        <div class="card-footer text-right"><a href="{{ route('productCategory.index', ['product_ray_id' => 1]) }}"
+                        <div class="card-footer p-2 text-right"><a href="{{ route('productCategory.index', ['product_ray_id' => 1]) }}"
                             class="text-danger">Tout afficher</a></div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                                     @endif
                                 </h6>
                             </div>
-                            <div class="card-footer text-center px-0">
+                            <div class="card-footer text-center p-2">
                                 <a data-toggle="tooltip" title="Ajouter au panier"
                                     href="{{ route('cart.add', ['product' => $product]) }}" class="text-primary"><i
                                         class="fa fa-shopping-cart"></i></a>

@@ -68,30 +68,30 @@ Route::prefix('/')->name('page.')->group(function() {
 	Route::get('/splashscreen', [PageController::class, 'splashscreen'])->name('splashscreen');
 });
 
-Route::prefix('/boutique')->name('store.')->middleware(['store'])->group(function() {
+Route::prefix('/store')->name('store.')->middleware(['store'])->group(function() {
 	Route::get('/', [StoreController::class, 'index'])->name('index');
-	Route::get('/{product}/afficher', [StoreController::class, 'show'])->name('show');
-	Route::get('/recherche', [StoreController::class, 'search'])->name('search');
-	Route::get('/aliments/bio', [StoreController::class, 'organicFoods'])->name('organic_foods');
-	Route::get('/aliments/manufactures', [StoreController::class, 'manufacturedFoods'])->name('manufactured_foods');
-	Route::get('/product/home/appliance', [StoreController::class, 'homeAppliance'])->name('home_appliance');
-	Route::get('/product/high/tech', [StoreController::class, 'highTech'])->name('high_tech');
+	Route::get('/{product}/show', [StoreController::class, 'show'])->name('show');
+	Route::get('/search', [StoreController::class, 'search'])->name('search');
+	Route::get('/organic/foods', [StoreController::class, 'organicFoods'])->name('organic_foods');
+	Route::get('/manufactured/foods', [StoreController::class, 'manufacturedFoods'])->name('manufactured_foods');
+	Route::get('/home/appliance', [StoreController::class, 'homeAppliance'])->name('home_appliance');
+	Route::get('/high/tech', [StoreController::class, 'highTech'])->name('high_tech');
 	Route::get('/other/products', [StoreController::class, 'otherProducts'])->name('other_products');
 });
 
-Route::prefix('/immobilier')->name('immovable.')->group(function() {
+Route::prefix('/immovable')->name('immovable.')->group(function() {
 	Route::get('/', [ImmovableController::class, 'index'])->name('index');
 });
 
-Route::prefix('/annonce')->name('ad.')->group(function() {
+Route::prefix('/ad')->name('ad.')->group(function() {
 	Route::get('/', [AdController::class, 'index'])->name('index');
 });
 
-Route::prefix('/agrobusiness')->name('agribusiness.')->group(function() {
+Route::prefix('/agribusiness')->name('agribusiness.')->group(function() {
 	Route::get('/', [AgribusinessController::class, 'index'])->name('index');
 });
 
-Route::prefix('/informatique')->name('informatics.')->group(function() {
+Route::prefix('/informatics')->name('informatics.')->group(function() {
 	Route::get('/', [ComputerScienceController::class, 'index'])->name('index');
 	Route::get('/solutions', [ComputerScienceController::class, 'solutions'])->name('solutions');
 	Route::get('/networks', [ComputerScienceController::class, 'networks'])->name('networks');
@@ -101,7 +101,7 @@ Route::prefix('/informatique')->name('informatics.')->group(function() {
 	Route::get('/formations', [ComputerScienceController::class, 'formations'])->name('formations');
 });
 
-Route::prefix('/cosmetique')->name('cosmetic.')->group(function() {
+Route::prefix('/cosmetic')->name('cosmetic.')->group(function() {
 	Route::get('/', [CosmeticController::class, 'index'])->name('index');
 });
 
@@ -114,27 +114,27 @@ Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function ()
 	Route::get('/pdf/{order}', [OrderController::class, 'pdf'])->name('pdf');
 });
 
-Route::prefix('/utilisateur')->name('user.')->middleware(['auth'])->group(function() {
-	Route::get('/commandes', [UserController::class, 'orders'])->name('orders');
-	Route::get('/produits/favorite', [UserController::class, 'favoriteProducts'])->name('favorite_products');
+Route::prefix('/user')->name('user.')->middleware(['auth'])->group(function() {
+	Route::get('/orders', [UserController::class, 'orders'])->name('orders');
+	Route::get('/favorite/products', [UserController::class, 'favoriteProducts'])->name('favorite_products');
 	Route::get('/transactions', [UserController::class, 'transactions'])->name('transactions');
 	Route::get('/payments', [UserController::class, 'payments'])->name('payments');
 	Route::get('/{product}/add', [UserController::class, 'add'])->name('add');
 
 	Route::get('/', [UserController::class, 'index'])->name('index');
-	Route::match(['GET', 'POST'], '/{user}/afficher', [UserController::class, 'show'])->name('show');
-	Route::match(['GET', 'POST'], '/{user}/editer', [UserController::class, 'edit'])->name('edit');
+	Route::match(['GET', 'POST'], '/{user}/show', [UserController::class, 'show'])->name('show');
+	Route::match(['GET', 'POST'], '/{user}/edit', [UserController::class, 'edit'])->name('edit');
 });
 
-Route::prefix('/panier')->name('cart.')->group(function() {
+Route::prefix('/cart')->name('cart.')->group(function() {
 	Route::get('/', [CartController::class, 'index'])->name('index');
-	Route::get('/{product}/ajouter', [CartController::class, 'add'])->name('add');
-	Route::get('/{row}/supprimer', [CartController::class, 'remove'])->name('remove');
-	Route::get('/{row}/modifier', [CartController::class, 'update'])->name('update');
-	Route::get('/vider', [CartController::class, 'truncate'])->name('truncate');
-	Route::post('/appliquer/coupon', [CartController::class, 'applyCoupon'])->name('apply_coupon');
-	Route::get('/supprimer/coupon', [CartController::class, 'removeCoupon'])->name('remove_coupon');
-	Route::match(['GET', 'POST'], '/payement', [CartController::class, 'checkout'])->name('checkout');
+	Route::get('/{product}/add', [CartController::class, 'add'])->name('add');
+	Route::get('/{row}/remove', [CartController::class, 'remove'])->name('remove');
+	Route::get('/{row}/update', [CartController::class, 'update'])->name('update');
+	Route::get('/truncate', [CartController::class, 'truncate'])->name('truncate');
+	Route::post('/apply/coupon', [CartController::class, 'applyCoupon'])->name('apply_coupon');
+	Route::get('/remove/coupon', [CartController::class, 'removeCoupon'])->name('remove_coupon');
+	Route::match(['GET', 'POST'], '/checkout', [CartController::class, 'checkout'])->name('checkout');
 });
 
 Route::prefix('/contact')->name('contact.')->group(function () {
@@ -156,10 +156,10 @@ Route::prefix('/payement')->name('payment.')->group(function () {
 
 
 /** */
-Route::prefix('parametres')->name('settings.')->middleware(['auth'])->group(function () {
+Route::prefix('settings')->name('settings.')->middleware(['auth'])->group(function () {
 	Route::get('/', [SettingsController::class, 'index'])->name('index');
-	Route::get('/suppression/compte', [SettingsController::class, 'removingAccount'])->name('removing_account');
-	Route::get('/activation/tfa', [SettingsController::class, 'enablingTFA'])->name('enabling_tfa');
+	Route::get('/removing/account', [SettingsController::class, 'removingAccount'])->name('removing_account');
+	Route::get('/enabling/tfa', [SettingsController::class, 'enablingTFA'])->name('enabling_tfa');
 });
 /** */
 
