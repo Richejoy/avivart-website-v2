@@ -9,6 +9,8 @@
 				
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 				  <div class="carousel-inner">
+
+				  	<!-- Row 1 -->
 				    <div class="carousel-item active">
 				    	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow slideInLeft">
@@ -22,6 +24,8 @@
 				    		</div>
 				    	</div>
 				    </div>
+
+				    <!-- Row 2 -->
 				    <div class="carousel-item">
 				      	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow fadeInLeft">
@@ -35,6 +39,8 @@
 				    		</div>
 				    	</div>
 				    </div>
+
+				    <!-- Row 3 -->
 				    <div class="carousel-item">
 				      	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow bounceInLeft">
@@ -48,6 +54,22 @@
 				    		</div>
 				    	</div>
 				    </div>
+
+				    <!-- Row 4 -->
+				    <div class="carousel-item">
+				      	<div class="row">
+				    		<div class="col-md-4 col-sm-4 wow bounceInLeft">
+				    			<img src="{{ asset('public/img/slider13.jpg') }}" class="d-block w-100" alt="Image">
+				    		</div>
+				    		<div class="col-md-4 col-sm-4 wow bounceInUp">
+				    			<img src="{{ asset('public/img/slider14.jpg') }}" class="d-block w-100" alt="Image">
+				    		</div>
+				    		<div class="col-md-4 col-sm-4 wow bounceInRight">
+				    			<img src="{{ asset('public/img/slider15.jpg') }}" class="d-block w-100" alt="Image">
+				    		</div>
+				    	</div>
+				    </div>
+
 				  </div>
 				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -227,7 +249,7 @@
 			<div class="col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<p><i class="fa fa-calendar fa-3x"></i></p>
+						<p><i class="fa fa-calendar text-danger fa-3x"></i></p>
 						<h4>20</h4>
 						<p class="font-weight-bold">Années d'expériences</p>
 					</div>
@@ -237,7 +259,7 @@
 			<div class="col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<p><i class="fa fa-users fa-3x"></i></p>
+						<p><i class="fa fa-users text-danger fa-3x"></i></p>
 						<h4>+250</h4>
 						<p class="font-weight-bold">Clients</p>
 					</div>
@@ -247,7 +269,7 @@
 			<div class="col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<p><i class="fa fa-handshake-o fa-3x"></i></p>
+						<p><i class="fa fa-handshake-o text-danger fa-3x"></i></p>
 						<h4>+10</h4>
 						<p class="font-weight-bold">Partenaires</p>
 					</div>
@@ -257,7 +279,7 @@
 			<div class="col-lg-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<p><i class="fa fa-user fa-3x"></i></p>
+						<p><i class="fa fa-user text-danger fa-3x"></i></p>
 						<h4>+12</h4>
 						<p class="font-weight-bold">Équipe</p>
 					</div>

@@ -181,8 +181,8 @@ use App\Helpers\Helper;
                         <ol class="breadcrumb bg-white m-0 p-0">
                             <li class="breadcrumb-item"><a href="{{ route('contact.index') }}"
                                     class=" text-primary font-weight-bold">Contactez-nous</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('store.index') }}"
-                                    class=" text-primary font-weight-bold">Boutique</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('store.guide') }}"
+                                    class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('productCategory.index') }}"
                                     class="text-primary font-weight-bold">Toutes nos catégories</a></li>
                             <li class="breadcrumb-item active" aria-current="page">{{ $title ?? 'Laravel' }}</li>
@@ -317,7 +317,7 @@ use App\Helpers\Helper;
     <!-- Modal -->
     <div class="videoIcon">
         <video muted autoplay loop data-toggle="tooltip" title="Publicités" data-placement="right">
-            <source src="{{ asset('public/videos/v0.mp4') }}" type="video/mp4">
+            <source src="{{ asset('public/videos/v3.mp4') }}" type="video/mp4">
         </video>
     </div>
     <div class="videoPopup">
@@ -325,7 +325,7 @@ use App\Helpers\Helper;
             <div class="card-header bg-secondary text-white">Publicités<span data-toggle="tooltip"
                     title="Fermer" class="closeVideoPopup pull-right"><i class="fa fa-close"></i></span></div>
             <video controls class="w-100 p-0">
-                <source src="{{ asset('public/videos/v0.mp4') }}" type="video/mp4">
+                <source src="{{ asset('public/videos/v3.mp4') }}" type="video/mp4">
             </video>
         </div>
     </div>

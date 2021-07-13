@@ -1,0 +1,51 @@
+:root {
+	--indigodark: #0e0c41;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.main-footer {
+	background-color: var(--indigodark);
+}
+
+.main-footer .copyright {
+}
+
+header .social-icon {
+}
+
+footer .social-icon {
+}
+
+.carousel img {
+	height: 600px;
+}
+
+.carousel .carousel-caption {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    max-width: 50%;
+    opacity: .5;
+    padding-top: 10%;
+}
+
+.carousel .carousel-caption h2 {
+    font-size: 5rem;
+}
+
+.carousel .carousel-caption p {
+    font-size: 2rem;
+}
+
+@media (max-width: 767px)
+{
+	.carousel img {
+		height: 300px;
+	}
+}

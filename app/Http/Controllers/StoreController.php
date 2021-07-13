@@ -35,6 +35,11 @@ class StoreController extends Controller
     	return view('stores.show', compact('product'));
     }
 
+    public function guide(Request $request)
+    {
+        return view('stores.guide');
+    }
+
     public function search(Request $request)
     {
         $products = Product::where('published', true)

@@ -1,7 +1,15 @@
-@extends('layouts.coming_soon', ['title' => 'Annonces'])
+@extends('layouts.ad', ['title' => 'Accueil'])
 
 @section('body')
 
-<p>Annonces</p>
+<section class="bg-light py-3">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				
+			</div>
+		</div>
+	</div>
+</section>
 
 @endsection
