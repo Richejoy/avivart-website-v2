@@ -31,7 +31,10 @@
 
     <title>{{ config('app.name') }} - Informatique - {{ $title ?? 'Laravel' }}</title>
 
+    @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
+    @endif
+    
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/informatics.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -41,7 +44,7 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0d47a1">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-success">Informatique</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <p class="mb-0">
-                    <img class="w-100" src="{{ asset('public/img/viva1.jpg') }}" alt="Photo">
+                    <img class="w-100 border border-dark p-2" src="{{ asset('public/img/viva1.jpg') }}" alt="Photo">
                 </p>
                 <h5 class="mt-0 bg-dark p-2 text-white font-weight-bold">Mme Viva AKUE-ATSAH</h5>
             </div>
@@ -51,7 +51,7 @@
 
             <div class="col-lg-6">
                 <p class="mb-0">
-                    <img class="w-100" src="{{ asset('public/img/team.jpeg') }}" alt="Image">
+                    <img class="w-100 border border-dark p-2" src="{{ asset('public/img/team.jpeg') }}" alt="Image">
                 </p>
                 <h5 class="mt-0 bg-dark p-2 text-white font-weight-bold">VIVA Equipe</h5>
             </div>
@@ -61,26 +61,26 @@
 
 <section class="bg-white py-3">
     <div class="container-fluid">
-        <div class="row py-3">
+        <div class="row py-5">
             <div class="col-lg-12 text-center">
                 <h2 class="font-weight-bold text-uppercase text-info"><u>Nos valeurs</u></h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row py-3">
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-lock text-info fa-2x px-5"></i> SÉCURITÉ</h4>
+                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-lock text-info fa-2x px-3"></i> SÉCURITÉ</h4>
                 <p class="text-secondary">
                     Nous disposons des meilleurs standards au niveau de la sécurité et de la qualité.
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-check text-info fa-2x px-5"></i> RAPIDITÉ</h4>
+                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-check text-info fa-2x px-3"></i> RAPIDITÉ</h4>
                 <p class="text-secondary">
                     La prise en charge rapide de vos commandes est garantie par notre réseau performant de partenaires de transport sélectionnés que nous entretenons.
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-user text-info fa-2x px-5"></i> FLEXIBILITÉ</h4>
+                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-user text-info fa-2x px-3"></i> FLEXIBILITÉ</h4>
                 <p class="text-secondary">
                     Nous avons la capacité de nous adapter à tous vos besoins en temps réel.
                 </p>

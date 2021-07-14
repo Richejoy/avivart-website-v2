@@ -47,7 +47,10 @@ use App\Helpers\Helper;
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
 
+    @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
+    @endif
+    
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/store.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -58,7 +61,7 @@ use App\Helpers\Helper;
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
-                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-danger">Boutique</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

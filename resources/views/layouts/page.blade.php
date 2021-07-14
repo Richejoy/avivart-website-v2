@@ -41,7 +41,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/cookie-consent-banner-localstroage/css/cookie-banner.css') }}">
 
+    @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
+    @endif
+    
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>

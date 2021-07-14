@@ -86,6 +86,7 @@ Route::prefix('/immovable')->name('immovable.')->group(function() {
 
 Route::prefix('/ad')->name('ad.')->group(function() {
 	Route::get('/', [AdController::class, 'index'])->name('index');
+	Route::get('/{ad}/show', [AdController::class, 'show'])->name('show');
 });
 
 Route::prefix('/agribusiness')->name('agribusiness.')->group(function() {
