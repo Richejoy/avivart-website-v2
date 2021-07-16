@@ -12,23 +12,18 @@
 				</p>
 
 				<div class="xzoom-thumbs">
-				  <a href="{{ asset('public/img/ads/001/IMG-20210708-WA0012.jpg') }}">
-				    <img class="xzoom-gallery" width="80" src="{{ asset('public/img/ads/001/IMG-20210708-WA0012.jpg') }}"  xpreview="{{ asset('public/img/ads/001/IMG-20210708-WA0012.jpg') }}" title="Voiture double cabine 4x4 L200">
+				  <a href="{{ $ad->image->link }}">
+				    <img class="xzoom-gallery" width="80" src="{{ $ad->image->link }}"  xpreview="{{ $ad->image->link }}" title="{{ $ad->name }}">
 				  </a>
 
 				  <!-- Others images -->
-				  <a href="{{ asset('public/img/ads/001/IMG-20210708-WA0013.jpg') }}">
-				    <img class="xzoom-gallery" width="80" src="{{ asset('public/img/ads/001/IMG-20210708-WA0013.jpg') }}" title="Voiture double cabine 4x4 L200">
+				  @if($adThumbs->count())
+				  @foreach($adThumbs as $adThumb)
+				  <a href="{{ $adThumb->image->link }}">
+				    <img class="xzoom-gallery" width="80" src="{{ $adThumb->image->link }}" title="Thumb Image">
 				  </a>
-				  <a href="{{ asset('public/img/ads/001/IMG-20210708-WA0014.jpg') }}">
-				    <img class="xzoom-gallery" width="80" src="{{ asset('public/img/ads/001/IMG-20210708-WA0014.jpg') }}" title="Voiture double cabine 4x4 L200">
-				  </a>
-				  <a href="{{ asset('public/img/ads/001/IMG-20210708-WA0015.jpg') }}">
-				    <img class="xzoom-gallery" width="80" src="{{ asset('public/img/ads/001/IMG-20210708-WA0015.jpg') }}" title="Voiture double cabine 4x4 L200">
-				  </a>
-				  <a href="{{ asset('public/img/ads/001/IMG-20210708-WA0016.jpg') }}">
-				    <img class="xzoom-gallery" width="80" src="{{ asset('public/img/ads/001/IMG-20210708-WA0016.jpg') }}" title="Voiture double cabine 4x4 L200">
-				  </a>
+				  @endforeach
+				  @endif
 				</div>
 			</div>
 
@@ -54,7 +49,7 @@
 				</p>
 				<p class="card-text text-secondary">
 					<span class="material-icons">timer</span> Date :
-					<time class="timeago" datetime="{{ $ad->user->image->created }}">{{ $ad->user->image->created }}</time>
+					<time class="timeago" datetime="{{ $ad->image->created }}">{{ $ad->image->created }}</time>
 				</p>
 
 				<p class="">

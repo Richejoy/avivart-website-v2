@@ -7,6 +7,7 @@ use App\Models\AdCategory;
 use App\Models\AdRay;
 use App\Models\AdType;
 use App\Models\Ad;
+use App\Models\AdImage;
 
 class AdController extends Controller
 {
@@ -44,7 +45,9 @@ class AdController extends Controller
 
     public function show(Request $request, Ad $ad)
     {
-        return view('ads.show', compact('ad'));
+        $adThumbs = AdImage::where('ad_id', $ad->id)->get();
+
+        return view('ads.show', compact('ad', 'adThumbs'));
     }
 
     public function edit(Request $request, Ad $ad)

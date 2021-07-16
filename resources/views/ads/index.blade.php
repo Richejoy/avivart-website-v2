@@ -1,4 +1,4 @@
-@extends('layouts.ad', ['title' => 'Publier des annonces que vous désirez'])
+@extends('layouts.ad', ['title' => 'Faites gratuitement vos annonces, validité une semaine'])
 
 @section('body')
 
@@ -39,7 +39,7 @@
 
 				<div class="row py-3">
 					<div class="col-md-12">
-						<h2 class="font-weight-bold">Annonces VIP</h2>
+						<h2 class="font-weight-bold text-primary">Annonces VIP</h2>
 					</div>
 				</div>
 
@@ -51,7 +51,7 @@
 
 					@foreach($vipAds as $ad)
 					<div class="col-md-3 mb-3 ad-item">
-						<div class="card h-100">
+						<div class="card h-100 border-primary">
 						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
@@ -62,7 +62,7 @@
 						    </div>
 						    <div class="card-text text-secondary">
 						    	<span class="material-icons">timer</span>
-						    	<time class="timeago" datetime="{{ $ad->user->image->created }}">{{ $ad->user->image->created }}</time>
+						    	<time class="timeago" datetime="{{ $ad->image->created }}">{{ $ad->image->created }}</time>
 						    </div>
 						  </div>
 						  <div class="card-footer p-1 text-center">
@@ -94,7 +94,7 @@
 
 				<div class="row py-3">
 					<div class="col-md-12">
-						<h2 class="font-weight-bold">Annonces les plus récentes</h2>
+						<h2 class="font-weight-bold text-success">Annonces les plus récentes</h2>
 					</div>
 				</div>
 
@@ -104,18 +104,18 @@
 
 					@foreach($latestAds as $ad)
 					<div class="col-md-3 mb-3 ad-item">
-						<div class="card h-100">
+						<div class="card h-100 border-success">
 						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
 						    <h5 class="card-title font-weight-bold">
-						    	<a href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a></h5>
+						    	<a class="text-success" href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a></h5>
 						    <div class="card-text text-secondary">
 						    	<span class="material-icons">location_on</span>{{ $ad->user->location() }}
 						    </div>
 						    <div class="card-text text-secondary">
 						    	<span class="material-icons">timer</span>
-						    	<time class="timeago" datetime="{{ $ad->user->image->created }}">{{ $ad->user->image->created }}</time>
+						    	<time class="timeago" datetime="{{ $ad->image->created }}">{{ $ad->image->created }}</time>
 						    </div>
 						  </div>
 						  <div class="card-footer p-1 text-center">
@@ -145,7 +145,7 @@
 
 				<div class="row py-3">
 					<div class="col-md-12">
-						<h2 class="font-weight-bold">Toutes nos annonces</h2>
+						<h2 class="font-weight-bold text-danger">Toutes nos annonces</h2>
 					</div>
 				</div>
 
@@ -155,18 +155,18 @@
 
 					@foreach($ads as $ad)
 					<div class="col-md-3 mb-3 ad-item">
-						<div class="card h-100">
+						<div class="card h-100 border-danger">
 						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
 						    <h5 class="card-title font-weight-bold">
-						    	<a href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a></h5>
+						    	<a class="text-danger" href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a></h5>
 						    <div class="card-text text-secondary">
 						    	<span class="material-icons">location_on</span>{{ $ad->user->location() }}
 						    </div>
 						    <div class="card-text text-secondary">
 						    	<span class="material-icons">timer</span>
-						    	<time class="timeago" datetime="{{ $ad->user->image->created }}">{{ $ad->user->image->created }}</time>
+						    	<time class="timeago" datetime="{{ $ad->image->created }}">{{ $ad->image->created }}</time>
 						    </div>
 						  </div>
 						  <div class="card-footer p-1 text-center">
