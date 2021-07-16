@@ -1,4 +1,4 @@
-@extends('layouts.store', ['title' => Request::query('name')])
+@extends('layouts.store', ['title' => Request::query('name') ?? 'Recherche'])
 
 @section('body')
 

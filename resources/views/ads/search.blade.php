@@ -1,4 +1,4 @@
-@extends('layouts.ad', ['title' => 'Recherche'])
+@extends('layouts.ad', ['title' => Request::query('name') ?? 'Recherche'])
 
 @section('body')
 

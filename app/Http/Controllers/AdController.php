@@ -76,20 +76,20 @@ class AdController extends Controller
 
     public function search(Request $request)
     {
-        $ads = Ad::where('published', true)->get();
+        $query = Ad::where('published', true);
 
-        if ($request->has('name')) {
-            $conditions = [];
-
-            if ($request->has('ad_category_id') && ($request->query('ad_category_id') > 0)) {
-                $conditions = ['ad_category_id' => $request->query('ad_category_id')];
+        if ($request->has('ad_category_id')) {
+            
+            if ($request->query('ad_category_id') > 0) {
+                $query = $query->where(['ad_category_id' => $request->query('ad_category_id')]);
             }
 
-            $ads = Ad::where('published', true)
-            ->where($conditions)
-            ->where('name', 'LIKE', '%' . $request->query('name') . '%')
-            ->get();
+            if ($request->has('name')) {
+                $query = $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
+            }
         }
+
+        $ads = $query->get();
 
         return view('ads.search', compact('ads'));
     }

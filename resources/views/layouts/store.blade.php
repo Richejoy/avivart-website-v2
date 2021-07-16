@@ -99,11 +99,6 @@ use App\Helpers\Helper;
                         <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}" href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
-                    @if(Auth::check())
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('user.index') }}">Espace client</a>
-                    </li>
-                    @else
                     <li class="nav-item hvr-underline-from-center">
                         <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                     </li>
@@ -111,7 +106,6 @@ use App\Helpers\Helper;
                     <li class="nav-item hvr-underline-from-center">
                         <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
                     </li>
-                    @endif
 
                 </ul>
             </div>
@@ -149,7 +143,7 @@ use App\Helpers\Helper;
                                 </select>
                             </div>
                             <input type="search" name="name" id="name" class="form-control border-danger"
-                                placeholder="Rechercher un aliment ou produit..." required
+                                placeholder="Rechercher un aliment ou produit..."
                                 value="{{ Request::query('name') }}">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-danger hvr-glow">Rechercher</button>

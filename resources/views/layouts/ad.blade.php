@@ -136,7 +136,7 @@
                                 </select>
                             </div>
                             <input type="search" name="name" id="name" class="form-control border-warning"
-                                placeholder="Rechercher une annonce..." required
+                                placeholder="Rechercher une annonce..."
                                 value="{{ Request::query('name') }}">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-warning hvr-glow">Rechercher</button>

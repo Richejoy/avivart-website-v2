@@ -40,22 +40,21 @@ class StoreController extends Controller
 
     public function search(Request $request)
     {
-        $products = Product::where('published', true)
-        ->where('quantity', '>', 0)->get();
+        $query = Product::where('published', true)
+        ->where('quantity', '>', 0);
 
-        if ($request->has('name')) {
-            $conditions = [];
+        if ($request->has('product_category_id')) {
 
-            if ($request->has('product_category_id') && ($request->query('product_category_id') > 0)) {
-                $conditions = ['product_category_id' => $request->query('product_category_id')];
+            if ($request->query('product_category_id') > 0) {
+                $query = $query->where(['product_category_id' => $request->query('product_category_id')]);
             }
 
-            $products = Product::where('published', true)
-            ->where('quantity', '>', 0)
-            ->where($conditions)
-            ->where('name', 'LIKE', '%' . $request->query('name') . '%')
-            ->get();
+            if ($request->has('name')) {
+                $query = $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
+            }
         }
+
+        $products = $query->get();
 
     	return view('stores.search', compact('products'));
     }
