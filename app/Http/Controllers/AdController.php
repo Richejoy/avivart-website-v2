@@ -45,9 +45,9 @@ class AdController extends Controller
 
     public function show(Request $request, Ad $ad)
     {
-        $adThumbs = AdImage::where('ad_id', $ad->id)->get();
+        $adsImages = AdImage::where('ad_id', $ad->id)->get();
 
-        return view('ads.show', compact('ad', 'adThumbs'));
+        return view('ads.show', compact('ad', 'adsImages'));
     }
 
     public function edit(Request $request, Ad $ad)

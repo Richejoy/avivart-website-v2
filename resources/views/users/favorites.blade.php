@@ -1,4 +1,4 @@
-@extends('layouts.user', ['title' => 'Mes produits favorites'])
+@extends('layouts.user', ['title' => 'Mes produits favoris'])
 
 @section('body')
 

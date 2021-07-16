@@ -25,7 +25,7 @@
             <div class="inner">
                 <h3>{{ session('userFavoriteProducts', 0) }}</h3>
 
-                <p>Mes produits favorites</p>
+                <p>Mes produits favoris</p>
             </div>
             <div class="icon">
                 <i class="ion ion-star"></i>

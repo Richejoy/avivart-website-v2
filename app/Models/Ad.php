@@ -18,6 +18,7 @@ class Ad extends Model
         'price',
         'is_vip',
         'published',
+        'expire_date',
         'ad_type_id',
         'ad_category_id',
         'currency_id',

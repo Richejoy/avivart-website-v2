@@ -47,7 +47,7 @@
                 <h4 class="font-weight-bold">Validation</h4>
 
                 <p class="text-secondary">
-                    Votre annonce sera visible dès la validation de la direction AVIV'ART.
+                    Votre annonce sera visible dès sa validation par la direction AVIV'ART.
                 </p>
             </div>
         </div>

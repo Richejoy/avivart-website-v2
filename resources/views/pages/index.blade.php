@@ -407,7 +407,7 @@
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/gozem.png') }}" alt="GOZEM" class="img-150x150 w-100">
+					<img src="{{ asset('public/img/partners/smartaps.jpg') }}" alt="SMARTAPS" class="img-150x150 w-100">
 				</p>
 			</div>
 

@@ -89,7 +89,7 @@
                                 class="fa fa-google-plus"></i></a>
                     </li>
                     <li class="">
-                        <a data-toggle="tooltip" title="Ajouter au favorite"
+                        <a data-toggle="tooltip" title="Ajouter au favoris"
                             href="{{ route('user.add', ['product' => $product]) }}" class="text-danger"><i
                                 class="fa fa-heart fa-2x fa-spin"></i></a>
                     </li>

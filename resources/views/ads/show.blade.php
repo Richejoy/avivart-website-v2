@@ -8,19 +8,19 @@
 
 			<div class="col-lg-6">
 				<p>
-					<img class="xzoom" src="{{ $ad->image->link }}" xoriginal="{{ $ad->image->link }}" title="{{ $ad->name }}" />
+					<img class="xzoom" src="{{ $ad->image->link }}" xoriginal="{{ $ad->image->link }}" title="{{ $ad->image->description }}" alt="{{ $ad->image->description }}" />
 				</p>
 
 				<div class="xzoom-thumbs">
-				  <a href="{{ $ad->image->link }}">
-				    <img class="xzoom-gallery" width="80" src="{{ $ad->image->link }}"  xpreview="{{ $ad->image->link }}" title="{{ $ad->name }}">
+				  <a href="{{ $ad->image->link }}" class="text-decoration-none">
+				    <img class="xzoom-gallery" width="100" src="{{ $ad->image->link }}"  xpreview="{{ $ad->image->link }}" title="{{ $ad->image->description }}" alt="{{ $ad->image->description }}">
 				  </a>
 
 				  <!-- Others images -->
-				  @if($adThumbs->count())
-				  @foreach($adThumbs as $adThumb)
-				  <a href="{{ $adThumb->image->link }}">
-				    <img class="xzoom-gallery" width="80" src="{{ $adThumb->image->link }}" title="Thumb Image">
+				  @if($adsImages->count())
+				  @foreach($adsImages as $adImage)
+				  <a href="{{ $adImage->image->link }}" class="text-decoration-none">
+				    <img class="xzoom-gallery" width="100" src="{{ $adImage->image->link }}" title="{{ $ad->image->description }}" alt="{{ $ad->image->description }}">
 				  </a>
 				  @endforeach
 				  @endif

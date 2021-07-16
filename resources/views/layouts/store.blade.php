@@ -162,7 +162,7 @@ use App\Helpers\Helper;
                         <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}" data-toggle="tooltip" title="Nombre de produits"><i
                                 class="fa fa-shopping-cart"></i> ({{ Cart::content()->count() }})</a>
 
-                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}" data-toggle="tooltip" title="Produits favorites"><i
+                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}" data-toggle="tooltip" title="Produits favoris"><i
                                 class="fa fa-heart"></i> ({{ session('userFavoriteProducts', 0) }})</a>
 
                         <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}" data-toggle="tooltip" title="Détails commande">

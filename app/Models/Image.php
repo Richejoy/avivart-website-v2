@@ -13,7 +13,7 @@ class Image extends Model
     const UPDATED_AT = 'modified';
 
     protected $fillable = [
-        'folder', 'url', 'link'
+        'folder', 'url', 'link', 'description'
     ];
 
     protected $casts = [

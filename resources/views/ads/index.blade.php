@@ -52,7 +52,7 @@
 					@foreach($vipAds as $ad)
 					<div class="col-md-3 mb-3 ad-item">
 						<div class="card h-100 border-primary">
-						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
+						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="{{ $ad->image->description }}">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
 						    <h5 class="card-title font-weight-bold">
@@ -105,7 +105,7 @@
 					@foreach($latestAds as $ad)
 					<div class="col-md-3 mb-3 ad-item">
 						<div class="card h-100 border-success">
-						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
+						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="{{ $ad->image->description }}">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
 						    <h5 class="card-title font-weight-bold">
@@ -156,7 +156,7 @@
 					@foreach($ads as $ad)
 					<div class="col-md-3 mb-3 ad-item">
 						<div class="card h-100 border-danger">
-						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="Image">
+						  <img src="{{ $ad->image->link }}" class="card-img-top img-200x200" alt="{{ $ad->image->description }}">
 						  <div class="card-body">
 						  	<p class="font-weight-bold">{{ $ad->getPrice() }}</p>
 						    <h5 class="card-title font-weight-bold">

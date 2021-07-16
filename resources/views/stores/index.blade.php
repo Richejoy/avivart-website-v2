@@ -138,7 +138,7 @@
                                     href="{{ route('cart.add', ['product' => $product]) }}" class="text-primary"><i
                                         class="fa fa-shopping-cart"></i></a>
 
-                                <a data-toggle="tooltip" title="Ajouter au favorites"
+                                <a data-toggle="tooltip" title="Ajouter au favoris"
                                     href="{{ route('user.add', ['product' => $product]) }}" class="text-danger px-5"><i
                                         class="fa fa-heart"></i></a>
 
