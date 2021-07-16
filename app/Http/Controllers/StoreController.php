@@ -20,8 +20,6 @@ class StoreController extends Controller
     {
     	$productRays = ProductRay::all();
 
-        //$conversions = Conversion::inRandomOrder()->get();
-
         $productTypes = ProductType::inRandomOrder()->get();
 
         $products = Product::where('published', true)

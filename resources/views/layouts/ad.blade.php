@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
-    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="DESCRIPTION" CONTENT="AVIV'ART Annonces" />
+    <meta NAME="KEYWORDS" CONTENT="Automobile, Immobilier, Cosmétique, Agrobusiness" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
     <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <title>{{ config('app.name') }} - Annonces - {{ $title ?? 'Laravel' }}</title>
 
@@ -35,6 +37,12 @@
 
     <link type="text/css" rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.css" />
     <link type="text/css" rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
@@ -49,7 +57,7 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_black.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-warning">Annonces</strong></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-warning"><u>Annonces</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,12 +65,32 @@
 
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" href="{{ route('ad.index') }}">Annonces</a>
+                        <a class="nav-link font-weight-bold text-danger" href="{{ route('ad.index') }}">Annonces</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Automobile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Immobilier</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Cosmétique</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Agrobusiness</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Autres Annonces</a>
                     </li>
 
                     <li class="nav-item">
@@ -72,33 +100,92 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link font-weight-bold btn btn-danger text-white" href="{{ route('user.index') }}">Publier une annonce</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="p-2 bg-light">
-        <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 w-100" type="search" placeholder="Chercher des annonces">
-                    <button class="sr-only btn btn-success my-2 my-sm-0" type="submit">Rechercher</button>
-                </form>
+    <header class="bg-white">
+        <section class="container-fluid">
+            <div class="row pt-3">
+                <div class="col-lg-3">
+                    <p class="m-lg-0 fs-12">Horaires : 7j/7j de 6h30min à 21h00 Tél : (+228) 92 10 78 78</p>
+                    <p class="m-lg-0 fs-12 text-danger">Faites gratuitement vos annonces, validité une semaine.</p>
+                </div>
+                <div class="col-lg-6">
+                    <form class="" method="get" action="{{ route('ad.search') }}" accept-charset="utf-8"
+                        autocomplete="off">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <select class="form-select" name="ad_category_id" id="ad_category_id">
+
+                                    <option value="0">Toutes les catégories</option>
+
+                                    @if(session()->has('sessionAdRays') && session('sessionAdRays')->count())
+                                    @foreach(session('sessionAdRays') as $adRay)
+                                    <optgroup label="{{ $adRay->name }}">
+                                        @if($adRay->adCategories->count())
+                                        @foreach($adRay->adCategories as $adCategory)
+                                        <option value="{{ $adCategory->id }}">{{ $adCategory->name }}</option>
+                                        @endforeach
+                                        @endif
+                                    </optgroup>
+                                    @endforeach
+                                    @endif
+
+                                </select>
+                            </div>
+                            <input type="search" name="name" id="name" class="form-control border-warning"
+                                placeholder="Rechercher une annonce..." required
+                                value="{{ Request::query('name') }}">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-warning hvr-glow">Rechercher</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <a class="btn btn-primary" href="{{ route('user.favorite_ads') }}" data-toggle="tooltip" title="Annonces favorites"><span
+                                class="material-icons">favorite</span>{{ session('userFavoriteAds', 0) }}</a>
+
+                        <a class="btn btn-danger" href="{{ route('ad.create') }}"><span class="material-icons">notification_important</span>Publier une annonce</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous et publier des annonces en toute liberté.</a></p>
+                </div>
+                <div class="col-lg-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-white m-0 p-0">
+                            <li class="breadcrumb-item"><a href="{{ route('page.login') }}"
+                                    class=" text-primary font-weight-bold">Connectez-vous</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('ad.guide') }}"
+                                    class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('adCategory.index') }}"
+                                    class="text-primary font-weight-bold">Toutes nos catégories</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ $title ?? 'Laravel' }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
         @yield('body')
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer bg-dark">
         <section class="content py-lg-4">
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
                     <div class="col-lg-3 col-sm-12">
                         <p>
-                            <img src="{{ asset('public/img/logo_grey.png') }}" alt="{{ config('app.name') }}"
+                            <img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}"
                                 class="logo">
                         </p>
 
@@ -111,8 +198,11 @@
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
-                            
-                            
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Automobile</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Immobilier</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Cosmétique</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Agrobusiness</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Autres Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                         </ul>
@@ -125,11 +215,11 @@
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
+                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
+                            </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
-                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
-                            </li>
                             <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                         </ul>
                     </div>
@@ -206,11 +296,17 @@
     </script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/jquery.hammer.min.js') }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha256-0+5OfvOxkLHqpLPPwy9pDjug8N3cwaqcmleaxnR5VS8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/locales/jquery.timeago.fr.min.js" integrity="sha256-83OUXlbwKXMQPFrnJtQFpqYMK1LKWbBL+eUEGYhleDM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hazzik-jquery.livequery/1.3.6/jquery.livequery.min.js" integrity="sha256-88KNhDMpl3sAHFBGXrXw/K7H95NglbRhahMYlJyUtOo=" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom-custom.js') }}"></script>
 

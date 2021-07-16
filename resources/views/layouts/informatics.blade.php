@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
-    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="DESCRIPTION" CONTENT="AVIV'ART Informatique" />
+    <meta NAME="KEYWORDS" CONTENT="Solutions, Réseaux, Base de Données, Services, Partenaires, Formations" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
     <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
@@ -28,6 +28,8 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <title>{{ config('app.name') }} - Informatique - {{ $title ?? 'Laravel' }}</title>
 
@@ -44,7 +46,7 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0d47a1">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-success">Informatique</strong></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-success"><u>Informatique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -148,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-sm-12">
                         <p>
-                            <img src="{{ asset('public/img/logo_grey.png') }}" alt="{{ config('app.name') }}"
+                            <img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}"
                                 class="logo">
                         </p>
 
@@ -181,11 +183,11 @@
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
+                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
+                            </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
-                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
-                            </li>
                             <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                         </ul>
                     </div>

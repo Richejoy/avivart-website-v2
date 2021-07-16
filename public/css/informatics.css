@@ -4,23 +4,24 @@
 	--indigodark: #0e0c41;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
+
+.material-icons { display: inline-flex; vertical-align: text-bottom; }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 .main-footer {
 	background-color: var(--indigodark);
 }
 
 .main-footer .copyright {
-}
-
-header .social-icon {
-}
-
-footer .social-icon {
 }
 
 .carousel img {

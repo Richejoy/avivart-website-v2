@@ -10,6 +10,7 @@ use App\Models\Country;
 use App\Models\Civility;
 use App\Models\Image;
 use App\Models\ProductUser;
+use App\Models\AdUser;
 use App\Models\User;
 use App\Models\Member;
 use App\Models\Transaction;
@@ -432,6 +433,7 @@ class PageController extends Controller
             Auth::login($user, $request->has('remember_me'));
 
             session()->put('userFavoriteProducts', ProductUser::where(['user_id' => $user->id])->count());
+            session()->put('userFavoriteAds', AdUser::where(['user_id' => $user->id])->count());
 
             session()->flash('success', "Bienvenue dans votre tableau de bord");
 

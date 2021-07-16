@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\ProductUser;
+use App\Models\Ad;
+use App\Models\AdUser;
 use App\Models\Order;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -141,7 +143,7 @@ class UserController extends Controller
         return view('users.edit', compact('user', 'civilities', 'countries'));
     }
 
-    public function add(Request $request, Product $product)
+    public function addProduct(Request $request, Product $product)
     {
         $user = $request->user();
 
@@ -153,6 +155,22 @@ class UserController extends Controller
         }
 
         session()->put('userFavoriteProducts', ProductUser::where(['user_id' => $user->id])->count());
+
+        return back();
+    }
+
+    public function addAd(Request $request, Ad $ad)
+    {
+        $user = $request->user();
+
+        if (!AdUser::where(['ad_id' => $ad->id, 'user_id' => $user->id])->first()) {
+            AdUser::create([
+                'ad_id' => $ad->id,
+                'user_id' => $user->id
+            ]);
+        }
+
+        session()->put('userFavoriteAds', AdUser::where(['user_id' => $user->id])->count());
 
         return back();
     }

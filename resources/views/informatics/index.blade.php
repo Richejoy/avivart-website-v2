@@ -1,4 +1,4 @@
-@extends('layouts.informatics', ['title' => 'Accueil'])
+@extends('layouts.informatics', ['title' => 'Des logiciels sur mesure'])
 
 @section('body')
 
@@ -72,7 +72,7 @@
           <div class="card-body bg-light">
             <h5 class="card-title font-weight-bold">Administration de base de données</h5>
             <p>
-              Ce programme contient les formations ORACLE, SQL SERVER
+              Ce programme contient les formations ORACLE, SQL SERVER, MYSQL
             </p>
           </div>
         </div>

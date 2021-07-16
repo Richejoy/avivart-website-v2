@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
-    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="DESCRIPTION" CONTENT="AVIV'ART, L'art de mieux vivre" />
+    <meta NAME="KEYWORDS" CONTENT="Services, Contact, A propos, Conditions Générales, Termes Généraux, Foire aux questions, Plan du site, Faire un Don" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
     <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
@@ -17,8 +17,6 @@
     <meta name="google-site-verification" content="ZfxY-rbHjCOQfeNrQTT-4OA03jPPQQAPqz-kqMToyhQ" />
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css" />
 
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
@@ -30,6 +28,8 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
@@ -52,7 +52,7 @@
 <body>
 
     @if(session()->has('splashscreen'))
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm" id="navbarTop">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
                     src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
@@ -95,15 +95,17 @@
                         <a class="nav-link" href="{{ route('service.index') }}">Services</a>
                     </li>
 
-                    @if(Auth::check())
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('user.index') }}">Espace client</a>
-                    </li>
-                    @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
+                        <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                     </li>
-                    @endif
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="{{ route('page.login') }}"><i class="fa fa-user-circle fa-2x"></i></a>
+                    </li>
 
                 </ul>
             </div>
@@ -149,11 +151,11 @@
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
                             </li>
+                            <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
+                            <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
-                            <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
-                            <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                             <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                             <li><a class="text-secondary" href="{{ route('page.sitemap') }}">Plan du Site</a></li>
                             <li><a class="text-secondary" href="{{ route('page.donate') }}">Faire un Don</a></li>

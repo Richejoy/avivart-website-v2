@@ -11,8 +11,8 @@ use App\Helpers\Helper;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="L'art de mieux vivre" />
-    <meta NAME="KEYWORDS" CONTENT="Aliments, Products, School Express, VIVA SOS, Insurances" />
+    <meta NAME="DESCRIPTION" CONTENT="AVIV'ART Boutique" />
+    <meta NAME="KEYWORDS" CONTENT="Aliments Bio, Aliments Manufacturés, Electro-Ménager, High-Tech" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
     <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
@@ -32,6 +32,8 @@ use App\Helpers\Helper;
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A=="
@@ -61,7 +63,7 @@ use App\Helpers\Helper;
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
-                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-danger">Boutique</strong></a>
+                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-danger"><u>Boutique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -103,11 +105,11 @@ use App\Helpers\Helper;
                     </li>
                     @else
                     <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('page.login') }}">Connexion</a>
+                        <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('page.register') }}">Inscription</a>
+                        <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
                     </li>
                     @endif
 
@@ -182,8 +184,8 @@ use App\Helpers\Helper;
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb bg-white m-0 p-0">
-                            <li class="breadcrumb-item"><a href="{{ route('contact.index') }}"
-                                    class=" text-primary font-weight-bold">Contactez-nous</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('page.login') }}"
+                                    class=" text-primary font-weight-bold">Connectez-vous</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('store.guide') }}"
                                     class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('productCategory.index') }}"
@@ -240,11 +242,11 @@ use App\Helpers\Helper;
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
+                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
+                            </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.terms') }}">Termes Généraux</a></li>
-                            <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
-                            </li>
                             <li><a class="text-secondary" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                         </ul>
                     </div>

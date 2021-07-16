@@ -113,6 +113,11 @@ class User extends Authenticatable
         return $this->country->phonecode . ' ' . $this->phone;
     }
 
+    public function location()
+    {
+        return $this->city . ', ' . $this->country->name;
+    }
+
     public function transactions()
     {
         return $this->hasMany(Transaction::class);

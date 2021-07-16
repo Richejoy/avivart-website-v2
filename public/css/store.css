@@ -2,10 +2,10 @@
 	
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto', serif;
 }
 
 .main-footer {

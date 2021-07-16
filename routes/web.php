@@ -23,6 +23,10 @@ use App\Http\Controllers\ConversionController;
 use App\Http\Controllers\ProductUserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\AdRayController;
+use App\Http\Controllers\AdCategoryController;
+use App\Http\Controllers\AdTypeController;
+use App\Http\Controllers\AdUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,9 +88,20 @@ Route::prefix('/immovable')->name('immovable.')->group(function() {
 	Route::get('/', [ImmovableController::class, 'index'])->name('index');
 });
 
-Route::prefix('/ad')->name('ad.')->group(function() {
+Route::prefix('/ad')->name('ad.')->middleware(['ad'])->group(function() {
 	Route::get('/', [AdController::class, 'index'])->name('index');
 	Route::get('/{ad}/show', [AdController::class, 'show'])->name('show');
+
+	Route::middleware(['auth'])->group(function() {
+		Route::get('/create', [AdController::class, 'create'])->name('create');
+		Route::post('/store', [AdController::class, 'store'])->name('store');
+		Route::get('/{ad}/edit', [AdController::class, 'edit'])->name('edit');
+		Route::put('/update', [AdController::class, 'update'])->name('update');
+		Route::delete('/destroy', [AdController::class, 'destroy'])->name('destroy');
+	});
+
+	Route::get('/search', [AdController::class, 'search'])->name('search');
+	Route::get('/guide', [AdController::class, 'guide'])->name('guide');
 });
 
 Route::prefix('/agribusiness')->name('agribusiness.')->group(function() {
@@ -108,6 +123,7 @@ Route::prefix('/cosmetic')->name('cosmetic.')->group(function() {
 });
 
 Route::resource('/product_user', ProductUserController::class)->middleware(['auth']);
+Route::resource('/ad_user', AdUserController::class)->middleware(['auth']);
 Route::resource('/order', OrderController::class)->middleware(['auth']);
 Route::resource('/transaction', TransactionController::class)->middleware(['auth']);
 
@@ -119,9 +135,13 @@ Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function ()
 Route::prefix('/user')->name('user.')->middleware(['auth'])->group(function() {
 	Route::get('/orders', [UserController::class, 'orders'])->name('orders');
 	Route::get('/favorite/products', [UserController::class, 'favoriteProducts'])->name('favorite_products');
+	Route::get('/favorite/ads', [UserController::class, 'favoriteAds'])->name('favorite_ads');
+
 	Route::get('/transactions', [UserController::class, 'transactions'])->name('transactions');
 	Route::get('/payments', [UserController::class, 'payments'])->name('payments');
-	Route::get('/{product}/add', [UserController::class, 'add'])->name('add');
+
+	Route::get('product/{product}/add', [UserController::class, 'addProduct'])->name('add');
+	Route::get('ad/{ad}/add', [UserController::class, 'addAd'])->name('add_ad');
 
 	Route::get('/', [UserController::class, 'index'])->name('index');
 	Route::match(['GET', 'POST'], '/{user}/show', [UserController::class, 'show'])->name('show');
@@ -191,4 +211,19 @@ Route::prefix('/conversion')->name('conversion.')->group(function() {
 
 Route::prefix('/service')->name('service.')->group(function() {
 	Route::get('/', [ServiceController::class, 'index'])->name('index');
+});
+
+Route::prefix('/ad/ray')->name('adRay.')->group(function() {
+	Route::get('/', [AdRayController::class, 'index'])->name('index');
+	Route::get('/{adRay}/show', [AdRayController::class, 'show'])->name('show');
+});
+
+Route::prefix('/ad/category')->name('adCategory.')->group(function() {
+	Route::get('/', [AdCategoryController::class, 'index'])->name('index');
+	Route::get('/{adCategory}/show', [AdCategoryController::class, 'show'])->name('show');
+});
+
+Route::prefix('/ad/type')->name('adType.')->group(function() {
+	Route::get('/', [AdTypeController::class, 'index'])->name('index');
+	Route::get('/{adType}/show', [AdTypeController::class, 'show'])->name('show');
 });
