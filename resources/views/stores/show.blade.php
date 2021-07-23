@@ -33,9 +33,9 @@
                 <p class="">En promotion : {{ $product->on_discount ? 'Oui' : 'Non' }}</p>
 
                 <h6 class="">
-                    Prix : <strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
+                    Prix : <strong>{{ $product->getNewPrice() }}</strong>
                     @if($product->new_price != $product->old_price)
-                    / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
+                    / <strike>{{ $product->getOldPrice() }}</strike>
                     @endif
                 </h6>
 
@@ -60,6 +60,32 @@
                 <p class="text-muted">
                     {!! nl2br($product->characteristics) !!}
                 </p>
+
+                <hr>
+
+                <p>
+                    <a target="_blank" data-toggle="tooltip" title="Appel" href="{{ $product->phoneLink() }}" class=""><i
+                                            class="fa fa-phone fa-2x text-danger"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Whatsapp"
+                                        href="{{ $product->whatsappLink() }}"
+                                        class="ml-4 mr-2"><i class="fa fa-whatsapp fa-2x text-success"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Telegram" href="{{ $product->telegramLink() }}" class="ml-2 mr-4"><i
+                                class="fa fa-telegram fa-2x text-primary"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Message"
+                                        href="{{ $product->messageLink() }}" class=""><i
+                                            class="fa fa-comments fa-2x text-warning"></i></a>
+                </p>
+
+                <hr>
+
+                <p>
+                    <a data-toggle="tooltip" title="Ajouter au favoris"
+                            href="{{ route('user.add', ['product' => $product]) }}" class="text-danger"><i
+                                class="fa fa-heart fa-2x fa-spin"></i></a>
+                </p>
             </div>
 
             <div class="col-lg-4">
@@ -81,17 +107,8 @@
                                 class="fa fa-twitter"></i></a>
                     </li>
                     <li class="">
-                        <a target="_blank" href="https://telegram.me/share/url?url={{ Request::url() }}&text=Bonjour" class="text-white text-decoration-none social-icon twitter hvr-pulse"><i
-                                class="fa fa-telegram"></i></a>
-                    </li>
-                    <li class="">
                         <a target="_blank" href="https://plus.google.com/share?url={{ Request::url() }}" class="text-white text-decoration-none social-icon youtube hvr-hang"><i
                                 class="fa fa-google-plus"></i></a>
-                    </li>
-                    <li class="">
-                        <a data-toggle="tooltip" title="Ajouter au favoris"
-                            href="{{ route('user.add', ['product' => $product]) }}" class="text-danger"><i
-                                class="fa fa-heart fa-2x fa-spin"></i></a>
                     </li>
                 </ul>
             </div>

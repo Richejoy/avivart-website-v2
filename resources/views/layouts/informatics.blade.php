@@ -28,15 +28,14 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>{{ config('app.name') }} - Informatique - {{ $title ?? 'Laravel' }}</title>
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
-    
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/informatics.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -46,7 +45,9 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0d47a1">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-success"><u>Informatique</u></strong></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
+                    src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"
+                    align="middle"> <strong class="text-success"><u>Informatique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +62,7 @@
                     <li class="nav-item active">
                         <a class="nav-link font-weight-bold" href="{{ route('informatics.index') }}">Informatique</a>
                     </li>
-            
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -70,12 +71,14 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Microfinance</a>
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Digitalisation</a>
-                            <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Transformation Digitale</a>
+                            <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Transformation
+                                Digitale</a>
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Gestion de Stock</a>
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Logistique</a>
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Santé</a>
                             <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Site Web</a>
-                            <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Intégration de solution informatique</a>
+                            <a class="dropdown-item" href="{{ route('informatics.solutions') }}">Intégration de solution
+                                informatique</a>
                         </div>
                     </li>
 
@@ -166,11 +169,14 @@
                             <li><a class="text-secondary" href="{{ route('informatics.solutions') }}">Solutions</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('informatics.networks') }}">Réseaux</a></li>
-                            <li><a class="text-secondary" href="{{ route('informatics.databases') }}">Base de Données</a>
+                            <li><a class="text-secondary" href="{{ route('informatics.databases') }}">Base de
+                                    Données</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('informatics.services') }}">Services</a></li>
-                            <li><a class="text-secondary" href="{{ route('informatics.partners') }}">Partenaires</a></li>
-                            <li><a class="text-secondary" href="{{ route('informatics.formations') }}">Formations</a></li>
+                            <li><a class="text-secondary" href="{{ route('informatics.partners') }}">Partenaires</a>
+                            </li>
+                            <li><a class="text-secondary" href="{{ route('informatics.formations') }}">Formations</a>
+                            </li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                         </ul>
@@ -193,7 +199,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres
+                            spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -213,23 +220,29 @@
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li>
-                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                                <a target="_blank" href="https://facebook.com/societeavivart"
+                                    class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                                <a target="_blank" href="https://twitter.com/art_aviv"
+                                    class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                <a target="_blank" href="https://telegram.me/avivart"
+                                    class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
                                         class="fa fa-telegram"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank"
+                                    href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!"
+                                    class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg"
+                                    class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -247,7 +260,7 @@
                         est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        
+
                     </div>
                 </div>
             </div>

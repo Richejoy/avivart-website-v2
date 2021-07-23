@@ -89,6 +89,27 @@
                     </div>
                 </div>
 
+                <div class="my-3">
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0015.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0016.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0017.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0018.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0019.jpg" alt="Image" class="w-100">
+                    </p>
+                </div>
+
             </aside>
 
             <div class="col-lg-9">
@@ -127,9 +148,9 @@
                                 </p>
 
                                 <h6 class="text-dark m-0">
-                                    <strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
+                                    <strong>{{ $product->getNewPrice() }}</strong>
                                     @if($product->new_price != $product->old_price)
-                                    / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
+                                    / <strike>{{ $product->getOldPrice() }}</strike>
                                     @endif
                                 </h6>
                             </div>

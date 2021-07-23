@@ -32,8 +32,7 @@ use App\Helpers\Helper;
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A=="
@@ -46,13 +45,15 @@ use App\Helpers\Helper;
     <title>{{ config('app.name') }} - Boutique - {{ $title ?? 'Laravel' }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/loadMoreResults/css/loadMoreResults.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('public/plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('public/plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
-    
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/store.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -63,7 +64,8 @@ use App\Helpers\Helper;
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
-                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-danger"><u>Boutique</u></strong></a>
+                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"
+                    align="middle"> <strong class="text-danger"><u>Boutique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -76,27 +78,34 @@ use App\Helpers\Helper;
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.index') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.index') }}" href="{{ route('store.index') }}">Boutique</a>
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.index') }}"
+                            href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.organic_foods') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.organic_foods') }}" href="{{ route('store.organic_foods') }}">Aliments Bio</a>
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.organic_foods') }}"
+                            href="{{ route('store.organic_foods') }}">Aliments Bio</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.manufactured_foods') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.manufactured_foods') }}" href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
+                    <li
+                        class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.manufactured_foods') }}">
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.manufactured_foods') }}"
+                            href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.home_appliance') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.home_appliance') }}" href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.home_appliance') }}"
+                            href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.high_tech') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.high_tech') }}" href="{{ route('store.high_tech') }}">High-Tech</a>
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.high_tech') }}"
+                            href="{{ route('store.high_tech') }}">High-Tech</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.other_products') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}" href="{{ route('store.other_products') }}">Autres Produits</a>
+                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}"
+                            href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
                     <li class="nav-item hvr-underline-from-center">
@@ -143,8 +152,7 @@ use App\Helpers\Helper;
                                 </select>
                             </div>
                             <input type="search" name="name" id="name" class="form-control border-danger"
-                                placeholder="Rechercher un aliment ou produit..."
-                                value="{{ Request::query('name') }}">
+                                placeholder="Rechercher un aliment ou produit..." value="{{ Request::query('name') }}">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-danger hvr-glow">Rechercher</button>
                             </div>
@@ -153,16 +161,20 @@ use App\Helpers\Helper;
                 </div>
                 <div class="col-lg-3">
                     <div>
-                        <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}" data-toggle="tooltip" title="Nombre de produits"><i
-                                class="fa fa-shopping-cart"></i> ({{ Cart::content()->count() }})</a>
+                        <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}"
+                            data-toggle="tooltip" title="Nombre de produits"><i class="fa fa-shopping-cart"></i>
+                            ({{ Cart::content()->count() }})</a>
 
-                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}" data-toggle="tooltip" title="Produits favoris"><i
-                                class="fa fa-heart"></i> ({{ session('userFavoriteProducts', 0) }})</a>
+                        <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}"
+                            data-toggle="tooltip" title="Produits favoris"><i class="fa fa-heart"></i>
+                            ({{ session('userFavoriteProducts', 0) }})</a>
 
-                        <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}" data-toggle="tooltip" title="Détails commande">
+                        <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}"
+                            data-toggle="tooltip" title="Détails commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
-                            ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }} FCFA)
+                            ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }}
+                            FCFA)
                             @else
                             <i class="fa fa-money"></i> ({{ Cart::subtotal() }} FCFA)
                             @endif
@@ -173,7 +185,8 @@ use App\Helpers\Helper;
 
             <div class="row">
                 <div class="col-lg-3">
-                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous. Livraison gratuite à partir de 100 000FCFA.</a></p>
+                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous. Livraison gratuite à
+                            partir de 100 000FCFA.</a></p>
                 </div>
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
@@ -246,7 +259,8 @@ use App\Helpers\Helper;
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres
+                            spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -266,23 +280,29 @@ use App\Helpers\Helper;
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li>
-                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                                <a target="_blank" href="https://facebook.com/societeavivart"
+                                    class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                                <a target="_blank" href="https://twitter.com/art_aviv"
+                                    class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                <a target="_blank" href="https://telegram.me/avivart"
+                                    class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
                                         class="fa fa-telegram"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank"
+                                    href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!"
+                                    class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg"
+                                    class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -302,7 +322,8 @@ use App\Helpers\Helper;
                     <div class="col-lg-4 text-light text-lg-center">
                         <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="pr-3 img-25x25">
 
-                        <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}" class="pl-2 pr-2 img-25x25">
+                        <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}"
+                            class="pl-2 pr-2 img-25x25">
 
                         <img alt="VISA" src="{{ asset('public/img/payments/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
 
@@ -321,8 +342,8 @@ use App\Helpers\Helper;
     </div>
     <div class="videoPopup">
         <div class="card border-secondary">
-            <div class="card-header bg-secondary text-white">Publicités<span data-toggle="tooltip"
-                    title="Fermer" class="closeVideoPopup pull-right"><i class="fa fa-close"></i></span></div>
+            <div class="card-header bg-secondary text-white">Publicités<span data-toggle="tooltip" title="Fermer"
+                    class="closeVideoPopup pull-right"><i class="fa fa-close"></i></span></div>
             <video controls class="w-100 p-0">
                 <source src="{{ asset('public/videos/v3.mp4') }}" type="video/mp4">
             </video>
@@ -350,11 +371,15 @@ use App\Helpers\Helper;
 
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/fix-element-top-scroll/js/jquery.fixx.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/plugins/sticky-cookie-accept-banner/js/cookit.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/fix-element-top-scroll/js/jquery.fixx.js') }}">
+    </script>
+    <script type="text/javascript" src="{{ asset('public/plugins/sticky-cookie-accept-banner/js/cookit.min.js') }}">
+    </script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

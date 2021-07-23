@@ -8,7 +8,8 @@
     <meta NAME="TITLE" CONTENT="AVIV'ART" />
     <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
     <meta NAME="DESCRIPTION" CONTENT="AVIV'ART, L'art de mieux vivre" />
-    <meta NAME="KEYWORDS" CONTENT="Services, Contact, A propos, Conditions Générales, Termes Généraux, Foire aux questions, Plan du site, Faire un Don" />
+    <meta NAME="KEYWORDS"
+        CONTENT="Services, Contact, A propos, Conditions Générales, Termes Généraux, Foire aux questions, Plan du site, Faire un Don" />
     <meta NAME="OWNER" CONTENT="VIVA AKUE" />
     <meta NAME="ROBOTS" CONTENT="index,all">
     <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
@@ -28,8 +29,7 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
@@ -37,14 +37,16 @@
 
     <title>{{ config('app.name') }} - {{ $title ?? 'Laravel' }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/cookie-consent-banner-localstroage/css/cookie-banner.css') }}">
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('public/plugins/cookie-consent-banner-localstroage/css/cookie-banner.css') }}">
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
-    
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -54,8 +56,8 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" id="navbarTop">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
-                    src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
+                    alt="{{ config('app.name') }}" class="logo-xs"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -104,7 +106,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('page.login') }}"><i class="fa fa-user-circle fa-2x"></i></a>
+                        <a class="nav-link text-info" href="{{ route('page.login') }}"><i
+                                class="fa fa-user-circle fa-2x"></i></a>
                     </li>
 
                 </ul>
@@ -163,7 +166,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres
+                            spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -183,23 +187,29 @@
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li>
-                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                                <a target="_blank" href="https://facebook.com/societeavivart"
+                                    class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                                <a target="_blank" href="https://twitter.com/art_aviv"
+                                    class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                <a target="_blank" href="https://telegram.me/avivart"
+                                    class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
                                         class="fa fa-telegram"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank"
+                                    href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!"
+                                    class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg"
+                                    class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -217,7 +227,7 @@
                         est fait par <a class="text-success" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        
+
                     </div>
                 </div>
             </div>
@@ -226,11 +236,11 @@
 
     <!-- Cookie Banner -->
     <div class="nk-cookie-banner alert alert-warning text-center mb-0" role="alert">
-      &#x1F36A; This website uses cookies to ensure you get the best experience on our website.
-      <a href="{{ route('page.terms') }}" target="blank">Learn more</a>
-      <button type="button" class="btn btn-primary btn-sm ml-3" onclick="window.nk_hideCookieBanner()">
-        I accept
-      </button>
+        &#x1F36A; This website uses cookies to ensure you get the best experience on our website.
+        <a href="{{ route('page.terms') }}" target="blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ml-3" onclick="window.nk_hideCookieBanner()">
+            I accept
+        </button>
     </div>
     <!-- End of Cookie Banner -->
 
@@ -243,28 +253,36 @@
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
     </script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/Material-Style-Auto-Show-Hide-Scroll-To-Top-Button-Material-ScrollTop/dist/material-scrolltop.js') }}">
+    </script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/pin-element-top-sticky/js/jquery.sticky.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/pin-element-top-sticky/js/jquery.sticky.js') }}">
+    </script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/cookie-consent-banner-localstroage/js/cookie-banner.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/cookie-consent-banner-localstroage/js/cookie-banner.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/js/page.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
-    
+
     <script type="text/javascript">
-        new WOW().init();
+    new WOW().init();
     </script>
 </body>
 

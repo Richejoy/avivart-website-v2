@@ -28,21 +28,23 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>{{ config('app.name') }} - Annonces - {{ $title ?? 'Laravel' }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/css/xzoom.css') }}" media="all" />
+    <link rel="stylesheet" type="text/css"
+        href="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/css/xzoom.css') }}"
+        media="all" />
 
-    <link type="text/css" rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link type="text/css" rel="stylesheet" media="all"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.css" />
+    <link type="text/css" rel="stylesheet" media="all"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
 
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
@@ -57,7 +59,9 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong class="text-warning"><u>Annonces</u></strong></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
+                    alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong
+                    class="text-warning"><u>Annonces</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -136,8 +140,7 @@
                                 </select>
                             </div>
                             <input type="search" name="name" id="name" class="form-control border-warning"
-                                placeholder="Rechercher une annonce..."
-                                value="{{ Request::query('name') }}">
+                                placeholder="Rechercher une annonce..." value="{{ Request::query('name') }}">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-warning hvr-glow">Rechercher</button>
                             </div>
@@ -146,17 +149,20 @@
                 </div>
                 <div class="col-lg-3">
                     <div>
-                        <a class="btn btn-primary" href="{{ route('user.favorite_ads') }}" data-toggle="tooltip" title="Annonces favorites"><span
+                        <a class="btn btn-primary" href="{{ route('user.favorite_ads') }}" data-toggle="tooltip"
+                            title="Annonces favorites"><span
                                 class="material-icons">favorite</span>{{ session('userFavoriteAds', 0) }}</a>
 
-                        <a class="btn btn-danger" href="{{ route('ad.create') }}"><span class="material-icons">notification_important</span>Publier une annonce</a>
+                        <a class="btn btn-danger" href="{{ route('ad.create') }}"><span
+                                class="material-icons">notification_important</span>Publier une annonce</a>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-lg-3">
-                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous et publier des annonces en toute liberté.</a></p>
+                    <p class="m-lg-0 fs-12"><a href="{{ route('page.register') }}">Inscrivez-vous et publier des
+                            annonces en toute liberté.</a></p>
                 </div>
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
@@ -225,7 +231,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres spéciales.
+                        <p class="text-secondary">Recevez des mises à jour par email sur notre site et nos offres
+                            spéciales.
                         </p>
 
                         {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
@@ -245,23 +252,29 @@
 
                         <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
                             <li>
-                                <a target="_blank" href="https://facebook.com/societeavivart" class="text-white text-decoration-none social-icon facebook hvr-grow"><i
+                                <a target="_blank" href="https://facebook.com/societeavivart"
+                                    class="text-white text-decoration-none social-icon facebook hvr-grow"><i
                                         class="fa fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://twitter.com/art_aviv" class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
+                                <a target="_blank" href="https://twitter.com/art_aviv"
+                                    class="text-white text-decoration-none social-icon twitter hvr-shrink"><i
                                         class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://telegram.me/avivart" class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
+                                <a target="_blank" href="https://telegram.me/avivart"
+                                    class="text-white text-decoration-none social-icon telegram hvr-pulse"><i
                                         class="fa fa-telegram"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!" class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
+                                <a target="_blank"
+                                    href="https://web.whatsapp.com/send?phone=22892107878&text=Bonjour AVIVART!"
+                                    class="text-white text-decoration-none social-icon whatsapp hvr-push"><i
                                         class="fa fa-whatsapp"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg" class="text-white text-decoration-none social-icon youtube hvr-pop"><i
+                                <a target="_blank" href="https://youtube.com/channel/UC-JUg2ErdyUWoHWF8AoqQYg"
+                                    class="text-white text-decoration-none social-icon youtube hvr-pop"><i
                                         class="fa fa-youtube"></i></a>
                             </li>
                         </ul>
@@ -279,7 +292,7 @@
                         est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
-                        
+
                     </div>
                 </div>
             </div>
@@ -295,20 +308,30 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/jquery.hammer.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/jquery.hammer.min.js') }}">
+    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha256-0+5OfvOxkLHqpLPPwy9pDjug8N3cwaqcmleaxnR5VS8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/locales/jquery.timeago.fr.min.js" integrity="sha256-83OUXlbwKXMQPFrnJtQFpqYMK1LKWbBL+eUEGYhleDM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hazzik-jquery.livequery/1.3.6/jquery.livequery.min.js" integrity="sha256-88KNhDMpl3sAHFBGXrXw/K7H95NglbRhahMYlJyUtOo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"
+        integrity="sha256-0+5OfvOxkLHqpLPPwy9pDjug8N3cwaqcmleaxnR5VS8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/locales/jquery.timeago.fr.min.js"
+        integrity="sha256-83OUXlbwKXMQPFrnJtQFpqYMK1LKWbBL+eUEGYhleDM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hazzik-jquery.livequery/1.3.6/jquery.livequery.min.js"
+        integrity="sha256-88KNhDMpl3sAHFBGXrXw/K7H95NglbRhahMYlJyUtOo=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom-custom.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom-custom.js') }}">
+    </script>
 
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

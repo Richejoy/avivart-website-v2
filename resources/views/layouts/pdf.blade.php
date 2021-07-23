@@ -10,12 +10,12 @@
     <title>PDF</title>
 
     <style>
-	.page-break {
-	    /*page-break-before: always;*/
-	    page-break-after: always;
-	}
+    .page-break {
+        /*page-break-before: always;*/
+        page-break-after: always;
+    }
 
-	table {
+    table {
         border-collapse: collapse;
         width: 100%;
     }
@@ -41,7 +41,7 @@
     table.table2 thead th {
         text-align: center;
     }
-	</style>
+    </style>
 </head>
 
 <body>

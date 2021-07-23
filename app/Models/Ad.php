@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Request;
 
 class Ad extends Model
 {
@@ -69,6 +70,26 @@ class Ad extends Model
 
     public function getPrice()
     {
-        return $this->price . ' ' . $this->currency->name;
+        return number_format($this->price, 2, '.', ' ') . ' ' . $this->currency->name;
+    }
+
+    public function phoneLink()
+    {
+        return "tel:+" . str_replace(' ', '', $this->user->longPhone());
+    }
+
+    public function whatsappLink()
+    {
+        return "https://web.whatsapp.com/send?phone=+" . str_replace(' ', '', $this->user->longPhone()) . "&text=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
+    }
+
+    public function telegramLink()
+    {
+        return "https://telegram.me/share/url?url=" . Request::url() . "&text=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
+    }
+
+    public function messageLink()
+    {
+        return "mailto:" . $this->user->email . "?subject=Annonce&body=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
     }
 }

@@ -8,11 +8,32 @@
 
             <aside class="col-lg-3">
 
+                <div class="my-3">
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210614-WA0007.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210517-WA0006.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210601-WA0000.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210715-WA0005.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210721-WA0039.jpg" alt="Image" class="w-100">
+                    </p>
+                </div>
+
             </aside>
 
             <div class="col-lg-9">
 
-                <h2>Recherche de produits ({{ $products->count() }})</h2>
+                <h2 class="font-weight-bold text-dark">Recherche de produits ({{ $products->count() }})</h2>
 
                 @if($products->count())
 
@@ -43,9 +64,9 @@
                                 </p>
 
                                 <h6 class="text-dark m-0">
-                                    <strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
+                                    <strong>{{ $product->getNewPrice() }}</strong>
                                     @if($product->new_price != $product->old_price)
-                                    / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
+                                    / <strike>{{ $product->getOldPrice() }}</strike>
                                     @endif
                                 </h6>
                             </div>

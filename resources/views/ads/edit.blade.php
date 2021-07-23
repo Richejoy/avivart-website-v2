@@ -3,12 +3,12 @@
 @section('body')
 
 <section class="bg-white py-3">
-	<div class="container-fluid">
-		<div class="row">
+    <div class="container-fluid">
+        <div class="row">
 
-			
-		</div>
-	</div>
+
+        </div>
+    </div>
 </section>
 
 @endsection

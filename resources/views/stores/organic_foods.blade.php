@@ -77,9 +77,9 @@
                                 </p>
 
                                 <h6 class="text-dark m-0">
-                                    <strong>{{ $product->new_price }} {{ $product->currency->name }}</strong>
+                                    <strong>{{ $product->getNewPrice() }}</strong>
                                     @if($product->new_price != $product->old_price)
-                                    / <strike>{{ $product->old_price }} {{ $product->currency->name }}</strike>
+                                    / <strike>{{ $product->getOldPrice() }}</strike>
                                     @endif
                                 </h6>
                             </div>

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
+use Illuminate\Support\Facades\Request;
 
 class Product extends Model implements Buyable
 {
@@ -94,11 +95,31 @@ class Product extends Model implements Buyable
 
     public function getNewPrice()
     {
-        return $this->new_price . ' ' . $this->currency->name;
+        return number_format($this->new_price, 2, '.', ' ') . ' ' . $this->currency->name;
     }
 
     public function getOldPrice()
     {
-        return $this->old_price . ' ' . $this->currency->name;
+        return number_format($this->old_price, 2, '.', ' ') . ' ' . $this->currency->name;
+    }
+
+    public function phoneLink()
+    {
+        return "tel:+" . str_replace(' ', '', $this->user->longPhone());
+    }
+
+    public function whatsappLink()
+    {
+        return "https://web.whatsapp.com/send?phone=+" . str_replace(' ', '', $this->user->longPhone()) . "&text=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
+    }
+
+    public function telegramLink()
+    {
+        return "https://telegram.me/share/url?url=" . Request::url() . "&text=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
+    }
+
+    public function messageLink()
+    {
+        return "mailto:" . $this->user->email . "?subject=Annonce&body=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
     }
 }
