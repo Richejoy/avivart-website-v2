@@ -135,6 +135,8 @@ Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function ()
 Route::prefix('/user')->name('user.')->middleware(['auth'])->group(function() {
 	Route::get('/orders', [UserController::class, 'orders'])->name('orders');
 	Route::get('/favorite/products', [UserController::class, 'favoriteProducts'])->name('favorite_products');
+
+	Route::get('/ads', [UserController::class, 'ads'])->name('ads');
 	Route::get('/favorite/ads', [UserController::class, 'favoriteAds'])->name('favorite_ads');
 
 	Route::get('/transactions', [UserController::class, 'transactions'])->name('transactions');

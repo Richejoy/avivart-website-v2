@@ -190,7 +190,25 @@ class UserController extends Controller
 
         $productsUsers = ProductUser::where('user_id', $user->id)->get();
 
-        return view('users.favorites', compact('user', 'productsUsers'));
+        return view('users.favorite_products', compact('user', 'productsUsers'));
+    }
+
+    public function ads(Request $request)
+    {
+        $user = $request->user();
+
+        $ads = Ad::where('user_id', $user->id)->get();
+
+        return view('users.ads', compact('user', 'ads'));
+    }
+
+    public function favoriteAds(Request $request)
+    {
+        $user = $request->user();
+
+        $adsUsers = AdUser::where('user_id', $user->id)->get();
+
+        return view('users.favorite_ads', compact('user', 'adsUsers'));
     }
 
     public function transactions(Request $request)

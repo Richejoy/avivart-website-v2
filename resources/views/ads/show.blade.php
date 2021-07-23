@@ -61,10 +61,10 @@
                 <p class="">
                     <a target="_blank" href="{{ $ad->phoneLink() }}" class="btn btn-danger btn-sm"><span class="material-icons">phone</span> Appel</a>
 
-                    <a target="_blank" href="{{ $ad->whatsappLink() }}" class="btn btn-success btn-sm mx-5"><span class="material-icons">forum</span>
+                    <a target="_blank" href="{{ $ad->whatsappLink() }}" class="btn btn-success btn-sm ml-4 mr-2"><span class="material-icons">forum</span>
                         Whatsapp</a>
 
-                    <a target="_blank" href="{{ $ad->telegramLink() }}" class="btn btn-info btn-sm mx-5"><span class="material-icons">share</span>
+                    <a target="_blank" href="{{ $ad->telegramLink() }}" class="btn btn-info btn-sm ml-2 mr-4"><span class="material-icons">forum</span>
                         Telegram</a>
 
                     <a target="_blank" href="{{ $ad->messageLink() }}" class="btn btn-warning btn-sm"><span class="material-icons">message</span> Message</a>

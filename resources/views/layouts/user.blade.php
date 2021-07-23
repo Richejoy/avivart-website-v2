@@ -145,16 +145,38 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="{{ route('user.orders') }}">
-                            <i class="fa fa-shopping-cart"></i> <span>Mes commandes</span>
+                    <li class="treeview">
+                        <a href="{{ route('user.index') }}">
+                            <i class="fa fa-shopping-basket"></i> <span>Produits</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="{{ route('user.orders') }}"><i class="fa fa-shopping-cart"></i> Mes commandes</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.favorite_products') }}"><i class="fa fa-star"></i> Mes produits favoris</a>
+                            </li>
+                        </ul>
                     </li>
 
-                    <li>
-                        <a href="{{ route('user.favorite_products') }}">
-                            <i class="fa fa-star"></i> <span>Mes produits favoris</span>
+                    <li class="treeview">
+                        <a href="{{ route('user.index') }}">
+                            <i class="fa fa-bullhorn"></i> <span>Annonces</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
                         </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="{{ route('user.ads') }}"><i class="fa fa-bullhorn"></i> Mes annonces</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('user.favorite_ads') }}"><i class="fa fa-star"></i> Mes annonces favoris</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li>

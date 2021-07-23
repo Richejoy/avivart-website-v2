@@ -59,7 +59,8 @@
 
                 @if($adCategory->ads->count())
 
-                	@foreach($adCategory->ads as $ad)
+                	<div class="row">
+                     @foreach($adCategory->ads as $ad)
                         <div class="col-md-4 mb-3 ad-item">
                             <div class="card h-100">
                                 <a href="{{ route('ad.show', ['ad' => $ad]) }}">
@@ -97,7 +98,8 @@
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+                    @endforeach   
+                    </div>
 
                 @else
                 <p>Aucune annonce</p>
