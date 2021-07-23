@@ -7,7 +7,9 @@ use App\Models\AdCategory;
 use App\Models\AdRay;
 use App\Models\AdType;
 use App\Models\Ad;
+use App\Models\Currency;
 use App\Models\AdImage;
+use App\Models\Image;
 
 class AdController extends Controller
 {
@@ -31,16 +33,50 @@ class AdController extends Controller
 
     public function create(Request $request)
     {
-        return view('ads.create');
+        $adCategories = AdCategory::all()->sortBy('id')->pluck(null, 'id');
+        $adTypes = AdType::all()->sortBy('id')->pluck(null, 'id');
+        $currencies = Currency::all()->sortBy('id')->pluck(null, 'id');
+
+        return view('ads.create', compact('adCategories', 'adTypes', 'currencies'));
     }
 
     public function store(Request $request)
     {
+        $user = $request->user();
+
         if ($request->isMethod('POST')) {
-            // code...
+            $this->validate($request, [
+                'name' => ['required', 'bail', 'min:6'],
+                'description' => ['required', 'bail', 'min:6'],
+                'characteristics' => ['required', 'bail', 'min:10'],
+                'price' => ['required', 'bail'],
+                'ad_category_id' => ['required', 'bail'],
+                'ad_type_id' => ['required', 'bail'],
+                'currency_id' => ['required', 'bail'],
+            ]);
+
+            $image = Image::create([
+                'folder' => 'ads',
+                'url' => 'default.jpg',
+                'link' => 'https://avivart.net/images/ads/default.jpg',
+                'description' => $request->name,
+            ]);
+
+            $ad = Ad::create(array_merge(
+                $request->all(),
+                [
+                    'user_id' => $user->id,
+                    'image_id' => $image->id,
+                    'is_vip' => false,
+                    'published' => false,
+                    'expire_date' => now(),
+                ]
+            ));
+
+            flashy()->success('Votre annonce à été ajouter. Veuillez attendre sa validation');
         }
 
-        return back();
+        return redirect()->route('user.ads');
     }
 
     public function show(Request $request, Ad $ad)
@@ -52,16 +88,38 @@ class AdController extends Controller
 
     public function edit(Request $request, Ad $ad)
     {
-        return view('ads.edit', compact('ad'));
+        $adCategories = AdCategory::all()->sortBy('id')->pluck(null, 'id');
+        $adTypes = AdType::all()->sortBy('id')->pluck(null, 'id');
+        $currencies = Currency::all()->sortBy('id')->pluck(null, 'id');
+
+        return view('ads.edit', compact('ad', 'adCategories', 'adTypes', 'currencies'));
     }
 
     public function update(Request $request, Ad $ad)
     {
-        if ($request->isMethod('PUT')) {
-            // code...
+        $user = $request->user();
+
+        if ($user->id != $ad->user_id) {
+            return back()->withDanger("Erreur interne");
         }
 
-        return back();
+        if ($request->isMethod('PUT')) {
+            $this->validate($request, [
+                'name' => ['required', 'bail', 'min:6'],
+                'description' => ['required', 'bail', 'min:6'],
+                'characteristics' => ['required', 'bail', 'min:10'],
+                'price' => ['required', 'bail'],
+                'ad_category_id' => ['required', 'bail'],
+                'ad_type_id' => ['required', 'bail'],
+                'currency_id' => ['required', 'bail'],
+            ]);
+            
+            $ad->update($request->all());
+
+            flashy()->success('Annonce mise à jour');
+        }
+
+        return redirect()->route('user.ads');
     }
 
     public function destroy(Request $request, Ad $ad)

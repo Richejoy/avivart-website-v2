@@ -30,9 +30,17 @@
                             <a target="_blank" data-toggle="tooltip" title="Afficher"
                                     href="{{ route('ad.show', ['ad' => $ad]) }}" class="text-success"><i
                                         class="fa fa-info-circle"></i></a>
-                            <a target="_blank" data-toggle="tooltip" title="Editer"
+                            <a style="margin: 0 15px;" target="_blank" data-toggle="tooltip" title="Editer"
                                     href="{{ route('ad.edit', ['ad' => $ad]) }}" class="text-warning"><i
                                         class="fa fa-pencil"></i></a>
+
+                            <a data-toggle="tooltip" title="Editer image"
+                                    href="{{ route('image.edit', ['image' => $ad->image->id]) }}" class="text-danger"><i
+                                        class="fa fa-image"></i></a>
+
+                            <a style="margin-left: 15px;" data-toggle="tooltip" title="Images supplémentaires"
+                                    href="{{ route('adImage.index', ['ad' => $ad->id]) }}" class="text-info"><i
+                                        class="fa fa-file"></i></a>
                         </td>
                     </tr>
                     @endforeach

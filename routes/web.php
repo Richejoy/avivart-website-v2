@@ -27,6 +27,8 @@ use App\Http\Controllers\AdRayController;
 use App\Http\Controllers\AdCategoryController;
 use App\Http\Controllers\AdTypeController;
 use App\Http\Controllers\AdUserController;
+use App\Http\Controllers\AdImageController;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,8 +98,8 @@ Route::prefix('/ad')->name('ad.')->middleware(['ad'])->group(function() {
 		Route::get('/create', [AdController::class, 'create'])->name('create');
 		Route::post('/store', [AdController::class, 'store'])->name('store');
 		Route::get('/{ad}/edit', [AdController::class, 'edit'])->name('edit');
-		Route::put('/update', [AdController::class, 'update'])->name('update');
-		Route::delete('/destroy', [AdController::class, 'destroy'])->name('destroy');
+		Route::put('/{ad}/update', [AdController::class, 'update'])->name('update');
+		Route::delete('/{ad}/destroy', [AdController::class, 'destroy'])->name('destroy');
 	});
 
 	Route::get('/search', [AdController::class, 'search'])->name('search');
@@ -228,4 +230,16 @@ Route::prefix('/ad/category')->name('adCategory.')->group(function() {
 Route::prefix('/ad/type')->name('adType.')->group(function() {
 	Route::get('/', [AdTypeController::class, 'index'])->name('index');
 	Route::get('/{adType}/show', [AdTypeController::class, 'show'])->name('show');
+});
+
+Route::prefix('/ad/image')->name('adImage.')->group(function() {
+	Route::get('/{ad}', [AdImageController::class, 'index'])->name('index');
+	Route::match(['GET', 'POST'],'/create/{ad}', [AdImageController::class, 'create'])->name('create');
+	
+	Route::get('/{adImage}/show', [AdImageController::class, 'show'])->name('show');
+});
+
+Route::prefix('/image')->name('image.')->middleware(['auth'])->group(function() {
+	Route::get('/{image}/show', [ImageController::class, 'show'])->name('show');
+	Route::match(['GET', 'POST'],'/{image}/edit', [ImageController::class, 'edit'])->name('edit');
 });

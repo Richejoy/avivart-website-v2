@@ -26,9 +26,6 @@
 
                 <li role="presentation"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">Mot de
                         passe</a></li>
-
-                <li role="presentation"><a href="#avatar" aria-controls="avatar" role="tab" data-toggle="tab">Photo de
-                        profil</a></li>
             </ul>
 
             <div class="tab-content">
@@ -196,24 +193,6 @@
 
                     <div class="form-group">
                         {{ Form::hidden('form', 'password') }}
-                        {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
-                    </div>
-                    {!! Form::close() !!}
-                </div>
-
-                <div class="tab-pane" id="avatar" role="tabpanel">
-                    <p>
-                        <img src="{{ Auth::user()->image->link }}" id="preview-upload" width="100" height="100"
-                            alt="Image" class="circle">
-                    </p>
-
-                    {!! Form::open(['files' => true]) !!}
-                    <div class="form-group">
-                        {{ Form::label('image', 'Photo ou Image', ['class' => 'btn btn-info']) }}
-                        {{ Form::file('image', ['class' => 'form-control-file sr-only', 'data-upload' => true, 'required' => true, 'accept' => 'image/*']) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::hidden('form', 'avatar') }}
                         {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
                     </div>
                     {!! Form::close() !!}

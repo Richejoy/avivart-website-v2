@@ -8,6 +8,9 @@
         <p class="text-center">
             <img src="{{ Auth::user()->image->link }}" width="150" height="150" alt="Image" class="circle">
         </p>
+        <p class="text-center">
+            {{ link_to_route('image.edit', 'Editer la photo', ['image' => Auth::user()->image], ['class' => 'btn btn-link']) }}
+        </p>
 
         <p>
             {{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-danger']) }}

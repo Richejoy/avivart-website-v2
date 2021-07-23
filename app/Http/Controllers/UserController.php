@@ -107,16 +107,6 @@ class UserController extends Controller
 
                     break;
 
-                case 'avatar':
-
-                    $this->validate($request, [
-                        'image' => 'required|mimes:jpeg,png,jpg,gif|max:10000',
-                    ]);
-
-                    Flashy::success('Mises à jour éffectuées avec succès');
-
-                    break;
-
                 case 'identity':
                     
                     $this->validate($request, [
