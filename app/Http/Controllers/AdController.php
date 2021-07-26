@@ -68,7 +68,7 @@ class AdController extends Controller
                     'user_id' => $user->id,
                     'image_id' => $image->id,
                     'is_vip' => false,
-                    'published' => false,
+                    'published' => true,
                     'expire_date' => now(),
                 ]
             ));

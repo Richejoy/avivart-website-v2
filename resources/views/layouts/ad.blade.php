@@ -362,6 +362,7 @@
         src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom-custom.js') }}">
     </script>
 
+    <script type="text/javascript" src="{{ asset('public/js/jquery-static-load-more.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/cookies.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

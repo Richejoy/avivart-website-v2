@@ -72,7 +72,8 @@
 
                 <div class="row py-3">
                     <div class="col-md-12">
-                        <h2 class="font-weight-bold text-primary">Annonces VIP</h2>
+                        <h2 class="mb-0 font-weight-bold text-primary">Annonces VIP</h2>
+                        <p class="my-0 text-muted"><span>{{ $vipAds->count() }}</span> résultats</p>
                     </div>
                 </div>
 
@@ -134,11 +135,12 @@
 
                 <div class="row py-3">
                     <div class="col-md-12">
-                        <h2 class="font-weight-bold text-success">Annonces les plus récentes</h2>
+                        <h2 class="mb-0 font-weight-bold text-success">Annonces les plus récentes</h2>
+                        <p class="my-0 text-muted"><span>{{ $latestAds->count() }}</span> résultats</p>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row slick-slider">
 
                     @if($latestAds->count())
 
@@ -197,11 +199,12 @@
 
                 <div class="row py-3">
                     <div class="col-md-12">
-                        <h2 class="font-weight-bold text-danger">Toutes nos annonces</h2>
+                        <h2 class="mb-0 font-weight-bold text-danger">Toutes nos annonces</h2>
+                        <p class="my-0 text-muted">Affichage <span class="shownLength"></span> sur <span class="listLength"></span> résultats</p>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row static-load-more">
 
                     @if($ads->count())
 
@@ -254,6 +257,14 @@
 
                     @endif
 
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <div class="buttonToogle" style="display: none;">
+                          <a href="javascript:;" class="showMore">+ Afficher plus</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

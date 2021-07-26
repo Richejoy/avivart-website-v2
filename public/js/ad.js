@@ -48,6 +48,8 @@ jQuery(document).ready(function ($) {
 		    }]
     });
 
+    //deleteCookie('securityCookie')
+
     if (checkCookie('securityCookie')) {
     	$('#securityModal').modal()
     }
