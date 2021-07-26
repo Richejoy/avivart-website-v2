@@ -69,7 +69,7 @@
 
                     <a target="_blank" href="{{ $ad->messageLink() }}" class="btn btn-warning btn-sm"><span class="material-icons">message</span> Message</a>
                 </p>
-
+                
             </div>
 
         </div>

@@ -61,17 +61,17 @@
 
                 	<div class="row">
                      @foreach($adCategory->ads as $ad)
-                        <div class="col-md-4 mb-3 ad-item">
+                        <div class="col-md-3 mb-3 ad-item">
                             <div class="card h-100">
                                 <a href="{{ route('ad.show', ['ad' => $ad]) }}">
                                     <img src="{{ $ad->image->link }}" class="card-img-top img-200x200"
                                     alt="{{ $ad->image->description }}">
                                 </a>
                                 <div class="card-body">
-                                    <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
-                                    <h5 class="card-title font-weight-bold">
+                                    <h6 class="card-title font-weight-bold m-0">
                                         <a href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a>
-                                    </h5>
+                                    </h6>
+                                    <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
                                     <div class="card-text text-secondary">
                                         <span class="material-icons">location_on</span>{{ $ad->user->location() }}
                                     </div>

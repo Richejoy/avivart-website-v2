@@ -48,4 +48,12 @@ jQuery(document).ready(function ($) {
 		    }]
     });
 
+    if (checkCookie('securityCookie')) {
+    	$('#securityModal').modal()
+    }
+
+    $('#securityModal').on('hidden.bs.modal', function (event) {
+	  setCookie('securityCookie', 'accepted', 1)
+	})
+
 })

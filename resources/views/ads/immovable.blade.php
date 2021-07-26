@@ -1,15 +1,56 @@
-@extends('layouts.ad', ['title' => Request::query('name') ?? 'Recherche'])
+@extends('layouts.ad', ['title' =>  'Immobilier'])
 
 @section('body')
 
 <section class="bg-light py-3">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+            <aside class="col-lg-3 pb-3">
+
+                <div class="accordion" id="accordion1">
+                    <div class="card">
+                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                    type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    <i class="fa fa-plus"></i> Immobilier
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion1">
+                            <div class="card-body">
+
+                                @if($adCategories->count())
+                                <ul type="circle" class="list-unstyled simple-load-more">
+                                    <li><a class="text-danger" href="{{ route('ad.immovable') }}">Tout</a></li>
+
+                                    @foreach($adCategories as $adCategory)
+                                    <li><a class="{{ $adCategory->getSelected(Request::query('ad_category_id')) }}"
+                                            href="{{ route('ad.immovable', ['ad_category_id' => $adCategory->id]) }}">{{ $adCategory->name }}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                                @else
+                                <p>Aucune catégorie d'annonce</p>
+                                @endif
+
+                            </div>
+                        </div>
+
+                        <div class="card-footer p-2 text-right"><a href="{{ route('adCategory.index', ['ad_ray_id' => 2]) }}"
+                            class="text-danger">Tout afficher</a></div>
+                    </div>
+                </div>
+
+            </aside>
+            <div class="col-lg-9">
 
                 <div class="row py-3">
                     <div class="col-md-12">
-                        <h2 class="font-weight-bold text-dark">Recherche d'annonces ({{ $ads->count() }})</h2>
+                        <h2 class="font-weight-bold text-dark">Annonces ({{ $ads->count() }})</h2>
                     </div>
                 </div>
 

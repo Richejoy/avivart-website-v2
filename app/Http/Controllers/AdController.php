@@ -76,7 +76,7 @@ class AdController extends Controller
             flashy()->success('Votre annonce à été ajouter. Veuillez attendre sa validation');
         }
 
-        return redirect()->route('user.ads');
+        return redirect()->route('image.edit', ['image' => $ad->image->id]);
     }
 
     public function show(Request $request, Ad $ad)
@@ -119,7 +119,7 @@ class AdController extends Controller
             flashy()->success('Annonce mise à jour');
         }
 
-        return redirect()->route('user.ads');
+        return redirect()->route('image.edit', ['image' => $ad->image->id]);
     }
 
     public function destroy(Request $request, Ad $ad)
@@ -150,5 +150,135 @@ class AdController extends Controller
         $ads = $query->get();
 
         return view('ads.search', compact('ads'));
+    }
+
+    public function automobile(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 1)->get();
+
+        $ads = Ad::whereHas('adCategory', function($query) {
+            
+            $query->whereHas('adRay', function($query) {
+                $query->where('id', 1);
+            });
+
+        })->paginate(self::PAGINATION_NUMBER);
+
+        if ($request->has('ad_category_id')) {
+            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
+                ->whereHas('adCategory', function($query) {
+            
+                    $query->whereHas('adRay', function($query) {
+                        $query->where('id', 1);
+                    });
+
+            })->paginate(self::PAGINATION_NUMBER);
+        }
+
+        return view('ads.automobile', compact('adCategories', 'ads'));
+    }
+
+    public function immovable(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 2)->get();
+
+        $ads = Ad::whereHas('adCategory', function($query) {
+            
+            $query->whereHas('adRay', function($query) {
+                $query->where('id', 2);
+            });
+
+        })->paginate(self::PAGINATION_NUMBER);
+
+        if ($request->has('ad_category_id')) {
+            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
+                ->whereHas('adCategory', function($query) {
+            
+                    $query->whereHas('adRay', function($query) {
+                        $query->where('id', 2);
+                    });
+
+            })->paginate(self::PAGINATION_NUMBER);
+        }
+
+        return view('ads.immovable', compact('adCategories', 'ads'));
+    }
+
+    public function cosmetic(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 3)->get();
+
+        $ads = Ad::whereHas('adCategory', function($query) {
+            
+            $query->whereHas('adRay', function($query) {
+                $query->where('id', 3);
+            });
+
+        })->paginate(self::PAGINATION_NUMBER);
+
+        if ($request->has('ad_category_id')) {
+            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
+                ->whereHas('adCategory', function($query) {
+            
+                    $query->whereHas('adRay', function($query) {
+                        $query->where('id', 3);
+                    });
+
+            })->paginate(self::PAGINATION_NUMBER);
+        }
+
+        return view('ads.cosmetic', compact('adCategories', 'ads'));
+    }
+
+    public function agribusiness(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 4)->get();
+
+        $ads = Ad::whereHas('adCategory', function($query) {
+            
+            $query->whereHas('adRay', function($query) {
+                $query->where('id', 4);
+            });
+
+        })->paginate(self::PAGINATION_NUMBER);
+
+        if ($request->has('ad_category_id')) {
+            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
+                ->whereHas('adCategory', function($query) {
+            
+                    $query->whereHas('adRay', function($query) {
+                        $query->where('id', 4);
+                    });
+
+            })->paginate(self::PAGINATION_NUMBER);
+        }
+
+        return view('ads.agribusiness', compact('adCategories', 'ads'));
+    }
+
+    public function otherAds(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 5)->get();
+
+        $ads = Ad::whereHas('adCategory', function($query) {
+            
+            $query->whereHas('adRay', function($query) {
+                $query->where('id', 5);
+            });
+
+        })->paginate(self::PAGINATION_NUMBER);
+
+        if ($request->has('ad_category_id')) {
+            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
+                ->whereHas('adCategory', function($query) {
+            
+                    $query->whereHas('adRay', function($query) {
+                        $query->where('id', 5);
+                    });
+
+            })->paginate(self::PAGINATION_NUMBER);
+        }
+
+        return view('ads.other_ads', compact('adCategories', 'ads'));
     }
 }

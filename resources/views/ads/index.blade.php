@@ -88,10 +88,10 @@
                                     alt="{{ $ad->image->description }}">
                                 </a>
                                 <div class="card-body">
-                                    <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
-                                    <h5 class="card-title font-weight-bold">
+                                    <h6 class="card-title font-weight-bold m-0">
                                         <a href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a>
-                                    </h5>
+                                    </h6>
+                                    <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
                                     <div class="card-text text-secondary">
                                         <span class="material-icons">location_on</span>{{ $ad->user->location() }}
                                     </div>
@@ -150,11 +150,11 @@
                                     alt="{{ $ad->image->description }}">
                             </a>
                             <div class="card-body">
-                                <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
-                                <h5 class="card-title font-weight-bold">
+                                <h6 class="card-title font-weight-bold m-0">
                                     <a class="text-success"
                                         href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a>
-                                </h5>
+                                </h6>
+                                <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
                                 <div class="card-text text-secondary">
                                     <span class="material-icons">location_on</span>{{ $ad->user->location() }}
                                 </div>
@@ -213,11 +213,11 @@
                                     alt="{{ $ad->image->description }}">
                             </a>
                             <div class="card-body">
-                                <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
-                                <h5 class="card-title font-weight-bold">
+                                <h6 class="card-title font-weight-bold m-0">
                                     <a class="text-danger"
                                         href="{{ route('ad.show', array('ad' => $ad)) }}">{{ $ad->name }}</a>
-                                </h5>
+                                </h6>
+                                <p class="font-weight-bold">{{ $ad->getPrice() }}</p>
                                 <div class="card-text text-secondary">
                                     <span class="material-icons">location_on</span>{{ $ad->user->location() }}
                                 </div>

@@ -104,6 +104,11 @@ Route::prefix('/ad')->name('ad.')->middleware(['ad'])->group(function() {
 
 	Route::get('/search', [AdController::class, 'search'])->name('search');
 	Route::get('/guide', [AdController::class, 'guide'])->name('guide');
+	Route::get('/automobile', [AdController::class, 'automobile'])->name('automobile');
+	Route::get('/cosmetic', [AdController::class, 'cosmetic'])->name('cosmetic');
+	Route::get('/immovable', [AdController::class, 'immovable'])->name('immovable');
+	Route::get('/agribusiness', [AdController::class, 'agribusiness'])->name('agribusiness');
+	Route::get('/other/ads', [AdController::class, 'otherAds'])->name('other_ads');
 });
 
 Route::prefix('/agribusiness')->name('agribusiness.')->group(function() {

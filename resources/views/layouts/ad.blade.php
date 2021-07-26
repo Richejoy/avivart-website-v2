@@ -78,23 +78,23 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Automobile</a>
+                        <a class="nav-link" href="{{ route('ad.automobile') }}">Automobile</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Immobilier</a>
+                        <a class="nav-link" href="{{ route('ad.immovable') }}">Immobilier</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Cosmétique</a>
+                        <a class="nav-link" href="{{ route('ad.cosmetic') }}">Cosmétique</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Agrobusiness</a>
+                        <a class="nav-link" href="{{ route('ad.agribusiness') }}">Agrobusiness</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Autres Annonces</a>
+                        <a class="nav-link" href="{{ route('ad.other_ads') }}">Autres Annonces</a>
                     </li>
 
                     <li class="nav-item">
@@ -204,11 +204,11 @@
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
                             <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Automobile</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Immobilier</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Cosmétique</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Agrobusiness</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Autres Annonces</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.automobile') }}">Automobile</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.immovable') }}">Immobilier</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.cosmetic') }}">Cosmétique</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.agribusiness') }}">Agrobusiness</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.other_ads') }}">Autres Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-secondary" href="{{ route('page.about') }}">A propos</a></li>
                         </ul>
@@ -298,6 +298,35 @@
             </div>
         </section>
     </footer>
+
+    <div class="modal fade" id="securityModal" tabindex="-1" aria-labelledby="securityModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">AVIV'ART Annonce : Conseils de sécurité</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="text-center"><i class="fa fa-lock fa-5x text-warning"></i></p>
+            <ol>
+                <li>Eviter d'envoyer de paiements sans avoir <a href="{{ route('contact.index') }}">verifié l'annonce</a>.</li>
+                <li>Eviter d'envoyer d'argent par des mobiles money, par virement bancaire ou par n'importe quels autres moyens.</li>
+                <li>Donner RDV au vendeur dans un lieu public à une heure de travail.</li>
+            </ol>
+            <p class="text-center">
+                Téléphone : (+228) 92 10 78 78<br>
+                Email : <a href="mailto:contact@avivart.net">contact@avivart.net</a>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     @else
     @include('layouts.partials._splashscreen')
     @endif
@@ -333,6 +362,7 @@
         src="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/js/xzoom-custom.js') }}">
     </script>
 
+    <script type="text/javascript" src="{{ asset('public/js/cookies.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
 </body>
