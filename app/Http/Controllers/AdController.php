@@ -10,6 +10,10 @@ use App\Models\Ad;
 use App\Models\Currency;
 use App\Models\AdImage;
 use App\Models\Image;
+use App\Models\Formula;
+use App\Models\AdFormula;
+use MercurySeries\Flashy\Flashy;
+use Carbon\Carbon;
 
 class AdController extends Controller
 {
@@ -280,5 +284,63 @@ class AdController extends Controller
         }
 
         return view('ads.other_ads', compact('adCategories', 'ads'));
+    }
+
+    public function booster(Request $request, Ad $ad)
+    {
+        $user = $request->user();
+
+        if ($user->id != $ad->user_id) {
+            return back()->withDanger("Erreur interne");
+        }
+        
+        $formulas = Formula::all()->sortBy('id')->pluck(null, 'id');
+
+        if ($request->isMethod('POST')) {
+
+            $this->validate($request, [
+                'formula_id' => ['bail', 'required'],
+            ]);
+
+            $formula = Formula::findOrFail($request->formula_id);
+
+            $adFormula = AdFormula::create([
+                'ad_id' => $ad->id,
+                'formula_id' => $formula->id,
+            ]);
+
+            /**/
+            $callbackURL = route('payment.callback_url');
+            $returnURL = route('payment.return_url');
+            $cancelURL = route('payment.cancel_url');
+
+            $paygateURL = self::PAYGATE_URL;
+            $token = self::PAYGATE_TOKEN;
+            $identifier = mb_substr(uniqid(date('YmdHis') . $ad->id ), 0, 25);
+            $amount = str_replace(',', '', $formula->amount);    //very important
+            /**/
+
+            session()->put('ad_id', $ad->id);
+            session()->put('formula_id', $formula->id);
+
+            $queryString = [
+                "amount={$amount}",
+                "token={$token}",
+                "description=Boostage de l'annonce {$ad->name}",
+                "identifier={$identifier}",
+                "url={$returnURL}",
+            ];
+
+            return redirect($paygateURL . implode('&', $queryString));
+
+            /*$ad->update([
+                'expire_date' => Carbon::parse($ad->expire_date)->addMonths($formula->months_add),
+                'is_vip' => true,
+            ]);*/
+
+            //Flashy::success('Annonce boostée avec succès');
+        }
+
+        return view('ads.booster', compact('ad', 'formulas'));
     }
 }

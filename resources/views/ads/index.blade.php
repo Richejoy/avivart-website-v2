@@ -6,6 +6,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6235533576544520" crossorigin="anonymous"></script>
+                <!-- AnnonceCarree1 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:200px;height:300px"
+                     data-ad-client="ca-pub-6235533576544520"
+                     data-ad-slot="7920091469"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
 
             <div class="col-lg-8">
@@ -60,6 +67,13 @@
             </div>
 
             <div class="col-lg-2">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6235533576544520" crossorigin="anonymous"></script>
+                <!-- AnnonceCarree2 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:200px;height:300px"
+                     data-ad-client="ca-pub-6235533576544520"
+                     data-ad-slot="6074961050"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </div>
     </div>
@@ -263,6 +277,57 @@
                     <div class="col-md-12 text-right">
                         <div class="buttonToogle" style="display: none;">
                           <a href="javascript:;" class="showMore">+ Afficher plus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row py-3">
+                    <div class="col-md-12">
+                        <h2 class="mb-0 font-weight-bold text-warning">Communiqués</h2>
+                        <p class="my-0 text-muted"><span>2</span> résultats</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h4 class="font-weight-bold">Candidature spontanée</h4>
+
+                                <p>
+                                    Recherche d'un couple marié avec ou sans enfant(s) d'origine <strong>Nord du Togo</strong> pour un travail dans une ferme à <strong>Vogan</strong> de 3 hectares.
+                                </p>
+
+                                <p class="font-weight-bold">NB : Logement et Paiement assurés</p>
+
+                                <p>
+                                    Téléphone : (+228) 92 10 78 78
+                                </p>
+
+                                <h6 class="text-right text-secondary">Tag : emplacement de terrain</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="card border-warning">
+                            <div class="card-body">
+                                <h4 class="font-weight-bold">Candidature spontanée</h4>
+                                
+                                <p>
+                                    Une technicienne de surface recherche un travail de ménage. Elle réside à <strong>Totsi Djidjolé (Togo).</strong> Elle a de l'expérience en la matière et des qualités suivantes : éfficacité, disponibilité et serviabilité.
+                                </p>
+
+                                <p class="font-weight-bold">NB : Disponibilité immédiate</p>
+
+                                <p>
+                                    Téléphone : (+228) 92 10 78 78
+                                </p>
+
+                                <h6 class="text-right text-secondary">Tag : emplacement de maison</h6>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -148,13 +148,14 @@
                     </form>
                 </div>
                 <div class="col-lg-3">
-                    <div>
-                        <a class="btn btn-primary" href="{{ route('user.favorite_ads') }}" data-toggle="tooltip"
-                            title="Annonces favorites"><span
-                                class="material-icons">favorite</span>{{ session('userFavoriteAds', 0) }}</a>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <a class="btn btn-outline-primary"><span class="material-icons">favorite</span></a>
+                      <a data-toggle="tooltip" title="Annonces favorites" class="btn btn-primary" href="{{ route('user.favorite_ads') }}">{{ session('userFavoriteAds', 0) }}</a>
+                    </div>
 
-                        <a class="btn btn-danger" href="{{ route('ad.create') }}"><span
-                                class="material-icons">notification_important</span>Publier une annonce</a>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <a class="btn btn-outline-danger"><span class="material-icons">notification_important</span></a>
+                      <a class="btn btn-danger" href="{{ route('ad.create') }}">Publier une annonce</a>
                     </div>
                 </div>
             </div>
@@ -330,6 +331,8 @@
     @else
     @include('layouts.partials._splashscreen')
     @endif
+
+    <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 

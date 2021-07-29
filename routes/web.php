@@ -100,6 +100,7 @@ Route::prefix('/ad')->name('ad.')->middleware(['ad'])->group(function() {
 		Route::get('/{ad}/edit', [AdController::class, 'edit'])->name('edit');
 		Route::put('/{ad}/update', [AdController::class, 'update'])->name('update');
 		Route::delete('/{ad}/destroy', [AdController::class, 'destroy'])->name('destroy');
+		Route::match(['GET', 'POST'], '/{ad}/booster', [AdController::class, 'booster'])->name('booster');
 	});
 
 	Route::get('/search', [AdController::class, 'search'])->name('search');

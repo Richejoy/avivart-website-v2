@@ -5,26 +5,43 @@
 		Votre navigateur n'est pas à jour pour lire la vidéo.
 	</video>
 
-	<div class="content bg-white p-5 text-center">
+	<div class="content bg-white px-4 py-2 text-center">
+
 		<p>
 			<a href="{{ route('page.splashscreen') }}?redirect={{ route('page.index') }}">
 				<img class="logo" src="{{ asset('public/img/logo.png') }}" alt="LOGO">
 			</a>
 		</p>
-		<p>
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('informatics.index') }}" class="btn btn-primary btn-lg">Informatique</a>
 
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('store.index') }}" class="btn btn-success btn-lg">Boutique</a>
-		</p>
+		<table class="table">
+			<tr>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('informatics.index') }}" class="btn btn-primary btn-lg btn-block">Informatique</a>
+				</td>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('store.index') }}" class="btn btn-success btn-lg btn-block">Boutique</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('ad.index') }}" class="btn btn-warning btn-lg btn-block">Annonces</a>
+				</td>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('cosmetic.index') }}" class="btn btn-info btn-lg btn-block">Cosmétique</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('agribusiness.index') }}" class="btn btn-dark btn-lg btn-block">Agrobusiness</a>
+				</td>
+				<td>
+					<a href="{{ route('page.splashscreen') }}?redirect={{ route('immovable.index') }}" class="btn btn-danger btn-lg btn-block">Immobilier</a>
+				</td>
+			</tr>
+		</table>
+		
 		<p>
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('agribusiness.index') }}" class="btn btn-dark btn-lg">Agrobusiness</a>
-
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('ad.index') }}" class="btn btn-warning btn-lg">Annonces</a>
-		</p>
-		<p>
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('cosmetic.index') }}" class="btn btn-info btn-lg">Cosmétique</a>
-
-			<a href="{{ route('page.splashscreen') }}?redirect={{ route('immovable.index') }}" class="btn btn-danger btn-lg">Immobilier</a>
+			<a href="{{ route('page.index') }}" class="btn btn-link">Nous découvrir</a>
 		</p>
 	</div>
 </div>

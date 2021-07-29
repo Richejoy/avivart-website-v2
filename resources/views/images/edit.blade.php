@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-6">
         <p>
-            <img src="{{ $image->link }}" id="preview-upload" alt="{{ $image->description }}">
+            <img class="img-thumbnail" src="{{ $image->link }}" id="preview-upload" alt="{{ $image->description }}">
         </p>
     </div>
 
@@ -24,7 +24,8 @@
                 <div class="tab-pane active" id="url" role="tabpanel">
                     {!! Form::model($image, ['files' => true]) !!}
                     <div class="form-group">
-                        {{ Form::label('image', 'Choisissez votre image ou photo', ['class' => 'btn btn-link']) }}
+                        <p>URL</p>
+                        {{ Form::label('image', 'Choisissez votre image ou photo', ['class' => 'btn btn-warning']) }}
                         {{ Form::file('image', ['class' => 'form-control-file sr-only', 'data-upload' => true, 'required' => true, 'accept' => 'image/*']) }}
                     </div>
 
@@ -38,6 +39,8 @@
                         {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
                     </div>
                     {!! Form::close() !!}
+
+                    <h5>NB : Désolé, cette fonctionnalité est désactivée pour le moment. Veuillez utiliser la fonctionnalité de <strong>Lien</strong></h5>
                 </div>
 
                 <div class="tab-pane" id="link" role="tabpanel">

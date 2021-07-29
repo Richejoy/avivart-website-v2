@@ -127,7 +127,7 @@
                         <div class="text-right">
                             <span class="badge {{ $product->onDiscount() }}">{{ $product->getPercentage() }}%</span>
                         </div>
-                        <div class="card h-100">
+                        <div class="card border-primary h-100">
                             <a href="{{ route('store.show', ['product' => $product]) }}">
                                 <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
                                 src="https://via.placeholder.com/200x150.png?text=Chargement..."
