@@ -332,13 +332,6 @@ class AdController extends Controller
             ];
 
             return redirect($paygateURL . implode('&', $queryString));
-
-            /*$ad->update([
-                'expire_date' => Carbon::parse($ad->expire_date)->addMonths($formula->months_add),
-                'is_vip' => true,
-            ]);*/
-
-            //Flashy::success('Annonce boostée avec succès');
         }
 
         return view('ads.booster', compact('ad', 'formulas'));

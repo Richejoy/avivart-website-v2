@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\Ad;
+use App\Models\Formula;
 use App\Models\Order;
 use App\Models\Payment;
 use Illuminate\Http\Request;
@@ -26,13 +29,13 @@ class PaymentController extends Controller
 
             file_put_contents(public_path('payments.json'), $data);
 
-            if (session()->has('order_id') || $request->has('order_id')) {
+            if (session()->has('order_id')) {
 
                 try {
 
                     DB::beginTransaction();
 
-                    $order = Order::find(session('order_id') || $request->query('order_id'));
+                    $order = Order::find(session('order_id'));
 
                     $payment = Payment::where('order_id', $order->id)->first();
 
@@ -59,6 +62,18 @@ class PaymentController extends Controller
 
                     $response = ['status' => 'Database error'];
                 }
+            } elseif (session()->has('ad_id') && session()->has('formula_id')) {
+
+                $ad = Ad::find(session('ad_id'));
+                $formula = Formula::find(session('formula_id'));
+                
+                $ad->update([
+                    'expire_date' => Carbon::parse($ad->expire_date)->addMonths($formula->months_add),
+                    'is_vip' => true,
+                ]);
+
+                $response = ['status' => 'Success'];
+
             } else {
                 $response = ['status' => 'Required params'];
             }
