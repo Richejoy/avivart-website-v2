@@ -54,7 +54,7 @@
 <body>
 
     @if(session()->has('splashscreen'))
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" id="navbarTop">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
                     alt="{{ config('app.name') }}" class="logo-xs"></a>
@@ -78,6 +78,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('ad.index') }}">Annonces</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('cosmetic.index') }}">Cosmétique</a>
                     </li>
 
@@ -87,10 +91,6 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('immovable.index') }}">Immobilier</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.index') }}">Annonces</a>
                     </li>
 
                     <li class="nav-item">
@@ -106,8 +106,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('page.login') }}"><i
-                                class="fa fa-user-circle fa-2x"></i></a>
+                        <a class="nav-link text-success" href="{{ route('page.login') }}"><i class="fa fa-user-circle fa-2x"></i></a>
                     </li>
 
                 </ul>
@@ -143,10 +142,10 @@
                             <li><a class="text-secondary" href="{{ route('page.index') }}">Accueil</a></li>
                             <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
                             <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-sm-6">
@@ -223,7 +222,7 @@
             <div class="container-fluid py-3">
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
-                        Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
+                        &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
                         est fait par <a class="text-success" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">

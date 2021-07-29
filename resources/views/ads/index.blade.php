@@ -294,7 +294,7 @@
                     <div class="col-md-12 mb-3">
                         <div class="card border-warning">
                             <div class="card-body">
-                                <h4 class="font-weight-bold">Candidature spontanée</h4>
+                                <h4 class="font-weight-bold">Offre d'emploi</h4>
 
                                 <p>
                                     Recherche d'un couple marié avec ou sans enfant(s) d'origine <strong>Nord du Togo</strong> pour un travail dans une ferme à <strong>Vogan</strong> de 3 hectares.

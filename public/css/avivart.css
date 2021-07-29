@@ -3,6 +3,13 @@
 	--darken_red_3: #c62828;
 	--darken_red_2: #d32f2f;
 	--darken_red_1: #e53935;
+	--primary: #0275d8;
+	--success: #5cb85c;
+	--info: #5bc0de;
+	--warning: #f0ad4e;
+	--danger: #d9534f;
+	--dark: #292b2c;
+	--light: #f7f7f7;
 }
 
 .bg-darken-4 {
@@ -59,6 +66,14 @@ img.img-300x300 {
 	height: 300px;
 }
 
+.fs-10 {
+	font-size: 10px;
+}
+
+.fs-11 {
+	font-size: 11px;
+}
+
 .fs-12 {
 	font-size: 12px;
 }
@@ -99,6 +114,10 @@ img.img-300x300 {
 	padding: 20px;
 }
 
+.cursor-pointer {
+	cursor: pointer;
+}
+
 .social-icon {
 	border-radius: 50%;
 }
@@ -131,6 +150,38 @@ img.img-300x300 {
 .social-icon.youtube {
 	padding: 8px 10px !important;
 	background-color: #b71c1c;
+}
+
+#modules {
+	display: none;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	width: 350px;
+	border-left: 1px solid #e2e2e2;
+}
+
+#modules .modules-header {
+	/*position: fixed;
+	top: 0;
+	width: 350px;*/
+	border-bottom: 1px solid #e2e2e2;
+}
+
+#modules .modules-body {
+	height: 80%;
+	overflow-y: auto;
+}
+
+#modules .modules-body .card:hover {
+	background-color: var(--light);
+}
+
+#modules .modules-footer {
+	position: fixed;
+	bottom: 0;
+	width: 350px;
+	border-top: 1px solid #e2e2e2;
 }
 
 @media (max-width: 767px)

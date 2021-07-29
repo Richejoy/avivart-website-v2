@@ -166,6 +166,18 @@
 
 			<div class="col-lg-4 mb-3">
 				<div class="card h-100">
+				  <img src="https://images.unsplash.com/photo-1602189156324-4c5c6c2c02b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YW5ub3VuY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
+				  <div class="card-body">
+				    <h5 class="card-title font-weight-bold text-uppercase">Annonces</h5>
+				    <p class="card-text">
+				    	Clients et Partenaires faites vos annonces
+				    </p>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 mb-3">
+				<div class="card h-100">
 				  <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y29zbWV0aWNzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
 				  <div class="card-body">
 				    <h5 class="card-title font-weight-bold text-uppercase">Cosmétique</h5>
@@ -206,18 +218,6 @@
 						<li>Construction de Bâtiments</li>
 						<li>Décoration maison</li>
 					</ul>
-				  </div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 mb-3">
-				<div class="card h-100">
-				  <img src="https://images.unsplash.com/photo-1602189156324-4c5c6c2c02b3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YW5ub3VuY2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="card-img-top img-200x200" alt="Image">
-				  <div class="card-body">
-				    <h5 class="card-title font-weight-bold text-uppercase">Annonces</h5>
-				    <p class="card-text">
-				    	Clients et Partenaires faites vos annonces
-				    </p>
 				  </div>
 				</div>
 			</div>

@@ -65,7 +65,7 @@ use App\Helpers\Helper;
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
                     src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"
-                    align="middle"> <strong class="text-danger"><u>Boutique</u></strong></a>
+                    align="middle"> <strong class="text-success"><u>Boutique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -108,12 +108,8 @@ use App\Helpers\Helper;
                             href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
-                    </li>
-
-                    <li class="nav-item hvr-underline-from-center">
-                        <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
+                    <li class="nav-item">
+                        <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
                     </li>
 
                 </ul>
@@ -207,6 +203,8 @@ use App\Helpers\Helper;
 
     <main>
         @yield('body')
+
+        @include('layouts.partials._modules')
     </main>
 
     <footer class="main-footer" id="end">
@@ -245,10 +243,10 @@ use App\Helpers\Helper;
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('informatics.index') }}">Informatique</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
@@ -316,7 +314,7 @@ use App\Helpers\Helper;
             <div class="container-fluid py-3">
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
-                        Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
+                        &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
                         est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">

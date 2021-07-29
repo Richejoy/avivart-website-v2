@@ -47,7 +47,7 @@
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
                     src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"
-                    align="middle"> <strong class="text-success"><u>Informatique</u></strong></a>
+                    align="middle"> <strong class="text-primary"><u>Informatique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -128,11 +128,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact.index') }}">Contact</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('page.about') }}">A propos</a>
+                        <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
                     </li>
                 </ul>
             </div>
@@ -145,6 +141,8 @@
 
     <main>
         @yield('body')
+
+        @include('layouts.partials._modules')
     </main>
 
     <footer class="main-footer">
@@ -185,10 +183,10 @@
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
                             <li><a class="text-secondary" href="{{ route('store.index') }}">Boutique</a></li>
+                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
                             <li><a class="text-secondary" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
                             <li><a class="text-secondary" href="{{ route('immovable.index') }}">Immobilier</a></li>
-                            <li><a class="text-secondary" href="{{ route('ad.index') }}">Annonces</a></li>
                             <li><a class="text-secondary" href="{{ route('service.index') }}">Services</a>
                             </li>
                             <li><a class="text-secondary" href="{{ route('page.conditions') }}">Conditions Générales</a>
@@ -256,7 +254,7 @@
             <div class="container-fluid py-3">
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
-                        Copyright &copy; {{ date('Y') }} Tous droits réservés, par {{ config('app.name') }} | Ce design
+                        &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
                         est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
@@ -266,14 +264,17 @@
             </div>
         </section>
     </footer>
+
     @else
     @include('layouts.partials._splashscreen')
     @endif
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
