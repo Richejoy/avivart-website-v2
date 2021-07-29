@@ -41,7 +41,7 @@
 		</table>
 		
 		<p>
-			<a href="{{ route('page.index') }}" class="btn btn-link">Nous découvrir</a>
+			<a href="{{ route('page.splashscreen') }}?redirect={{ route('page.index') }}" class="btn btn-link">Nous découvrir</a>
 		</p>
 	</div>
 </div>

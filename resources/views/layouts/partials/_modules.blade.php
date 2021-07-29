@@ -31,7 +31,7 @@
 					<div class="card border-success">
 						<div class="card-body text-center p-1">
 							<div><i class="text-success fa fa-shopping-basket fa-3x"></i></div>
-							<div class="mt-2"><a class="text-muted" href="{{ route('store.index') }}">Bouique</a></div>
+							<div class="mt-2"><a class="text-muted" href="{{ route('store.index') }}">Boutique</a></div>
 						</div>
 					</div>
 				</div>

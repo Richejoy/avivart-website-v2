@@ -45,7 +45,7 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #0d47a1">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img
+            <a class="navbar-brand p-0" href="{{ route('informatics.index') }}"><img
                     src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"
                     align="middle"> <strong class="text-primary"><u>Informatique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

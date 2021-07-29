@@ -59,7 +59,7 @@
     @if(session()->has('splashscreen'))
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
+            <a class="navbar-brand p-0" href="{{ route('ad.index') }}"><img src="{{ asset('public/img/logo.png') }}"
                     alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong
                     class="text-warning"><u>Annonces</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
