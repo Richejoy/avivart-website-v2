@@ -21,20 +21,20 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0016.jpg" class="d-block w-100" alt="Image">
                                 </div>
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0017.jpg" class="d-block w-100" alt="Image">
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="http://avivart.net/images/ads/01.jpg" class="d-block w-100" alt="Image">
                                 </div>
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="{{ asset('public/img/ads/IMG-20210707-WA0000.jpg') }}" class="d-block w-100"
                                 alt="Image">
                                 </div>
@@ -42,10 +42,10 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" class="d-block w-100" alt="Image">
                                 </div>
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0018.jpg" class="d-block w-100"
                                 alt="Image">
                                 </div>
@@ -53,10 +53,10 @@
                         </div>
                         <div class="carousel-item">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0015.jpg" class="d-block w-100" alt="Image">
                                 </div>
-                                <div class="col">
+                                <div class="col-md-6">
                                     <img src="https://avivart.net/images/galleries/IMG-20210723-WA0019.jpg" class="d-block w-100" alt="Image">
                                 </div>
                             </div>
@@ -305,8 +305,6 @@
                                 <p>
                                     Téléphone : (+228) 92 10 78 78
                                 </p>
-
-                                <h6 class="text-right text-secondary">Tag : emplacement de terrain</h6>
                             </div>
                         </div>
                     </div>
@@ -325,8 +323,6 @@
                                 <p>
                                     Téléphone : (+228) 92 10 78 78
                                 </p>
-
-                                <h6 class="text-right text-secondary">Tag : emplacement de maison</h6>
                             </div>
                         </div>
                     </div>

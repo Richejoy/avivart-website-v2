@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-		infinite: true,
+		arrows: true,
 
 		  // the magic
 		  responsive: [{
@@ -18,6 +18,7 @@ jQuery(document).ready(function ($) {
 		      breakpoint: 900,
 		      settings: {
 		        slidesToShow: 3,
+		        slidesToScroll: 3,
 		        dots: true,
 		        arrows: false
 		      }
@@ -27,6 +28,7 @@ jQuery(document).ready(function ($) {
 		      breakpoint: 767,
 		      settings: {
 		        slidesToShow: 2,
+		        slidesToScroll: 2,
 		        dots: true,
 		        arrows: false
 		      }
@@ -36,6 +38,7 @@ jQuery(document).ready(function ($) {
 		      breakpoint: 480,
 		      settings: {
 		        slidesToShow: 1,
+		        slidesToScroll: 1,
 		        dots: true,
 		        arrows: false
 		      }
