@@ -92,6 +92,10 @@ class AdController extends Controller
 
     public function edit(Request $request, Ad $ad)
     {
+        $user = $request->user();
+
+        abort_if(($user->id != $ad->user_id), 403);
+        
         $adCategories = AdCategory::all()->sortBy('id')->pluck(null, 'id');
         $adTypes = AdType::all()->sortBy('id')->pluck(null, 'id');
         $currencies = Currency::all()->sortBy('id')->pluck(null, 'id');
@@ -101,10 +105,6 @@ class AdController extends Controller
 
     public function update(Request $request, Ad $ad)
     {
-        $user = $request->user();
-
-        abort_if(($user->id != $ad->user_id), 403);
-
         if ($request->isMethod('PUT')) {
             $this->validate($request, [
                 'name' => ['required', 'bail', 'min:6'],

@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-lg-6">
         <p>
-            <img class="img-thumbnail" src="{{ $image->link }}" id="preview-upload" alt="{{ $image->description }}">
+            <img class="{{ ($image->folder == 'users') ? 'img-circle img-thumbnail' : 'img-thumbnail' }}" src="{{ $image->link }}" id="preview-upload" alt="{{ $image->description }}">
         </p>
     </div>
 

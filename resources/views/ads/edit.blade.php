@@ -16,7 +16,7 @@
                 @include("layouts.partials._validation_errors")
 
                 <h2 class="font-weight-bold">Modification d'annonce</h2>
-                <h6 class="text-secondary">Publier des annonces gratuitement, validité une semaine.</h6>
+                <h6 class="text-secondary mb-5">Publier des annonces gratuitement, validité une semaine.</h6>
 
                 {!! Form::model($ad, ['route' => ['ad.update', $ad->id]]) !!}
 
@@ -52,7 +52,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             {{ Form::label('price', 'Prix', ['class' => 'text-dark']) }}
-                            {{ Form::number('price', null, ['class' => 'form-control', 'placeholder' => 'Prix', 'required' => true]) }}
+                            {{ Form::number('price', null, ['class' => 'form-control', 'placeholder' => 'Prix', 'required' => true, 'min' => 0]) }}
                         </div>
                     </div>
                 </div>

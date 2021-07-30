@@ -6,10 +6,10 @@
     <div class="col-lg-12">
 
         <p class="text-center">
-            <img src="{{ auth()->user()->image->link }}" width="150" height="150" alt="Image" class="circle">
+            <img src="{{ auth()->user()->image->link }}" width="150" height="150" alt="Image" class="img-circle img-thumbnail">
         </p>
         <p class="text-center">
-            {{ link_to_route('image.edit', 'Editer la photo', ['image' => auth()->user()->image], ['class' => 'btn btn-link']) }}
+            {{ link_to_route('image.edit', 'Modifier la photo', ['image' => auth()->user()->image], ['class' => 'btn btn-link']) }}
         </p>
 
         <p>
