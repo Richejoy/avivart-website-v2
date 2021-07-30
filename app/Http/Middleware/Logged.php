@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class Logged
 {
@@ -17,7 +16,7 @@ class Logged
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check()) return redirect()->route('user.index');
+        if (auth()->check()) return redirect()->route('user.index');
         
         return $next($request);
     }

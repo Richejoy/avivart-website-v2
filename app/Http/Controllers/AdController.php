@@ -103,9 +103,7 @@ class AdController extends Controller
     {
         $user = $request->user();
 
-        if ($user->id != $ad->user_id) {
-            return back()->withDanger("Erreur interne");
-        }
+        abort_if(($user->id != $ad->user_id), 403);
 
         if ($request->isMethod('PUT')) {
             $this->validate($request, [
@@ -290,9 +288,7 @@ class AdController extends Controller
     {
         $user = $request->user();
 
-        if ($user->id != $ad->user_id) {
-            return back()->withDanger("Erreur interne");
-        }
+        abort_if(($user->id != $ad->user_id), 403);
         
         $formulas = Formula::all()->sortBy('id')->pluck(null, 'id');
 

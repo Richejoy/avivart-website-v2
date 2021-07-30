@@ -210,7 +210,7 @@ class PageController extends Controller
                         $request->all(),
                         [
                             'username' => mb_strtoupper(mb_substr(uniqid($image->id), 0, 15)),
-                            'password' => Hash::make($password),
+                            'password' => bcrypt($password),
                             'image_id' => $image->id,
                             'token' => sha1(uniqid($image->id)),
                         ]
@@ -351,7 +351,7 @@ class PageController extends Controller
 
             if ($user = User::where(['email' => $email, 'token' => $token])->first()) {
                 $user->update([
-                    'password' => Hash::make($request->password),
+                    'password' => bcrypt($request->password),
                     'token' => null,
                 ]);
 
@@ -430,7 +430,7 @@ class PageController extends Controller
                 'transaction_type_id' => 1,
             ]);
 
-            Auth::login($user, $request->has('remember_me'));
+            auth()->login($user, $request->has('remember_me'));
 
             session()->put('userFavoriteProducts', ProductUser::where(['user_id' => $user->id])->count());
             session()->put('userFavoriteAds', AdUser::where(['user_id' => $user->id])->count());

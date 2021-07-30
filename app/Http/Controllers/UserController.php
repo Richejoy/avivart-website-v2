@@ -61,12 +61,12 @@ class UserController extends Controller
 
                     if (Hash::check($request->password_old, $user->password)) {
                         $user->update([
-                            'password' => Hash::make($request->password),
+                            'password' => bcrypt($request->password),
                         ]);
 
-                        Flashy::success('Mises à jour éffectuées avec succès');
+                        flashy()->success('Mises à jour éffectuées avec succès');
                     } else {
-                        Flashy::error('Ancien mot de passe incorrecte');
+                        flashy()->error('Ancien mot de passe incorrecte');
                     }
 
                     break;
@@ -79,7 +79,7 @@ class UserController extends Controller
 
                     $user->update($request->all());
 
-                    Flashy::success('Mises à jour éffectuées avec succès');
+                    flashy()->success('Mises à jour éffectuées avec succès');
 
                     break;
 
@@ -91,7 +91,7 @@ class UserController extends Controller
 
                     $user->update($request->all());
 
-                    Flashy::success('Mises à jour éffectuées avec succès');
+                    flashy()->success('Mises à jour éffectuées avec succès');
 
                     break;
 
@@ -103,7 +103,7 @@ class UserController extends Controller
 
                     $user->update($request->all());
 
-                    Flashy::success('Mises à jour éffectuées avec succès');
+                    flashy()->success('Mises à jour éffectuées avec succès');
 
                     break;
 
@@ -118,7 +118,7 @@ class UserController extends Controller
 
                     $user->update($request->all());
 
-                    Flashy::success('Mises à jour éffectuées avec succès');
+                    flashy()->success('Mises à jour éffectuées avec succès');
                     
                     break;
                     

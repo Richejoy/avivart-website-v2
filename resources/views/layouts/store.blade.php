@@ -1,7 +1,3 @@
-@php
-use App\Helpers\Helper;
-@endphp
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -42,7 +38,7 @@ use App\Helpers\Helper;
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" />
 
-    <title>{{ config('app.name') }} - Boutique - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Boutique - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/loadMoreResults/css/loadMoreResults.css') }}">
     <link rel="stylesheet" type="text/css"
@@ -77,34 +73,34 @@ use App\Helpers\Helper;
                         <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.index') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.index') }}"
+                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.index') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.index') }}"
                             href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.organic_foods') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.organic_foods') }}"
+                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.organic_foods') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.organic_foods') }}"
                             href="{{ route('store.organic_foods') }}">Aliments Bio</a>
                     </li>
 
                     <li
-                        class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.manufactured_foods') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.manufactured_foods') }}"
+                        class="nav-item hvr-underline-from-center {{ activeMenuItem('store.manufactured_foods') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.manufactured_foods') }}"
                             href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.home_appliance') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.home_appliance') }}"
+                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.home_appliance') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.home_appliance') }}"
                             href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.high_tech') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.high_tech') }}"
+                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.high_tech') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.high_tech') }}"
                             href="{{ route('store.high_tech') }}">High-Tech</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ Helper::activeMenuItem('store.other_products') }}">
-                        <a class="nav-link {{ Helper::activeMenuItemStyle('store.other_products') }}"
+                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.other_products') }}">
+                        <a class="nav-link {{ activeMenuItemStyle('store.other_products') }}"
                             href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
@@ -193,7 +189,7 @@ use App\Helpers\Helper;
                                     class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('productCategory.index') }}"
                                     class="text-primary font-weight-bold">Toutes nos catégories</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $title ?? 'Laravel' }}</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ pageTitle($title) }}</li>
                         </ol>
                     </nav>
                 </div>

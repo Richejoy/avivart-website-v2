@@ -26,9 +26,7 @@ class OrderController extends Controller
     {
         $user = $request->user();
 
-        if ($user->id != $order->user_id) {
-            return back();
-        }
+        abort_if(($user->id != $order->user_id), 403);
 
         return view('orders.show', compact('user', 'order'));
     }
@@ -37,9 +35,7 @@ class OrderController extends Controller
     {
         $user = $request->user();
 
-        if ($user->id != $order->user_id) {
-            return back();
-        }
+        abort_if(($user->id != $order->user_id), 403);
 
         $pdf = PDF::loadView('orders.pdf.order', compact('user', 'order'));
 
@@ -50,9 +46,7 @@ class OrderController extends Controller
     {
         $user = $request->user();
 
-        if ($user->id != $order->user_id) {
-            return back();
-        }
+        abort_if(($user->id != $order->user_id), 403);
 
         /**/
         $callbackURL = route('payment.callback_url');

@@ -22,12 +22,12 @@ class Controller extends BaseController
 		# code...
 	}
 
-	protected function getFormVerificationCode()
+	protected function getFormVerificationCode(): int
 	{
 		return mt_rand(100000, 500000);
 	}
 
-	protected function getAppropriateUrl(Request $request)
+	protected function getAppropriateUrl(Request $request): string
 	{
 		$url = null;
 
@@ -54,7 +54,7 @@ class Controller extends BaseController
 		return $url;
 	}
 
-	protected function getAppropriateLink(Request $request, string $folder)
+	protected function getAppropriateLink(Request $request, string $folder): string
 	{
 		$url = $this->getAppropriateUrl($request);
 
@@ -65,7 +65,7 @@ class Controller extends BaseController
 		return "http://avivart.net/images/{$folder}/{$url}";
 	}
 
-	public function getMonpaysUri()
+	public function getMonpaysUri(): string
 	{
 		if (config('app.env') == 'local') {
 			return '';

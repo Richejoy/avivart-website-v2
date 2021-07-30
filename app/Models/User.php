@@ -108,12 +108,12 @@ class User extends Authenticatable
         return $this->belongsTo(UserType::class);
     }
 
-    public function longPhone()
+    public function longPhone(): string
     {
         return $this->country->phonecode . ' ' . $this->phone;
     }
 
-    public function location()
+    public function location(): string
     {
         return $this->city . ', ' . $this->country->name;
     }
@@ -128,7 +128,7 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
-    public function fullName()
+    public function fullName(): string
     {
         return $this->last_name . ' ' . $this->first_name;
     }

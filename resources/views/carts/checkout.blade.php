@@ -36,10 +36,10 @@
 
             <div class="col-lg-6 pt-3">
 
-                @if(Auth::check())
+                @auth
 
                 <div class="alert alert-success" role="alert">
-                    Connecté en tant que {{ Auth::user()->username }}
+                    Connecté en tant que {{ auth()->user()->username }}
                 </div>
 
                 <div class="card">
@@ -83,7 +83,7 @@
                     <a href="{{ route('page.login') }}" class="btn btn-primary">Se connecter maintenant</a>
                 </p>
 
-                @endif
+                @endauth
 
             </div>
         </div>

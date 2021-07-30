@@ -6,8 +6,8 @@
     <div class="col-lg-12">
 
         <p>
-            {{ link_to_route('user.edit', 'Actualiser', ['user' => Auth::user()], ['class' => 'btn btn-success']) }}
-            {{ link_to_route('user.show', 'Profil', ['user' => Auth::user()], ['class' => 'btn btn-primary']) }}
+            {{ link_to_route('user.edit', 'Actualiser', ['user' => auth()->user()], ['class' => 'btn btn-success']) }}
+            {{ link_to_route('user.show', 'Profil', ['user' => auth()->user()], ['class' => 'btn btn-primary']) }}
         </p>
 
         <div>
@@ -31,7 +31,7 @@
             <div class="tab-content">
 
                 <div class="tab-pane active" id="identity" role="tabpanel">
-                    {!! Form::model(Auth::user()) !!}
+                    {!! Form::model(auth()->user()) !!}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="tab-pane" id="username" role="tabpanel">
-                    {!! Form::model(Auth::user()) !!}
+                    {!! Form::model(auth()->user()) !!}
                     <div class="form-group">
                         {{ Form::label('username', "Nom d'utilisateur", ['class' => 'font-weight-bold']) }}
                         <div class="input-group">
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="tab-pane" id="email" role="tabpanel">
-                    {!! Form::model(Auth::user()) !!}
+                    {!! Form::model(auth()->user()) !!}
                     <div class="form-group">
                         {{ Form::label('email', 'Email', ['class' => 'font-weight-bold']) }}
                         <div class="input-group">
@@ -143,11 +143,11 @@
                 </div>
 
                 <div class="tab-pane" id="phone" role="tabpanel">
-                    {!! Form::model(Auth::user()) !!}
+                    {!! Form::model(auth()->user()) !!}
                     <div class="form-group">
                         {{ Form::label('phone', 'Téléphone', ['class' => 'font-weight-bold']) }}
                         <div class="input-group">
-                            <div class="input-group-addon">{{ Auth::user()->country }}
+                            <div class="input-group-addon">{{ auth()->user()->country }}
                             </div>
                             {{ Form::tel('phone', null, ['placeholder' => 'Téléphone', 'class' => 'form-control', 'required' => true]) }}
                         </div>

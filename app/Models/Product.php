@@ -83,42 +83,42 @@ class Product extends Model implements Buyable
         return 'pt-' . mt_rand(1, $this->productType->id);
     }
 
-    public function onDiscount()
+    public function onDiscount(): string
     {
         return $this->on_discount ? 'badge-success' : 'badge-danger';
     }
 
-    public function getPercentage()
+    public function getPercentage(): float
     {
         return ceil(($this->new_price / $this->old_price) * 100) - 100;
     }
 
-    public function getNewPrice()
+    public function getNewPrice(): string
     {
         return number_format($this->new_price, 2, '.', ' ') . ' ' . $this->currency->name;
     }
 
-    public function getOldPrice()
+    public function getOldPrice(): string
     {
         return number_format($this->old_price, 2, '.', ' ') . ' ' . $this->currency->name;
     }
 
-    public function phoneLink()
+    public function phoneLink(): string
     {
         return "tel:+" . str_replace(' ', '', $this->user->longPhone());
     }
 
-    public function whatsappLink()
+    public function whatsappLink(): string
     {
         return "https://web.whatsapp.com/send?phone=+" . str_replace(' ', '', $this->user->longPhone()) . "&text=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
     }
 
-    public function telegramLink()
+    public function telegramLink(): string
     {
         return "https://telegram.me/share/url?url=" . Request::url() . "&text=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
     }
 
-    public function messageLink()
+    public function messageLink(): string
     {
         return "mailto:" . $this->user->email . "?subject=Annonce&body=Bonjour, j'ai trouvé votre produit sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". Le produit se trouve ici : " . route('store.show', array('product' => $this->id));
     }

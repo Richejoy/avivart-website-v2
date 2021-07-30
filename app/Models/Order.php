@@ -51,8 +51,13 @@ class Order extends Model
         return $this->hasMany(ProductOrder::class);
     }
 
-    public function getNumber()
+    public function getNumber(): int
     {
         return $this->id . Carbon::parse($this->created)->format('dmYHis');
+    }
+
+    public function paid(): string
+    {
+        return $this->paid ? 'Oui' : 'Non';
     }
 }

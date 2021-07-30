@@ -39,7 +39,7 @@
     </tr>
     <tr>
         <th>Payée</th>
-        <td>{{ $order->paid ? 'Oui' : 'Non' }}</td>
+        <td>{{ $order->paid() }}</td>
     </tr>
     <tr>
         <th>Date</th>

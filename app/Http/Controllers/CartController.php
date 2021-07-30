@@ -23,8 +23,6 @@ class CartController extends Controller
     {
     	$cartContent = Cart::content();
 
-        //dd($cartContent);
-
         return view('carts.index', compact('cartContent'));
     }
 
@@ -36,7 +34,7 @@ class CartController extends Controller
 
         if ($request->isMethod('POST') && (Cart::count() > 0)) {
 
-            if (!Auth::check()) {
+            if (!auth()->check()) {
                 return back()->withDanger("Vous devez vous connecté pour continuer");
             }
 

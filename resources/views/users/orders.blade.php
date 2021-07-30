@@ -32,7 +32,7 @@
                         <td>{{ $order->paymentMode }}</td>
                         <td>{{ $order->orderState }}</td>
                         <td>{{ $order->amount }}</td>
-                        <td>{{ $order->paid ? 'Oui' : 'Non' }}</td>
+                        <td>{{ $order->paid() }}</td>
                         <td>{{ $order->created }}</td>
                         <td>
                             <a target="_blank" data-toggle="tooltip" title="Facture"

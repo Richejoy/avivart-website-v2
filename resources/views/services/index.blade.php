@@ -1,4 +1,4 @@
-@extends('layouts.page', ['title' => 'Nos Services'])
+@extends('layouts.page', ['title' => 'Services'])
 
 @section('body')
 

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>{{ config('app.name') }} - Immobilier - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Immobilier - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/immovable.css') }}">

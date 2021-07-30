@@ -29,7 +29,7 @@ class ProductCategory extends Model
         return $this->name;
     }
 
-    public function getSelected($productCategoryId = 0)
+    public function getSelected($productCategoryId = 0): string
     {
         return ($this->id == $productCategoryId) ? 'text-info font-weight-bold' : 'text-muted';
     }

@@ -27,7 +27,7 @@ class PaymentController extends Controller
             $data = json_encode($request->all());   //object
             $operation = json_decode($data, true);  //array
 
-            file_put_contents(public_path('payments.json'), $data);
+            info($data);    //laravel log file
 
             if (session()->has('order_id')) {
 

@@ -30,7 +30,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>{{ config('app.name') }} - Informatique - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Informatique - {{ pageTitle($title) }}</title>
 
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">

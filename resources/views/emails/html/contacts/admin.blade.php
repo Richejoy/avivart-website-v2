@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Bonjour {{ config('app.name', 'Laravel') }}!</h1>
+<h1>Bonjour {{ config('app.name') }}!</h1>
 
 <p>{{ $contact->email }} a contacté le site le {{ $contact->created }}</p>
 

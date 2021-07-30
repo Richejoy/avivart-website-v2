@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }} - Utilisateur - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Utilisateur - {{ pageTitle($title) }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -61,19 +61,19 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="{{ route('user.index') }}" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="{{ Auth::user()->image->link }}" class="user-image" alt="User Image"
+                                <img src="{{ auth()->user()->image->link }}" class="user-image" alt="User Image"
                                     width="160" height="160">
-                                <span class="hidden-xs">{{ Auth::user()->username }}</span>
+                                <span class="hidden-xs">{{ auth()->user()->username }}</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="{{ Auth::user()->image->link }}" class="img-circle" alt="User Image"
+                                    <img src="{{ auth()->user()->image->link }}" class="img-circle" alt="User Image"
                                         width="160" height="160">
 
                                     <p>
-                                        {{ Auth::user()->fullName() }} - {{ Auth::user()->userType->name }}
-                                        <small>Membre depuis {{ Auth::user()->image->created }}</small>
+                                        {{ auth()->user()->fullName() }} - {{ auth()->user()->userType->name }}
+                                        <small>Membre depuis {{ auth()->user()->image->created }}</small>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
@@ -95,7 +95,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="{{ route('user.show', array('user' => Auth::user())) }}"
+                                        <a href="{{ route('user.show', array('user' => auth()->user())) }}"
                                             class="btn btn-default btn-flat">Profil</a>
                                     </div>
                                     <div class="pull-right">
@@ -121,13 +121,13 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="{{ Auth::user()->image->link }}" class="img-circle" alt="User Image" width="160"
+                        <img src="{{ auth()->user()->image->link }}" class="img-circle" alt="User Image" width="160"
                             height="160">
                     </div>
                     <div class="pull-left info">
-                        <p>+{{ Auth::user()->longPhone() }}</p>
-                        <a href="{{ route('user.show', array('user' => Auth::user())) }}"><i
-                                class="fa fa-calendar text-success"></i> {{ Auth::user()->last_login }}</a>
+                        <p>+{{ auth()->user()->longPhone() }}</p>
+                        <a href="{{ route('user.show', array('user' => auth()->user())) }}"><i
+                                class="fa fa-calendar text-success"></i> {{ auth()->user()->last_login }}</a>
                     </div>
                 </div>
 
@@ -193,15 +193,15 @@
 
                     <li class="treeview">
                         <a href="{{ route('user.index') }}">
-                            <i class="fa fa-user-o"></i> <span>{{ Auth::user()->email }}</span>
+                            <i class="fa fa-user-o"></i> <span>{{ auth()->user()->email }}</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ route('user.show', array('user' => Auth::user())) }}"><i
+                            <li><a href="{{ route('user.show', array('user' => auth()->user())) }}"><i
                                         class="fa fa-user"></i> Profil</a></li>
-                            <li><a href="{{ route('user.edit', array('user' => Auth::user())) }}"><i
+                            <li><a href="{{ route('user.edit', array('user' => auth()->user())) }}"><i
                                         class="fa fa-pencil"></i> Edition</a></li>
                             <li><a href="{{ route('page.logout') }}"><i class="fa fa-lock"></i> Déconnexion</a></li>
                         </ul>
@@ -218,11 +218,11 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1> {{ $title ?? 'Laravel' }}</h1>
+                <h1> {{ pageTitle($title) }}</h1>
                 <ol class="breadcrumb">
                     <li><a href="{{ route('page.index') }}"><i class="fa fa-home"></i> Accueil</a></li>
                     <li><a href="{{ route('user.index') }}"><i class="fa fa-dashboard"></i> Tableau de bord</a></li>
-                    <li class="active">{{ $title ?? 'Laravel' }}</li>
+                    <li class="active">{{ pageTitle($title) }}</li>
                 </ol>
             </section>
 
@@ -245,7 +245,7 @@
             <div class="pull-right hidden-xs">
                 <a href="{{ route('contact.index') }}" target="_blank">Contactez-nous</a>
             </div>
-            <strong>Copyright &copy; {{ date('Y') }} <a href="#">AVIV'ART</a>.</strong> Tous Droits Réservés.
+            <strong>&copy; 2018 - {{ date('Y') }} <a href="#">{{ config('app.name') }}</a></strong> Tous Droits Réservés.
         </footer>
 
         <!-- Control Sidebar -->

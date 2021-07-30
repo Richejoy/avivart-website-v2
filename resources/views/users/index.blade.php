@@ -1,4 +1,4 @@
-@extends('layouts.user', ['title' => Auth::user()->fullName()])
+@extends('layouts.user', ['title' => auth()->user()->fullName()])
 
 @section('body')
 
@@ -7,7 +7,7 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
             <div class="inner">
-                <h3>{{ Auth::user()->orders->count() }}</h3>
+                <h3>{{ auth()->user()->orders->count() }}</h3>
 
                 <p>Mes commandes</p>
             </div>
@@ -39,7 +39,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
             <div class="inner">
-                <h3>{{ Auth::user()->transactions->count() }}</h3>
+                <h3>{{ auth()->user()->transactions->count() }}</h3>
 
                 <p>Mes transactions</p>
             </div>

@@ -19,9 +19,9 @@
                     <tr>
                         <th>1</th>
                         <th>Activer/Désactiver la double authentification (2FA)</th>
-                        <td>{{ Auth::user()->tfa_enabled ? 'Activer' : 'Désactiver' }}</td>
+                        <td>{{ auth()->user()->tfa_enabled ? 'Activer' : 'Désactiver' }}</td>
                         <td>
-                            @if(Auth::user()->tfa_enabled)
+                            @if(auth()->user()->tfa_enabled)
                             <a href="{{ route('settings.enabling_tfa') }}">Désactiver</a>
                             @else
                             <a href="{{ route('settings.enabling_tfa') }}">Activer</a>
@@ -31,7 +31,7 @@
                     <tr>
                         <th>2</th>
                         <th>Supprimer mon compte</th>
-                        <td>{{ Auth::user()->removed ? 'Inactif' : 'Actif' }}</td>
+                        <td>{{ auth()->user()->removed ? 'Inactif' : 'Actif' }}</td>
                         <td>
                             <a href="{{ route('settings.removing_account') }}">Supprimer</a>
                         </td>

@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>{{ config('app.name') }} - Contact - {{ $title ?? 'Laravel' }}</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>{{ config('app.name') }} - Contact - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/contact.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
@@ -33,7 +37,7 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
+                        <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
                     </li>
                 </ul>
             </div>
@@ -46,6 +50,8 @@
 
     <main>
         @yield('body')
+
+        @include('layouts.partials._modules')
     </main>
 
     <footer>

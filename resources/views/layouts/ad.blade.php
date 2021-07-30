@@ -30,7 +30,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>{{ config('app.name') }} - Annonces - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Annonces - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css"
         href="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/css/xzoom.css') }}"
@@ -170,7 +170,7 @@
                                     class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('adCategory.index') }}"
                                     class="text-primary font-weight-bold">Toutes nos catégories</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ $title ?? 'Laravel' }}</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ pageTitle($title) }}</li>
                         </ol>
                     </nav>
                 </div>

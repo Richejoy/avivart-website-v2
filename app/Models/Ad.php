@@ -63,32 +63,32 @@ class Ad extends Model
         return 'pt-' . mt_rand(1, $this->adType->id);
     }
 
-    public function isVIP()
+    public function isVIP(): string
     {
         return $this->is_vip ? 'badge-success' : 'badge-danger';
     }
 
-    public function getPrice()
+    public function getPrice(): string
     {
         return number_format($this->price, 2, '.', ' ') . ' ' . $this->currency->name;
     }
 
-    public function phoneLink()
+    public function phoneLink(): string
     {
         return "tel:+" . str_replace(' ', '', $this->user->longPhone());
     }
 
-    public function whatsappLink()
+    public function whatsappLink(): string
     {
         return "https://web.whatsapp.com/send?phone=+" . str_replace(' ', '', $this->user->longPhone()) . "&text=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
     }
 
-    public function telegramLink()
+    public function telegramLink(): string
     {
         return "https://telegram.me/share/url?url=" . Request::url() . "&text=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
     }
 
-    public function messageLink()
+    public function messageLink(): string
     {
         return "mailto:" . $this->user->email . "?subject=Annonce&body=Bonjour, j'ai trouvé votre annonce sur AVIV'ART. Veuillez m'envoyer plus d'informations sur " . $this->name . ". L'annonce se trouve ici : " . route('ad.show', array('ad' => $this->id));
     }

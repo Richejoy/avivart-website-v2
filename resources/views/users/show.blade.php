@@ -6,10 +6,10 @@
     <div class="col-lg-12">
 
         <p class="text-center">
-            <img src="{{ Auth::user()->image->link }}" width="150" height="150" alt="Image" class="circle">
+            <img src="{{ auth()->user()->image->link }}" width="150" height="150" alt="Image" class="circle">
         </p>
         <p class="text-center">
-            {{ link_to_route('image.edit', 'Editer la photo', ['image' => Auth::user()->image], ['class' => 'btn btn-link']) }}
+            {{ link_to_route('image.edit', 'Editer la photo', ['image' => auth()->user()->image], ['class' => 'btn btn-link']) }}
         </p>
 
         <p>
@@ -27,44 +27,44 @@
                 <tbody>
                     <tr>
                         <td>Nom & Prénoms</td>
-                        <td>{{ Auth::user()->fullName() }}</td>
+                        <td>{{ auth()->user()->fullName() }}</td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td>{{ Auth::user()->email }}</td>
+                        <td>{{ auth()->user()->email }}</td>
                     </tr>
                     <tr>
                         <td>Téléphone</td>
-                        <td>+{{ Auth::user()->country->phonecode }} {{ Auth::user()->phone }}</td>
+                        <td>+{{ auth()->user()->country->phonecode }} {{ auth()->user()->phone }}</td>
                     </tr>
                     <tr>
                         <td>Nom d'utilisateur</td>
-                        <td>{{ Auth::user()->username }}</td>
+                        <td>{{ auth()->user()->username }}</td>
                     </tr>
                     <tr>
                         <td>Dernière connexion</td>
                         <td><time class="timeago"
-                                datetime="{{ Auth::user()->last_login }}">{{ Auth::user()->last_login }}</time></td>
+                                datetime="{{ auth()->user()->last_login }}">{{ auth()->user()->last_login }}</time></td>
                     </tr>
                     <tr>
                         <td>Nombre de connexion</td>
-                        <td>{{ Auth::user()->nb_login }} fois</td>
+                        <td>{{ auth()->user()->nb_login }} fois</td>
                     </tr>
                     <tr>
                         <td>Civilité</td>
-                        <td>{{ Auth::user()->civility }}</td>
+                        <td>{{ auth()->user()->civility }}</td>
                     </tr>
                     <tr>
                         <td>Pays de résidence</td>
-                        <td>{{ Auth::user()->country }}</td>
+                        <td>{{ auth()->user()->country }}</td>
                     </tr>
                     <tr>
                         <td>Ville</td>
-                        <td>{{ Auth::user()->city }}</td>
+                        <td>{{ auth()->user()->city }}</td>
                     </tr>
                     <tr>
                         <td>Adresse</td>
-                        <td>{{ Auth::user()->address }}</td>
+                        <td>{{ auth()->user()->address }}</td>
                     </tr>
                 </tbody>
             </table>

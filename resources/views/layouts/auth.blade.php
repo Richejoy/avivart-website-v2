@@ -18,7 +18,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>{{ config('app.name') }} - Authentification - {{ $title ?? 'Laravel' }}</title>
+    <title>{{ config('app.name') }} - Authentification - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/auth.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">

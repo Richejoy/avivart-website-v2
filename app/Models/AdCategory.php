@@ -29,7 +29,7 @@ class AdCategory extends Model
         return $this->name;
     }
 
-    public function getSelected($adCategoryId = 0)
+    public function getSelected($adCategoryId = 0): string
     {
         return ($this->id == $adCategoryId) ? 'text-info font-weight-bold' : 'text-muted';
     }
