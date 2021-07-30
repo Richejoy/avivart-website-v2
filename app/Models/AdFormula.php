@@ -9,6 +9,9 @@ class AdFormula extends Model
 {
     use HasFactory;
 
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
+
     protected $fillable = [
         'ad_id', 'formula_id', 'paid',
     ];
