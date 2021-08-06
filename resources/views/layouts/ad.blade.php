@@ -66,7 +66,7 @@
         <main role="main">
             @yield('body')
 
-            @include('layouts.partials._modules')
+            <x-modules />
 
             @include('layouts.partials.ad._security_modal')
         </main>
@@ -75,7 +75,7 @@
 
     @else
 
-        @include('layouts.partials._splashscreen')
+        <x-splash />
 
     @endif
 

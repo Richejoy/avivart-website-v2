@@ -31,7 +31,7 @@
     <main role="main">
         @yield('body')
 
-        @include('layouts.partials._modules')
+        <x-modules />
     </main>
 
     @livewire('contact.footer')

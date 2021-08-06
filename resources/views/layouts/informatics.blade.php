@@ -51,14 +51,14 @@
         <main>
             @yield('body')
 
-            @include('layouts.partials._modules')
+            <x-modules />
         </main>
 
         @livewire('informatics.footer')
 
     @else
 
-        @include('layouts.partials._splashscreen')
+        <x-splash />
         
     @endif
 

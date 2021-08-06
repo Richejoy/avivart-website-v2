@@ -41,14 +41,14 @@
         <main>
             @yield('body')
 
-            @include('layouts.partials._modules')
+            <x-modules />
         </main>
 
         @livewire('cosmetic.footer')
 
     @else
 
-        @include('layouts.partials._splashscreen')
+        <x-splash />
 
     @endif
 

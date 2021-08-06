@@ -69,7 +69,7 @@
 
     @else
 
-        @include('layouts.partials._splashscreen')
+        <x-splash />
 
     @endif
 
