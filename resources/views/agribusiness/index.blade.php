@@ -1,4 +1,4 @@
-@extends('layouts.coming_soon', ['title' => 'Agrobusiness'])
+@extends('layouts.soon', ['title' => 'Agrobusiness'])
 
 @section('body')
 

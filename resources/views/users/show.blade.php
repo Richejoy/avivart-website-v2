@@ -13,7 +13,7 @@
         </p>
 
         <p>
-            {{ link_to_route('user.edit', 'Editer le profil', ['user' => Auth::user()], ['class' => 'btn btn-danger']) }}
+            {{ link_to_route('user.edit', 'Editer le profil', ['user' => auth()->id()], ['class' => 'btn btn-danger']) }}
         </p>
 
         <div class="table-responsive">

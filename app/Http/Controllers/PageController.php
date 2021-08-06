@@ -55,6 +55,11 @@ class PageController extends Controller
         return view('pages.sitemap');
     }
 
+    public function galleries(Request $request)
+    {
+        return view('pages.galleries');
+    }
+
     public function about(Request $request)
     {
         return view('pages.about');

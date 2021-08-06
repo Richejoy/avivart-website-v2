@@ -92,9 +92,7 @@ class AdController extends Controller
 
     public function edit(Request $request, Ad $ad)
     {
-        $user = $request->user();
-
-        abort_if(($user->id != $ad->user_id), 403);
+        abort_if((auth()->id() != $ad->user_id), 401, 'Unauthorized');
         
         $adCategories = AdCategory::all()->sortBy('id')->pluck(null, 'id');
         $adTypes = AdType::all()->sortBy('id')->pluck(null, 'id');
@@ -286,9 +284,7 @@ class AdController extends Controller
 
     public function booster(Request $request, Ad $ad)
     {
-        $user = $request->user();
-
-        abort_if(($user->id != $ad->user_id), 403);
+        abort_if((auth()->id() != $ad->user_id), 401, 'Unauthorized');
         
         $formulas = Formula::all()->sortBy('id')->pluck(null, 'id');
 

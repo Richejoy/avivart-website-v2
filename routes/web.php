@@ -54,6 +54,7 @@ Route::prefix('/')->name('page.')->group(function() {
 	Route::get('/conditions', [PageController::class, 'conditions'])->name('conditions');
 	Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 	Route::get('/sitemap', [PageController::class, 'sitemap'])->name('sitemap');
+	Route::get('/galleries', [PageController::class, 'galleries'])->name('galleries');
 
 	Route::middleware(['logged'])->group(function () {
 		Route::match(['GET', 'POST'], '/login', [PageController::class, 'login'])->name('login');

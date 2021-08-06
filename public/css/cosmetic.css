@@ -1,0 +1,37 @@
+:root {
+	--reddark: #F50057;
+	--yellowdark: #e7d516;
+	--indigodark: #0e0c41;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.material-icons { display: inline-flex; vertical-align: text-bottom; }
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.main-footer {
+	background-color: var(--indigodark);
+}
+
+.main-footer .copyright {
+}
+
+.carousel img {
+	height: 600px;
+}
+
+
+@media (max-width: 767px)
+{
+	.carousel img {
+		height: 300px;
+	}
+}

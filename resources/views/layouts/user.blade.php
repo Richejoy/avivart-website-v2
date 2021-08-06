@@ -41,190 +41,13 @@
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
 
-        <header class="main-header">
-            <!-- Logo -->
-            <a href="{{ route('page.index') }}" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>A</b>RT</span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>AVIV'</b>ART</span>
-            </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
+        @livewire('user.header')
 
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu">
-                            <a href="{{ route('user.index') }}" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="{{ auth()->user()->image->link }}" class="user-image" alt="User Image"
-                                    width="160" height="160">
-                                <span class="hidden-xs">{{ auth()->user()->username }}</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <!-- User image -->
-                                <li class="user-header">
-                                    <img src="{{ auth()->user()->image->link }}" class="img-circle" alt="User Image"
-                                        width="160" height="160">
-
-                                    <p>
-                                        {{ auth()->user()->fullName() }} - {{ auth()->user()->userType->name }}
-                                        <small>Membre depuis {{ auth()->user()->image->created }}</small>
-                                    </p>
-                                </li>
-                                <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="row">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="{{ route('user.orders') }}"><i class="fa fa-shopping-cart"></i></a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="{{ route('user.favorite_products') }}"><i
-                                                    class="fa fa-star"></i></a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="{{ route('user.transactions') }}"><i class="fa fa-refresh"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- /.row -->
-                                </li>
-                                <!-- Menu Footer-->
-                                <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="{{ route('user.show', array('user' => auth()->user())) }}"
-                                            class="btn btn-default btn-flat">Profil</a>
-                                    </div>
-                                    <div class="pull-right">
-                                        <a href="{{ route('page.logout') }}"
-                                            class="btn btn-default btn-flat">Déconnexion</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- Control Sidebar Toggle Button -->
-                        <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="{{ auth()->user()->image->link }}" class="img-circle" alt="User Image" width="160"
-                            height="160">
-                    </div>
-                    <div class="pull-left info">
-                        <p>+{{ auth()->user()->longPhone() }}</p>
-                        <a href="{{ route('user.show', array('user' => auth()->user())) }}"><i
-                                class="fa fa-calendar text-success"></i> {{ auth()->user()->last_login }}</a>
-                    </div>
-                </div>
-
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                <ul class="sidebar-menu" data-widget="tree">
-                    <li>
-                        <a href="{{ route('page.index') }}">
-                            <i class="fa fa-home"></i> <span>Accueil</span>
-                        </a>
-                    </li>
-
-                    <li class="active">
-                        <a href="{{ route('user.index') }}">
-                            <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
-                        </a>
-                    </li>
-
-                    <li class="treeview">
-                        <a href="{{ route('user.index') }}">
-                            <i class="fa fa-shopping-basket"></i> <span>Produits</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="{{ route('user.orders') }}"><i class="fa fa-shopping-cart"></i> Mes commandes</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('user.favorite_products') }}"><i class="fa fa-star"></i> Mes produits favoris</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="treeview">
-                        <a href="{{ route('user.index') }}">
-                            <i class="fa fa-bullhorn"></i> <span>Annonces</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="{{ route('user.ads') }}"><i class="fa fa-bullhorn"></i> Mes annonces</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('user.favorite_ads') }}"><i class="fa fa-star"></i> Mes annonces favoris</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('user.transactions') }}">
-                            <i class="fa fa-refresh"></i> <span>Mes transactions</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('user.payments') }}">
-                            <i class="fa fa-money"></i> <span>Mes payements</span>
-                        </a>
-                    </li>
-
-                    <li class="treeview">
-                        <a href="{{ route('user.index') }}">
-                            <i class="fa fa-user-o"></i> <span>{{ auth()->user()->email }}</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="{{ route('user.show', array('user' => auth()->user())) }}"><i
-                                        class="fa fa-user"></i> Profil</a></li>
-                            <li><a href="{{ route('user.edit', array('user' => auth()->user())) }}"><i
-                                        class="fa fa-pencil"></i> Edition</a></li>
-                            <li><a href="{{ route('page.logout') }}"><i class="fa fa-lock"></i> Déconnexion</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="{{ route('settings.index') }}"><i class="fa fa-cog"></i> <span>Parametres</span></a>
-                    </li>
-                </ul>
-            </section>
-            <!-- /.sidebar -->
-        </aside>
+        @livewire('user.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1> {{ pageTitle($title) }}</h1>
-                <ol class="breadcrumb">
-                    <li><a href="{{ route('page.index') }}"><i class="fa fa-home"></i> Accueil</a></li>
-                    <li><a href="{{ route('user.index') }}"><i class="fa fa-dashboard"></i> Tableau de bord</a></li>
-                    <li class="active">{{ pageTitle($title) }}</li>
-                </ol>
-            </section>
+            @livewire('user.breadcrumb', ['title' => $title])
 
             <!-- Main content -->
             <section class="content">
@@ -241,38 +64,11 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <a href="{{ route('contact.index') }}" target="_blank">Contactez-nous</a>
-            </div>
-            <strong>&copy; 2018 - {{ date('Y') }} <a href="#">{{ config('app.name') }}</a></strong>, Tous Droits Réservés.
-        </footer>
+        
+        @livewire('user.footer')
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark" style="display: none;">
-            <!-- Create the tabs -->
-            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-            </ul>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <!-- Home tab content -->
-                <div class="tab-pane" id="control-sidebar-home-tab">
-
-                </div>
-                <!-- /.tab-pane -->
-                <!-- Stats tab content -->
-                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-                <!-- /.tab-pane -->
-                <!-- Settings tab content -->
-                <div class="tab-pane" id="control-sidebar-settings-tab">
-
-                </div>
-                <!-- /.tab-pane -->
-            </div>
-        </aside>
-        <!-- /.control-sidebar -->
+        @livewire('user.control')
+        
         <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>

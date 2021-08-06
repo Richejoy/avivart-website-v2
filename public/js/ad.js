@@ -1,9 +1,9 @@
-"use strict";
+"use strict"
 
 jQuery(document).ready(function ($) {
 
 	//
-    $("time.timeago").timeago();
+    $("time.timeago").timeago()
 
 	$(".slick-slider").slick({
         dots: true,
@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
 		      settings: "unslick"
 
 		    }]
-    });
+    })
 
     //deleteCookie('securityCookie')
 
@@ -61,4 +61,37 @@ jQuery(document).ready(function ($) {
 	  setCookie('securityCookie', 'accepted', 1)
 	})
 
+	$('#navbarTop').scrollFix()
+
+	$.gdprcookie.init()
+	//$.gdprcookie.display()
+
+})
+
+up({
+
+  // bottom position
+  bottom: '20px',
+
+  // left position
+  left: '20px',
+
+  // width
+  width: '45px',
+
+  // height
+  height: '45px',
+
+  // background color
+  bg: 'green',
+
+  // custom icon
+  src: 'https://avivart.net/public/plugins/up_btn/chevron-up-solid.svg',
+
+  // distance from the top to show the back to top button
+  whenShow: 400,
+
+  // circular button?
+  circle: true
+  
 })

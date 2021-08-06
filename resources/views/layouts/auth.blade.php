@@ -26,42 +26,15 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('page.index') }}">{{ config('app.name') }}</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    @livewire('auth.header')
 
-            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header>
-
-    </header>
-
-    <main>
+    <main role="main">
         @yield('body')
 
         @include('layouts.partials._modules')
     </main>
 
-    <footer>
-        <div class="text-center py-3">
-            <a class="mr-2" href="{{ route('page.index') }}">Accueil</a>
-            <a class="mx-2" href="{{ route('page.register') }}">Inscription</a>
-            <a class="mx-2" href="{{ route('page.login') }}">Connexion</a>
-            <a class="ml-2" href="{{ route('page.password_forgot') }}">Mot de passe oublié ?</a>
-        </div>
-    </footer>
+    @livewire('auth.footer')
 
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
 
@@ -75,6 +48,8 @@
 
     <script type="text/javascript" src="{{ asset('public/js/auth.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+
+    @include('flashy::message')
 </body>
 
 </html>

@@ -6,8 +6,8 @@
     <div class="col-lg-12">
 
         <p>
-            {{ link_to_route('user.edit', 'Actualiser', ['user' => auth()->user()], ['class' => 'btn btn-success']) }}
-            {{ link_to_route('user.show', 'Profil', ['user' => auth()->user()], ['class' => 'btn btn-primary']) }}
+            {{ link_to_route('user.edit', 'Actualiser', ['user' => auth()->id()], ['class' => 'btn btn-success']) }}
+            {{ link_to_route('user.show', 'Profil', ['user' => auth()->id()], ['class' => 'btn btn-primary']) }}
         </p>
 
         <div>
@@ -15,8 +15,7 @@
                 <li role="presentation" class="active"><a href="#identity" aria-controls="identity" role="tab"
                         data-toggle="tab">Identité</a></li>
 
-                <li role="presentation"><a href="#username" aria-controls="username" role="tab" data-toggle="tab">Nom
-                        d'utilisateur</a></li>
+                <li role="presentation"><a href="#username" aria-controls="username" role="tab" data-toggle="tab">Nom d'utilisateur</a></li>
 
                 <li role="presentation"><a href="#email" aria-controls="email" role="tab" data-toggle="tab">Email</a>
                 </li>
@@ -24,8 +23,7 @@
                 <li role="presentation"><a href="#phone" aria-controls="phone" role="tab"
                         data-toggle="tab">Téléphone</a></li>
 
-                <li role="presentation"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">Mot de
-                        passe</a></li>
+                <li role="presentation"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">Mot de passe</a></li>
             </ul>
 
             <div class="tab-content">

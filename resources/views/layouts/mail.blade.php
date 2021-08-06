@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
     <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
@@ -15,10 +14,13 @@
 
 <body>
 
-    @yield('content')
+    @livewire('mail.header')
 
-    <h6>Nous découvrir : <a href="{{ route('page.index') }}">Ici</a></h6>
-    <h5>Equipe {{ config('app.name') }}</h5>
+    <main>
+        @yield('content')
+    </main>
+
+    @livewire('mail.footer')
 
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <!-- Required meta tags -->
@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
     <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
 
-    <title>{{ config('app.name') }} - {{ pageTitle($title) }}</title>
+    <title>{{ config('app.name') }} - Coming soon - {{ pageTitle($title) }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/coming_soon.css') }}">
 </head>

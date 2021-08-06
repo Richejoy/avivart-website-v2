@@ -46,6 +46,14 @@ body {
     font-size: 2rem;
 }
 
+#navbarTop {
+	background-color: #0d47a1;
+}
+
+#back-to-top {
+	left: 20px;
+}
+
 @media (max-width: 767px)
 {
 	.carousel img {
