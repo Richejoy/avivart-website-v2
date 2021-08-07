@@ -95,6 +95,8 @@
 
             <a class="fs-12 text-muted mx-2" href="{{ route('page.register') }}">Inscription</a>
             <a class="fs-12 text-muted" href="{{ route('page.donate') }}">Faire un don</a>
+
+            <a class="fs-12 text-muted mx-2" href="{{ route('page.galleries') }}">Galeries</a>
         </p>
         <p class="m-0">
             <strong class="fs-12 text-muted">&copy; 2018 - {{ date('Y') }} {{ config('app.name') }}</strong>

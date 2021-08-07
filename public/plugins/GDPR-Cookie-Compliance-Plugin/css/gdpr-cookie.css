@@ -2,6 +2,7 @@
 
 .gdprcookie {
     position: fixed;
+    z-index: 999;
     color: white;
     font-size: .8em;
     line-height: 1.5em;

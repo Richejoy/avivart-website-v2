@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Ad;
 
 use Livewire\Component;
+use App\Models\AdRay;
 
 class Header extends Component
 {
@@ -15,6 +16,8 @@ class Header extends Component
 
     public function render()
     {
-        return view('livewire.ad.header');
+        $adRays = AdRay::all();
+
+        return view('livewire.ad.header', compact('adRays'));
     }
 }

@@ -36,7 +36,7 @@
 
     @if(session()->has('splashscreen'))
     
-        @livewire('cosmetic.header')
+        @livewire('cosmetic.header', ['title' => $title])
 
         <main>
             @yield('body')

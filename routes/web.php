@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\ComputerScienceController;
@@ -8,28 +9,40 @@ use App\Http\Controllers\AdController;
 use App\Http\Controllers\AgribusinessController;
 use App\Http\Controllers\ImmovableController;
 use App\Http\Controllers\CosmeticController;
-use App\Http\Controllers\CartController;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\CronController;
-use App\Http\Controllers\ProductRayController;
-use App\Http\Controllers\ProductCategoryController;
-use App\Http\Controllers\ProductTypeController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ConversionController;
-use App\Http\Controllers\ProductUserController;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\ImageController;
+
+use App\Http\Controllers\OrderController;
+
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\BasketController;
+
+use App\Http\Controllers\ProductRayController;
+use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\ProductTypeController;
+use App\Http\Controllers\ProductUserController;
+use App\Http\Controllers\ProductImageController;
+
+use App\Http\Controllers\ArticleRayController;
+use App\Http\Controllers\ArticleCategoryController;
+use App\Http\Controllers\ArticleTypeController;
+use App\Http\Controllers\ArticleUserController;
+use App\Http\Controllers\ArticleImageController;
+
 use App\Http\Controllers\AdRayController;
 use App\Http\Controllers\AdCategoryController;
 use App\Http\Controllers\AdTypeController;
 use App\Http\Controllers\AdUserController;
 use App\Http\Controllers\AdImageController;
-use App\Http\Controllers\ImageController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,7 +88,7 @@ Route::prefix('/')->name('page.')->group(function() {
 	Route::get('/splashscreen', [PageController::class, 'splashscreen'])->name('splashscreen');
 });
 
-Route::prefix('/store')->name('store.')->middleware(['store'])->group(function() {
+Route::prefix('/store')->name('store.')->group(function() {
 	Route::get('/', [StoreController::class, 'index'])->name('index');
 	Route::get('/{product}/show', [StoreController::class, 'show'])->name('show');
 	Route::get('/search', [StoreController::class, 'search'])->name('search');
@@ -91,7 +104,7 @@ Route::prefix('/immovable')->name('immovable.')->group(function() {
 	Route::get('/', [ImmovableController::class, 'index'])->name('index');
 });
 
-Route::prefix('/ad')->name('ad.')->middleware(['ad'])->group(function() {
+Route::prefix('/ad')->name('ad.')->group(function() {
 	Route::get('/', [AdController::class, 'index'])->name('index');
 	Route::get('/{ad}/show', [AdController::class, 'show'])->name('show');
 
@@ -129,9 +142,19 @@ Route::prefix('/informatics')->name('informatics.')->group(function() {
 
 Route::prefix('/cosmetic')->name('cosmetic.')->group(function() {
 	Route::get('/', [CosmeticController::class, 'index'])->name('index');
+	Route::get('/{article}/show', [CosmeticController::class, 'show'])->name('show');
+	Route::get('/search', [CosmeticController::class, 'search'])->name('search');
+	Route::get('/guide', [CosmeticController::class, 'guide'])->name('guide');
+
+	Route::get('/soap', [CosmeticController::class, 'soap'])->name('soap');
+	Route::get('/milk', [CosmeticController::class, 'milk'])->name('milk');
+	Route::get('/scrub', [CosmeticController::class, 'scrub'])->name('scrub');
+	Route::get('/mask', [CosmeticController::class, 'mask'])->name('mask');
+	Route::get('/perfume', [CosmeticController::class, 'perfume'])->name('perfume');
 });
 
 Route::resource('/product_user', ProductUserController::class)->middleware(['auth']);
+Route::resource('/article_user', ArticleUserController::class)->middleware(['auth']);
 Route::resource('/ad_user', AdUserController::class)->middleware(['auth']);
 Route::resource('/order', OrderController::class)->middleware(['auth']);
 Route::resource('/transaction', TransactionController::class)->middleware(['auth']);
@@ -143,16 +166,19 @@ Route::prefix('/order')->name('order.')->middleware(['auth'])->group(function ()
 
 Route::prefix('/user')->name('user.')->middleware(['auth'])->group(function() {
 	Route::get('/orders', [UserController::class, 'orders'])->name('orders');
-	Route::get('/favorite/products', [UserController::class, 'favoriteProducts'])->name('favorite_products');
-
 	Route::get('/ads', [UserController::class, 'ads'])->name('ads');
-	Route::get('/favorite/ads', [UserController::class, 'favoriteAds'])->name('favorite_ads');
+	Route::get('/articles', [UserController::class, 'articles'])->name('articles');
 
-	Route::get('/transactions', [UserController::class, 'transactions'])->name('transactions');
-	Route::get('/payments', [UserController::class, 'payments'])->name('payments');
+	Route::get('/favorite/products', [UserController::class, 'favoriteProducts'])->name('favorite_products');
+	Route::get('/favorite/articles', [UserController::class, 'favoriteArticles'])->name('favorite_articles');
+	Route::get('/favorite/ads', [UserController::class, 'favoriteAds'])->name('favorite_ads');
 
 	Route::get('product/{product}/add', [UserController::class, 'addProduct'])->name('add');
 	Route::get('ad/{ad}/add', [UserController::class, 'addAd'])->name('add_ad');
+	Route::get('article/{article}/add', [UserController::class, 'addArticle'])->name('add_article');
+
+	Route::get('/transactions', [UserController::class, 'transactions'])->name('transactions');
+	Route::get('/payments', [UserController::class, 'payments'])->name('payments');
 
 	Route::get('/', [UserController::class, 'index'])->name('index');
 	Route::match(['GET', 'POST'], '/{user}/show', [UserController::class, 'show'])->name('show');
@@ -168,6 +194,17 @@ Route::prefix('/cart')->name('cart.')->group(function() {
 	Route::post('/apply/coupon', [CartController::class, 'applyCoupon'])->name('apply_coupon');
 	Route::get('/remove/coupon', [CartController::class, 'removeCoupon'])->name('remove_coupon');
 	Route::match(['GET', 'POST'], '/checkout', [CartController::class, 'checkout'])->name('checkout');
+});
+
+Route::prefix('/basket')->name('basket.')->group(function() {
+	Route::get('/', [BasketController::class, 'index'])->name('index');
+	Route::get('/{article}/add', [BasketController::class, 'add'])->name('add');
+	Route::get('/{row}/remove', [BasketController::class, 'remove'])->name('remove');
+	Route::get('/{row}/update', [BasketController::class, 'update'])->name('update');
+	Route::get('/truncate', [BasketController::class, 'truncate'])->name('truncate');
+	Route::post('/apply/coupon', [BasketController::class, 'applyCoupon'])->name('apply_coupon');
+	Route::get('/remove/coupon', [BasketController::class, 'removeCoupon'])->name('remove_coupon');
+	Route::match(['GET', 'POST'], '/checkout', [BasketController::class, 'checkout'])->name('checkout');
 });
 
 Route::prefix('/contact')->name('contact.')->group(function () {
@@ -215,13 +252,33 @@ Route::prefix('/product/type')->name('productType.')->group(function() {
 	Route::get('/{productType}/show', [ProductTypeController::class, 'show'])->name('show');
 });
 
-Route::prefix('/conversion')->name('conversion.')->group(function() {
-	Route::get('/', [ConversionController::class, 'index'])->name('index');
-	Route::get('/{conversion}/show', [ConversionController::class, 'show'])->name('show');
+Route::prefix('/product/image')->name('productImage.')->group(function() {
+	Route::get('/{product}', [ProductImageController::class, 'index'])->name('index');
+	Route::match(['GET', 'POST'],'/create/{product}', [ProductImageController::class, 'create'])->name('create');
+	
+	Route::get('/{productImage}/show', [ProductImageController::class, 'show'])->name('show');
 });
 
-Route::prefix('/service')->name('service.')->group(function() {
-	Route::get('/', [ServiceController::class, 'index'])->name('index');
+Route::prefix('/article/ray')->name('articleRay.')->group(function() {
+	Route::get('/', [ArticleRayController::class, 'index'])->name('index');
+	Route::get('/{articleRay}/show', [ArticleRayController::class, 'show'])->name('show');
+});
+
+Route::prefix('/article/category')->name('articleCategory.')->group(function() {
+	Route::get('/', [ArticleCategoryController::class, 'index'])->name('index');
+	Route::get('/{articleCategory}/show', [ArticleCategoryController::class, 'show'])->name('show');
+});
+
+Route::prefix('/article/type')->name('articleType.')->group(function() {
+	Route::get('/', [ArticleTypeController::class, 'index'])->name('index');
+	Route::get('/{articleType}/show', [ArticleTypeController::class, 'show'])->name('show');
+});
+
+Route::prefix('/article/image')->name('articleImage.')->group(function() {
+	Route::get('/{article}', [ArticleImageController::class, 'index'])->name('index');
+	Route::match(['GET', 'POST'],'/create/{article}', [ArticleImageController::class, 'create'])->name('create');
+	
+	Route::get('/{articleImage}/show', [ArticleImageController::class, 'show'])->name('show');
 });
 
 Route::prefix('/ad/ray')->name('adRay.')->group(function() {
@@ -244,6 +301,15 @@ Route::prefix('/ad/image')->name('adImage.')->group(function() {
 	Route::match(['GET', 'POST'],'/create/{ad}', [AdImageController::class, 'create'])->name('create');
 	
 	Route::get('/{adImage}/show', [AdImageController::class, 'show'])->name('show');
+});
+
+Route::prefix('/conversion')->name('conversion.')->group(function() {
+	Route::get('/', [ConversionController::class, 'index'])->name('index');
+	Route::get('/{conversion}/show', [ConversionController::class, 'show'])->name('show');
+});
+
+Route::prefix('/service')->name('service.')->group(function() {
+	Route::get('/', [ServiceController::class, 'index'])->name('index');
 });
 
 Route::prefix('/image')->name('image.')->middleware(['auth'])->group(function() {

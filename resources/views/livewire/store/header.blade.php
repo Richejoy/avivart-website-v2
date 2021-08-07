@@ -17,8 +17,8 @@
 
                                     <option value="0">Toutes les catégories</option>
 
-                                    @if(session()->has('sessionProductRays') && session('sessionProductRays')->count())
-                                    @foreach(session('sessionProductRays') as $productRay)
+                                    @if($productRays->count())
+                                    @foreach($productRays as $productRay)
                                     <optgroup label="{{ $productRay->name }}">
                                         @if($productRay->productCategories->count())
                                         @foreach($productRay->productCategories as $productCategory)
@@ -32,7 +32,7 @@
                                 </select>
                             </div>
                             <input type="search" name="name" id="name" class="form-control border-danger"
-                                placeholder="Rechercher un aliment ou produit..." value="{{ Request::query('name') }}">
+                                placeholder="Rechercher un produit..." value="{{ Request::query('name') }}">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-danger hvr-glow">Rechercher</button>
                             </div>
@@ -50,7 +50,7 @@
                             ({{ session('userFavoriteProducts', 0) }})</a>
 
                         <a class="btn btn-light hvr-bounce-to-right" href="{{ route('cart.checkout') }}"
-                            data-toggle="tooltip" title="Détails commande">
+                            data-toggle="tooltip" title="Détail commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
                             ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }}

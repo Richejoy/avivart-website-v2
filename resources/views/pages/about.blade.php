@@ -68,22 +68,28 @@
         </div>
         <div class="row py-3">
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-lock text-info fa-2x px-3"></i> SÉCURITÉ</h4>
-                <p class="text-secondary">
-                    Nous disposons des meilleurs standards au niveau de la sécurité et de la qualité.
-                </p>
+                <div class="border-hover-solid-primary">
+                    <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-lock text-info fa-2x px-3"></i> SÉCURITÉ</h4>
+                    <p class="text-secondary">
+                        Nous disposons des meilleurs standards au niveau de la sécurité et de la qualité.
+                    </p>
+                </div>
             </div>
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-check text-info fa-2x px-3"></i> RAPIDITÉ</h4>
-                <p class="text-secondary">
-                    La prise en charge rapide de vos commandes est garantie par notre réseau performant de partenaires de transport sélectionnés que nous entretenons.
-                </p>
+                <div class="border-hover-solid-success">
+                    <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-check text-info fa-2x px-3"></i> RAPIDITÉ</h4>
+                    <p class="text-secondary">
+                        La prise en charge rapide de vos commandes est garantie par notre réseau performant de partenaires de transport sélectionnés que nous entretenons.
+                    </p>
+                </div>
             </div>
             <div class="col-lg-4 text-center">
-                <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-user text-info fa-2x px-3"></i> FLEXIBILITÉ</h4>
-                <p class="text-secondary">
-                    Nous avons la capacité de nous adapter à tous vos besoins en temps réel.
-                </p>
+                <div class="border-hover-solid-danger">
+                    <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-user text-info fa-2x px-3"></i> FLEXIBILITÉ</h4>
+                    <p class="text-secondary">
+                        Nous avons la capacité de nous adapter à tous vos besoins en temps réel.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

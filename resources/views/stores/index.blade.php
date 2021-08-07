@@ -89,27 +89,6 @@
                     </div>
                 </div>
 
-                <div class="my-3">
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
-                    </p>
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0015.jpg" alt="Image" class="w-100">
-                    </p>
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0016.jpg" alt="Image" class="w-100">
-                    </p>
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0017.jpg" alt="Image" class="w-100">
-                    </p>
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0018.jpg" alt="Image" class="w-100">
-                    </p>
-                    <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0019.jpg" alt="Image" class="w-100">
-                    </p>
-                </div>
-
             </aside>
 
             <div class="col-lg-9">
@@ -175,6 +154,21 @@
                 @else
                 <p>Aucun produit</p>
                 @endif
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0015.jpg" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0016.jpg" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0017.jpg" alt="Image" class="w-100">
             </div>
         </div>
     </div>

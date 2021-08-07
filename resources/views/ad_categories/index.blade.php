@@ -1,4 +1,4 @@
-@extends('layouts.ad', ['title' => "Catégories d'annonce"])
+@extends('layouts.ad', ['title' => 'Toutes nos catégories'])
 
 @section('body')
 

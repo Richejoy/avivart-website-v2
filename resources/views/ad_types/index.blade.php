@@ -1,4 +1,4 @@
-@extends('layouts.ad', ['title' => 'Accueil'])
+@extends('layouts.ad', ['title' => 'Tous nos types'])
 
 @section('body')
 

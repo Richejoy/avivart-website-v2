@@ -114,6 +114,42 @@ img.img-300x300 {
 	padding: 20px;
 }
 
+.border-hover-solid-primary:hover {
+	border: 1px solid var(--primary);
+}
+
+.border-hover-solid-success:hover {
+	border: 1px solid var(--success);
+}
+
+.border-hover-solid-danger:hover {
+	border: 1px solid var(--danger);
+}
+
+.border-hover-solid-warning:hover {
+	border: 1px solid var(--warning);
+}
+
+.border-hover-solid-info:hover {
+	border: 1px solid var(--info);
+}
+
+.border-hover-solid-dark:hover {
+	border: 1px solid var(--dark);
+}
+
+.border-hover-solid-light:hover {
+	border: 1px solid var(--light);
+}
+
+.bg-hover-primary:hover {
+	background-color: var(--primary);
+}
+
+.bg-hover-success:hover {
+	background-color: var(--success);
+}
+
 .cursor-pointer {
 	cursor: pointer;
 }

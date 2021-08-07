@@ -17,8 +17,8 @@
 
                                     <option value="0">Toutes les catégories</option>
 
-                                    @if(session()->has('sessionAdRays') && session('sessionAdRays')->count())
-                                    @foreach(session('sessionAdRays') as $adRay)
+                                    @if($adRays->count())
+                                    @foreach($adRays as $adRay)
                                     <optgroup label="{{ $adRay->name }}">
                                         @if($adRay->adCategories->count())
                                         @foreach($adRay->adCategories as $adCategory)

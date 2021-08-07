@@ -19,31 +19,23 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Savons</a>
+                        <a class="nav-link" href="{{ route('cosmetic.soap') }}">Savons</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Laits</a>
+                        <a class="nav-link" href="{{ route('cosmetic.milk') }}">Laits</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Gommages</a>
+                        <a class="nav-link" href="{{ route('cosmetic.scrub') }}">Gommages</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.agribusiness') }}">Masques</a>
+                        <a class="nav-link" href="{{ route('cosmetic.mask') }}">Masques</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Parfums</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Autres</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cosmetic.index') }}">Conseils</a>
+                        <a class="nav-link" href="{{ route('cosmetic.perfume') }}">Parfums</a>
                     </li>
 
                     <li class="nav-item">

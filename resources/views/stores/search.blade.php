@@ -13,7 +13,10 @@
                         <img src="https://avivart.net/images/galleries/IMG-20210614-WA0007.jpg" alt="Image" class="w-100">
                     </p>
                     <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0018.jpg" alt="Image" class="w-100">
+                    </p>
+                    <p>
+                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0019.jpg" alt="Image" class="w-100">
                     </p>
                     <p>
                         <img src="https://avivart.net/images/galleries/IMG-20210517-WA0006.jpg" alt="Image" class="w-100">

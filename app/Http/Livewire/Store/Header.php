@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Store;
 
 use Livewire\Component;
+use App\Models\ProductRay;
 
 class Header extends Component
 {
@@ -15,6 +16,8 @@ class Header extends Component
 
     public function render()
     {
-        return view('livewire.store.header');
+        $productRays = ProductRay::all();
+
+        return view('livewire.store.header', compact('productRays'));
     }
 }

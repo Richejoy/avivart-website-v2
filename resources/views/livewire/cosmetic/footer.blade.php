@@ -17,17 +17,13 @@
                         <ul class="list-unstyled">
                             <li><a class="text-dark" href="{{ route('page.index') }}">Accueil</a></li>
                             <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Savons</a>
+                            <li><a class="text-dark" href="{{ route('cosmetic.soap') }}">Savons</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Laits</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Gommages</a>
+                            <li><a class="text-dark" href="{{ route('cosmetic.milk') }}">Laits</a></li>
+                            <li><a class="text-dark" href="{{ route('cosmetic.scrub') }}">Gommages</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Masques</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Parfums</a>
-                            </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Autres</a>
-                            </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Conseils</a>
+                            <li><a class="text-dark" href="{{ route('cosmetic.mask') }}">Masques</a></li>
+                            <li><a class="text-dark" href="{{ route('cosmetic.perfume') }}">Parfums</a>
                             </li>
                             <li><a class="text-dark" href="{{ route('contact.index') }}">Contact</a></li>
                             <li><a class="text-dark" href="{{ route('page.about') }}">A propos</a></li>

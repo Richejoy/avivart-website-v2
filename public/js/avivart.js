@@ -4,12 +4,12 @@ jQuery(document).ready(function ($) {
 
 	$('#show-modules').click(function(e) {
 		e.preventDefault()
-		$('#modules').show()
+		$('#modules').toggle()
 	})
 
 	$('#close-modules').click(function(e) {
 		e.preventDefault()
-		$('#modules').hide()
+		$('#modules').fadeOut()
 	})
 
 })

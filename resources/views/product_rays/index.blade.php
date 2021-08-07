@@ -1,4 +1,4 @@
-@extends('layouts.store', ['title' => 'Rayons de produit'])
+@extends('layouts.store', ['title' => 'Tous nos rayons'])
 
 @section('body')
 
