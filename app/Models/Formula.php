@@ -9,6 +9,9 @@ class Formula extends Model
 {
     use HasFactory;
 
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
+
     public function currency()
     {
         return $this->belongsTo(Currency::class);

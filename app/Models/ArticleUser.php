@@ -10,7 +10,7 @@ class ArticleUser extends Model
     use HasFactory;
 
     const CREATED_AT = 'created';
-    const UPDATED_AT = null;
+    const UPDATED_AT = 'modified';
 
     public $table = 'articles_users';
 

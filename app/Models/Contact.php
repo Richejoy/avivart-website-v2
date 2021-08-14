@@ -10,7 +10,7 @@ class Contact extends Model
     use HasFactory;
 
     const CREATED_AT = 'created';
-    const UPDATED_AT = null;
+    const UPDATED_AT = 'modified';
 
     protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'contact_topic_id', 'message'];
 

@@ -9,7 +9,8 @@ class ProductOrder extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
 
     public $table = 'products_orders';
 

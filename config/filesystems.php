@@ -30,6 +30,19 @@ return [
 
     'disks' => [
 
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => 'files144.hostinger.fr',
+            'username' => 'u774058325',
+            'password' => '20?Avi!varT@18',
+            // Optional FTP Settings...
+            // 'port' => 21,
+            // 'root' => '',
+            // 'passive' => true,
+            // 'ssl' => true,
+            // 'timeout' => 30,
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

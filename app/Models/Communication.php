@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class Communication extends Model
 {
     use HasFactory;
 
@@ -13,18 +13,19 @@ class Transaction extends Model
     const UPDATED_AT = 'modified';
 
     protected $fillable = [
+        'communication_category_id',
         'user_id',
-        'transaction_type_id',
-        'activity',
+        'content',
+        'published',
     ];
-    
+
+    public function communicationCategory()
+    {
+        return $this->belongsTo(CommunicationCategory::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function transactionType()
-    {
-        return $this->belongsTo(TransactionType::class);
     }
 }

@@ -286,46 +286,32 @@
                 <div class="row py-3">
                     <div class="col-md-12">
                         <h2 class="mb-0 font-weight-bold text-warning">Communiqués</h2>
-                        <p class="my-0 text-muted"><span>2</span> résultats</p>
+                        <p class="my-0 text-muted"><span>{{ $communications->count() }}</span> résultats</p>
                     </div>
                 </div>
 
                 <div class="row">
+
+                    @forelse($communications as $communication)
                     <div class="col-md-12 mb-3">
                         <div class="card border-warning">
                             <div class="card-body">
-                                <h4 class="font-weight-bold">Offre d'emploi</h4>
+                                <h4 class="font-weight-bold">{{ $communication->communicationCategory->name }}</h4>
 
-                                <p>
-                                    Recherche d'un couple marié avec ou sans enfant(s) d'origine <strong>Nord du Togo</strong> pour un travail dans une ferme à <strong>Vogan</strong> de 3 hectares.
-                                </p>
+                                {!! nl2br($communication->content) !!}
 
-                                <p class="font-weight-bold">NB : Logement et Paiement assurés</p>
-
-                                <p>
-                                    Téléphone : (+228) 92 10 78 78
-                                </p>
+                                <h6 class="text-right text-muted">Postée le {{ $communication->created }} par {{ $communication->user->fullName() }}</h6>
                             </div>
                         </div>
                     </div>
+                    @empty
 
                     <div class="col-md-12">
-                        <div class="card border-warning">
-                            <div class="card-body">
-                                <h4 class="font-weight-bold">Candidature spontanée</h4>
-                                
-                                <p>
-                                    Une technicienne de surface recherche un travail de ménage. Elle réside à <strong>Totsi Djidjolé (Togo).</strong> Elle a de l'expérience en la matière et des qualités suivantes : éfficacité, disponibilité et serviabilité.
-                                </p>
-
-                                <p class="font-weight-bold">NB : Disponibilité immédiate</p>
-
-                                <p>
-                                    Téléphone : (+228) 92 10 78 78
-                                </p>
-                            </div>
-                        </div>
+                        <p>Aucun résultat</p>
                     </div>
+
+                    @endforelse
+
                 </div>
 
             </div>

@@ -147,6 +147,12 @@
                 </p>
             </div>
 
+            <div class="col-lg-3 col-sm-6 text-center">
+                <p>
+                    <img src="{{ asset('public/img/partners/coopagro.jpg') }}" alt="FUCEC TOGO" class="img-150x150 w-100">
+                </p>
+            </div>
+
         </div>
     </div>
 </section>

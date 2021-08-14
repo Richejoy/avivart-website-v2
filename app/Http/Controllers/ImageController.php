@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Image;
+use Illuminate\Validation\Rule;
 
 class ImageController extends Controller
 {
@@ -28,7 +29,12 @@ class ImageController extends Controller
                         'description' => ['required', 'bail', 'min:6'],
                     ]);
 
-                    $image->update($request->all());
+                    $image->update(array_merge(
+                        $request->all(),
+                        [
+                            'url' => $request->link,
+                        ]
+                    ));
 
                     return back()->withSuccess('Mises à jour éffectuées avec succès');
 
@@ -41,7 +47,27 @@ class ImageController extends Controller
                         'description' => ['required', 'bail', 'min:6'],
                     ]);
 
-                    return back()->withSuccess('Données non pris en compte');
+                    //upload file
+                    if ($request->hasFile('image') && $request->file('image')->isValid()) {
+                        
+                        //$uploadPath = $request->file('image')->path();
+
+                        //$extension = $request->file('image')->extension();
+
+                        //$name = $request->file('image')->getClientOriginalName();
+
+                        $filename = time() . '.' . $request->file('image')->extension();
+
+                        $storePath = $request->file('image')->storeAs("public_html/images/uploads/users/{$image->folder}", $filename, 'ftp');
+
+                        $image->update([
+                            'description' => $request->description,
+                            'url' => $filename,
+                            'link' => "http://avivart.net/images/uploads/users/{$image->folder}/" . $filename,
+                        ]);
+
+                        return back()->withSuccess("Modifications éffectuées");
+                    }
 
                     break;
                 

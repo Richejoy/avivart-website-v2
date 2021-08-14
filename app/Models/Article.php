@@ -11,7 +11,8 @@ class Article extends Model implements Buyable
 {
     use HasFactory;
 
-    public $timestamps = false;
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
 
     protected $fillable = [
         'name',

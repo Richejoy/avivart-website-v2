@@ -9,6 +9,9 @@ class ProductCategory extends Model
 {
     use HasFactory;
 
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
+
     public function image()
     {
         return $this->belongsTo(Image::class);

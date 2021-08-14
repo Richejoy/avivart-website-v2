@@ -9,6 +9,9 @@ class Civility extends Model
 {
     use HasFactory;
 
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
+
     public function gender()
     {
         return $this->belongsTo(Gender::class);

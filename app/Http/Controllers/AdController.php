@@ -12,6 +12,7 @@ use App\Models\AdImage;
 use App\Models\Image;
 use App\Models\Formula;
 use App\Models\AdFormula;
+use App\Models\Communication;
 use MercurySeries\Flashy\Flashy;
 use Carbon\Carbon;
 
@@ -31,8 +32,9 @@ class AdController extends Controller
         $vipAds = Ad::where(['published' => true, 'is_vip' => true])->inRandomOrder()->get();
         $latestAds = Ad::where('published', true)->inRandomOrder()->take(8)->orderBy('id' ,'DESC')->get();
         $ads = Ad::where('published', true)->inRandomOrder()->get();
+        $communications = Communication::where('published', true)->inRandomOrder()->get();
 
-        return view('ads.index', compact('adRays', 'adTypes', 'vipAds', 'latestAds', 'ads'));
+        return view('ads.index', compact('adRays', 'adTypes', 'vipAds', 'latestAds', 'ads', 'communications'));
     }
 
     public function create(Request $request)
