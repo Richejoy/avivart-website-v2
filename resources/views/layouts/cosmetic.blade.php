@@ -30,11 +30,12 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/cosmetic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/colors.css') }}">
 
     @livewireStyles
 </head>
 
-<body class="bg-light">
+<body>
 
     @if(session()->has('splashscreen'))
     
@@ -44,6 +45,8 @@
             @yield('body')
 
             <x-modules />
+
+            @include('layouts.partials.cosmetic._video_modal')
         </main>
 
         @livewire('cosmetic.footer')
