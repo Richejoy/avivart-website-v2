@@ -41,9 +41,9 @@
                 </div>
                 <div class="col-lg-3">
                     <div>
-                        <a class="btn btn-dark" href="{{ route('cart.index') }}"
-                            data-toggle="tooltip" title="Nombre d'articles'"><i class="fa fa-shopping-cart"></i>
-                            ({{ Cart::content()->count() }})</a>
+                        <a class="btn btn-dark" href="{{ route('basket.index') }}"
+                            data-toggle="tooltip" title="Nombre d'articles"><i class="fa fa-shopping-cart"></i>
+                            ({{ Cart::instance('cosmetic')->content()->count() }})</a>
 
                         <a class="btn btn-dark" href="{{ route('user.favorite_articles') }}"
                             data-toggle="tooltip" title="Articles favoris"><i class="fa fa-heart"></i>
@@ -53,10 +53,10 @@
                             data-toggle="tooltip" title="Détail commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
-                            ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }}
+                            ({{ str_replace(',', '', Cart::instance('cosmetic')->total()) - (str_replace(',', '', Cart::instance('cosmetic')->subtotal()) * session('discountCoupon')->rate) }}
                             FCFA)
                             @else
-                            <i class="fa fa-money"></i> ({{ Cart::subtotal() }} FCFA)
+                            <i class="fa fa-money"></i> ({{ Cart::instance('cosmetic')->subtotal() }} FCFA)
                             @endif
                         </a>
                     </div>

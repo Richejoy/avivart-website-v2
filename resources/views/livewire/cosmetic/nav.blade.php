@@ -15,7 +15,7 @@
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link font-weight-bold text-info" href="{{ route('cosmetic.index') }}">Cosmétique</a>
+                        <a class="nav-link font-weight-bold text-info" href="{{ route('cosmetic.index') }}">Shop</a>
                     </li>
 
                     <li class="nav-item">

@@ -30,6 +30,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/cosmetic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+
+    @livewireStyles
 </head>
 
 <body class="bg-light">
@@ -64,6 +66,8 @@
 
     <script type="text/javascript" src="{{ asset('public/js/cosmetic.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+
+    @livewireScripts
 
     @include('flashy::message')
 </body>

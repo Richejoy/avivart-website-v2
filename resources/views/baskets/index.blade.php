@@ -1,11 +1,11 @@
-@extends('layouts.cart', ['title' => 'Panier'])
+@extends('layouts.basket', ['title' => 'Panier'])
 
 @section('body')
 
 <section class="py-5 bg-light">
     <div class="container-fluid">
 
-        @if(Cart::instance('store')->count())
+        @if(Cart::instance('cosmetic')->count())
 
         <div class="row">
             <div class="col-lg-8">
@@ -27,11 +27,11 @@
                             @foreach($cartContent as $row)
                             <tr>
                                 <td><img src="{{ $row->model->image->link }}" alt="Image" width="48" height="48"></td>
-                                <td><a href="{{ route('store.show', ['product' => $row->id]) }}">{{ $row->name }}</a>
+                                <td><a href="{{ route('cosmetic.show', ['article' => $row->id]) }}">{{ $row->name }}</a>
                                 </td>
                                 <td>{{ $row->price }} {{ $row->model->currency->name }}</td>
                                 <td>
-                                    <form method="get" action="{{ route('cart.update', ['row' => $row->rowId]) }}"
+                                    <form method="get" action="{{ route('basket.update', ['row' => $row->rowId]) }}"
                                         accept-charset="utf-8" autocomplete="off">
                                         <div class="input-group">
                                             <input type="number" name="quantity" id="quantity" class="form-control"
@@ -45,7 +45,7 @@
                                 <td>{{ $row->subtotal }} {{ $row->model->currency->name }}</td>
                                 <td>
                                     <a data-toggle="tooltip" title="Retirer du panier"
-                                        href="{{ route('cart.remove', ['row' => $row->rowId]) }}" class="text-danger"><i
+                                        href="{{ route('basket.remove', ['row' => $row->rowId]) }}" class="text-danger"><i
                                             class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -56,9 +56,9 @@
                 </div>
 
                 <p class="mt-5">
-                    <a href="{{ route('store.index') }}" class="btn btn-outline-primary">Continuer mes achats</a>
+                    <a href="{{ route('cosmetic.index') }}" class="btn btn-outline-primary">Continuer mes achats</a>
 
-                    <a href="{{ route('cart.truncate') }}" class="btn btn-outline-warning">Vider le panier</a>
+                    <a href="{{ route('basket.truncate') }}" class="btn btn-outline-warning">Vider le panier</a>
                 </p>
 
             </div>
@@ -71,16 +71,16 @@
                     <div class="card-body">
                         <h6>Un coupon de ({{ session('discountCoupon')->rate }}) à été appliqué</h6>
 
-                        <h5 class="font-weight-bold"><mark>Montant à payé = {{ str_replace(',', '', Cart::instance('store')->total()) - (str_replace(',', '', Cart::instance('store')->subtotal()) * session('discountCoupon')->rate) }} FCFA</mark></h5>
+                        <h5 class="font-weight-bold"><mark>Montant à payé = {{ str_replace(',', '', Cart::instance('cosmetic')->total()) - (str_replace(',', '', Cart::instance('cosmetic')->subtotal()) * session('discountCoupon')->rate) }} FCFA</mark></h5>
                     </div>
                     <div class="card-footer">
-                        <a href="{{ route('cart.remove_coupon') }}" class="btn btn-warning">Supprimer le coupon</a>
+                        <a href="{{ route('basket.remove_coupon') }}" class="btn btn-warning">Supprimer le coupon</a>
                     </div>
                 </div>
 
                 @else
 
-                {!! Form::open(['route' => 'cart.apply_coupon']) !!}
+                {!! Form::open(['route' => 'basket.apply_coupon']) !!}
                 <div class="input-group">
                     <input type="text" name="code" id="code" class="form-control" placeholder="Entrez votre code"
                         required>
@@ -99,22 +99,22 @@
                             <tbody>
                                 <tr>
                                     <td>Sous Total</td>
-                                    <td>{{ Cart::instance('store')->subtotal() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->subtotal() }} FCFA</td>
                                 </tr>
                                 <tr>
                                     <td>Taxe</td>
-                                    <td>{{ Cart::instance('store')->tax() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->tax() }} FCFA</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>{{ Cart::instance('store')->total() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->total() }} FCFA</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="card-footer">
-                        <a href="{{ route('cart.checkout') }}" class="btn btn-success">Payer</a>
+                        <a href="{{ route('basket.checkout') }}" class="btn btn-success">Payer</a>
                     </div>
                 </div>
             </aside>

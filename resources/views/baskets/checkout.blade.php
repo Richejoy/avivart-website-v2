@@ -1,11 +1,11 @@
-@extends('layouts.cart', ['title' => 'Payement'])
+@extends('layouts.basket', ['title' => 'Payement'])
 
 @section('body')
 
 <section class="bg-light py-5">
     <div class="container-fluid">
 
-        @if(Cart::instance('store')->count())
+        @if(Cart::instance('cosmetic')->count())
 
         <div class="row">
             <div class="col-lg-6">
@@ -17,15 +17,15 @@
                             <tbody>
                                 <tr>
                                     <td>Sous Total</td>
-                                    <td>{{ Cart::instance('store')->subtotal() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->subtotal() }} FCFA</td>
                                 </tr>
                                 <tr>
                                     <td>Taxe</td>
-                                    <td>{{ Cart::instance('store')->tax() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->tax() }} FCFA</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>{{ Cart::instance('store')->total() }} FCFA</td>
+                                    <td>{{ Cart::instance('cosmetic')->total() }} FCFA</td>
                                 </tr>
                             </tbody>
                         </table>

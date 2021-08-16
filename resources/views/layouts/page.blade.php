@@ -49,6 +49,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+
+    @livewireStyles
 </head>
 
 <body>
@@ -103,6 +105,10 @@
     <script type="text/javascript">
         new WOW().init();
     </script>
+
+    @livewireScripts
+
+    @include('flashy::message')
 </body>
 
 </html>

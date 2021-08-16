@@ -21,7 +21,7 @@ class BasketController extends Controller
 
     public function index(Request $request)
     {
-    	$cartContent = Cart::content();
+    	$cartContent = Cart::instance('cosmetic')->content();
 
         return view('baskets.index', compact('cartContent'));
     }
@@ -30,9 +30,9 @@ class BasketController extends Controller
     {
     	$paymentModes = PaymentMode::all()->sortBy('id')->pluck(null, 'id');
 
-        $cartContent = Cart::content();
+        $cartContent = Cart::instance('cosmetic')->content();
 
-        if ($request->isMethod('POST') && (Cart::count() > 0)) {
+        if ($request->isMethod('POST') && (Cart::instance('cosmetic')->count() > 0)) {
 
             if (!auth()->check()) {
                 return back()->withDanger("Vous devez vous connecté pour continuer");
@@ -58,7 +58,7 @@ class BasketController extends Controller
                 $paygateURL = self::PAYGATE_URL;
                 $token = self::PAYGATE_TOKEN;
                 $identifier = mb_substr(uniqid(date('YmdHis') . $user->id ), 0, 25);
-                $amount = session()->has('discountCoupon') ? str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate : Cart::total();
+                $amount = session()->has('discountCoupon') ? str_replace(',', '', Cart::instance('cosmetic')->subtotal()) * session('discountCoupon')->rate : Cart::instance('cosmetic')->total();
                 $amount = str_replace(',', '', $amount);    //very important
                 /**/
 
@@ -93,7 +93,7 @@ class BasketController extends Controller
                     "url={$returnURL}",
                 ];
 
-                Cart::destroy();
+                Cart::instance('cosmetic')->destroy();
 
                 return redirect($paygateURL . implode('&', $queryString));
             } catch (\Exception $ex) {
@@ -115,7 +115,7 @@ class BasketController extends Controller
             $quantity = $request->query('quantity');
         }
 
-        Cart::add($article, $quantity, array());
+        Cart::instance('cosmetic')->add($article, $quantity, array());
 
         flashy()->success("Article ajouté au panier");
 
@@ -124,7 +124,7 @@ class BasketController extends Controller
 
     public function remove(Request $request, string $row)
     {
-    	Cart::remove($row);
+    	Cart::instance('cosmetic')->remove($row);
 
         flashy()->info("Article supprimé du panier");
 
@@ -134,7 +134,7 @@ class BasketController extends Controller
     public function update(Request $request, string $row)
     {
     	if ($request->has('quantity') && ($request->query('quantity') > 0)) {
-            Cart::update($row, $request->query('quantity'));
+            Cart::instance('cosmetic')->update($row, $request->query('quantity'));
 
             flashy()->info("Article mise à jour dans le panier");
         }
@@ -144,7 +144,7 @@ class BasketController extends Controller
 
     public function truncate(Request $request)
     {
-    	Cart::destroy();
+    	Cart::instance('cosmetic')->destroy();
 
         flashy()->error("Panier vidé");
 

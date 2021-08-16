@@ -22,8 +22,7 @@
                         href="{{ route('productType.show', ['productType' => $product->productType]) }}">{{ $product->productType->name }}</a>
                 </p>
 
-                <p class="">Conversion : <a
-                        href="{{ route('conversion.show', ['conversion' => $product->conversion]) }}">{{ $product->conversion->name }}</a>
+                <p class="">Conversion : {{ $product->conversion->name }}
                 </p>
 
                 <p class="">Devise : {{ $product->currency->name }}</p>

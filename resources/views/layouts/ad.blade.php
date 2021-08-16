@@ -55,6 +55,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/ad.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+
+    @livewireStyles
 </head>
 
 <body>
@@ -122,6 +124,8 @@
     <script type="text/javascript" src="{{ asset('public/js/cookies.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+
+    @livewireScripts
 
     @include('flashy::message')
 </body>

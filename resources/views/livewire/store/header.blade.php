@@ -43,7 +43,7 @@
                     <div>
                         <a class="btn btn-light hvr-bounce-to-bottom" href="{{ route('cart.index') }}"
                             data-toggle="tooltip" title="Nombre de produits"><i class="fa fa-shopping-cart"></i>
-                            ({{ Cart::content()->count() }})</a>
+                            ({{ Cart::instance('store')->content()->count() }})</a>
 
                         <a class="btn btn-light hvr-bounce-to-top" href="{{ route('user.favorite_products') }}"
                             data-toggle="tooltip" title="Produits favoris"><i class="fa fa-heart"></i>
@@ -53,10 +53,10 @@
                             data-toggle="tooltip" title="Détail commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
-                            ({{ str_replace(',', '', Cart::total()) - (str_replace(',', '', Cart::subtotal()) * session('discountCoupon')->rate) }}
+                            ({{ str_replace(',', '', Cart::instance('store')->total()) - (str_replace(',', '', Cart::instance('store')->subtotal()) * session('discountCoupon')->rate) }}
                             FCFA)
                             @else
-                            <i class="fa fa-money"></i> ({{ Cart::subtotal() }} FCFA)
+                            <i class="fa fa-money"></i> ({{ Cart::instance('store')->subtotal() }} FCFA)
                             @endif
                         </a>
                     </div>

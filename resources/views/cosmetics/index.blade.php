@@ -115,8 +115,7 @@
                                 </p>
 
                                 <p class="card-text m-0">
-                                    <a class="text-secondary"
-                                        href="{{ route('conversion.show', ['conversion' => $article->conversion]) }}">{{ $article->conversion->name }}</a>
+                                    {{ $article->conversion->name }}
                                 </p>
 
                                 <h6 class="text-dark m-0">
