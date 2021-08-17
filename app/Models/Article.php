@@ -86,7 +86,7 @@ class Article extends Model implements Buyable
 
     public function onDiscount(): string
     {
-        return $this->on_discount ? 'badge-success' : 'badge-danger';
+        return $this->on_discount ? 'badge-info' : 'badge-danger';
     }
 
     public function getPercentage(): float

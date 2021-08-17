@@ -2,10 +2,10 @@
 	--indigodark: #0e0c41;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Roboto', serif;
 }
 
 .material-icons { display: inline-flex; vertical-align: text-bottom; }

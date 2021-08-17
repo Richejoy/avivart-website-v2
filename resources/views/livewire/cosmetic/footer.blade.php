@@ -1,4 +1,4 @@
-<footer class="bg-info">
+<footer class="bg-dark">
         <section class="content py-lg-4">
             <div class="container-fluid pt-5 pb-3">
                 <div class="row">
@@ -15,44 +15,44 @@
                     <div class="col-lg-3 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Liens Principaux</h4>
                         <ul class="list-unstyled">
-                            <li><a class="text-dark" href="{{ route('page.index') }}">Accueil</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.soap') }}">Savons</a>
+                            <li><a class="text-muted" href="{{ route('page.index') }}">Accueil</a></li>
+                            <li><a class="text-muted" href="{{ route('cosmetic.index') }}">Cosmétique</a></li>
+                            <li><a class="text-muted" href="{{ route('cosmetic.soap') }}">Savons</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.milk') }}">Laits</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.scrub') }}">Gommages</a>
+                            <li><a class="text-muted" href="{{ route('cosmetic.milk') }}">Laits</a></li>
+                            <li><a class="text-muted" href="{{ route('cosmetic.scrub') }}">Gommages</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.mask') }}">Masques</a></li>
-                            <li><a class="text-dark" href="{{ route('cosmetic.perfume') }}">Parfums</a>
+                            <li><a class="text-muted" href="{{ route('cosmetic.mask') }}">Masques</a></li>
+                            <li><a class="text-muted" href="{{ route('cosmetic.perfume') }}">Parfums</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('contact.index') }}">Contact</a></li>
-                            <li><a class="text-dark" href="{{ route('page.about') }}">A propos</a></li>
-                            <li><a class="text-dark" href="{{ route('page.galleries') }}">Galeries</a></li>
+                            <li><a class="text-muted" href="{{ route('contact.index') }}">Contact</a></li>
+                            <li><a class="text-muted" href="{{ route('page.about') }}">A propos</a></li>
+                            <li><a class="text-muted" href="{{ route('page.galleries') }}">Galeries</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-sm-6">
                         <h4 class="text-white font-weight-bold text-uppercase">Autres Liens</h4>
                         <ul class="list-unstyled">
-                            <li><a class="text-dark" href="{{ route('informatics.index') }}">Informatique</a></li>
-                            <li><a class="text-dark" href="{{ route('store.index') }}">Boutique</a></li>
-                            <li><a class="text-dark" href="{{ route('ad.index') }}">Annonces</a></li>
-                            <li><a class="text-dark" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
-                            <li><a class="text-dark" href="{{ route('immovable.index') }}">Immobilier</a></li>
-                            <li><a class="text-dark" href="{{ route('service.index') }}">Services</a>
+                            <li><a class="text-muted" href="{{ route('informatics.index') }}">Informatique</a></li>
+                            <li><a class="text-muted" href="{{ route('store.index') }}">Boutique</a></li>
+                            <li><a class="text-muted" href="{{ route('ad.index') }}">Annonces</a></li>
+                            <li><a class="text-muted" href="{{ route('agribusiness.index') }}">Agrobusiness</a></li>
+                            <li><a class="text-muted" href="{{ route('immovable.index') }}">Immobilier</a></li>
+                            <li><a class="text-muted" href="{{ route('service.index') }}">Services</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('page.conditions') }}">Conditions Générales</a>
+                            <li><a class="text-muted" href="{{ route('page.conditions') }}">Conditions Générales</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('page.terms') }}">Termes Généraux</a></li>
-                            <li><a class="text-dark" href="{{ route('page.faq') }}">Foire aux questions</a></li>
+                            <li><a class="text-muted" href="{{ route('page.terms') }}">Termes Généraux</a></li>
+                            <li><a class="text-muted" href="{{ route('page.faq') }}">Foire aux questions</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-sm-12">
                         <h4 class="text-white font-weight-bold text-uppercase">Souscription Newsletter</h4>
-                        <p class="text-dark">Recevez des mises à jour par email sur notre site et nos offres
+                        <p class="text-muted">Recevez des mises à jour par email sur notre site et nos offres
                             spéciales.
                         </p>
 
-                        <x-newsletter btnColor="btn btn-dark" />
+                        <x-newsletter btnColor="btn btn-warning" />
 
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
@@ -95,7 +95,7 @@
                 <div class="row">
                     <div class="col-lg-8 text-light text-lg-center">
                         &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
-                        est fait par <a class="text-dark" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-info" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
                     <div class="col-lg-4 text-light text-lg-center">
 
