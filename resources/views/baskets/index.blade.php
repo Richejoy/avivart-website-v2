@@ -2,7 +2,7 @@
 
 @section('body')
 
-<section class="py-5 bg-light">
+<section class="py-5 bc-dark-pink-10">
     <div class="container-fluid">
 
         @if(Cart::instance('cosmetic')->count())
@@ -56,9 +56,9 @@
                 </div>
 
                 <p class="mt-5">
-                    <a href="{{ route('cosmetic.index') }}" class="btn btn-outline-primary">Continuer mes achats</a>
+                    <a href="{{ route('cosmetic.index') }}" class="btn btn-primary">Continuer mes achats</a>
 
-                    <a href="{{ route('basket.truncate') }}" class="btn btn-outline-warning">Vider le panier</a>
+                    <a href="{{ route('basket.truncate') }}" class="btn btn-warning">Vider le panier</a>
                 </p>
 
             </div>

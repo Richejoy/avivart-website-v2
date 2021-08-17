@@ -12,11 +12,9 @@
     </div>
 </section>
 
-<section class="py-5">
+<section class="bg-light py-5">
 	<div class="container-fluid">
 		<div class="row">
-			<aside class="col-lg-3">
-			</aside>
 			<article class="col-lg-9">
                 <h2 class="py-2 font-weight-bold text-dark">Produits liés ({{ $articleType->articles->count() }})</h2>
 
@@ -75,6 +73,9 @@
                 <p>Aucun produit</p>
                 @endif
             </article>
+
+            <aside class="col-lg-3">
+            </aside>
 		</div>
 	</div>
 </section>
