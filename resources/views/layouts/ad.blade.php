@@ -53,6 +53,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/up_btn/up_btn.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/GDPR-Cookie-Compliance-Plugin/css/gdpr-cookie.css') }}">
 
+    <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+    
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/ad.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 
@@ -81,7 +83,9 @@
 
     @endif
 
+    @production
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+    @endproduction
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
@@ -120,8 +124,9 @@
     <script type="text/javascript" src="{{ asset('public/plugins/Fix-Any-Element-To-Top-Of-The-Page-Using-jQuery-scrollFix/js/jQuery.scrollFix.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/GDPR-Cookie-Compliance-Plugin/js/gdpr-cookie.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public/js/jquery-static-load-more.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/js/cookies.js') }}"></script>
+    <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-static-load-more.js"></script>
+    <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/cookies.js"></script>
+    
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
 

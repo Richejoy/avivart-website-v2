@@ -62,38 +62,6 @@
 
                 <hr>
 
-                <p>
-                    <a target="_blank" data-toggle="tooltip" title="Appel" href="{{ $product->phoneLink() }}" class=""><i
-                                            class="fa fa-phone fa-2x text-danger"></i></a>
-
-                    <a target="_blank" data-toggle="tooltip" title="Whatsapp"
-                                        href="{{ $product->whatsappLink() }}"
-                                        class="ml-4 mr-2"><i class="fa fa-whatsapp fa-2x text-success"></i></a>
-
-                    <a target="_blank" data-toggle="tooltip" title="Telegram" href="{{ $product->telegramLink() }}" class="ml-2 mr-4"><i
-                                class="fa fa-telegram fa-2x text-primary"></i></a>
-
-                    <a target="_blank" data-toggle="tooltip" title="Message"
-                                        href="{{ $product->messageLink() }}" class=""><i
-                                            class="fa fa-comments fa-2x text-warning"></i></a>
-                </p>
-
-                <hr>
-
-                <p>
-                    <a data-toggle="tooltip" title="Ajouter au favoris"
-                            href="{{ route('user.add', ['product' => $product]) }}" class="text-danger"><i
-                                class="fa fa-heart fa-2x fa-spin"></i></a>
-                </p>
-            </div>
-
-            <div class="col-lg-4">
-                <p class="">
-                    <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
-                        src="https://via.placeholder.com/200x150.png?text=Chargement..." class="w-100 lazyrate"
-                        alt="Image">
-                </p>
-
                 <h4 class="my-3">Partagez</h4>
 
                 <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center my-2">
@@ -110,6 +78,36 @@
                                 class="fa fa-google-plus"></i></a>
                     </li>
                 </ul>
+
+                <hr>
+
+                <p>
+                    <a target="_blank" data-toggle="tooltip" title="Appel" href="{{ $product->phoneLink() }}" class=""><i
+                                            class="fa fa-phone fa-2x text-danger"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Whatsapp"
+                                        href="{{ $product->whatsappLink() }}"
+                                        class="ml-4 mr-2"><i class="fa fa-whatsapp fa-2x text-success"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Telegram" href="{{ $product->telegramLink() }}" class="ml-2 mr-4"><i
+                                class="fa fa-telegram fa-2x text-primary"></i></a>
+
+                    <a target="_blank" data-toggle="tooltip" title="Message"
+                                        href="{{ $product->messageLink() }}" class="mr-4"><i
+                                            class="fa fa-comments fa-2x text-warning"></i></a>
+                
+                    <a data-toggle="tooltip" title="Ajouter au favoris"
+                            href="{{ route('user.add', ['product' => $product]) }}" class="text-danger"><i
+                                class="fa fa-heart fa-2x"></i></a>
+                </p>
+            </div>
+
+            <div class="col-lg-4">
+                <p class="">
+                    <img id="img{{ $product->id }}" data-src="{{ $product->image->link }}"
+                        src="https://via.placeholder.com/200x150.png?text=Chargement..." class="w-100 lazyrate"
+                        alt="Image">
+                </p>
             </div>
 
         </div>

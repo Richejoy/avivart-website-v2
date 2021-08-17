@@ -47,6 +47,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
 
+    <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 
@@ -75,7 +77,9 @@
 
     @endif
 
+    @production
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+    @endproduction
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">

@@ -1,8 +1,4 @@
 :root {
-	--darken_red_4: #b71c1c;
-	--darken_red_3: #c62828;
-	--darken_red_2: #d32f2f;
-	--darken_red_1: #e53935;
 	--primary: #0275d8;
 	--success: #5cb85c;
 	--info: #5bc0de;
@@ -12,20 +8,40 @@
 	--light: #f7f7f7;
 }
 
-.bg-darken-4 {
-	background-color: var(--darken_red_4);
+.border-hover-solid-primary:hover {
+	border: 1px solid var(--primary);
 }
 
-.bg-darken-4 {
-	background-color: var(--darken_red_3);
+.border-hover-solid-success:hover {
+	border: 1px solid var(--success);
 }
 
-.bg-darken-4 {
-	background-color: var(--darken_red_2);
+.border-hover-solid-danger:hover {
+	border: 1px solid var(--danger);
 }
 
-.bg-darken-4 {
-	background-color: var(--darken_red_1);
+.border-hover-solid-warning:hover {
+	border: 1px solid var(--warning);
+}
+
+.border-hover-solid-info:hover {
+	border: 1px solid var(--info);
+}
+
+.border-hover-solid-dark:hover {
+	border: 1px solid var(--dark);
+}
+
+.border-hover-solid-light:hover {
+	border: 1px solid var(--light);
+}
+
+.bg-hover-primary:hover {
+	background-color: var(--primary);
+}
+
+.bg-hover-success:hover {
+	background-color: var(--success);
 }
 
 img.logo {
@@ -64,90 +80,6 @@ img.img-250x250 {
 
 img.img-300x300 {
 	height: 300px;
-}
-
-.fs-10 {
-	font-size: 10px;
-}
-
-.fs-11 {
-	font-size: 11px;
-}
-
-.fs-12 {
-	font-size: 12px;
-}
-
-.fs-14 {
-	font-size: 14px;
-}
-
-.fs-16 {
-	font-size: 16px;
-}
-
-.fs-18 {
-	font-size: 18px;
-}
-
-.fs-20 {
-	font-size: 20px;
-}
-
-.fs-22 {
-	font-size: 22px;
-}
-
-.fs-24 {
-	font-size: 24px;
-}
-
-.fs-26 {
-	font-size: 26px;
-}
-
-.fs-28 {
-	font-size: 28px;
-}
-
-.p-20 {
-	padding: 20px;
-}
-
-.border-hover-solid-primary:hover {
-	border: 1px solid var(--primary);
-}
-
-.border-hover-solid-success:hover {
-	border: 1px solid var(--success);
-}
-
-.border-hover-solid-danger:hover {
-	border: 1px solid var(--danger);
-}
-
-.border-hover-solid-warning:hover {
-	border: 1px solid var(--warning);
-}
-
-.border-hover-solid-info:hover {
-	border: 1px solid var(--info);
-}
-
-.border-hover-solid-dark:hover {
-	border: 1px solid var(--dark);
-}
-
-.border-hover-solid-light:hover {
-	border: 1px solid var(--light);
-}
-
-.bg-hover-primary:hover {
-	background-color: var(--primary);
-}
-
-.bg-hover-success:hover {
-	background-color: var(--success);
 }
 
 .cursor-pointer {

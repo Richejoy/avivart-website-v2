@@ -16,6 +16,8 @@
 
     <title>{{ config('app.name') }} - Payement - {{ pageTitle($title) }}</title>
 
+    <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/payment.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>

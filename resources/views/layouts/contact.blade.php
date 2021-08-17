@@ -20,6 +20,8 @@
 
     <title>{{ config('app.name') }} - Contact - {{ pageTitle($title) }}</title>
 
+    <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/contact.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>

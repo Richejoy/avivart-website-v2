@@ -20,6 +20,8 @@
 
     <title>{{ config('app.name') }} - Authentification - {{ pageTitle($title) }}</title>
 
+    <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/auth.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -36,7 +38,9 @@
 
     @livewire('auth.footer')
 
+    @production
     <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+    @endproduction
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">

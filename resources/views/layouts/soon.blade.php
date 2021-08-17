@@ -12,7 +12,7 @@
 
     <title>{{ config('app.name') }} - Coming soon - {{ pageTitle($title) }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/coming_soon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/soon.css') }}">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="{{ asset('public/js/coming_soon.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/js/soon.js') }}"></script>
 
 </body>
 

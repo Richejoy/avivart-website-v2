@@ -77,9 +77,7 @@
                 <p>Rien pour le moment</p>
 
                 @endif
-
             </div>
-
         </div>
     </div>
 </section>

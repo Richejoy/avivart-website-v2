@@ -9,6 +9,10 @@ jQuery(document).ready(function ($) {
     })
 
     $("[data-toggle='tooltip']").tooltip()
+
+    $(".lazyrate").lazyRate({
+        delay: 1000
+    })
     
 	$('.videoIcon').on('click', function(e) {
     	$('.videoPopup').show('slow')
