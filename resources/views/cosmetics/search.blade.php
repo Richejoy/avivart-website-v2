@@ -16,12 +16,12 @@
                         <div class="text-right">
                             <span class="badge {{ $article->onDiscount() }}">{{ $article->getPercentage() }}%</span>
                         </div>
-                        <div class="card border-success h-100">
+                        <div class="card border-dark h-100">
                             <a href="{{ route('cosmetic.show', ['article' => $article]) }}">
                                 <img src="{{ $article->image->link }}"
                                 class="card-img-top article-img" alt="Image">
                             </a>
-                            <span class="bg-success text-white text-center">{{ $article->name }}</span>
+                            <span class="bg-dark text-white text-center">{{ $article->name }}</span>
                             <div class="card-body p-2 text-center">
                                 <h6 class="card-title m-0">{{ $article->description }}</h6>
 

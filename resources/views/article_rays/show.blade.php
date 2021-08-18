@@ -2,7 +2,7 @@
 
 @section('body')
 
-<section class="bg-dark py-3">
+<section class="bg-color1 py-3">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">

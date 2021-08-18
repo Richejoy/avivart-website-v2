@@ -1,5 +1,5 @@
 :root {
-	--indigodark: #0e0c41;
+	--primaryColor: #e2a789;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -16,7 +16,6 @@ body {
 .material-icons.md-48 { font-size: 48px; }
 
 .main-footer {
-	background-color: var(--indigodark);
 }
 
 .main-footer .copyright {
@@ -25,6 +24,10 @@ body {
 /*.breadcrumb-item + .breadcrumb-item::before {
 	content: ">";
 }*/
+
+.bg-color1 {
+	background-color: var(--primaryColor);
+}
 
 .accordion .fa {
 	margin-right: .5rem;

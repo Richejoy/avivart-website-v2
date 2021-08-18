@@ -22,16 +22,22 @@
                 <div class="col-6">
                     <div class="card border-primary">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-primary fa fa-code fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('informatics.index') }}">Informatique</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('informatics.index') }}">
+                                <i class="text-primary fa fa-code fa-3x"></i>
+                                <br>
+                                <strong>Informatique</strong>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card border-success">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-success fa fa-shopping-basket fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('store.index') }}">Boutique</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('store.index') }}">
+                                <i class="text-success fa fa-shopping-basket fa-3x"></i>
+                                <br>
+                                <strong>Boutique</strong>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -41,16 +47,22 @@
                 <div class="col-6">
                     <div class="card border-warning">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-warning fa fa-bullhorn fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('ad.index') }}">Annonces</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('ad.index') }}">
+                                <i class="text-warning fa fa-bullhorn fa-3x"></i>
+                                <br>
+                                <strong>Annonces</strong>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card border-info">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-info fa fa-suitcase fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('cosmetic.index') }}">Cosmétique</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('cosmetic.index') }}">
+                                <i class="text-info fa fa-suitcase fa-3x"></i>
+                                <br>
+                                <strong>Cosmétique</strong>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -60,16 +72,22 @@
                 <div class="col-6">
                     <div class="card border-dark">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-dark fa fa-blind fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('agribusiness.index') }}">Agrobusiness</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('agribusiness.index') }}">
+                                <i class="text-dark fa fa-blind fa-3x"></i>
+                                <br>
+                                <strong>Agrobusiness</strong>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="card border-danger">
                         <div class="card-body text-center p-1">
-                            <div><i class="text-danger fa fa-industry fa-3x"></i></div>
-                            <div class="mt-2"><a class="text-muted" href="{{ route('immovable.index') }}">Immobilier</a></div>
+                            <a class="d-block text-decoration-none text-muted" href="{{ route('immovable.index') }}">
+                                <i class="text-danger fa fa-industry fa-3x"></i>
+                                <br>
+                                <strong>Immobilier</strong>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -52,7 +52,7 @@
                             spéciales.
                         </p>
 
-                        <x-newsletter btnColor="btn btn-warning" />
+                        <x-newsletter btnColor="btn btn-info" />
 
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
@@ -85,6 +85,19 @@
                             </li>
                         </ul>
 
+                        <div class="text-center mt-3">
+                            <em class="fs-12 text-secondary text-uppercase">Mode de payement</em>
+
+                            <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="mr-2 img-25x25">
+
+                            <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}"
+                            class="mr-2 img-25x25">
+
+                            <img alt="VISA" src="{{ asset('public/img/payments/visa.jpeg') }}" class="mr-2 img-25x25">
+
+                            <img alt="PAYPAL" src="{{ asset('public/img/payments/paypal.png') }}" class="img-25x25">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -93,12 +106,12 @@
         <section class="copyright">
             <div class="container-fluid py-3">
                 <div class="row">
-                    <div class="col-lg-8 text-light text-lg-center">
+                    <div class="col-lg-8 text-warning text-lg-center">
                         &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
-                        est fait par <a class="text-info" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-info" href="#" target="_blank">AVIV'ART-DESIGN</a></a>
                     </div>
-                    <div class="col-lg-4 text-light text-lg-center">
-
+                    <div class="col-lg-4 text-warning text-lg-center">
+                        Fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-info" href="#" target="_blank">AVIV'ART-DEV</a></a>
                     </div>
                 </div>
             </div>

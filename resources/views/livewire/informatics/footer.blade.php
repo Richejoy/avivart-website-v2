@@ -54,7 +54,7 @@
                             spéciales.
                         </p>
 
-                        <x-newsletter btnColor="btn btn-danger" />
+                        <x-newsletter btnColor="btn btn-primary" />
 
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
@@ -97,10 +97,10 @@
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
                         &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
-                        est fait par <a class="text-danger" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-primary" href="#" target="_blank">AVIV'ART DESIGN</a></a>
                     </div>
-                    <div class="col-lg-4 text-light text-lg-center">
-
+                    <div class="col-lg-4 text-info text-lg-center">
+                        Fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-primary" href="#" target="_blank">AVIV'ART-DEV</a></a>
                     </div>
                 </div>
             </div>

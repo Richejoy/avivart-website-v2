@@ -2,7 +2,7 @@
 
 @section('body')
 
-<section class="py-3" style="background-color: #e2a789;">
+<section class="py-3 bg-color1">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
@@ -64,11 +64,18 @@
 
             <aside class="col-lg-3 pb-3">
 
+                <div class="card border-dark mb-3">
+                    <div class="card-header bg-dark text-white py-2"><i class="fa fa-bell fa-pulse mr-2 text-warning"></i> Conseils</div>
+                    <video controls class="w-100 p-0">
+                        <source src="{{ asset('public/videos/v4.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+
                 <div class="accordion" id="accordion1">
-                    <div class="card">
-                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
+                    <div class="card border-dark">
+                        <div class="card-header p-0 bg-dark font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-white"
                                     type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
                                     <i class="fa fa-plus"></i> Tous nos Rayons
@@ -111,10 +118,10 @@
                 </div>
 
                 <div class="mt-3 accordion" id="accordion2">
-                    <div class="card">
-                        <div class="card-header p-0 bg-white font-weight-bold" id="headingOne">
+                    <div class="card border-dark">
+                        <div class="card-header p-0 bg-dark font-weight-bold" id="headingOne">
                             <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left text-decoration-none text-dark"
+                                <button class="btn btn-link btn-block text-left text-decoration-none text-white"
                                     type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
                                     aria-controls="collapseTwo">
                                     <i class="fa fa-plus"></i> Tous nos Types

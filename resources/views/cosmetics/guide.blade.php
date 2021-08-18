@@ -54,7 +54,7 @@
     </div>
 </section>
 
-<section class="bg-dark py-5">
+<section class="bg-color1 py-5">
     <div class="container">
         <div class="row py-3">
             <div class="col-lg-12 text-center">

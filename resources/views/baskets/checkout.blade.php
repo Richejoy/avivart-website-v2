@@ -2,7 +2,7 @@
 
 @section('body')
 
-<section class="py-5 bc-dark-pink-10">
+<section class="py-5 bg-color1">
     <div class="container-fluid">
 
         @if(Cart::instance('cosmetic')->count())

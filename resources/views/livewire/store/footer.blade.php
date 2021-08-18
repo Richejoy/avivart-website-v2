@@ -53,18 +53,7 @@
                             spéciales.
                         </p>
 
-                        {!! Form::open(['route' => 'newsletter.store', 'class' => 'my-4']) !!}
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">@</div>
-                            </div>
-                            <input type="email" name="email" id="email" class="form-control"
-                                placeholder="Entrez votre email">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-warning">Souscrire</button>
-                            </div>
-                        </div>
-                        {!! Form::close() !!}
+                        <x-newsletter btnColor="btn btn-success" />
 
                         <h6 class="my-3 text-white font-weight-bold text-uppercase">Suivez-nous</h6>
 
@@ -97,6 +86,19 @@
                             </li>
                         </ul>
 
+                        <div class="text-center mt-3">
+                            <em class="fs-12 text-secondary text-uppercase">Mode de payement</em>
+
+                            <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="mr-2 img-25x25">
+
+                            <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}"
+                            class="mr-2 img-25x25">
+
+                            <img alt="VISA" src="{{ asset('public/img/payments/visa.jpeg') }}" class="mr-2 img-25x25">
+
+                            <img alt="PAYPAL" src="{{ asset('public/img/payments/paypal.png') }}" class="img-25x25">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -107,17 +109,10 @@
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
                         &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
-                        est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART DESIGN</a></a>
+                        est fait par <a class="text-success" href="#" target="_blank">AVIV'ART-DESIGN</a></a>
                     </div>
-                    <div class="col-lg-4 text-light text-lg-center">
-                        <img alt="TMONEY" src="{{ asset('public/img/payments/tmoney.png') }}" class="pr-3 img-25x25">
-
-                        <img alt="FLOOZ" src="{{ asset('public/img/payments/flooz.jpeg') }}"
-                            class="pl-2 pr-2 img-25x25">
-
-                        <img alt="VISA" src="{{ asset('public/img/payments/visa.jpeg') }}" class="pl-2 pr-2 img-25x25">
-
-                        <img alt="PAYPAL" src="{{ asset('public/img/payments/paypal.png') }}" class="pl-3 img-25x25">
+                    <div class="col-lg-4 text-info text-lg-center">
+                        Fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-success" href="#" target="_blank">AVIV'ART-DEV</a></a>
                     </div>
                 </div>
             </div>
