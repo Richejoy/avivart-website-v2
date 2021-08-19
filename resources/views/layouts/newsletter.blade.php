@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
 
+    @stack('styles')
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/newsletter.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -38,6 +40,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
+    @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/newsletter.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

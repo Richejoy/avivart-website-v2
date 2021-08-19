@@ -52,6 +52,8 @@
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
 
+    @stack('styles')
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/store.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 </head>
@@ -103,6 +105,8 @@
     </script>
     <script type="text/javascript"
         src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
+
+    @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

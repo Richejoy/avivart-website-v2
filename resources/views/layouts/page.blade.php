@@ -49,6 +49,8 @@
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
 
+    @stack('styles')
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/page.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 
@@ -102,6 +104,8 @@
 
     <script type="text/javascript"
         src="{{ asset('public/plugins/cookie-consent-banner-localstroage/js/cookie-banner.js') }}"></script>
+
+    @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/page.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

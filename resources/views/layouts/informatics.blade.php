@@ -40,6 +40,8 @@
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
 
+    @stack('styles')
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/informatics.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
 
@@ -80,6 +82,8 @@
     <script type="text/javascript" src="{{ asset('public/plugins/vanilla-back-to-top-master/js/vanilla-back-to-top.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/jQuery-Plugin-To-Fix-Any-Elements-On-The-Top-Fixit/js/jquery.fixit.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/GDPR-Cookie-Consent-Popup-Plugin/js/jquery.ihavecookies.min.js') }}"></script>
+
+    @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/informatics.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

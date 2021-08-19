@@ -6,6 +6,11 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
+                <div
+                    class="p-2 mt-xs-3 mb-3 bg-white font-weight-bold shadow-sm rounded">
+                    <i class="fa fa-bell fa-pulse"></i> Réaussez votre beauté avec du naturel
+                </div>
+
                 @if($articles->count())
 
                 <div class="row mb-4" id="article-container">

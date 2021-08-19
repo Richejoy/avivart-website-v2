@@ -24,7 +24,7 @@
                     produits en toute liberté.</h6>
 
                 {!! Form::open() !!}
-                <div class="form-group">
+                <div class="form-group select">
                     {{ Form::label('country_id', 'Pays de résidence', ['class' => 'text-dark']) }}
                     {{ Form::select('country_id', $countries, null, ['class' => 'form-control', 'placeholder' => 'Pays de résidence', 'required' => true]) }}
                 </div>
@@ -99,3 +99,11 @@
 </section>
 
 @endsection
+
+@push('styles')
+
+@endpush
+
+@push('scripts')
+
+@endpush

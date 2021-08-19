@@ -54,6 +54,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/GDPR-Cookie-Compliance-Plugin/css/gdpr-cookie.css') }}">
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
+    @stack('styles')
     
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/ad.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
@@ -126,6 +128,8 @@
 
     <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-static-load-more.js"></script>
     <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/cookies.js"></script>
+
+    @stack('scripts')
     
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>

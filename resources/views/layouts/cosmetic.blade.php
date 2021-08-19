@@ -37,6 +37,8 @@
     @endif
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
+
+    @stack('styles')
     
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/cosmetic.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
@@ -79,6 +81,8 @@
     </script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
+
+    @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/cosmetic.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
