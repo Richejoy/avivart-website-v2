@@ -2,7 +2,7 @@
 
 @section('body')
 
-<section class="bg-white py-5">
+<section class="bg-light py-5">
     <div class="container-fluid">
         <div class="row py-3">
             <div class="col-lg-12 text-center">
@@ -54,11 +54,11 @@
     </div>
 </section>
 
-<section class="bg-color1 py-5">
+<section class="bg-info py-5">
     <div class="container">
         <div class="row py-3">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold text-primary">Vos Avantages</h2>
+                <h2 class="font-weight-bold text-warning">Vos Avantages</h2>
             </div>
         </div>
 

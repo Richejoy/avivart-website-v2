@@ -1,7 +1,7 @@
 <section>
     @livewire('cosmetic.nav')
 
-    <header class="bg-light">
+    <header class="bg-white">
         <section class="container-fluid">
             <div class="row pt-3">
                 <div class="col-lg-3">
@@ -41,15 +41,15 @@
                 </div>
                 <div class="col-lg-3">
                     <div>
-                        <a class="btn btn-dark" href="{{ route('basket.index') }}"
+                        <a class="btn btn-danger" href="{{ route('basket.index') }}"
                             data-toggle="tooltip" title="Nombre d'articles"><i class="fa fa-shopping-cart"></i>
                             ({{ Cart::instance('cosmetic')->content()->count() }})</a>
 
-                        <a class="btn btn-dark" href="{{ route('user.favorite_articles') }}"
+                        <a class="btn btn-warning" href="{{ route('user.favorite_articles') }}"
                             data-toggle="tooltip" title="Articles favoris"><i class="fa fa-heart"></i>
                             ({{ session('userFavoriteArticles', 0) }})</a>
 
-                        <a class="btn btn-dark" href="{{ route('basket.checkout') }}"
+                        <a class="btn btn-success" href="{{ route('basket.checkout') }}"
                             data-toggle="tooltip" title="Détail commande">
                             @if(session()->has('discountCoupon'))
                             <i class="fa fa-money"></i>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-lg-9">
                     <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb bg-light m-0 p-0">
+                        <ol class="breadcrumb bg-white m-0 p-0">
                             <li class="breadcrumb-item"><a href="{{ route('page.login') }}"
                                     class=" text-primary font-weight-bold">Connectez-vous</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('cosmetic.guide') }}"
