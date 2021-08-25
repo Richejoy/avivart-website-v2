@@ -106,6 +106,8 @@
     <script type="text/javascript"
         src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>

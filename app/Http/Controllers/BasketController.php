@@ -117,9 +117,13 @@ class BasketController extends Controller
 
         Cart::instance('cosmetic')->add($article, $quantity, array());
 
-        flashy()->success("Article ajouté au panier");
+        if ($request->ajax()) {
+            return response()->json(['error' => false, 'message' => 'Very good']);
+        } else {
+            flashy()->success("Article ajouté au panier");
 
-        return back();
+            return back();
+        }
     }
 
     public function remove(Request $request, string $row)

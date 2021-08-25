@@ -82,10 +82,14 @@
 
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     @stack('scripts')
 
     <script type="text/javascript" src="{{ asset('public/js/cosmetic.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+
+    <script src="{{ asset('public/js/laroute.js') }}"></script>
 
     @livewireScripts
 

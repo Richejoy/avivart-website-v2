@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "473abd1ccdd6eaa764ad27af29a0487c",
+    "content-hash": "ea5afbd6e52ab56f9c9fbe921af94fee",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6413,6 +6413,73 @@
                 }
             ],
             "time": "2021-03-06T07:59:01+00:00"
+        },
+        {
+            "name": "te7a-houdini/laroute",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amaelftah/laroute.git",
+                "reference": "b8773d8c00adb51bd1d34ba3745cf2429fa4f9d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amaelftah/laroute/zipball/b8773d8c00adb51bd1d34ba3745cf2429fa4f9d9",
+                "reference": "b8773d8c00adb51bd1d34ba3745cf2429fa4f9d9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.8.0|~6.0|~7.0|~8.0",
+                "illuminate/console": "~5.8.0|~6.0|~7.0|~8.0",
+                "illuminate/filesystem": "~5.8.0|~6.0|~7.0|~8.0",
+                "illuminate/routing": "~5.8.0|~6.0|~7.0|~8.0",
+                "illuminate/support": "~5.8.0|~6.0|~7.0|~8.0",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "orchestra/testbench": "^3.5|~4.0|~5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Te7aHoudini\\Laroute\\LarouteServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Te7aHoudini\\Laroute\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed Abd El Ftah",
+                    "email": "ahmedabdelftah95165@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Aaron Lord",
+                    "email": "hello@aaronlord.is"
+                }
+            ],
+            "description": "Access Laravels URL/Route helper functions, from JavaScript.",
+            "keywords": [
+                "javascript",
+                "laravel",
+                "routes",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/amaelftah/laroute/issues",
+                "source": "https://github.com/amaelftah/laroute/tree/2.1.1"
+            },
+            "time": "2020-08-28T07:20:26+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

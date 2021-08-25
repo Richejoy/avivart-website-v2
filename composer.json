@@ -27,6 +27,7 @@
         "orangehill/iseed": "^3.0",
         "rah/danpu": "^2.7",
         "spatie/db-dumper": "^2.21",
+        "te7a-houdini/laroute": "^2.1",
         "torann/geoip": "^3.0"
     },
     "require-dev": {
