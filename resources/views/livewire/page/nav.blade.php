@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm w-100" id="navbarTop">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-100" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
                     alt="{{ config('app.name') }}" class="logo-xs"></a>
@@ -50,7 +50,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-success" href="{{ route('page.login') }}"><i class="fa fa-user-circle fa-2x"></i></a>
+                        <a id="show-modules" class="nav-link text-success" href="#"><i class="fa fa-user-circle fa-2x"></i></a>
                     </li>
 
                 </ul>

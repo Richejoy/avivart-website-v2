@@ -24,4 +24,19 @@ jQuery(document).ready(function ($) {
 	    offsetY: 90
 	})
 
+  $("#introLoading").introLoader({
+
+                    animation: {
+                        name: 'cssLoader',
+                        options: {
+                            exitFx:'slideUp',
+                            ease: "easeOutSine",
+                            style: getIntroLoadingTheme(getRandomIntInclusive(0, 6)),
+                            delayBefore: 1000, //delay time in milliseconds
+                            exitTime: 500
+                        }
+                    }
+
+      })
+
 })

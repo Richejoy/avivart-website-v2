@@ -43,6 +43,8 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('public/plugins/cookie-consent-banner-localstroage/css/cookie-banner.css') }}">
 
+    <link href="{{ asset('public/plugins/introLoader/dist/css/introLoader.css') }}" rel="stylesheet">
+
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
@@ -60,11 +62,15 @@
 <body>
 
     @if(session()->has('splashscreen'))
+
+        <div id="introLoading" class="introLoading"></div>
     
         @livewire('page.header')
 
         <main role="main">
             @yield('body')
+
+            <x-modules content="login" />
 
             @include('layouts.partials.page._cookie_banner')
 
@@ -105,18 +111,23 @@
     <script type="text/javascript"
         src="{{ asset('public/plugins/cookie-consent-banner-localstroage/js/cookie-banner.js') }}"></script>
 
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+
     @stack('scripts')
 
+    <script type="text/javascript" src="{{ asset('public/js/laroute.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/js/utils.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/page.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
-
-    <script type="text/javascript">
-        new WOW().init();
-    </script>
 
     @livewireScripts
 
     @include('flashy::message')
+
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

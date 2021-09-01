@@ -74,7 +74,7 @@
                             </div>
                             <div class="card-footer text-center p-2">
                                 <a data-toggle="tooltip" title="Ajouter au panier"
-                                    href="{{ route('basket.add', ['article' => $article]) }}" class="cart text-primary"><i
+                                    href="{{ route('basket.add', ['article' => $article]) }}" class="add-product-to-cart text-primary"><i
                                         class="fa fa-shopping-cart"></i></a>
 
                                 <a data-toggle="tooltip" title="Ajouter au favoris"

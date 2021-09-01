@@ -45,7 +45,7 @@
                                 <td>{{ $row->subtotal }} {{ $row->model->currency->name }}</td>
                                 <td>
                                     <a data-toggle="tooltip" title="Retirer du panier"
-                                        href="{{ route('cart.remove', ['row' => $row->rowId]) }}" class="text-danger"><i
+                                        href="{{ route('cart.remove', ['row' => $row->rowId]) }}" class="remove-product-from-cart text-danger"><i
                                             class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -58,7 +58,7 @@
                 <p class="mt-5">
                     <a href="{{ route('store.index') }}" class="btn btn-outline-primary">Continuer mes achats</a>
 
-                    <a href="{{ route('cart.truncate') }}" class="btn btn-outline-warning">Vider le panier</a>
+                    <a href="{{ route('cart.truncate') }}" class="truncate-cart btn btn-outline-warning">Vider le panier</a>
                 </p>
 
             </div>

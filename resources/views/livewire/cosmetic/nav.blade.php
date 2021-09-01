@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom shadow-sm w-100" id="navbarTop">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm w-100" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('ad.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}"
                     alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong

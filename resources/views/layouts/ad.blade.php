@@ -32,6 +32,8 @@
 
     <title>{{ config('app.name') }} - Annonces - {{ pageTitle($title) }}</title>
 
+    <link href="{{ asset('public/plugins/introLoader/dist/css/introLoader.css') }}" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css"
         href="{{ asset('public/plugins/Feature-rich-Product-Gallery-With-Image-Zoom-xZoom/css/xzoom.css') }}"
         media="all" />
@@ -66,6 +68,8 @@
 <body>
 
     @if(session()->has('splashscreen'))
+
+        <div id="introLoading" class="introLoading"></div>
     
         @livewire('ad.header', ['title' => $title])
 
@@ -96,6 +100,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.js">
     </script>
@@ -129,14 +137,23 @@
     <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-static-load-more.js"></script>
     <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/cookies.js"></script>
 
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+
     @stack('scripts')
     
+    <script type="text/javascript" src="{{ asset('public/js/laroute.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/js/utils.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/ad.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
 
     @livewireScripts
 
     @include('flashy::message')
+
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

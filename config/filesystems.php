@@ -43,6 +43,11 @@ return [
             // 'timeout' => 30,
         ],
 
+        'uploads_path' => [
+            'driver' => 'local',
+            'root' => public_path('libraries'),
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

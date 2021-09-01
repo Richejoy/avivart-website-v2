@@ -32,6 +32,8 @@
 
     <title>{{ config('app.name') }} - Informatique - {{ pageTitle($title) }}</title>
 
+    <link href="{{ asset('public/plugins/introLoader/dist/css/introLoader.css') }}" rel="stylesheet">
+
     @if(!session()->has('splashscreen'))
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
     @endif
@@ -51,6 +53,8 @@
 <body>
 
     @if(session()->has('splashscreen'))
+
+        <div id="introLoading" class="introLoading"></div>
     
         @livewire('informatics.header')
 
@@ -79,18 +83,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
     <script type="text/javascript" src="{{ asset('public/plugins/vanilla-back-to-top-master/js/vanilla-back-to-top.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/jQuery-Plugin-To-Fix-Any-Elements-On-The-Top-Fixit/js/jquery.fixit.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/plugins/GDPR-Cookie-Consent-Popup-Plugin/js/jquery.ihavecookies.min.js') }}"></script>
 
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
+    <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+
     @stack('scripts')
 
+    <script type="text/javascript" src="{{ asset('public/js/laroute.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('public/js/utils.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/informatics.js') }}"></script>
     <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
 
     @livewireScripts
 
     @include('flashy::message')
+
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 </body>
 
 </html>

@@ -2,6 +2,12 @@
 
 jQuery(document).ready(function ($) {
 
+	$.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+      }
+    })
+
 	$('#show-modules').click(function(e) {
 		e.preventDefault()
 		$('#modules').toggle()
@@ -12,4 +18,12 @@ jQuery(document).ready(function ($) {
 		$('#modules').fadeOut()
 	})
 
+	let loader = $('#introLoading').data('introLoader');
+    loader.stop()
+
+	/*setTimeout(function () {
+        $('#introLoading').hide()
+    }, 3000)*/
 })
+
+new WOW().init()

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class modules extends Component
+class Splash extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class modules extends Component
      */
     public function render()
     {
-        return view('components.modules');
+        return view('components.splash');
     }
 }

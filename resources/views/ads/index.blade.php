@@ -35,7 +35,7 @@
                                     <img src="http://avivart.net/images/ads/01.jpg" class="d-block w-100" alt="Image">
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="{{ asset('public/img/ads/IMG-20210707-WA0000.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('public/img/ads/IMG-20210831-WA0199.jpg') }}" class="d-block w-100"
                                 alt="Image">
                                 </div>
                             </div>
@@ -294,14 +294,17 @@
 
                     @forelse($communications as $communication)
                     <div class="col-md-12 mb-3">
+                        <div class="">
+                            <h4 class="font-weight-bold">&#128515; {{ $communication->communicationCategory->name }}</h4>
+                        </div>
                         <div class="card border-warning">
                             <div class="card-body">
-                                <h4 class="font-weight-bold">{{ $communication->communicationCategory->name }}</h4>
-
                                 {!! nl2br($communication->content) !!}
-
-                                <h6 class="text-right text-muted">Postée le {{ $communication->created }} par {{ $communication->user->fullName() }}</h6>
                             </div>
+                        </div>
+                        <div class="py-2">
+                            <h6 class="text-right text-muted">Postée {{ $communication->created->diffForHumans() }} par {{ $communication->user->fullName() }} ({{ $communication->user->userType->name }}).</h6>
+                            <p class="text-right"><em>Téléphone : {{ $communication->user->longPhone() }}</em></p>
                         </div>
                     </div>
                     @empty

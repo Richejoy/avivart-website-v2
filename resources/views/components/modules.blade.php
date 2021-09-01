@@ -6,7 +6,7 @@
                     <i class="p-2 fa fa-th"></i>
                 </div>
                 <div class="col-8 px-2 pt-1 pb-2">
-                    <strong class="text-uppercase">Domaines d’activité</strong>
+                    <strong class="text-uppercase">{{ $headerText }}</strong>
                 </div>
                 <div id="close-modules" class="col-2 bg-danger cursor-pointer">
                     <i class="p-2 fa fa-close text-white"></i>
@@ -17,6 +17,12 @@
 
     <div class="modules-body py-3">
         <div class="container">
+
+            @if(!is_null($content))
+
+            <livewire:login-form />
+
+            @else
 
             <div class="row">
                 <div class="col-6">
@@ -92,6 +98,8 @@
                     </div>
                 </div>
             </div>
+
+            @endif
 
         </div>
     </div>

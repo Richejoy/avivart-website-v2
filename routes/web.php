@@ -54,10 +54,12 @@ use App\Http\Controllers\AdImageController;
 |
 */
 
-Route::get('/cache/clear', function() {
+Route::get('/clear', function() {
+	Artisan::call('config:clear');
+	Artisan::call('route:clear');
 	Artisan::call('cache:clear');
 	Artisan::call('view:clear');
-	return "Cache is cleared";
+	return "Route, Cache and View are cleared";
 });
 
 Route::prefix('/')->name('page.')->group(function() {
