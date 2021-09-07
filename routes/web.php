@@ -71,7 +71,7 @@ Route::prefix('/')->name('page.')->group(function() {
 	Route::get('/sitemap', [PageController::class, 'sitemap'])->name('sitemap');
 	Route::get('/galleries', [PageController::class, 'galleries'])->name('galleries');
 
-	Route::middleware(['logged'])->group(function () {
+	Route::middleware(['guest'])->group(function () {
 		Route::match(['GET', 'POST'], '/login', [PageController::class, 'login'])->name('login');
 		Route::match(['GET', 'POST'], '/register', [PageController::class, 'register'])->name('register');
 		Route::match(['GET', 'POST'], '/confirmed', [PageController::class, 'confirmed'])->name('confirmed');

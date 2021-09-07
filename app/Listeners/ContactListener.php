@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Log;
 
 class ContactListener
 {
@@ -31,8 +32,14 @@ class ContactListener
     {
         $contact = $event->contact;
 
-        Mail::to($contact->email, $contact->fullName())->send(new ContactMail($contact, 'user', "Contact Mail"));
+        try {
+            Mail::to($contact->email, $contact->fullName())->send(new ContactMail($contact, 'user', "Contact Mail"));
 
-        //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new ContactMail($contact, 'admin', "Contact Mail", [], ['address' => $contact->email, 'name' => $contact->fullName()]));
+            //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new ContactMail($contact, 'admin', "Contact Mail", [], ['address' => $contact->email, 'name' => $contact->fullName()]));
+        } catch (\Exception $ex) {
+            Log::error('Unable to send mail', [
+                'exception' => $ex,
+            ]);
+        }
     }
 }

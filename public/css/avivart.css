@@ -125,7 +125,7 @@ img.img-300x300 {
 	z-index: 5;
 	top: 0;
 	right: 0;
-	width: 350px;
+	width: 22rem;
 	border-left: 1px solid #e2e2e2;
 }
 
@@ -148,7 +148,7 @@ img.img-300x300 {
 #modules .modules-footer {
 	position: fixed;
 	bottom: 0;
-	width: 350px;
+	width: 22rem;
 	border-top: 1px solid #e2e2e2;
 }
 

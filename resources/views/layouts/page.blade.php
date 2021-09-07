@@ -70,7 +70,7 @@
         <main role="main">
             @yield('body')
 
-            <x-modules content="login" />
+            <x-modules />
 
             @include('layouts.partials.page._cookie_banner')
 

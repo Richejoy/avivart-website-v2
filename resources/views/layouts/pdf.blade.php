@@ -9,7 +9,39 @@
 
     <title>{{ config('app.name') }} - PDF</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/pdf.css') }}">
+    <style type="text/css">
+        .page-break {
+            /*page-break-before: always;*/
+            page-break-after: always;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table.table1 th,
+        table.table1 td {
+            width: 50%;
+            border: 1px solid #222;
+            padding: 10px;
+        }
+
+        table.table1 thead th {
+            text-align: center;
+        }
+
+        table.table2 th,
+        table.table2 td {
+            width: 50%;
+            border: 1px solid #222;
+            padding: 10px;
+        }
+
+        table.table2 thead th {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>

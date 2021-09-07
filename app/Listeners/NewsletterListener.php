@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Log;
 
 class NewsletterListener
 {
@@ -36,17 +37,29 @@ class NewsletterListener
         switch ($action) {
             case 'subscribe':
 
-                Mail::to($newsletter->email)->send(new NewsletterMail($newsletter, 'subscribe_user', "Newsletter Mail"));
-                    
-                //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new NewsletterMail($newsletter, 'subscribe_admin', "Newsletter Mail", [], ['address' => $newsletter->email]));
+                try {
+                    Mail::to($newsletter->email)->send(new NewsletterMail($newsletter, 'subscribe_user', "Newsletter Mail"));
+                        
+                    //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new NewsletterMail($newsletter, 'subscribe_admin', "Newsletter Mail", [], ['address' => $newsletter->email]));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'unsubscribe':
 
-                Mail::to($newsletter->email)->send(new NewsletterMail($newsletter, 'unsubscribe_user', "Newsletter Mail"));
-                
-                //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new NewsletterMail($newsletter, 'unsubscribe_admin', "Newsletter Mail", [], ['address' => $newsletter->email]));
+                try {
+                    Mail::to($newsletter->email)->send(new NewsletterMail($newsletter, 'unsubscribe_user', "Newsletter Mail"));
+                    
+                    //Mail::to(Helper::EMAIL_INFO, config('app.name', 'Laravel'))->send(new NewsletterMail($newsletter, 'unsubscribe_admin', "Newsletter Mail", [], ['address' => $newsletter->email]));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 

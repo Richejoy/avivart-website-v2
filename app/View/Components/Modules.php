@@ -6,18 +6,14 @@ use Illuminate\View\Component;
 
 class Modules extends Component
 {
-    public string $headerText = "Domaines d’activité";
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public ?string $content = null)
+    public function __construct()
     {
-        if (!is_null($content)) {
-            $this->headerText = "Authentification";
-        }
+        
     }
 
     /**

@@ -23,6 +23,7 @@
 
                 <div class="tab-pane active" id="url" role="tabpanel">
                     {!! Form::model($image, ['files' => true]) !!}
+                    {{ Form::hidden('form', 'url') }}
                     <div class="form-group">
                         <p>URL</p>
                         {{ Form::label('image', 'Choisissez votre image ou photo', ['class' => 'btn btn-warning']) }}
@@ -35,16 +36,14 @@
                     </div>
 
                     <div class="form-group">
-                        {{ Form::hidden('form', 'url') }}
                         {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
                     </div>
                     {!! Form::close() !!}
-
-                    <h5>NB : Désolé, cette fonctionnalité est désactivée pour le moment. Veuillez utiliser la fonctionnalité de <strong>Lien</strong></h5>
                 </div>
 
                 <div class="tab-pane" id="link" role="tabpanel">
                     {!! Form::model($image) !!}
+                    {{ Form::hidden('form', 'link') }}
                     <div class="form-group">
                         {{ Form::label('link', 'Lien', ['class' => 'font-weight-bold']) }}
                         {{ Form::text('link', null, ['placeholder' => 'Lien', 'class' => 'form-control', 'required' => true]) }}
@@ -56,7 +55,6 @@
                     </div>
 
                     <div class="form-group">
-                        {{ Form::hidden('form', 'link') }}
                         {{ Form::submit('Mettre à jour', ['class' => 'btn btn-danger']) }}
                     </div>
                     {!! Form::close() !!}

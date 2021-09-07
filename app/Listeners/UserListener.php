@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Log;
 
 class UserListener
 {
@@ -36,61 +37,121 @@ class UserListener
         switch ($action) {
             case 'register':
 
-                Mail::to($user->email)->send(new UserMail($user, 'register', "Inscription sur le site", compact('password')));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'register', "Inscription sur le site", compact('password')));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'login':
 
-                Mail::to($user->email)->send(new UserMail($user, 'login', "Connexion sur le site"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'login', "Connexion sur le site"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'passwordForgot':
 
-                Mail::to($user->email)->send(new UserMail($user, 'password_forgot', "Demande de réinitialisation de mot de passe sur le site"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'password_forgot', "Demande de réinitialisation de mot de passe sur le site"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'passwordReset':
 
-                Mail::to($user->email)->send(new UserMail($user, 'password_reset', "Réinitialisation de mot de passe sur le site"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'password_reset', "Réinitialisation de mot de passe sur le site"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'activated':
 
-                Mail::to($user->email)->send(new UserMail($user, 'activated', "Activation du compte sur le site"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'activated', "Activation du compte sur le site"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'confirmed':
 
-                Mail::to($user->email)->send(new UserMail($user, 'confirmed', "Authentification à deux facteurs sur le site"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'confirmed', "Authentification à deux facteurs sur le site"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'removingAccount':
 
-                Mail::to($user->email)->send(new UserMail($user, 'account_removing', "Suppression du compte en cours..."));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'account_removing', "Suppression du compte en cours..."));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'enablingTFA':
 
-                Mail::to($user->email)->send(new UserMail($user, 'tfa_enabling', "Activation/Désactivation de la double authentification (2FA) en cours..."));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'tfa_enabling', "Activation/Désactivation de la double authentification (2FA) en cours..."));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'removedAccount':
 
-                Mail::to($user->email)->send(new UserMail($user, 'account_removed', "Suppression du compte"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'account_removed', "Suppression du compte"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 
             case 'enabledTFA':
 
-                Mail::to($user->email)->send(new UserMail($user, 'tfa_enabled', "Activation/Désactivation de la double authentification (2FA)"));
+                try {
+                    Mail::to($user->email)->send(new UserMail($user, 'tfa_enabled', "Activation/Désactivation de la double authentification (2FA)"));
+                } catch (\Exception $ex) {
+                    Log::error('Unable to send mail', [
+                        'exception' => $ex,
+                    ]);
+                }
 
                 break;
 

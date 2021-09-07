@@ -36,6 +36,8 @@
     <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
     <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
+
+    @livewireStyles
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -95,6 +97,8 @@
         $('.sidebar-menu').tree()
     })
     </script>
+
+    @livewireScripts
 </body>
 
 </html>

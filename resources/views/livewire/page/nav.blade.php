@@ -50,7 +50,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a id="show-modules" class="nav-link text-success" href="#"><i class="fa fa-user-circle fa-2x"></i></a>
+                        <a class="nav-link text-success" href="{{ route('page.login') }}"><i class="fa fa-user-circle fa-2x"></i></a>
                     </li>
 
                 </ul>
