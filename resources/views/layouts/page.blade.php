@@ -114,6 +114,7 @@
     <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
     <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
     <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+    <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-active-page.js"></script>
 
     @stack('scripts')
 

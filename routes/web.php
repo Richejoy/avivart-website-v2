@@ -95,8 +95,8 @@ Route::prefix('/store')->name('store.')->group(function() {
 	Route::get('/{product}/show', [StoreController::class, 'show'])->name('show');
 	Route::get('/search', [StoreController::class, 'search'])->name('search');
 	Route::get('/guide', [StoreController::class, 'guide'])->name('guide');
-	Route::get('/organic/foods', [StoreController::class, 'organicFoods'])->name('organic_foods');
-	Route::get('/manufactured/foods', [StoreController::class, 'manufacturedFoods'])->name('manufactured_foods');
+	Route::get('/aliments/bio', [StoreController::class, 'organicFoods'])->name('organic_foods');
+	Route::get('/aliments/manufactures', [StoreController::class, 'manufacturedFoods'])->name('manufactured_foods');
 	Route::get('/home/appliance', [StoreController::class, 'homeAppliance'])->name('home_appliance');
 	Route::get('/high/tech', [StoreController::class, 'highTech'])->name('high_tech');
 	Route::get('/other/products', [StoreController::class, 'otherProducts'])->name('other_products');

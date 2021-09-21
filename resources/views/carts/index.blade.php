@@ -4,7 +4,6 @@
 
 <section class="py-5 bg-light">
     <div class="container-fluid">
-
         @if(Cart::instance('store')->count())
 
         <div class="row">

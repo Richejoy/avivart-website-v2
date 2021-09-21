@@ -34,6 +34,8 @@
 
     <title>{{ config('app.name') }} - Cosmétique - {{ pageTitle($title) }}</title>
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/loadMoreResults/css/loadMoreResults.css') }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A=="
         crossorigin="anonymous" />
@@ -117,6 +119,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('public/plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('public/plugins/jQuery-Plugin-To-Fix-Any-Elements-On-The-Top-Fixit/js/jquery.fixit.js') }}"></script>
 
@@ -132,6 +137,7 @@
     <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
     <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
     <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+    <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-active-page.js"></script>
 
     @stack('scripts')
 

@@ -1,18 +1,21 @@
 @extends('layouts.ad', ['title' => Request::query('name') ?? 'Recherche'])
 
 @section('body')
+<section class="bg-primary py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-white">{{ Str::title(Request::query('name')) ?? 'Recherche' }}</h2>
+                <h4 class="font-weight-bold text-light">Annonces ({{ $ads->count() }})</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="bg-light py-3">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
-
-                <div class="row py-3">
-                    <div class="col-md-12">
-                        <h2 class="font-weight-bold text-dark">Recherche d'annonces ({{ $ads->count() }})</h2>
-                    </div>
-                </div>
-
                 <div class="row">
 
                     @if($ads->count())

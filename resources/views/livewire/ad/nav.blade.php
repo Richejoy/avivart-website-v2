@@ -10,32 +10,32 @@
 
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link font-weight-bold text-danger" href="{{ route('ad.index') }}">Annonces</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.automobile') }}">Automobile</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.index') }}">Annonces</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.immovable') }}">Immobilier</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.automobile') }}">Automobile</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.cosmetic') }}">Cosmétique</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.immovable') }}">Immobilier</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.agribusiness') }}">Agrobusiness</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.cosmetic') }}">Cosmétique</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ad.other_ads') }}">Autres Annonces</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.agribusiness') }}">Agrobusiness</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-class="text-warning" class="nav-link" href="{{ route('ad.other_ads') }}">Autres Annonces</a>
                     </li>
 
                     <li class="nav-item">

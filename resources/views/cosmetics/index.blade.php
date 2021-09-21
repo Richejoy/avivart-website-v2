@@ -30,7 +30,7 @@
   </a>
 </div>
 
-<section class="py-3 bg-color1">
+<section class="py-3" style="background-color: #eceff1;">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
@@ -47,12 +47,12 @@
                         <div class="text-right">
                             <span class="badge {{ $article->onDiscount() }}">{{ $article->getPercentage() }}%</span>
                         </div>
-                        <div class="card border-secondary h-100">
+                        <div class="card border-info h-100">
                             <a href="{{ route('cosmetic.show', ['article' => $article]) }}">
                                 <img src="{{ $article->image->link }}"
                                 class="card-img-top article-img" alt="Image">
                             </a>
-                            <span class="bg-secondary text-white text-center">{{ $article->name }}</span>
+                            <span class="bg-info text-white text-center">{{ $article->name }}</span>
                             <div class="card-body p-2 text-center">
                                 <h6 class="card-title m-0">{{ $article->description }}</h6>
 

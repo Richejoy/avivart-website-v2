@@ -9,8 +9,8 @@
 
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
                     <li class="nav-item">

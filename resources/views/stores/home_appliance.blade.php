@@ -1,6 +1,15 @@
 @extends('layouts.store', ['title' => 'Electro-Ménager'])
 
 @section('body')
+<section class="bg-success py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="font-weight-bold text-light">Produits ({{ $products->count() }})</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="bg-light py-3">
     <div class="container-fluid">

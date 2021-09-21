@@ -2,7 +2,7 @@
         <div class="container-fluid">
             <a class="navbar-brand p-0" href="{{ route('informatics.index') }}"><img
                     src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"
-                    align="middle"> <strong class="text-primary"><u>Informatique</u></strong></a>
+                    align="middle"> <strong class="text-warning"><u>Informatique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -14,8 +14,8 @@
                         <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" href="{{ route('informatics.index') }}">Informatique</a>
+                    <li class="nav-item">
+                        <a data-class="text-warning" class="nav-link" href="{{ route('informatics.index') }}">Informatique</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -75,11 +75,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('informatics.partners') }}">Partenaires</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('informatics.partners') }}">Partenaires</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('informatics.formations') }}">Formations</a>
+                        <a data-class="text-warning" class="nav-link" href="{{ route('informatics.formations') }}">Formations</a>
                     </li>
 
                     <li class="nav-item">

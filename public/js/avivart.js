@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
       headers: {
         'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
       }
-    })
+  })
 
 	$('#show-modules').click(function(e) {
 		e.preventDefault()
@@ -19,7 +19,9 @@ jQuery(document).ready(function ($) {
 	})
 
 	let loader = $('#introLoading').data('introLoader');
-    loader.stop()
+  loader.stop()
+
+  $('ul.navbar-nav > li > a').matchactive();
 
 	/*setTimeout(function () {
         $('#introLoading').hide()

@@ -11,31 +11,31 @@
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-warning" href="{{ route('page.index') }}">Accueil</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link font-weight-bold" href="{{ route('cosmetic.index') }}">Shop</a>
+                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('cosmetic.soap') }}">Savons</a>
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.index') }}">Shop</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('cosmetic.milk') }}">Laits</a>
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.soap') }}">Savons</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('cosmetic.scrub') }}">Gommages</a>
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.milk') }}">Laits</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('cosmetic.mask') }}">Masques</a>
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.scrub') }}">Gommages</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-info" href="{{ route('cosmetic.perfume') }}">Parfums</a>
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.mask') }}">Masques</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a data-class="text-info" class="nav-link" href="{{ route('cosmetic.perfume') }}">Parfums</a>
                     </li>
 
                     <li class="nav-item">

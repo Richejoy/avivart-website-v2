@@ -1,7 +1,6 @@
 @extends('layouts.ad', ['title' => 'Faites gratuitement vos annonces, validité une semaine'])
 
 @section('body')
-
 <section class="">
     <div class="container-fluid">
         <div class="row">

@@ -1,6 +1,15 @@
 @extends('layouts.ad', ['title' =>  'Automobile'])
 
 @section('body')
+<section class="bg-primary py-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="font-weight-bold text-light">Annonces ({{ $ads->count() }})</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="bg-light py-3">
     <div class="container-fluid">
@@ -47,13 +56,6 @@
 
             </aside>
             <div class="col-lg-9">
-
-                <div class="row py-3">
-                    <div class="col-md-12">
-                        <h2 class="font-weight-bold text-dark">Annonces ({{ $ads->count() }})</h2>
-                    </div>
-                </div>
-
                 <div class="row">
 
                     @if($ads->count())

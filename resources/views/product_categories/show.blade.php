@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="text-white">{{ $productCategory->name }}</h2>
+                <h4 class="font-weight-bold text-light">Produits liés ({{ $productCategory->products->count() }})</h4>
             </div>
         </div>
     </div>
@@ -55,8 +56,6 @@
             </aside>
 
             <div class="col-lg-9">
-                <h2 class="py-2 font-weight-bold text-dark">Produits liés ({{ $productCategory->products->count() }})</h2>
-
                 @if($productCategory->products->count())
 
                 <div class="row mb-4" id="product-container">

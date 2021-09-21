@@ -44,6 +44,10 @@
 	background-color: var(--success);
 }
 
+ul.navbar-nav .active {
+	font-weight: bold;
+}
+
 img.logo {
 	width: 200px;
 	height: 100px;

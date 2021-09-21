@@ -10,38 +10,38 @@
 
             <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active hvr-underline-from-center">
-                        <a class="nav-link font-weight-bold" href="{{ route('page.index') }}">Accueil</a>
+                    <li class="nav-item hvr-underline-from-center">
+                        <a class="nav-link" href="{{ route('page.index') }}">Accueil</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.index') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.index') }}"
+                    <li class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.index') }}">Boutique</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.organic_foods') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.organic_foods') }}"
+                    <li class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.organic_foods') }}">Aliments Bio</a>
                     </li>
 
                     <li
-                        class="nav-item hvr-underline-from-center {{ activeMenuItem('store.manufactured_foods') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.manufactured_foods') }}"
+                        class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.manufactured_foods') }}">Aliments Manufacturés</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.home_appliance') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.home_appliance') }}"
+                    <li class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.home_appliance') }}">Electro-Ménager</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.high_tech') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.high_tech') }}"
+                    <li class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.high_tech') }}">High-Tech</a>
                     </li>
 
-                    <li class="nav-item hvr-underline-from-center {{ activeMenuItem('store.other_products') }}">
-                        <a class="nav-link {{ activeMenuItemStyle('store.other_products') }}"
+                    <li class="nav-item hvr-underline-from-center">
+                        <a data-class="text-success" class="nav-link"
                             href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
