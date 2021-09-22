@@ -1,0 +1,29 @@
+ii  php-cli                                       2:7.3+69ubuntu2                             all          command-line interpreter for the PHP scripting language (default)
+ii  php-common                                    2:69ubuntu2                                 all          Common files for PHP packages
+ii  php-curl                                      2:7.3+69ubuntu2                             all          CURL module for PHP [default]
+ii  php-gd                                        2:7.3+69ubuntu2                             all          GD module for PHP [default]
+ii  php-imagick                                   3.4.3~rc2-2ubuntu7                          amd64        Provides a wrapper to the ImageMagick library
+ii  php-imap                                      2:7.3+69ubuntu2                             all          IMAP module for PHP [default]
+ii  php-intl                                      2:7.3+69ubuntu2                             all          Internationalisation module for PHP [default]
+ii  php-mbstring                                  2:7.3+69ubuntu2                             all          MBSTRING module for PHP [default]
+ii  php-mongodb                                   1.5.5-1build1                               amd64        MongoDB driver for PHP
+ii  php-mysql                                     2:7.3+69ubuntu2                             all          MySQL module for PHP [default]
+ii  php-pgsql                                     2:7.3+69ubuntu2                             all          PostgreSQL module for PHP [default]
+ii  php-sqlite3                                   2:7.3+69ubuntu2                             all          SQLite3 module for PHP [default]
+ii  php-xml                                       2:7.3+69ubuntu2                             all          DOM, SimpleXML, WDDX, XML, and XSL module for PHP [default]
+ii  php-zip                                       2:7.3+69ubuntu2                             all          Zip module for PHP [default]
+ii  php7.3-cli                                    7.3.11-0ubuntu0.19.10.6                     amd64        command-line interpreter for the PHP scripting language
+ii  php7.3-common                                 7.3.11-0ubuntu0.19.10.6                     amd64        documentation, examples and common module for PHP
+ii  php7.3-curl                                   7.3.11-0ubuntu0.19.10.6                     amd64        CURL module for PHP
+ii  php7.3-gd                                     7.3.11-0ubuntu0.19.10.6                     amd64        GD module for PHP
+ii  php7.3-imap                                   7.3.11-0ubuntu0.19.10.6                     amd64        IMAP module for PHP
+ii  php7.3-intl                                   7.3.11-0ubuntu0.19.10.6                     amd64        Internationalisation module for PHP
+ii  php7.3-json                                   7.3.11-0ubuntu0.19.10.6                     amd64        JSON module for PHP
+ii  php7.3-mbstring                               7.3.11-0ubuntu0.19.10.6                     amd64        MBSTRING module for PHP
+ii  php7.3-mysql                                  7.3.11-0ubuntu0.19.10.6                     amd64        MySQL module for PHP
+ii  php7.3-opcache                                7.3.11-0ubuntu0.19.10.6                     amd64        Zend OpCache module for PHP
+ii  php7.3-pgsql                                  7.3.11-0ubuntu0.19.10.6                     amd64        PostgreSQL module for PHP
+ii  php7.3-readline                               7.3.11-0ubuntu0.19.10.6                     amd64        readline module for PHP
+ii  php7.3-sqlite3                                7.3.11-0ubuntu0.19.10.6                     amd64        SQLite3 module for PHP
+ii  php7.3-xml                                    7.3.11-0ubuntu0.19.10.6                     amd64        DOM, SimpleXML, WDDX, XML, and XSL module for PHP
+ii  php7.3-zip                                    7.3.11-0ubuntu0.19.10.6                     amd64        Zip module for PHP

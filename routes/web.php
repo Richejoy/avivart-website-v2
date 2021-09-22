@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\StoreController;
@@ -53,7 +54,6 @@ use App\Http\Controllers\AdImageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/clear', function() {
 	Artisan::call('config:clear');
 	Artisan::call('route:clear');
