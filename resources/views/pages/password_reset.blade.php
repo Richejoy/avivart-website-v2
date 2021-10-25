@@ -10,7 +10,7 @@
                 @include("layouts.partials._validation_errors")
 
                 <p class="text-center">
-                    <img class="logo" src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}">
+                    <img class="logo" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name') }}">
                 </p>
 
                 <h6 class="text-center">Réinitialiser votre mot de passe à tout moment.</h6>

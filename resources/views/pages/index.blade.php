@@ -14,13 +14,13 @@
 				    <div class="carousel-item active">
 				    	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow slideInLeft">
-				    			<img src="{{ asset('public/img/slider1.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider1.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow slideInUp">
-				    			<img src="{{ asset('public/img/slider2.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider2.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow slideInRight">
-				    			<img src="{{ asset('public/img/slider3.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider3.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    	</div>
 				    </div>
@@ -29,13 +29,13 @@
 				    <div class="carousel-item">
 				      	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow fadeInLeft">
-				    			<img src="{{ asset('public/img/slider12.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider12.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow fadeInUp">
-				    			<img src="{{ asset('public/img/slider5.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider5.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow fadeInRight">
-				    			<img src="{{ asset('public/img/slider6.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider6.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    	</div>
 				    </div>
@@ -44,13 +44,13 @@
 				    <div class="carousel-item">
 				      	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow bounceInLeft">
-				    			<img src="{{ asset('public/img/slider7.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider7.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow bounceInUp">
-				    			<img src="{{ asset('public/img/slider8.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider8.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow bounceInRight">
-				    			<img src="{{ asset('public/img/slider9.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider9.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    	</div>
 				    </div>
@@ -59,13 +59,13 @@
 				    <div class="carousel-item">
 				      	<div class="row">
 				    		<div class="col-md-4 col-sm-4 wow bounceInLeft">
-				    			<img src="{{ asset('public/img/slider13.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider13.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow bounceInUp">
-				    			<img src="{{ asset('public/img/slider14.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider14.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    		<div class="col-md-4 col-sm-4 wow bounceInRight">
-				    			<img src="{{ asset('public/img/slider15.jpg') }}" class="d-block w-100" alt="Image">
+				    			<img src="{{ asset('img/slider15.jpg') }}" class="d-block w-100" alt="Image">
 				    		</div>
 				    	</div>
 				    </div>
@@ -91,7 +91,7 @@
 		<div class="row">
 			<div class="col-lg-3 wow flash">
 				<p>
-					<img class="w-100 border border-dark p-2" src="{{ asset('public/img/viva1.jpg') }}" alt="Photo">
+					<img class="w-100 border border-dark p-2" src="{{ asset('img/viva1.jpg') }}" alt="Photo">
 				</p>
 			</div>
 			<div class="col-lg-9 wow pulse">
@@ -338,7 +338,7 @@
 		<div class="row py-3">
 			<div class="col-lg-12">
 				<p>
-					<img class="w-100" src="{{ asset('public/img/team.jpeg') }}" alt="Image">
+					<img class="w-100" src="{{ asset('img/team.jpeg') }}" alt="Image">
 				</p>
 			</div>
 		</div>
@@ -359,73 +359,73 @@
 		<div class="row py-3">
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/lenovo.png') }}" alt="LENOVO" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/lenovo.png') }}" alt="LENOVO" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/microsoft.png') }}" alt="MICROSOFT" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/microsoft.png') }}" alt="MICROSOFT" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/hp.png') }}" alt="HP" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/hp.png') }}" alt="HP" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/oracle.png') }}" alt="ORACLE" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/oracle.png') }}" alt="ORACLE" class="img-150x150 w-100">
 				</p>
 			</div>
 			
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/ecobank.jpeg') }}" alt="ECOBANK" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/ecobank.jpeg') }}" alt="ECOBANK" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/sunu.jpeg') }}" alt="SUNU" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/sunu.jpeg') }}" alt="SUNU" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/moov.png') }}" alt="MOOV" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/moov.png') }}" alt="MOOV" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/togocom.jpeg') }}" alt="TOGOCOM" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/togocom.jpeg') }}" alt="TOGOCOM" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/smartaps.jpg') }}" alt="SMARTAPS" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/smartaps.jpg') }}" alt="SMARTAPS" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/ole.jpeg') }}" alt="OLE" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/ole.jpeg') }}" alt="OLE" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/kaba.jpeg') }}" alt="KABA" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/kaba.jpeg') }}" alt="KABA" class="img-150x150 w-100">
 				</p>
 			</div>
 
 			<div class="col-lg-3 col-sm-6 text-center">
 				<p>
-					<img src="{{ asset('public/img/partners/osons.jpg') }}" alt="OSONS" class="img-150x150 w-100">
+					<img src="{{ asset('img/partners/osons.jpg') }}" alt="OSONS" class="img-150x150 w-100">
 				</p>
 			</div>
 		</div>

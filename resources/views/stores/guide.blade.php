@@ -2,20 +2,24 @@
 
 @section('body')
 
-<section class="bg-light py-5">
+<section class="bg-success py-1">
     <div class="container-fluid">
-        <div class="row py-3">
+        <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold">Notre démarche en trois (3) étapes</h2>
+                <h4 class="font-weight-bold text-light">Notre démarche en trois (3) étapes</h4>
             </div>
         </div>
+    </div>
+</section>
 
+<section class="bg-light py-3">
+    <div class="container-fluid">
         <div class="row py-3">
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-success py-2 px-3">1</span></p>
+                <p><span class="badge badge-danger py-2 px-3">1</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_secure_login_pdn4.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_secure_login_pdn4.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Connexion</h4>
@@ -25,10 +29,10 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-success py-2 px-3">2</span></p>
+                <p><span class="badge badge-danger py-2 px-3">2</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_shopping_app_flsj.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_shopping_app_flsj.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Commande</h4>
@@ -38,10 +42,10 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-success py-2 px-3">3</span></p>
+                <p><span class="badge badge-danger py-2 px-3">3</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_order_a_car_3tww.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_order_a_car_3tww.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Livraison</h4>
@@ -105,7 +109,7 @@
                         <p><i class="fa fa-car text-primary fa-3x"></i></p>
                         <h4 class="font-weight-bold">Transport</h4>
                         <p>
-                            Rapidité et éfficacité garanties avec nos partenaires en logistique
+                            Rapidité et éfficacité garanties avec nos partenaires
                         </p>
                     </div>
                 </div>

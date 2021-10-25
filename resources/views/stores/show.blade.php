@@ -1,11 +1,11 @@
 @extends('layouts.store', ['title' => $product->name])
 
 @section('body')
-<section class="bg-success py-3">
+<section class="bg-success py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold text-light">{{ $product->name }}</h2>
+                <h4 class="font-weight-bold text-light">{{ $product->name }}</h4>
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
                         <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantité"
                             value="1" min="1" step="1" required>
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-dark">Ajouter au
+                            <button type="submit" class="btn btn-success">Ajouter au
                                 panier</button>
                         </div>
                     </div>

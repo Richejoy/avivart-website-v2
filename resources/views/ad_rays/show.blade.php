@@ -2,12 +2,11 @@
 
 @section('body')
 
-<section class="bg-primary py-3">
+<section class="bg-primary py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ $adRay->name }}</h2>
-                <h4 class="font-weight-bold text-light">Catégories liées ({{ $adRay->adCategories->count() }})</h4>
+                <h4 class="font-weight-bold text-light">{{ $adRay->name }} | Catégories liées ({{ $adRay->adCategories->count() }})</h4>
             </div>
         </div>
     </div>
@@ -49,7 +48,7 @@
                         </div>
 
                         <div class="card-footer p-2 text-right"><a href="{{ route('adRay.index') }}"
-                            class="text-info">Tout afficher</a></div>
+                            class="text-primary">Tout afficher</a></div>
                     </div>
                 </div>
             </aside>
@@ -64,7 +63,7 @@
                             <img id="img{{ $adCategory->id }}" src="{{ $adCategory->image->link }}" alt="Image" class="w-100 img-200x200">
                         </p>
                         <h4><a href="{{ route('adCategory.show', ['adCategory' => $adCategory]) }}"
-                                class="text-info">{{ $adCategory->name }}</a></h4>
+                                class="text-primary">{{ $adCategory->name }}</a></h4>
                     </div>
                     @endforeach
                 </div>

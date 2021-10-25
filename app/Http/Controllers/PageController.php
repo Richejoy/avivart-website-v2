@@ -177,7 +177,7 @@ class PageController extends Controller
     public function register(Request $request)
     {
         $countries = Country::all()->sortBy('id')->pluck(null, 'id');
-        $civilities = Civility::all()->sortBy('id')->pluck(null, 'id');
+        $civilities = Civility::with('gender')->get()->sortBy('id')->pluck(null, 'id');
 
         if ($request->isMethod('POST')) {
 
@@ -190,6 +190,7 @@ class PageController extends Controller
                 'phone' => 'required|unique:users',
                 'city' => 'required|min:3',
                 'address' => 'required|min:3',
+                'g-recaptcha-response' => 'required|captcha',
             ]);
 
             if (empty($request->tou)) {

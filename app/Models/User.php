@@ -131,11 +131,41 @@ class User extends Authenticatable
 
     public function fullName(): string
     {
-        return $this->last_name . ' ' . $this->first_name;
+        return $this->getFullNameAttribute();
+    }
+
+    public function setLastNameAttribute($value)
+    {
+        $this->attributes['last_name'] = mb_strtoupper($value);
+    }
+
+    public function setFirstNameAttribute($value)
+    {
+        $this->attributes['first_name'] = ucfirst($value);
+    }
+
+    public function setCityAttribute($value)
+    {
+        $this->attributes['city'] = mb_strtoupper($value);
+    }
+
+    public function setAddressAttribute($value)
+    {
+        $this->attributes['address'] = ucwords($value);
+    }
+
+    public function setEmailAttribute($value)
+    {
+        $this->attributes['email'] = mb_strtolower($value);
+    }
+
+    public function getFullNameAttribute(): string
+    {
+        return $this->attributes['last_name'] . ' ' . $this->attributes['first_name'];
     }
 
     public function __toString()
     {
-        return $this->fullName();
+        return $this->getFullNameAttribute();
     }
 }

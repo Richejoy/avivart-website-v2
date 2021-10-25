@@ -13,11 +13,10 @@
                     @foreach($articleRays as $articleRay)
                     <div class="col-md-3 mb-3 text-center">
                         <p>
-                            <img id="img{{ $articleRay->id }}" data-src="{{ $articleRay->image->link }}"
-                                src="https://via.placeholder.com/200x150.png?text=Chargement..." alt="Image" class="w-100 img-200x200 hvr-pop lazyrate">
+                            <img id="img{{ $articleRay->id }}" src="{{ $articleRay->image->link }}" alt="Image" class="w-100 img-200x200">
                         </p>
                         <h4><a href="{{ route('articleRay.show', ['articleRay' => $articleRay]) }}"
-                                class="text-danger">{{ $articleRay->name }}</a></h4>
+                                class="text-info">{{ $articleRay->name }}</a></h4>
                     </div>
                     @endforeach
                 </div>

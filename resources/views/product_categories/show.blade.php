@@ -2,12 +2,11 @@
 
 @section('body')
 
-<section class="bg-success py-3">
+<section class="bg-success py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ $productCategory->name }}</h2>
-                <h4 class="font-weight-bold text-light">Produits liés ({{ $productCategory->products->count() }})</h4>
+                <h4 class="font-weight-bold text-light">{{ $productCategory->name }} | Produits liés ({{ $productCategory->products->count() }})</h4>
             </div>
         </div>
     </div>

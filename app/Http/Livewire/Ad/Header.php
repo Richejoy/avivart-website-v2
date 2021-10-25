@@ -16,7 +16,7 @@ class Header extends Component
 
     public function render()
     {
-        $adRays = AdRay::all();
+        $adRays = AdRay::with('adCategories')->get();
 
         return view('livewire.ad.header', compact('adRays'));
     }

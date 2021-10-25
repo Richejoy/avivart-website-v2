@@ -2,20 +2,25 @@
 
 @section('body')
 
-<section class="bg-light py-5">
+<section class="bg-danger py-1">
     <div class="container-fluid">
-        <div class="row py-3">
+        <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold">Notre démarche en trois (3) étapes</h2>
+                <h4 class="font-weight-bold text-light">Notre démarche en trois (3) étapes</h4>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="bg-light py-3">
+    <div class="container-fluid">
 
         <div class="row py-3">
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-danger py-2 px-3">1</span></p>
+                <p><span class="badge badge-primary py-2 px-3">1</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_secure_login_pdn4_indigo.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_secure_login_pdn4_indigo.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Connexion</h4>
@@ -25,10 +30,10 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-danger py-2 px-3">2</span></p>
+                <p><span class="badge badge-primary py-2 px-3">2</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_add_to_cart_vkjp.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_add_to_cart_vkjp.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Annonce</h4>
@@ -38,10 +43,10 @@
                 </p>
             </div>
             <div class="col-lg-4 text-center">
-                <p><span class="badge badge-danger py-2 px-3">3</span></p>
+                <p><span class="badge badge-primary py-2 px-3">3</span></p>
 
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_checking_boxes_2ibd.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_checking_boxes_2ibd.png') }}" alt="Photo">
                 </p>
 
                 <h4 class="font-weight-bold">Validation</h4>

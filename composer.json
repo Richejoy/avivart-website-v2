@@ -9,8 +9,11 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "anhskohbo/no-captcha": "^3.3",
         "arrilot/laravel-widgets": "^3.13",
         "barryvdh/laravel-dompdf": "^0.9.0",
+        "beyondcode/laravel-websockets": "^1.12",
+        "davmixcool/laravel-meta-manager": "^1.2",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -19,21 +22,27 @@
         "intervention/image": "^2.5",
         "laravel-lang/lang": "^8.1",
         "laravel/framework": "^8.12",
+        "laravel/telescope": "^4.6",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "3.2",
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.5",
         "maatwebsite/excel": "^3.1",
         "mercuryseries/flashy": "^1.0",
         "niklasravnsborg/laravel-pdf": "^4.0",
         "orangehill/iseed": "^3.0",
+        "pusher/pusher-php-server": "~3.0|~4.0|~5.0",
         "rah/danpu": "^2.7",
         "realrashid/sweet-alert": "^4.0",
         "spatie/db-dumper": "^2.21",
+        "spatie/emoji": "^3.0",
+        "spatie/laravel-backup": "6.*",
         "te7a-houdini/laroute": "^2.1",
         "torann/geoip": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
+        "beyondcode/laravel-query-detector": "^1.5",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "kitloong/laravel-migrations-generator": "^4.5",
@@ -50,7 +59,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/telescope"
+            ]
         }
     },
     "autoload": {
@@ -80,6 +91,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan telescope:publish --ansi"
         ]
     }
 }

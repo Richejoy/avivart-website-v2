@@ -46,27 +46,27 @@
                     <div class="row">
                         <div class="col-md-3">
                             <video class="w-100 p-0" id="video1">
-                                <source src="{{ asset('public/videos/splashscreen0.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/splashscreen0.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                         <div class="col-md-3">
                             <video class="w-100 p-0" id="video2">
-                                <source src="{{ asset('public/videos/v0.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/v0.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                         <div class="col-md-3">
                             <video class="w-100 p-0" id="video3">
-                                <source src="{{ asset('public/videos/v1.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/v1.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                         <div class="col-md-3">
                             <video class="w-100 p-0" id="video4">
-                                <source src="{{ asset('public/videos/v2.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/v2.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                         <div class="col-md-3">
                             <video class="w-100 p-0" id="video5">
-                                <source src="{{ asset('public/videos/v4.mp4') }}" type="video/mp4">
+                                <source src="{{ asset('videos/v4.mp4') }}" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="row">
                         <div class="col-md-3 audios">
                           <audio crossorigin class="w-100 audio">
-                            <source src="{{ asset('public/audios/a1.mp3') }}" type="audio/mpeg">
+                            <source src="{{ asset('audios/a1.mp3') }}" type="audio/mpeg">
                           </audio>
                         </div>
                     </div>
@@ -93,15 +93,15 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('public/plugins/baguetteBox.js-master/css/baguetteBox.min.css') }}">
-<link rel="stylesheet" href="{{ asset('public/plugins/moovie.js-main/css/moovie.css') }}" />
-<link rel="stylesheet" href="{{ asset('public/plugins/green-audio-player-master/css/green-audio-player.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('plugins/baguetteBox.js-master/css/baguetteBox.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/moovie.js-main/css/moovie.css') }}" />
+<link rel="stylesheet" href="{{ asset('plugins/green-audio-player-master/css/green-audio-player.min.css') }}" />
 @endpush
 
 @push('scripts')
-<script src="{{ asset('public/plugins/baguetteBox.js-master/js/baguetteBox.min.js') }}" async></script>
-<script src="{{ asset('public/plugins/moovie.js-main/js/moovie.js') }}"></script>
-<script src="{{ asset('public/plugins/green-audio-player-master/js/green-audio-player.min.js') }}"></script>
+<script src="{{ asset('plugins/baguetteBox.js-master/js/baguetteBox.min.js') }}" async></script>
+<script src="{{ asset('plugins/moovie.js-main/js/moovie.js') }}"></script>
+<script src="{{ asset('plugins/green-audio-player-master/js/green-audio-player.min.js') }}"></script>
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {

@@ -6,20 +6,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
-    <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
     <title>{{ config('app.name') }} - Coming soon - {{ pageTitle($title) }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/soon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/soon.css') }}">
 </head>
 
 <body>
 
     <div class="bgimg">
         <div class="topleft">
-            <p><a href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo.png') }}"
+            <p><a href="{{ route('page.index') }}"><img src="{{ asset('img/logo.png') }}"
                         alt="{{ config('app.name') }}" class="logo-xs"></a></p>
         </div>
         <div class="middle">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="{{ asset('public/js/soon.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/soon.js') }}"></script>
 
 </body>
 

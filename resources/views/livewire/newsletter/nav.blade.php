@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <div class="container">
-            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
+            <a class="navbar-brand p-0" href="{{ route('page.index') }}"><img src="{{ asset('img/logo_ww.png') }}" alt="{{ config('app.name') }}" class="logo-xs"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -16,7 +16,7 @@
                             <img id="img{{ $adCategory->id }}" src="{{ $adCategory->image->link }}" alt="Image" class="w-100 img-200x200">
                         </p>
                         <h4><a href="{{ route('adCategory.show', ['adCategory' => $adCategory]) }}"
-                                class="text-info">{{ $adCategory->name }}</a></h4>
+                                class="text-primary">{{ $adCategory->name }}</a></h4>
                     </div>
                     @endforeach
                 </div>

@@ -1,7 +1,7 @@
 <div class="splashscreen">
     <video muted autoplay loop>
-        <source src="{{ asset('public/videos/splash.mp4') }}" type="video/mp4">
-        <source src="{{ asset('public/videos/splashscreen0.webm') }}" type="video/webm">
+        <source src="{{ asset('videos/splash.mp4') }}" type="video/mp4">
+        <source src="{{ asset('videos/splashscreen0.webm') }}" type="video/webm">
         Votre navigateur n'est pas à jour pour lire la vidéo.
     </video>
 
@@ -9,7 +9,7 @@
 
         <p>
             <a href="{{ route('page.splashscreen') }}?redirect={{ route('page.index') }}">
-                <img class="logo" src="{{ asset('public/img/logo.png') }}" alt="LOGO">
+                <img class="logo" src="{{ asset('img/logo.png') }}" alt="LOGO">
             </a>
         </p>
 

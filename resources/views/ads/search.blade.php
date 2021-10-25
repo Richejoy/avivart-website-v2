@@ -5,8 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ Str::title(Request::query('name')) ?? 'Recherche' }}</h2>
-                <h4 class="font-weight-bold text-light">Annonces ({{ $ads->count() }})</h4>
+                <h4 class="font-weight-bold text-light">{{ Str::title(Request::query('name')) ?? 'Recherche' }} | Annonces ({{ $ads->count() }})</h4>
             </div>
         </div>
     </div>
@@ -64,7 +63,7 @@
                     @else
 
                     <div class="col-lg-12">
-                        <p>Rien</p>
+                        <x-empty-data module="ad" />
                     </div>
 
                     @endif

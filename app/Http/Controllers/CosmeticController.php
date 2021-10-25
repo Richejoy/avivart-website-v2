@@ -17,12 +17,14 @@ class CosmeticController extends Controller
 
     public function index(Request $request)
     {
-        $articleRays = ArticleRay::all();
+        $articleRays = ArticleRay::with('articleCategories')->get();
 
         $articleTypes = ArticleType::inRandomOrder()->get();
 
         $articles = Article::where('published', true)
-        ->where('quantity', '>', 0)->inRandomOrder()->get();
+        ->where('quantity', '>', 0)
+        ->inRandomOrder()
+        ->get();
 
         return view('cosmetics.index', compact('articleRays', 'articleTypes', 'articles'));
     }
@@ -39,21 +41,18 @@ class CosmeticController extends Controller
 
     public function search(Request $request)
     {
-        $query = Article::where('published', true)
-        ->where('quantity', '>', 0);
-
-        if ($request->has('article_category_id')) {
-
-            if ($request->query('article_category_id') > 0) {
-                $query = $query->where(['article_category_id' => $request->query('article_category_id')]);
+        $articles = Article::where('published', true)
+        ->where('quantity', '>', 0)
+        ->when($request->has('article_category_id'), function($query) use ($request) {
+            if (intval($request->query('article_category_id')) > 0) {
+                $query->where('article_category_id', $request->query('article_category_id'));
             }
 
             if ($request->has('name')) {
-                $query = $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
+                $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
             }
-        }
-
-        $articles = $query->get();
+        })
+        ->get();
 
         return view('cosmetics.search', compact('articles'));
     }
@@ -62,24 +61,7 @@ class CosmeticController extends Controller
     {
         $articleCategories = ArticleCategory::where('article_ray_id', 1)->get();
 
-        $articles = Article::whereHas('articleCategory', function($query) {
-            
-            $query->whereHas('articleRay', function($query) {
-                $query->where('id', 1);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('article_category_id')) {
-            $articles = Article::where('article_category_id', $request->query('article_category_id'))
-                ->whereHas('articleCategory', function($query) {
-            
-                    $query->whereHas('articleRay', function($query) {
-                        $query->where('id', 1);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $articles = $this->_getFilterArticles(1);
 
         return view('cosmetics.soap', compact('articleCategories', 'articles'));
     }
@@ -88,24 +70,7 @@ class CosmeticController extends Controller
     {
         $articleCategories = ArticleCategory::where('article_ray_id', 2)->get();
 
-        $articles = Article::whereHas('articleCategory', function($query) {
-            
-            $query->whereHas('articleRay', function($query) {
-                $query->where('id', 2);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('article_category_id')) {
-            $articles = Article::where('article_category_id', $request->query('article_category_id'))
-                ->whereHas('articleCategory', function($query) {
-            
-                    $query->whereHas('articleRay', function($query) {
-                        $query->where('id', 2);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $articles = $this->_getFilterArticles(2);
 
         return view('cosmetics.milk', compact('articleCategories', 'articles'));
     }
@@ -114,24 +79,7 @@ class CosmeticController extends Controller
     {
         $articleCategories = ArticleCategory::where('article_ray_id', 3)->get();
 
-        $articles = Article::whereHas('articleCategory', function($query) {
-            
-            $query->whereHas('articleRay', function($query) {
-                $query->where('id', 3);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('article_category_id')) {
-            $articles = Article::where('article_category_id', $request->query('article_category_id'))
-                ->whereHas('articleCategory', function($query) {
-            
-                    $query->whereHas('articleRay', function($query) {
-                        $query->where('id', 3);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $articles = $this->_getFilterArticles(3);
 
         return view('cosmetics.scrub', compact('articleCategories', 'articles'));
     }
@@ -140,24 +88,7 @@ class CosmeticController extends Controller
     {
         $articleCategories = ArticleCategory::where('article_ray_id', 4)->get();
 
-        $articles = Article::whereHas('articleCategory', function($query) {
-            
-            $query->whereHas('articleRay', function($query) {
-                $query->where('id', 4);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('article_category_id')) {
-            $articles = Article::where('article_category_id', $request->query('article_category_id'))
-                ->whereHas('articleCategory', function($query) {
-            
-                    $query->whereHas('articleRay', function($query) {
-                        $query->where('id', 4);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $articles = $this->_getFilterArticles(4);
 
         return view('cosmetics.mask', compact('articleCategories', 'articles'));
     }
@@ -166,25 +97,25 @@ class CosmeticController extends Controller
     {
         $articleCategories = ArticleCategory::where('article_ray_id', 5)->get();
 
-        $articles = Article::whereHas('articleCategory', function($query) {
-            
-            $query->whereHas('articleRay', function($query) {
-                $query->where('id', 5);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('article_category_id')) {
-            $articles = Article::where('article_category_id', $request->query('article_category_id'))
-                ->whereHas('articleCategory', function($query) {
-            
-                    $query->whereHas('articleRay', function($query) {
-                        $query->where('id', 5);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $articles = $this->_getFilterArticles(5);
 
         return view('cosmetics.perfume', compact('articleCategories', 'articles'));
+    }
+
+    /**
+     * 
+     */
+    private function _getFilterArticles(int $rayId)
+    {
+        return Article::where('published', true)
+        ->whereHas('articleCategory', function($query) use ($rayId) {
+            
+            $query->whereHas('articleRay', function($query) use ($rayId) {
+                $query->where('id', $rayId);
+            });
+
+        })
+        ->when(request('article_category_id'), fn($query) => $query->where('article_category_id', request('article_category_id')))
+        ->paginate(self::PAGINATION_NUMBER);
     }
 }

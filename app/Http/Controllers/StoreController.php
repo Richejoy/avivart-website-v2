@@ -18,12 +18,16 @@ class StoreController extends Controller
 
     public function index(Request $request)
     {
-    	$productRays = ProductRay::all();
+    	$productRays = ProductRay::with('image', 'productCategories')
+        ->get();
 
-        $productTypes = ProductType::inRandomOrder()->get();
+        $productTypes = ProductType::inRandomOrder()
+        ->get();
 
-        $products = Product::where('published', true)
-        ->where('quantity', '>', 0)->inRandomOrder()->get();
+        $products = Product::with('image', 'productType', 'conversion', 'currency')->where('published', true)
+        ->where('quantity', '>', 0)
+        ->inRandomOrder()
+        ->get();
 
         return view('stores.index', compact('productRays', 'productTypes', 'products'));
     }
@@ -40,21 +44,19 @@ class StoreController extends Controller
 
     public function search(Request $request)
     {
-        $query = Product::where('published', true)
-        ->where('quantity', '>', 0);
-
-        if ($request->has('product_category_id')) {
-
-            if ($request->query('product_category_id') > 0) {
-                $query = $query->where(['product_category_id' => $request->query('product_category_id')]);
+        $products = Product::with('image', 'productType', 'conversion', 'currency')
+        ->where('published', true)
+        ->where('quantity', '>', 0)
+        ->when($request->has('product_category_id'), function($query) use ($request) {
+            if (intval($request->query('product_category_id')) > 0) {
+                $query->where('product_category_id', $request->query('product_category_id'));
             }
 
             if ($request->has('name')) {
-                $query = $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
+                $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
             }
-        }
-
-        $products = $query->get();
+        })
+        ->get();
 
     	return view('stores.search', compact('products'));
     }
@@ -63,24 +65,7 @@ class StoreController extends Controller
     {
         $productCategories = ProductCategory::where('product_ray_id', 1)->get();
 
-        $products = Product::whereHas('productCategory', function($query) {
-            
-            $query->whereHas('productRay', function($query) {
-                $query->where('id', 1);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('product_category_id')) {
-            $products = Product::where('product_category_id', $request->query('product_category_id'))
-                ->whereHas('productCategory', function($query) {
-            
-                    $query->whereHas('productRay', function($query) {
-                        $query->where('id', 1);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $products = $this->_getFilterProducts(1);
 
     	return view('stores.organic_foods', compact('productCategories', 'products'));
     }
@@ -89,24 +74,7 @@ class StoreController extends Controller
     {
         $productCategories = ProductCategory::where('product_ray_id', 2)->get();
 
-        $products = Product::whereHas('productCategory', function($query) {
-            
-            $query->whereHas('productRay', function($query) {
-                $query->where('id', 2);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('product_category_id')) {
-            $products = Product::where('product_category_id', $request->query('product_category_id'))
-                ->whereHas('productCategory', function($query) {
-            
-                    $query->whereHas('productRay', function($query) {
-                        $query->where('id', 2);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $products = $this->_getFilterProducts(2);
 
     	return view('stores.manufactured_foods', compact('productCategories', 'products'));
     }
@@ -115,24 +83,7 @@ class StoreController extends Controller
     {
         $productCategories = ProductCategory::where('product_ray_id', 3)->get();
 
-        $products = Product::whereHas('productCategory', function($query) {
-            
-            $query->whereHas('productRay', function($query) {
-                $query->where('id', 3);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('product_category_id')) {
-            $products = Product::where('product_category_id', $request->query('product_category_id'))
-                ->whereHas('productCategory', function($query) {
-            
-                    $query->whereHas('productRay', function($query) {
-                        $query->where('id', 3);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $products = $this->_getFilterProducts(3);
         
         return view('stores.home_appliance', compact('productCategories', 'products'));
     }
@@ -141,24 +92,7 @@ class StoreController extends Controller
     {
         $productCategories = ProductCategory::where('product_ray_id', 4)->get();
 
-        $products = Product::whereHas('productCategory', function($query) {
-            
-            $query->whereHas('productRay', function($query) {
-                $query->where('id', 4);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('product_category_id')) {
-            $products = Product::where('product_category_id', $request->query('product_category_id'))
-                ->whereHas('productCategory', function($query) {
-            
-                    $query->whereHas('productRay', function($query) {
-                        $query->where('id', 4);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $products = $this->_getFilterProducts(4);
         
         return view('stores.high_tech', compact('productCategories', 'products'));
     }
@@ -167,25 +101,26 @@ class StoreController extends Controller
     {
         $productCategories = ProductCategory::where('product_ray_id', 5)->get();
 
-        $products = Product::whereHas('productCategory', function($query) {
-            
-            $query->whereHas('productRay', function($query) {
-                $query->where('id', 5);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('product_category_id')) {
-            $products = Product::where('product_category_id', $request->query('product_category_id'))
-                ->whereHas('productCategory', function($query) {
-            
-                    $query->whereHas('productRay', function($query) {
-                        $query->where('id', 5);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
+        $products = $this->_getFilterProducts(5);
         
         return view('stores.other_products', compact('productCategories', 'products'));
+    }
+
+    /**
+     * 
+     */
+    private function _getFilterProducts(int $rayId)
+    {
+        return Product::with('image', 'productType', 'conversion', 'currency')
+        ->where('published', true)
+        ->whereHas('productCategory', function($query) use ($rayId) {
+            
+            $query->whereHas('productRay', function($query) use ($rayId) {
+                $query->where('id', $rayId);
+            });
+
+        })
+        ->when(request('product_category_id'), fn($query) => $query->where('product_category_id', request('product_category_id')))
+        ->paginate(self::PAGINATION_NUMBER);
     }
 }

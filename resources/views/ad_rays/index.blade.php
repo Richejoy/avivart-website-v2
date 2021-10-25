@@ -16,7 +16,7 @@
                             <img id="img{{ $adRay->id }}" src="{{ $adRay->image->link }}" alt="Image" class="w-100 img-200x200">
                         </p>
                         <h4><a href="{{ route('adRay.show', ['adRay' => $adRay]) }}"
-                                class="text-info">{{ $adRay->name }}</a></h4>
+                                class="text-primary">{{ $adRay->name }}</a></h4>
                     </div>
                     @endforeach
                 </div>

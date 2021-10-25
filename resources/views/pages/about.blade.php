@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <p class="mb-0">
-                    <img class="w-100 border border-dark p-2" src="{{ asset('public/img/viva1.jpg') }}" alt="Photo">
+                    <img class="w-100 border border-dark p-2" src="{{ asset('img/viva1.jpg') }}" alt="Photo">
                 </p>
                 <h5 class="mt-0 bg-dark p-2 text-white font-weight-bold">Mme Viva AKUE-ATSAH</h5>
             </div>
@@ -51,7 +51,7 @@
 
             <div class="col-lg-6">
                 <p class="mb-0">
-                    <img class="w-100 border border-dark p-2" src="{{ asset('public/img/team.jpeg') }}" alt="Image">
+                    <img class="w-100 border border-dark p-2" src="{{ asset('img/team.jpeg') }}" alt="Image">
                 </p>
                 <h5 class="mt-0 bg-dark p-2 text-white font-weight-bold">VIVA Equipe</h5>
             </div>
@@ -71,7 +71,7 @@
                 <div class="border-hover-solid-primary">
                     <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-lock text-info fa-2x px-3"></i> SÉCURITÉ</h4>
                     <p class="text-secondary">
-                        Nous disposons des meilleurs standards au niveau de la sécurité et de la qualité.
+                        Nous disposons des meilleurs standards <br> au niveau de la sécurité et de la qualité.
                     </p>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 <div class="border-hover-solid-danger">
                     <h4 class="py-3 font-weight-bold text-uppercase"><i class="fa fa-user text-info fa-2x px-3"></i> FLEXIBILITÉ</h4>
                     <p class="text-secondary">
-                        Nous avons la capacité de nous adapter à tous vos besoins en temps réel.
+                        Nous avons la capacité de nous adapter <br> à tous vos besoins en temps réel.
                     </p>
                 </div>
             </div>

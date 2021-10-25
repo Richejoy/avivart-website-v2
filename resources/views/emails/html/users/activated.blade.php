@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>Bonjour {{ $user }}!</h1>
+<h1>Bonjour {{ $user->full_name }}!</h1>
 
 @endsection

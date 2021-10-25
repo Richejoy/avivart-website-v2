@@ -1,12 +1,11 @@
 @extends('layouts.store', ['title' => Request::query('name') ?? 'Recherche'])
 
 @section('body')
-<section class="bg-success py-3">
+<section class="bg-success py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ Str::title(Request::query('name')) ?? 'Recherche' }}</h2>
-                <h4 class="font-weight-bold text-light">Produits ({{ $products->count() }})</h4>
+                <h4 class="font-weight-bold text-light">{{ Str::title(Request::query('name')) ?? 'Recherche' }} | Produits ({{ $products->count() }})</h4>
             </div>
         </div>
     </div>
@@ -85,7 +84,7 @@
                 </div>
 
                 @else
-                <p>Aucun produit</p>
+                <x-empty-data module="store" />
                 @endif
             </div>
         </div>

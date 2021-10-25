@@ -5,22 +5,16 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta NAME="TITLE" CONTENT="AVIV'ART" />
-    <meta NAME="AUTHOR" CONTENT="VIVA AKUE" />
-    <meta NAME="DESCRIPTION" CONTENT="AVIV'ART Boutique" />
-    <meta NAME="KEYWORDS" CONTENT="Aliments Bio, Aliments Manufacturés, Electro-Ménager, High-Tech" />
-    <meta NAME="OWNER" CONTENT="VIVA AKUE" />
-    <meta NAME="ROBOTS" CONTENT="index,all">
-    <meta NAME="Reply-to" CONTENT="viva-akue@outlook.fr" />
-    <meta NAME="REVISIT-AFTER" CONTENT="15" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="google-site-verification" content="ZfxY-rbHjCOQfeNrQTT-4OA03jPPQQAPqz-kqMToyhQ" />
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('meta::manager', [
+        'title' => fullPageTitle($title, 'Boutique'),
+    ])
 
-    <link rel="icon" href="{{ asset('public/favicon.ico') }}" type="image/x-icon">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/favicon.ico') }}">
-    <link rel="icon" type="image/png" href="{{ asset('public/favicon.png') }}">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -38,29 +32,28 @@
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" />
 
-    <title>{{ config('app.name') }} - Boutique - {{ pageTitle($title) }}</title>
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/loadMoreResults/css/loadMoreResults.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/loadMoreResults/css/loadMoreResults.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('public/plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
+        href="{{ asset('plugins/sticky-cookie-accept-banner/css/cookit.min.css') }}">
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('public/plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
+        href="{{ asset('plugins/scroll-top-custom-icon-animation/css/jquery.back-to-top.css') }}">
 
-    <link href="{{ asset('public/plugins/introLoader/dist/css/introLoader.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/introLoader/dist/css/introLoader.css') }}" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('public/plugins/circle-indicator-spinner/dist/jquery-spinner.min.css') }}">
-
-    @if(!session()->has('splashscreen'))
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/splashscreen.css') }}">
-    @endif
+        href="{{ asset('plugins/circle-indicator-spinner/dist/jquery-spinner.min.css') }}">
 
     <link rel="stylesheet" href="https://avivart.net/ecosoft/libs/css/all.css" />
 
     @stack('styles')
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/store.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/avivart.css') }}">
+    @if(!session()->has('splashscreen'))
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/splashscreen.css') }}">
+    @endif
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/store.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/avivart.css') }}">
 
     @livewireStyles
 </head>
@@ -92,49 +85,42 @@
     @endif
 
     @production
-    <script type="text/javascript" src="{{ asset('public/js/tawk.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/tawk.js') }}"></script>
     @endproduction
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous">
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-    </script>
+    <script type="text/javascript" src="{{ asset('js/laroute.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/jquery.lazyrate/js/jquery.lazyrate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/loadMoreResults/js/loadMoreResults.js') }}"></script>
     <script type="text/javascript"
-        src="{{ asset('public/plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
+        src="{{ asset('plugins/jquery.simpleLoadMore/js/jquery.simpleLoadMore.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/fix-element-top-scroll/js/jquery.fixx.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/fix-element-top-scroll/js/jquery.fixx.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('public/plugins/sticky-cookie-accept-banner/js/cookit.min.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/sticky-cookie-accept-banner/js/cookit.min.js') }}">
     </script>
     <script type="text/javascript"
-        src="{{ asset('public/plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
+        src="{{ asset('plugins/scroll-top-custom-icon-animation/js/jquery.back-to-top.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('public/plugins/circle-indicator-spinner/dist/jquery-spinner.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/circle-indicator-spinner/dist/jquery-spinner.min.js') }}"></script>
 
-    <script src="{{ asset('public/plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
-    <script src="{{ asset('public/plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
-    <script src="{{ asset('public/plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
+    <script src="{{ asset('plugins/introLoader/dist/helpers/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('plugins/introLoader/dist/helpers/spin.min.js') }}"></script>
+    <script src="{{ asset('plugins/introLoader/dist/jquery.introLoader.js') }}"></script>
     <script type="text/javascript" src="https://avivart.net/ecosoft/libs/js/jquery-active-page.js"></script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @stack('scripts')
-
-    <script src="{{ asset('public/js/laroute.js') }}"></script>
     
-    <script type="text/javascript" src="{{ asset('public/js/utils.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/js/store.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('public/js/avivart.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/utils.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/store.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/avivart.js') }}"></script>
 
     @livewireScripts
 

@@ -16,7 +16,7 @@ class Header extends Component
 
     public function render()
     {
-        $articleRays = ArticleRay::all();
+        $articleRays = ArticleRay::with('articleCategories')->get();
 
         return view('livewire.cosmetic.header', compact('articleRays'));
     }

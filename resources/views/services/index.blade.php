@@ -16,7 +16,7 @@
 
             <div class="col-lg-6">
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_software_engineer_lvl5.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_software_engineer_lvl5.png') }}" alt="Photo">
                 </p>
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="row py-5">
             <div class="col-lg-6">
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_electric_car_b7hl.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_electric_car_b7hl.png') }}" alt="Photo">
                 </p>
             </div>
 
@@ -52,7 +52,7 @@
 
             <div class="col-lg-6">
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_quitting_time_dm8t.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_quitting_time_dm8t.png') }}" alt="Photo">
                 </p>
             </div>
         </div>
@@ -62,7 +62,7 @@
         <div class="row py-5">
             <div class="col-lg-6">
                 <p>
-                    <img class="w-100" src="{{ asset('public/img/undraw_people_tax5.png') }}" alt="Photo">
+                    <img class="w-100" src="{{ asset('img/undraw_people_tax5.png') }}" alt="Photo">
                 </p>
             </div>
 

@@ -1,11 +1,11 @@
 @extends('layouts.store', ['title' => 'High-Tech'])
 
 @section('body')
-<section class="bg-success py-3">
+<section class="bg-success py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold text-light">Produits ({{ $products->count() }})</h2>
+                <h4 class="font-weight-bold text-light">Produits ({{ $products->count() }})</h4>
             </div>
         </div>
     </div>
@@ -117,7 +117,7 @@
                 {{ $products->onEachSide(5)->links() }}
 
                 @else
-                <p>Aucun produit</p>
+                <x-empty-data module="store" />
                 @endif
 
             </div>

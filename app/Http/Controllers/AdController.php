@@ -25,14 +25,32 @@ class AdController extends Controller
 
     public function index(Request $request)
     {
-    	$adRays = AdRay::all();
+    	$adRays = AdRay::with('adCategories')->get();
 
-        $adTypes = AdType::inRandomOrder()->get();
+        $adTypes = AdType::inRandomOrder()
+        ->get();
 
-        $vipAds = Ad::where(['published' => true, 'is_vip' => true])->inRandomOrder()->get();
-        $latestAds = Ad::where('published', true)->inRandomOrder()->take(8)->orderBy('id' ,'DESC')->get();
-        $ads = Ad::where('published', true)->inRandomOrder()->get();
-        $communications = Communication::where('published', true)->inRandomOrder()->get();
+        $vipAds = Ad::with('image', 'currency', 'user.country')
+        ->where(['published' => true, 'is_vip' => true])
+        ->inRandomOrder()
+        ->get();
+
+        $latestAds = Ad::with('image', 'currency', 'user.country')
+        ->where('published', true)
+        ->inRandomOrder()
+        ->take(8)
+        ->orderBy('id' ,'DESC')
+        ->get();
+
+        $ads = Ad::with('image', 'currency', 'user.country')
+        ->where('published', true)
+        ->inRandomOrder()
+        ->get();
+
+        $communications = Communication::with('communicationCategory', 'user.userType', 'user.country')
+        ->where('published', true)
+        ->inRandomOrder()
+        ->get();
 
         return view('ads.index', compact('adRays', 'adTypes', 'vipAds', 'latestAds', 'ads', 'communications'));
     }
@@ -134,156 +152,6 @@ class AdController extends Controller
         return view('ads.guide');
     }
 
-    public function search(Request $request)
-    {
-        $query = Ad::where('published', true);
-
-        if ($request->has('ad_category_id')) {
-            
-            if ($request->query('ad_category_id') > 0) {
-                $query = $query->where(['ad_category_id' => $request->query('ad_category_id')]);
-            }
-
-            if ($request->has('name')) {
-                $query = $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
-            }
-        }
-
-        $ads = $query->get();
-
-        return view('ads.search', compact('ads'));
-    }
-
-    public function automobile(Request $request)
-    {
-        $adCategories = AdCategory::where('ad_ray_id', 1)->get();
-
-        $ads = Ad::whereHas('adCategory', function($query) {
-            
-            $query->whereHas('adRay', function($query) {
-                $query->where('id', 1);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('ad_category_id')) {
-            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
-                ->whereHas('adCategory', function($query) {
-            
-                    $query->whereHas('adRay', function($query) {
-                        $query->where('id', 1);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
-
-        return view('ads.automobile', compact('adCategories', 'ads'));
-    }
-
-    public function immovable(Request $request)
-    {
-        $adCategories = AdCategory::where('ad_ray_id', 2)->get();
-
-        $ads = Ad::whereHas('adCategory', function($query) {
-            
-            $query->whereHas('adRay', function($query) {
-                $query->where('id', 2);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('ad_category_id')) {
-            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
-                ->whereHas('adCategory', function($query) {
-            
-                    $query->whereHas('adRay', function($query) {
-                        $query->where('id', 2);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
-
-        return view('ads.immovable', compact('adCategories', 'ads'));
-    }
-
-    public function cosmetic(Request $request)
-    {
-        $adCategories = AdCategory::where('ad_ray_id', 3)->get();
-
-        $ads = Ad::whereHas('adCategory', function($query) {
-            
-            $query->whereHas('adRay', function($query) {
-                $query->where('id', 3);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('ad_category_id')) {
-            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
-                ->whereHas('adCategory', function($query) {
-            
-                    $query->whereHas('adRay', function($query) {
-                        $query->where('id', 3);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
-
-        return view('ads.cosmetic', compact('adCategories', 'ads'));
-    }
-
-    public function agribusiness(Request $request)
-    {
-        $adCategories = AdCategory::where('ad_ray_id', 4)->get();
-
-        $ads = Ad::whereHas('adCategory', function($query) {
-            
-            $query->whereHas('adRay', function($query) {
-                $query->where('id', 4);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('ad_category_id')) {
-            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
-                ->whereHas('adCategory', function($query) {
-            
-                    $query->whereHas('adRay', function($query) {
-                        $query->where('id', 4);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
-
-        return view('ads.agribusiness', compact('adCategories', 'ads'));
-    }
-
-    public function otherAds(Request $request)
-    {
-        $adCategories = AdCategory::where('ad_ray_id', 5)->get();
-
-        $ads = Ad::whereHas('adCategory', function($query) {
-            
-            $query->whereHas('adRay', function($query) {
-                $query->where('id', 5);
-            });
-
-        })->paginate(self::PAGINATION_NUMBER);
-
-        if ($request->has('ad_category_id')) {
-            $ads = Ad::where('ad_category_id', $request->query('ad_category_id'))
-                ->whereHas('adCategory', function($query) {
-            
-                    $query->whereHas('adRay', function($query) {
-                        $query->where('id', 5);
-                    });
-
-            })->paginate(self::PAGINATION_NUMBER);
-        }
-
-        return view('ads.other_ads', compact('adCategories', 'ads'));
-    }
-
     public function booster(Request $request, Ad $ad)
     {
         abort_if((auth()->id() != $ad->user_id), 401, 'Unauthorized');
@@ -329,5 +197,86 @@ class AdController extends Controller
         }
 
         return view('ads.booster', compact('ad', 'formulas'));
+    }
+
+    public function search(Request $request)
+    {
+        $ads = Ad::with('image', 'currency', 'user.country')
+        ->where('published', true)
+        ->when($request->has('ad_category_id'), function($query) use ($request) {
+            if (intval($request->query('ad_category_id')) > 0) {
+                $query->where('ad_category_id', $request->query('ad_category_id'));
+            }
+
+            if ($request->has('name')) {
+                $query->where('name', 'LIKE', '%' . $request->query('name') . '%');
+            }
+        })
+        ->get();
+
+        return view('ads.search', compact('ads'));
+    }
+
+    public function automobile(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 1)->get();
+
+        $ads = $this->_getFilterAds(1);
+
+        return view('ads.automobile', compact('adCategories', 'ads'));
+    }
+
+    public function immovable(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 2)->get();
+
+        $ads = $this->_getFilterAds(2);
+
+        return view('ads.immovable', compact('adCategories', 'ads'));
+    }
+
+    public function cosmetic(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 3)->get();
+
+        $ads = $this->_getFilterAds(3);
+
+        return view('ads.cosmetic', compact('adCategories', 'ads'));
+    }
+
+    public function agribusiness(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 4)->get();
+
+        $ads = $this->_getFilterAds(4);
+
+        return view('ads.agribusiness', compact('adCategories', 'ads'));
+    }
+
+    public function otherAds(Request $request)
+    {
+        $adCategories = AdCategory::where('ad_ray_id', 5)->get();
+
+        $ads = $this->_getFilterAds(5);
+
+        return view('ads.other_ads', compact('adCategories', 'ads'));
+    }
+
+    /**
+     * 
+     */
+    private function _getFilterAds(int $rayId)
+    {
+        return Ad::with('image', 'currency', 'user.country')
+        ->where('published', true)
+        ->whereHas('adCategory', function($query) use ($rayId) {
+            
+            $query->whereHas('adRay', function($query) use ($rayId) {
+                $query->where('id', $rayId);
+            });
+
+        })
+        ->when(request('ad_category_id'), fn($query) => $query->where('ad_category_id', request('ad_category_id')))
+        ->paginate(self::PAGINATION_NUMBER);
     }
 }

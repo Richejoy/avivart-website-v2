@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-100" id="navbarTop">
         <div class="container-fluid">
             <a class="navbar-brand p-0 hvr-push" href="{{ route('store.index') }}"><img
-                    src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"
+                    src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }}" class="logo-xs"
                     align="middle"> <strong class="text-success"><u>Boutique</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
                             href="{{ route('store.other_products') }}">Autres Produits</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-block d-lg-block d-xl-block">
                         <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
                     </li>
 

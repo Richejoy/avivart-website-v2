@@ -2,21 +2,20 @@
 
 @section('body')
 
-<section class="bg-color1 py-3">
+<section class="bg-info py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ $articleCategory->name }}</h2>
+            <h4 class="font-weight-bold text-light">{{ $articleCategory->name }} | Produits liés ({{ $articleCategory->articles->count() }})</h4>
             </div>
         </div>
     </div>
 </section>
 
-<section class="bg-light py-5">
+<section class="bg-light py-3">
 	<div class="container-fluid">
 		<div class="row">
 			<article class="col-lg-9">
-                <h2 class="py-2 font-weight-bold text-dark">Produits liés ({{ $articleCategory->articles->count() }})</h2>
 
                 @if($articleCategory->articles->count())
 
@@ -26,12 +25,12 @@
                         <div class="text-right">
                             <span class="badge {{ $article->onDiscount() }}">{{ $article->getPercentage() }}%</span>
                         </div>
-                        <div class="card border-dark h-100">
+                        <div class="card border-info h-100">
                             <a href="{{ route('cosmetic.show', ['article' => $article]) }}">
                                 <img src="{{ $article->image->link }}"
                                 class="card-img-top article-img" alt="Image">
                             </a>
-                            <span class="bg-dark text-white text-center">{{ $article->name }}</span>
+                            <span class="bg-info text-white text-center">{{ $article->name }}</span>
                             <div class="card-body p-2 text-center">
                                 <h6 class="card-title m-0">{{ $article->description }}</h6>
 

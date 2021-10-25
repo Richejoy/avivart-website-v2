@@ -151,7 +151,7 @@
                 </div>
 
                 @else
-                <p>Aucun produit</p>
+                <x-empty-data module="store" />
                 @endif
             </div>
         </div>

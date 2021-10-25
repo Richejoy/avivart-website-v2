@@ -2,12 +2,11 @@
 
 @section('body')
 
-<section class="bg-primary py-3">
+<section class="bg-primary py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-white">{{ $adCategory->name }}</h2>
-                <h4 class="font-weight-bold text-light">Annonces liées ({{ $adCategory->ads->count() }})</h4>
+                <h4 class="font-weight-bold text-light">{{ $adCategory->name }} | Annonces liées ({{ $adCategory->ads->count() }})</h4>
             </div>
         </div>
     </div>
@@ -50,7 +49,7 @@
                         </div>
 
                         <div class="card-footer p-2 text-right"><a href="{{ route('adCategory.index') }}"
-                            class="text-info">Tout afficher</a></div>
+                            class="text-primary">Tout afficher</a></div>
                     </div>
                 </div>
             </aside>

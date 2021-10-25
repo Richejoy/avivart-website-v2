@@ -1,11 +1,11 @@
 @extends('layouts.ad', ['title' =>  'Cosmétique'])
 
 @section('body')
-<section class="bg-primary py-3">
+<section class="bg-primary py-1">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="font-weight-bold text-light">Annonces ({{ $ads->count() }})</h2>
+                <h4 class="font-weight-bold text-light">Annonces ({{ $ads->count() }})</h4>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@
                     @else
 
                     <div class="col-lg-12">
-                        <p>Rien</p>
+                        <x-empty-data module="ad" />
                     </div>
 
                     @endif

@@ -2,6 +2,16 @@
 
 @section('body')
 
+<section class="bg-info py-1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="font-weight-bold text-light"><i class="fa fa-bell fa-pulse"></i> Réaussez votre beauté avec du naturel</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -30,15 +40,11 @@
   </a>
 </div>
 
-<section class="py-3" style="background-color: #eceff1;">
+<section class="py-3 bg-light">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-9">
-                <div
-                    class="p-2 mt-xs-3 mb-3 bg-secondary text-white font-weight-bold shadow-sm rounded">
-                    <i class="fa fa-bell fa-pulse"></i> Réaussez votre beauté avec du naturel
-                </div>
-
+                
                 @if($articles->count())
 
                 <div class="row mb-4" id="article-container">
@@ -91,33 +97,31 @@
                 </div>
 
                 @else
-                <p>Aucun article</p>
+                <x-empty-data module="cosmetic" />
                 @endif
-            </div>
+      </div>
 
-            <aside class="col-lg-3 pb-3">
-
-                <div class="card border-white mb-3">
-                    <div class="card-header bg-white py-2"><i class="fa fa-bell fa-pulse mr-2 text-warning"></i> Conseils</div>
-
-                    <marquee>
-                        <img src="{{ asset('public/img/cosmetics/IMG-20210722-WA0033.jpg') }}" width="250px" height="250px">
-
-                        <img src="{{ asset('public/img/cosmetics/IMG-20210818-WA0012.jpg') }}" width="250px" height="250px">
-
-                        <img src="{{ asset('public/img/cosmetics/IMG-20210818-WA0014.jpg') }}" width="250px" height="250px">
-
-                        <img src="{{ asset('public/img/cosmetics/IMG-20210818-WA0015.jpg') }}" width="250px" height="250px">
-                    </marquee>
-
-                </div>
-
-                <video controls class="w-100 p-0">
-                    <source src="{{ asset('public/videos/v4.mp4') }}" type="video/mp4">
-                </video>
-
-            </aside>
+      <aside class="col-lg-3 pb-3">
+          <video controls class="w-100 p-0">
+              <source src="{{ asset('videos/v4.mp4') }}" type="video/mp4">
+          </video>
+      </aside>
 		</div>
+
+    <div class="row">
+            <div class="col-md-3">
+                <img src="{{ asset('img/cosmetics/IMG-20210722-WA0033.jpg') }}" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="{{ asset('img/cosmetics/IMG-20210818-WA0012.jpg') }}" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="{{ asset('img/cosmetics/IMG-20210818-WA0014.jpg') }}" alt="Image" class="w-100">
+            </div>
+            <div class="col-md-3">
+                <img src="{{ asset('img/cosmetics/IMG-20210818-WA0015.jpg') }}" alt="Image" class="w-100">
+            </div>
+    </div>
 	</div>
 </section>
 

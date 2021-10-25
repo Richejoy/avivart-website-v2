@@ -1,6 +1,15 @@
 @extends('layouts.cosmetic', ['title' => $article->name])
 
 @section('body')
+<section class="bg-info py-1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="font-weight-bold text-light">Détails sur {{ $article->name }}</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="bg-light py-3">
     <div class="container-fluid">
@@ -47,7 +56,7 @@
                         <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantité"
                             value="1" min="1" step="1" required>
                         <div class="input-group-append">
-                            <button type="submit" class="btn btn-dark">Ajouter au
+                            <button type="submit" class="btn btn-info">Ajouter au
                                 panier</button>
                         </div>
                     </div>
@@ -104,8 +113,7 @@
 
             <div class="col-lg-4">
                 <p class="">
-                    <img id="img{{ $article->id }}" data-src="{{ $article->image->link }}"
-                        src="https://via.placeholder.com/200x150.png?text=Chargement..." class="w-100 lazyrate"
+                    <img src="{{ $article->image->link }}" class="w-100"
                         alt="Image">
                 </p>
             </div>

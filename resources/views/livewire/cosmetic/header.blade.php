@@ -75,9 +75,13 @@
                                     class=" text-primary font-weight-bold">Connectez-vous</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('cosmetic.guide') }}"
                                     class=" text-primary font-weight-bold">Comment ça marche ?</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('articleRay.index') }}"
+                                    class="text-primary font-weight-bold">Tous nos rayons</a></li>
                             <li class="breadcrumb-item"><a href="{{ route('articleCategory.index') }}"
                                     class="text-primary font-weight-bold">Toutes nos catégories</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ pageTitle($title) }}</li>
+                            <li class="breadcrumb-item"><a href="{{ route('articleType.index') }}"
+                                    class="text-primary font-weight-bold">Tous nos types</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{ Str::limit(pageTitle($title), 25) }}</li>
                         </ol>
                     </nav>
                 </div>

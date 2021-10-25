@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-100" id="navbarTop">
         <div class="container-fluid">
-            <a class="navbar-brand p-0" href="{{ route('ad.index') }}"><img src="{{ asset('public/img/logo.png') }}"
+            <a class="navbar-brand p-0" href="{{ route('ad.index') }}"><img src="{{ asset('img/logo.png') }}"
                     alt="{{ config('app.name') }}" class="logo-xs" align="middle"> <strong
                     class="text-warning"><u>Annonces</u></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -38,7 +38,7 @@
                         <a data-class="text-warning" class="nav-link" href="{{ route('ad.other_ads') }}">Autres Annonces</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-md-block d-lg-block d-xl-block">
                         <a id="show-modules" class="nav-link" href="#"><i class="fa fa-th"></i></a>
                     </li>
                 </ul>

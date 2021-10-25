@@ -34,6 +34,6 @@ class AdCategory extends Model
 
     public function getSelected($adCategoryId = 0): string
     {
-        return ($this->id == $adCategoryId) ? 'text-info font-weight-bold' : 'text-muted';
+        return ($this->id == $adCategoryId) ? 'text-success font-weight-bold' : 'text-muted';
     }
 }

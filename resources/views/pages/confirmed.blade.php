@@ -10,7 +10,7 @@
                 @include("layouts.partials._validation_errors")
 
                 <p class="text-center">
-                    <img class="logo" src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}">
+                    <img class="logo" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name') }}">
                 </p>
 
                 <h6 class="text-center">Veuillez entrer le code de confirmation 2FA.</h6>

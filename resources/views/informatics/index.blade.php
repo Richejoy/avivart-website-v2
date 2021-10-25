@@ -5,28 +5,28 @@
 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('public/img/informatics/logiciel1.jpg') }}" class="d-block w-100" alt="Image">
+            <img src="{{ asset('img/informatics/logiciel1.jpg') }}" class="d-block w-100" alt="Image">
             <div class="carousel-caption d-none d-md-block px-3">
                 <h2 class="font-weight-bold">Logiciels</h2>
                 <p>Nous conçevons vos logiciels métiers selon votre budget.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('public/img/informatics/reseau1.jpg') }}" class="d-block w-100" alt="Image">
+            <img src="{{ asset('img/informatics/reseau1.jpg') }}" class="d-block w-100" alt="Image">
             <div class="carousel-caption d-none d-md-block px-3">
                 <h2 class="font-weight-bold">Réseaux</h2>
                 <p>Installation de réseaux stables et sécurisés.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('public/img/informatics/maintenance2.jpg') }}" class="d-block w-100" alt="Image">
+            <img src="{{ asset('img/informatics/maintenance2.jpg') }}" class="d-block w-100" alt="Image">
             <div class="carousel-caption d-none d-md-block px-3">
                 <h2 class="font-weight-bold">Maintenances</h2>
                 <p>Nous vendons et maintenons vos équipements informatiques.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ asset('public/img/informatics/services3.jpg') }}" class="d-block w-100" alt="Image">
+            <img src="{{ asset('img/informatics/services3.jpg') }}" class="d-block w-100" alt="Image">
             <div class="carousel-caption d-none d-md-block px-3">
                 <h2 class="font-weight-bold">Services</h2>
                 <p>Offre de services personnalisés.</p>
@@ -70,7 +70,7 @@
 
             <div class="col-lg-4 mb-3">
                 <div class="card h-100">
-                    <img src="{{ asset('public/img/trainings/database.png') }}" class="card-img-top img-200x200"
+                    <img src="{{ asset('img/trainings/database.png') }}" class="card-img-top img-200x200"
                         alt="Image">
                     <div class="card-body bg-light">
                         <h5 class="card-title font-weight-bold">Administration de base de données</h5>
@@ -83,7 +83,7 @@
 
             <div class="col-lg-4 mb-3">
                 <div class="card h-100">
-                    <img src="{{ asset('public/img/trainings/reseau.jpg') }}" class="card-img-top img-200x200"
+                    <img src="{{ asset('img/trainings/reseau.jpg') }}" class="card-img-top img-200x200"
                         alt="Image">
                     <div class="card-body bg-light">
                         <h5 class="card-title font-weight-bold">Administration réseaux</h5>
@@ -112,44 +112,44 @@
         <div class="row py-3">
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/ecobank.jpeg') }}" alt="ECOBANK" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/ecobank.jpeg') }}" alt="ECOBANK" class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/sunu.jpeg') }}" alt="SUNU" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/sunu.jpeg') }}" alt="SUNU" class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/hi.png') }}" alt="HI" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/hi.png') }}" alt="HI" class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/anaxar.jpg') }}" alt="ANAXAR" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/anaxar.jpg') }}" alt="ANAXAR" class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/nbfconsulting.png') }}" alt="NBF CONSULTING"
+                    <img src="{{ asset('img/partners/nbfconsulting.png') }}" alt="NBF CONSULTING"
                         class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/fucec.jpeg') }}" alt="FUCEC TOGO" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/fucec.jpeg') }}" alt="FUCEC TOGO" class="img-150x150 w-100">
                 </p>
             </div>
 
             <div class="col-lg-3 col-sm-6 text-center">
                 <p>
-                    <img src="{{ asset('public/img/partners/coopagro.jpg') }}" alt="FUCEC TOGO" class="img-150x150 w-100">
+                    <img src="{{ asset('img/partners/coopagro.jpg') }}" alt="FUCEC TOGO" class="img-150x150 w-100">
                 </p>
             </div>
 

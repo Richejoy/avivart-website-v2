@@ -5,12 +5,12 @@
 <section class="bg-light py-3">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 offset-lg-4">
+            <div class="col-lg-6 offset-lg-3">
 
                 @include("layouts.partials._validation_errors")
 
                 <p class="text-center">
-                    <img class="logo" src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}">
+                    <img class="logo" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name') }}">
                 </p>
 
                 <h6 class="text-center">Connectez-vous avec vos identiants.</h6>

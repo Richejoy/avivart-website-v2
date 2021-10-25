@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Bonjour {{ $user }}!</h1>
+<h1>Bonjour {{ $user->full_name }}!</h1>
 
 <p>Merci pour votre inscription</p>
 

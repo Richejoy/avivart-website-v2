@@ -4,7 +4,7 @@
 
 <header>
 	<p>
-		<img src="{{ asset('public/img/logo.jpg') }}" alt="{{ config('app.name') }}">
+		<img src="{{ asset('img/logo.jpg') }}" alt="{{ config('app.name') }}">
 	</p>
 </header>
 

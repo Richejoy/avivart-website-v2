@@ -16,7 +16,7 @@ class Header extends Component
 
     public function render()
     {
-        $productRays = ProductRay::all();
+        $productRays = ProductRay::with('image', 'productCategories')->get();
 
         return view('livewire.store.header', compact('productRays'));
     }

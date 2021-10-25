@@ -34,7 +34,7 @@
                                     <img src="http://avivart.net/images/ads/01.jpg" class="d-block w-100" alt="Image">
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="{{ asset('public/img/ads/IMG-20210831-WA0199.jpg') }}" class="d-block w-100"
+                                    <img src="{{ asset('img/ads/IMG-20210831-WA0199.jpg') }}" class="d-block w-100"
                                 alt="Image">
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
                         @else
 
                         <div class="col-lg-12">
-                            <p>Rien</p>
+                            <x-empty-data module="ad" />
                         </div>
 
                         @endif
@@ -201,7 +201,7 @@
                     @else
 
                     <div class="col-lg-12">
-                        <p>Rien</p>
+                        <x-empty-data module="ad" />
                     </div>
 
                     @endif
@@ -265,7 +265,7 @@
                     @else
 
                     <div class="col-lg-12">
-                        <p>Rien</p>
+                        <x-empty-data module="ad" />
                     </div>
 
                     @endif
@@ -309,7 +309,13 @@
                     @empty
 
                     <div class="col-md-12">
-                        <p>Aucun résultat</p>
+                        <div class="border-dashed-3 py-5 text-center">
+                            <p>
+                                <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wdHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Empty Image">
+                            </p>
+                            <h2 class="text-dark font-weight-bold">Aucun communiqué</h2>
+                            <p class="text-muted">Cette section ne contient rien pour le moment. Revenez plus tard merci!</p>
+                        </div>
                     </div>
 
                     @endforelse

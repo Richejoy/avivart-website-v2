@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-sm-12">
                         <p>
-                            <img src="{{ asset('public/img/logo_ww.png') }}" alt="{{ config('app.name') }}"
+                            <img src="{{ asset('img/logo_ww.png') }}" alt="{{ config('app.name') }}"
                                 class="logo">
                         </p>
 
@@ -92,10 +92,10 @@
                 <div class="row">
                     <div class="col-lg-8 text-info text-lg-center">
                         &copy; 2018 - {{ date('Y') }} {{ config('app.name') }}, Tous droits réservés | Ce design
-                        est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART-DESIGN</a></a>
+                        est fait par <a class="text-warning" href="#" target="_blank">AVIV'ART-DESIGN</a>
                     </div>
                     <div class="col-lg-4 text-info text-lg-center">
-                        Fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-warning" href="#" target="_blank">AVIV'ART-DEV</a></a>
+                        Fait avec <i class="fa fa-heart text-danger"></i> par <a class="text-warning" href="#" target="_blank">AVIV'ART-DEV</a>
                     </div>
                 </div>
             </div>

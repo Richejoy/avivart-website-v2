@@ -34,6 +34,6 @@ class ProductCategory extends Model
 
     public function getSelected($productCategoryId = 0): string
     {
-        return ($this->id == $productCategoryId) ? 'text-info font-weight-bold' : 'text-muted';
+        return ($this->id == $productCategoryId) ? 'text-danger font-weight-bold' : 'text-muted';
     }
 }

@@ -16,14 +16,14 @@
                 @include("layouts.partials._validation_errors")
 
                 <p class="text-center">
-                    <img class="logo" src="{{ asset('public/img/logo.png') }}" alt="{{ config('app.name') }}">
+                    <img class="logo" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name') }}">
                 </p>
 
                 <h1 class="lead text-center d-none">{{ config('app.name') }}</h1>
                 <h6 class="text-center">Inscrivez-vous gratuitement en quelques secondes et passez vos commandes de
                     produits en toute liberté.</h6>
 
-                {!! Form::open() !!}
+                {!! Form::open(['id' => 'register-form']) !!}
                 <div class="form-group select">
                     {{ Form::label('country_id', 'Pays de résidence', ['class' => 'text-dark']) }}
                     {{ Form::select('country_id', $countries, null, ['class' => 'form-control', 'placeholder' => 'Pays de résidence', 'required' => true]) }}
@@ -81,7 +81,9 @@
                     </div>
                 </div>
 
-                <div class="form-group text-center">
+                {!! NoCaptcha::display() !!}
+
+                <div class="form-group text-center mt-3">
                     {{ Form::checkbox('tou', null, true) }}
                     <label for="tou" class="text-dark">J'ai lu et j'accepte les
                         {{ link_to_route('page.conditions', "conditions", null, ['class' => 'text-danger']) }} et
