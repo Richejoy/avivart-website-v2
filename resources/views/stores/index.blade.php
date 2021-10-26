@@ -158,16 +158,16 @@
 
         <div class="row">
             <div class="col-md-3">
-                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0014.jpg" alt="Image" class="w-100">
+                <img src="{{ asset('img/pubs/IMG-20211026-WA0006.jpg') }}" alt="Image" class="w-100">
             </div>
             <div class="col-md-3">
-                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0015.jpg" alt="Image" class="w-100">
+                <img src="{{ asset('img/pubs/IMG-20211026-WA0007.jpg') }}" alt="Image" class="w-100">
             </div>
             <div class="col-md-3">
-                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0016.jpg" alt="Image" class="w-100">
+                <img src="{{ asset('img/pubs/IMG-20211026-WA0008.jpg') }}" alt="Image" class="w-100">
             </div>
             <div class="col-md-3">
-                <img src="https://avivart.net/images/galleries/IMG-20210723-WA0017.jpg" alt="Image" class="w-100">
+                <img src="{{ asset('img/pubs/IMG-20211026-WA0009.jpg') }}" alt="Image" class="w-100">
             </div>
         </div>
     </div>

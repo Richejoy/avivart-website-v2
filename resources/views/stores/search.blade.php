@@ -18,7 +18,7 @@
 
                 <div class="my-3">
                     <p>
-                        <img src="https://avivart.net/images/galleries/IMG-20210723-WA0018.jpg" alt="Image" class="w-100">
+                        <img src="{{ asset('img/pubs/IMG-20211026-WA0006.jpg') }}" alt="Image" class="w-100">
                     </p>
                     <p>
                         <img src="https://avivart.net/images/galleries/IMG-20210517-WA0006.jpg" alt="Image" class="w-100">
